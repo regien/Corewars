@@ -6,7 +6,7 @@
 #    By: adubugra <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/03/07 18:20:10 by adubugra          #+#    #+#              #
-#    Updated: 2018/05/15 18:12:22 by adubugra         ###   ########.fr        #
+#    Updated: 2018/05/16 01:20:42 by adubugra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,21 +14,25 @@ CWR	= corewar
 ASM	= asm
 
 # src / obj files
-SRC		= 
+SRC		=	read_file.c \
+			constructor.c \
+			checker.c \
+			print.c \
+			conversions.c 
 
 SRCALL	= $(SRC)
 SRCALL	+= corewar.c
-SRCALL	+= assembler.c
+#SRCALL	+= assembler.c
 
-SRCPS	= $(SRC)
-SRCPS	+= corewar.c
+SRCCW	= $(SRC)
+SRCCW	+= corewar.c
 
-SRCCH	= $(SRC)
-SRCCH	+= assembler.c
+#SRCAS	= $(SRC)
+#SRCAS	+= assembler.c
 
 OBJ	= $(addprefix $(OBJDIR),$(SRCALL:.c=.o))
-OBJCH	= $(addprefix $(OBJDIR),$(SRCCH:.c=.o))
-OBJPS	= $(addprefix $(OBJDIR),$(SRCPS:.c=.o))
+OBJCW	= $(addprefix $(OBJDIR),$(SRCCW:.c=.o))
+#OBJAS	= $(addprefix $(OBJDIR),$(SRCAS:.c=.o))
 
 # compiler
 CC		= gcc
@@ -47,7 +51,7 @@ OBJDIR	= ./obj/
 
 all: obj $(FT_LIB) $(CWR)
 
-test: obj $(FT_LIB) $(TESTER)
+test: obj $(FT_LIB) $(ASM)
 
 obj:
 	mkdir -p $(OBJDIR)
@@ -59,16 +63,16 @@ $(FT_LIB):
 	make -C $(FT)
 
 $(CWR): $(OBJ) 
-	$(CC) $(CFLAGS) $(OBJCH) $(FT_LNK) -lm -o $(CWR)
-	$(CC) $(CFLAGS) $(OBJPS) $(FT_LNK) -lm -o $(ASM)
+	$(CC) $(CFLAGS) $(OBJCW) $(FT_LNK) -lm -o $(CWR)
+#	$(CC) $(CFLAGS) $(OBJAS) $(FT_LNK) -lm -o $(ASM)
 
 clean:
 	rm -rf $(OBJDIR)
 	make -C $(FT) clean
 
 fclean: clean
-	rm -rf $(NAME)
-	rm -rf $(TESTER)
+	rm -rf $(CWR)
+	rm -rf $(ASM)
 	make -C $(FT) fclean
 
 re: fclean all
