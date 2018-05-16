@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 11:21:03 by adubugra          #+#    #+#             */
-/*   Updated: 2018/04/16 15:44:58 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/16 01:43:09 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,6 +107,8 @@ char			*ft_ltoa_base(long long value, int base);
 char			*ft_ultoa_base(unsigned long long value, int base);
 
 char			*ft_uitoa_base(unsigned int value, int base);
+
+char			*ft_ctoa_base(unsigned char v, int base);
 
 char			*ft_itoa(int n);
 
