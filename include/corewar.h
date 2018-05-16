@@ -121,3 +121,30 @@ void		clear_vm_mem(t_vm *vm);
 void		convert_big_endian(unsigned int *num);
 
 void		dump_memory(t_vm vm);
+
+// 			Function protyping 
+
+void			live(t_process *process);
+
+t_process		*add(char first, char second, char third);
+t_process		*sub(char first, char second, char third);
+
+
+t_process		*zjmp(char index);
+t_process		*fork(char index);
+t_process		*lfork(char index);
+t_process		*aff(char rejester);
+
+
+t_process		*or(char first, char second, char third);
+t_process		*and(char first, char second, char third);
+t_process		*xor(char first, char second, char third);
+
+
+t_process		*ld(char first, char second);
+t_process		*ldd(char first, char second);
+t_process		*lldi(char first, char second, char third);
+
+t_process		*st(char first, char second);
+t_process		*sti(char first, char second, char third);
+
