@@ -1,0 +1,96 @@
+Assembler:
+	Main goal: Take the .s code and convert it to binary.
+	How to do it:
+		save the whole file to a char arr
+		set header in the beginning of file- MagicNumber->prog_name[128]->prog_size->comment[2048]
+		create an array with the indexes of
+		every time a label is found, save the index in a hash table of the position of the first command
+		check if number of register is greater than max one
+
+
+
+
+
+
+Virtual machine:
+--reading
+	check arguments
+	read magic number
+		if not the right one, give error
+	read name
+	read size
+		if size greater than CHAMP_MAX_SIZE -> error
+	read comment
+	allocate memory for the whole map
+	read file into map
+	set plyr_nbr(either from arg, or from next available);
+
+--set up
+	write map from binary code in champions
+	allocate initial 16 regs;
+	point the PCs to the respective beginning of code
+	set carry to 0;
+
+--run
+	while (1)
+		For every process(process_q):
+			if (process has running function)
+				counter_func--;
+				if (clock_func == 0)
+					exec_func;
+		if (cycle % cycle_to_die == 0)
+			remove_dead_processes(process_q);
+	
+	cycle++;
+
+
+
+--functions
+	Sum:
+	Sub:
+	Store:
+	Store Index;
+	Load:
+	Long Load:
+	Load Index:
+	Long Load Index:
+	And:
+	Or:
+	Xor:
+	Jump:
+	Fork
+	Long Fork:
+	Live:
+	Aff:
+
+process struct:
+	char *PC; // each player can have multiple processes (when fork), therefore many PCs and many regs. 
+	int	 regs[16];  
+	char carry;
+	int	 cycle_counter;
+	char state;
+	char live;
+
+struct champion :
+	char plyr_nbr;
+	char *name[128]
+	char *comment[2048]
+	int size;
+	struct process *prcs;
+
+struct VM:
+	char map[MEM_SIZE];
+	int		cycles;
+	int		cycle_to_die;
+	champion 	champs[MAX_PLAYERS];
+
+functions struct:
+	int	f();
+	i*nt total_cycles;
+	int cycles_till_execution;
+	int flip_carry;
+	int	require_carry;
+	int expected_arg; // the byte after the function code will be the type of expected args, if direct, read DIR_SIZE, if register(4), read 1, if ind read IND_SIZE(2)
+
+
+	
