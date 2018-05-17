@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 22:55:43 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/16 14:13:04 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/17 01:47:36 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,11 @@ t_process	*set_process(char *pc_start)
 	t_process	*p;
 	int			i;
 
+	if (!pc_start)
+		printf("initial pc is weird\n");
 	p = malloc(sizeof(t_process));
 	p->pc = pc_start;
+	ft_printf("%x\n", p->pc);
 	i = 0;
 	while (i < 16)
 	{
@@ -51,5 +54,7 @@ t_process	*set_process(char *pc_start)
 	p->cycle_counter = 0;
 	p->state = FETCH;
 	p->live = 0;
+	init_ops(p->ops);
+	p->curr_op = 0;
 	return (p);
 }

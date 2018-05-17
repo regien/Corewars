@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 22:22:19 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/16 14:12:10 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/16 20:46:03 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ int		read_files(int players, t_vm *vm)
 		if (set_champ_comment(&vm->champs[i]))
 			return (0);
 		set_vm_memory(vm, i, players);
-		dump_memory(*vm);
 		i++;
 	}
 	return (1);
@@ -77,11 +76,6 @@ void	set_vm_memory(t_vm *vm, int i, int players)
 	read(vm->champs[i].fd, &(vm->memory[mem_start]), vm->champs[i].size);
 	//ft_printf("memory: %x\n", vm->memory[mem_start + vm->champs[i].size - 1]);
 }
-
-
-
-
-
 
 
 

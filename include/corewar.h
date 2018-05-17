@@ -6,14 +6,17 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/16 14:12:47 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/17 01:39:49 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef COREWAR_H
+# define COREWAR_H
 #include "../libft/libft.h"
+#include <stdio.h>
 
 #define IND_SIZE				2
-#define REG_SIZE				4
+#define REG_SIZE				2
 #define DIR_SIZE				REG_SIZE
 
 # define REG_CODE				1
@@ -61,15 +64,33 @@ typedef char	t_arg_type;
 # define WAIT 2
 # define EXEC 3
 
-typedef struct s_process
+typedef struct	s_command_args
 {
-  //funtion pointer
-	char	*pc;
-	int		regs[16];
-	char	carry;
-	int		cycle_counter;
-	char	state;
-	char	live;
+	int		v[3];
+	char	type[3];
+	char	args_size;
+}				t_command_args;
+
+typedef struct	s_op
+{
+  	int		(*func_to_be)();
+	char	truncate;
+	char	args;
+	int		descriptor; //ops with only one option of arg has no descriptor
+	int		cycles;
+}				t_op;
+
+typedef struct	s_process
+{
+  	t_op			ops[16];
+	int				curr_op;
+	t_command_args	arg;
+	char			*pc;
+	int				regs[REG_NUMBER];
+	char			carry;
+	int				cycle_counter;
+	char			state;
+	char			live;
 }				t_process;
 
 typedef struct	s_champ
@@ -90,6 +111,7 @@ typedef struct	s_vm
 	int		cycle_to_die;
 	t_champ	champs[MAX_PLAYERS];
 }				t_vm;
+
 
 typedef struct		header_s
 {
@@ -120,6 +142,14 @@ void		clear_vm_mem(t_vm *vm);
 
 void		convert_big_endian(unsigned int *num);
 
+void		convert_big_endian_short(unsigned short *num);
+
+void		fetch(t_process *process);
+
+void		init_ops(t_op *ops);
+
+void		controller(t_vm *vm);
+
 void		dump_memory(t_vm vm);
 
 // 			Function protyping 
@@ -131,7 +161,7 @@ t_process		*sub(char first, char second, char third);
 
 
 t_process		*zjmp(char index);
-t_process		*fork(char index);
+t_process		*ft_fork(char index);
 t_process		*lfork(char index);
 t_process		*aff(char rejester);
 
@@ -147,4 +177,4 @@ t_process		*lldi(char first, char second, char third);
 
 t_process		*st(char first, char second);
 t_process		*sti(char first, char second, char third);
-
+#endif

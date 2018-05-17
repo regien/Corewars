@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 03:28:13 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/16 04:50:31 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/16 14:56:51 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 **	add (r2, r3, r5) add the content of r2 and r3 and puts the result into r5.
 */
 
-t_process		*add(char first, char second, char third)
+t_process		*add(char first, char second, char third, t_process *p)
 {
 	char		carry;
 	t_process	*process;
@@ -27,11 +27,12 @@ t_process		*add(char first, char second, char third)
 	process = NULL;
 
 	// If the third parameter is a register:
+		p->reg[third] = p->reg[first] + p->reg[second];
 		address_at_value_(third) = address_at_value_(first) & address_at_value(second);
 
 	// Conversions.
 	
-	// process->carry ? (1) ? 0 : 1;	
+	// process->carry ? (1) ? 0 : 1;
 	carry = (1) ? 0 : 1;
 	return (process);
 }
