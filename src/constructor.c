@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 22:55:43 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/17 01:47:36 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/17 18:07:59 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ void	clear_vm_mem(t_vm *vm)
 		vm->memory[i] = 0;
 		i++;
 	}
+	vm->cycles = 0;
+	vm->cycle_to_die = CYCLE_TO_DIE;
 }
 
 t_process	*set_process(char *pc_start)
@@ -56,5 +58,6 @@ t_process	*set_process(char *pc_start)
 	p->live = 0;
 	init_ops(p->ops);
 	p->curr_op = 0;
+	p->index = 0;
 	return (p);
 }

@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/17 01:39:49 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/17 18:07:44 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,19 +73,20 @@ typedef struct	s_command_args
 
 typedef struct	s_op
 {
-  	int		(*func_to_be)();
+  	int		(*func_to_be)(char *, ...);
 	char	truncate;
-	char	args;
-	int		descriptor; //ops with only one option of arg has no descriptor
+	char	args; //number of args
+	int		descriptor; //the byte that describes what the following are -- ops with only one option of arg has no descriptor
 	int		cycles;
 }				t_op;
 
 typedef struct	s_process
 {
-  	t_op			ops[16];
+  	t_op			ops[17];
 	int				curr_op;
 	t_command_args	arg;
 	char			*pc;
+	int				index;
 	int				regs[REG_NUMBER];
 	char			carry;
 	int				cycle_counter;
@@ -145,6 +146,8 @@ void		convert_big_endian(unsigned int *num);
 void		convert_big_endian_short(unsigned short *num);
 
 void		fetch(t_process *process);
+
+void		execute(t_process *process);
 
 void		init_ops(t_op *ops);
 

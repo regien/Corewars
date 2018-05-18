@@ -6,39 +6,46 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 15:00:20 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/17 01:54:06 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/17 18:18:11 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/corewar.h"
+#define PROCESS vm->champs[i].processes
 
 void	controller(t_vm *vm)
 {
 	int		i;
 
 		i = 0;
-		//while (i < vm->players)
-		//{
-			fetch(vm->champs[i].processes);
-			fetch(vm->champs[i].processes);
-			fetch(vm->champs[i].processes);
-			fetch(vm->champs[i].processes);
-			/*
-			for each process in each hero
-				if (process.state == WAIT)
-					process.counter--
-					if (process.counter == 0)
-						process.state = EXEC
-				if (process.state == fetch)
-					process.func = fetch_next(PC pointer);
-					process.cycle_counter = func_respective_cycles - 1
-					process.state == WAiT
-				if (process.state == EXEC)
-					execute(process.func(args))
-					move PC pointer*/
-			i++;
-		//}
-		vm->cycles++;
+		while (1)
+		{
+			i = 0;
+			while (i < vm->players)
+			{
+				if (PROCESS->curr_op == 0)
+				{
+					fetch(PROCESS);
+					printf("champs %d fetched op %d\n", i + 1, vm->champs[i].processes->curr_op);
+				}
+				if (PROCESS->cycle_counter == 0 &&
+						PROCESS->curr_op)
+				{
+					execute(PROCESS);
+					printf("champs %d executed op %d\n", i + 1, PROCESS->curr_op);
+				}
+				else if (PROCESS->cycle_counter > 0)
+				{
+					printf("champs %d has %d cycles before executing\n", i + 1, PROCESS->cycle_counter);
+					PROCESS->cycle_counter--;
+				}
+				i++;
+			}
+			vm->cycles++;
+			printf("vm cycles: %d\n", vm->cycles);
+			if (vm->cycles >= 2*1140)
+				break ;
+		}
 }
 
 char	get_type(char octet, char arg_num)
@@ -90,7 +97,7 @@ size_t	set_arg(char **pc, char type, int *value, char truncation)
 	return (0);
 }
 
-void	fetch(t_process *process)
+void	execute(t_process *process)
 {
 	//get which command;
 	//get arg types;
@@ -99,45 +106,37 @@ void	fetch(t_process *process)
 	int		i;
 	int		curr_op;
 
-	if (*(process->pc) < 17 && *(process->pc) > 0)
-	{
-		curr_op = *(process->pc);
-		process->ops[1].func_to_be("SENT IT BOLUDO!\n");
-	printf("ate aqui ok \n");
-		process->pc += 1;
-		type = *(process->pc);
-		i = -1;
-		while (++i < process->ops[curr_op].args)
-			if (process->ops[curr_op].descriptor)
-				process->arg.type[i] = get_type(type, i + 1);
-			else
-				process->arg.type[i] = DIR_CODE;
-		process->pc += process->ops[curr_op].descriptor ? 1 : 0;
-		process->arg.args_size = 0;
-		i = -1;
-		while (++i < process->ops[curr_op].args)
-			process->arg.args_size += set_arg(&(process->pc),
-			process->arg.type[i], &(process->arg.v[i]), process->ops[curr_op].truncate);
-		ft_printf("v: %hd\n", process->arg.v[0]);
-		ft_printf("v2: %hd\n", process->arg.v[1]);
-		ft_printf("v3: %hd\n", process->arg.v[2]);
-	}
-	else
-		process->pc += 1;
-	//ft_printf("size: %d\n", process->arg.args_size);
-	//proces->func_to_be = get_func(pc);
-
+	curr_op = process->curr_op;
+				printf("curr_op: %d\n", process->curr_op);
+	type = *(process->pc);
+	i = -1;
+	while (++i < process->ops[curr_op].args)
+		if (process->ops[curr_op].descriptor)
+			process->arg.type[i] = get_type(*(process->pc), i + 1);
+		else
+			process->arg.type[i] = DIR_CODE;
+	process->pc += process->ops[curr_op].descriptor ? 1 : 0;
+	process->arg.args_size = 0;
+	i = -1;
+	while (++i < process->ops[curr_op].args)
+		process->arg.args_size += set_arg(&(process->pc),
+		process->arg.type[i], &(process->arg.v[i]), process->ops[curr_op].truncate);
+	printf("curr_op %d\n", curr_op);
+	process->ops[curr_op].func_to_be("VAIII DANADA %d\n", curr_op);
+	process->curr_op = 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+void	fetch(t_process *process)
+{
+	if (*(process->pc) <= 16 && *(process->pc) > 0)
+	{
+		process->curr_op = *(process->pc);
+		process->cycle_counter = process->ops[process->curr_op].cycles;
+	}
+	else
+	{
+		process->curr_op = 0;
+		process->cycle_counter = 0;
+	}
+	process->pc += 1;
+}
