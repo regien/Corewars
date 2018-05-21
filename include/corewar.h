@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/21 05:31:05 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/21 05:43:22 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,28 +133,10 @@ typedef struct		header_s
   char				comment[COMMENT_LENGTH + 1];
 }					header_t;
 
-
-//int			read_files(int players, t_vm *vm);
-
-//int			check_magic_number(int fd);
-
-//int			set_champ_name(t_champ *champ);
-
-//int			set_champ_comment(t_champ *champ);
-
-//int			set_champ_size(t_champ *champ);
-
 void		set_vm_memory(t_vm *vm, int i, int players);
-
-//void		set_champs(t_champ *champ, char *filename);
 
 t_process	*set_process(char *pc_start);
 
-//void		clear_vm_mem(t_vm *vm);
-
-//void		convert_big_endian(unsigned int *num);
-
-void		convert_big_endian_short(unsigned short *num);
 
 void		fetch(t_process *process);
 
@@ -207,14 +189,12 @@ extern char		g_usage[];
 void			init_vm(t_vm *vm);
 int				set_dump_number(int ac, int *i, char **av, t_flags *flags);
 void			set_up_player(t_vm vm, int temp, char *str);
-//void			parser_args(int ac, char **av, t_vm vm);
 void			parser_args(int ac, char **av, t_vm *vm);
 
 /*
 ** SET_UP_PLAYERS.c
 */
 
-//void		check_duplicate_players(t_vm *vm);
 void			get_nbr_player(int ac, int *i, char **av, t_vm *vm);
 void			set_up_player_nbr(int nbr_player, t_vm *vm, t_champ *champs);
 void			set_up_player_fd(int ac, char **av, int *i, t_vm *vm);
@@ -240,9 +220,6 @@ int			check_for_chars(char *str);
 ** Now is executed when a player is being setting up
 */
 
-//void			read_files(t_champ *champs);
-
-//int			read_files(t_vm *vm);
 int			read_files(int players, t_vm *vm);
 int			set_champ_name(t_champ *champ);
 int			set_champ_size(t_champ *champ);
@@ -261,5 +238,6 @@ int			check_magic_number(int fd);
 */
 
 void		convert_big_endian(unsigned int *num);
+void		convert_big_endian_short(unsigned short *num);
 
 #endif

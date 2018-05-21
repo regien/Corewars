@@ -93,4 +93,42 @@ functions struct:
 	int expected_arg; // the byte after the function code will be the type of expected args, if direct, read DIR_SIZE, if register(4), read 1, if ind read IND_SIZE(2)
 
 
+
+// GERARDO'S NOTES
+// HOW THE PARSER WORKS
+
+	ARGS functionality:
+	Help flag
+		display then
+		- exit
+	Dump flags
+		- check
+		ifnot set to 0
+	check warriors -- flag 0
+	turn on when reading something not starting with a '-'
+		start
+		check flag "-n"
+		champions_file
+			check_name (.cor terminated)
+			enter_champs_struct
+				champ_struct - SET FD;
+		
+		FUNCTION - Set_up_player
+		AFTER PLAYERS ARE DONE
+		- check for duplicate players
+			same players with same player number
+				^ it doesnt change the position
 	
+	check if nbr_cycles is invalid (nbr_cycle != 0)
+	otherwise just put the DEFINE - CYCLE_TO_DIE
+
+	- Players are set up and allocated in the parser and we set up the
+	FD there
+
+	WHEN USING DUMP | you are just printing the memory after
+	the number of cycles designated
+	IT MIGHT NOT BE AVAILABLE WHEN USED WITH VISUAL
+
+
+	if nrb_players > 4
+		general_exit(); 

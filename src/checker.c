@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 01:05:08 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/16 16:12:53 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/21 05:42:17 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,9 @@ int		check_magic_number(int fd)
 	read(fd, &magic_nbr, sizeof(unsigned int));
 	convert_big_endian(&magic_nbr);
 	if (magic_nbr != COREWAR_EXEC_MAGIC)
-		return (ft_printf("file not valid... no magic number\n"));
+	{
+		ft_putstr_fd("file not valid... no magic number\n", 2);
+		return (1);
+	}
 	return (0);
 }
