@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 22:22:19 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/16 20:46:03 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/21 05:12:29 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int		read_files(int players, t_vm *vm)
 	int	i;
 
 	i = 0;
-	clear_vm_mem(vm);
+//	clear_vm_mem(vm); clear vm its now a 2 lines while loop in init_vm
 	while (i < players)
 	{
 		if (check_magic_number(vm->champs[i].fd))
@@ -28,7 +28,7 @@ int		read_files(int players, t_vm *vm)
 			return (0);
 		if (set_champ_comment(&vm->champs[i]))
 			return (0);
-		set_vm_memory(vm, i, players);
+		set_vm_memory(vm, i, vm->players);
 		i++;
 	}
 	return (1);
@@ -43,7 +43,10 @@ int		set_champ_name(t_champ *champ)
 	(champ->name)[PROG_NAME_LENGTH + 4] = '\0';
 	//ft_printf("name: %s\n", champ->name);
 	if (!champ->name[0])
-		return (ft_printf("name starts with null terminator\n"));
+	{
+		ft_putstr_fd("name starts with null terminator\n", 2);
+		return (1);
+	}
 	return (0);
 }
 
@@ -54,7 +57,10 @@ int		set_champ_size(t_champ *champ)
 	convert_big_endian(&(champ->size));
 	//ft_printf("size: %d\n", champ->size);
 	if (champ->size == 0 || champ->size > CHAMP_MAX_SIZE)
-		return (ft_printf("champ is too big..., or no champ\n"));
+	{
+		ft_putstr_fd("champ is too big..., or no champ\n", 2);
+		return (1);
+	}
 	return (0);
 }
 
@@ -63,7 +69,10 @@ int		set_champ_comment(t_champ *champ)
 	read(champ->fd, champ->comment, COMMENT_LENGTH + 4);
 	(champ->comment)[COMMENT_LENGTH + 4] = '\0';
 	if (!champ->comment[0])
-		return (ft_printf("comment starts with null terminator\n"));
+	{
+		ft_putstr_fd("comment starts with null terminator\n", 2);
+		return (1);
+	}
 	return (0);
 }
 
@@ -76,6 +85,3 @@ void	set_vm_memory(t_vm *vm, int i, int players)
 	read(vm->champs[i].fd, &(vm->memory[mem_start]), vm->champs[i].size);
 	//ft_printf("memory: %x\n", vm->memory[mem_start + vm->champs[i].size - 1]);
 }
-
-
-

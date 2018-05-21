@@ -6,7 +6,7 @@
 #    By: adubugra <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/03/07 18:20:10 by adubugra          #+#    #+#              #
-#    Updated: 2018/05/17 01:27:14 by adubugra         ###   ########.fr        #
+#    Updated: 2018/05/21 05:33:41 by gmalpart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,8 +20,12 @@ SRC		=	read_file.c \
 			print.c \
 			init_ops.c \
 			function_controller.c \
-			conversions.c 
+			conversions.c \
+			parseargs.c \
+			set_up_player.c \
+			error_handling.c
 
+# 3
 SRCALL	= $(SRC)
 SRCALL	+= corewar.c
 #SRCALL	+= assembler.c
