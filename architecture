@@ -92,8 +92,6 @@ functions struct:
 	int	require_carry;
 	int expected_arg; // the byte after the function code will be the type of expected args, if direct, read DIR_SIZE, if register(4), read 1, if ind read IND_SIZE(2)
 
-
-
 // GERARDO'S NOTES
 // HOW THE PARSER WORKS
 
