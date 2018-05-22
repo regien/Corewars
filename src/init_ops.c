@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 01:20:26 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/17 16:30:31 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/17 19:58:16 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	set_ops_descriptor(t_op *ops)
 	ops[0x6].descriptor = 1;
 	ops[0x7].descriptor = 1;
 	ops[0x8].descriptor = 1;
-	ops[0x9].descriptor = 1;
+	ops[0x9].descriptor = 0;
 	ops[0xa].descriptor = 1;
 	ops[0xb].descriptor = 1;
 	ops[0xc].descriptor = 0;

@@ -6,7 +6,7 @@
 #    By: adubugra <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/03/07 18:20:10 by adubugra          #+#    #+#              #
-#    Updated: 2018/05/17 01:27:14 by adubugra         ###   ########.fr        #
+#    Updated: 2018/05/18 11:17:22 by adubugra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ SRC		=	read_file.c \
 			checker.c \
 			print.c \
 			init_ops.c \
+			fetch_and_exec.c \
 			function_controller.c \
 			conversions.c 
 
