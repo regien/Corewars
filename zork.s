@@ -2,7 +2,7 @@
 .comment "I'M ALIIIIVE"
 
 	
-l2:		aff r5
+l2:		aff r5 #whatvs
 		live %2
 		and r1, %2, r3	
 		lldi %4, %5, r4

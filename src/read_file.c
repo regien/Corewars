@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 22:22:19 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/21 05:12:29 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/22 16:34:07 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ void	set_vm_memory(t_vm *vm, int i, int players)
 	int mem_start;
 
 	mem_start = MEM_SIZE / players * i;
-	vm->champs[i].processes = set_process(&(vm->memory[mem_start]));
+	vm->champs[i].processes = set_process(&(vm->memory[0]), mem_start);
 	read(vm->champs[i].fd, &(vm->memory[mem_start]), vm->champs[i].size);
 	//ft_printf("memory: %x\n", vm->memory[mem_start + vm->champs[i].size - 1]);
 }

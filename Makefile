@@ -3,12 +3,13 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: adubugra <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: gmalpart <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2018/03/07 18:20:10 by adubugra          #+#    #+#              #
-#    Updated: 2018/05/21 05:33:41 by gmalpart         ###   ########.fr        #
+#    Created: 2018/05/22 16:31:53 by gmalpart          #+#    #+#              #
+#    Updated: 2018/05/22 16:31:55 by gmalpart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 
 CWR	= corewar
 ASM	= asm
@@ -19,6 +20,7 @@ SRC		=	read_file.c \
 			checker.c \
 			print.c \
 			init_ops.c \
+			fetch_and_exec.c \
 			function_controller.c \
 			conversions.c \
 			parseargs.c \

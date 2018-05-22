@@ -6,7 +6,11 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2018/05/21 05:43:22 by gmalpart         ###   ########.fr       */
+=======
+/*   Updated: 2018/05/22 14:51:14 by adubugra         ###   ########.fr       */
+>>>>>>> alex
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +20,7 @@
 #include <stdio.h>
 
 #define IND_SIZE				2
-#define REG_SIZE				2
+#define REG_SIZE				4
 #define DIR_SIZE				REG_SIZE
 
 # define REG_CODE				1
@@ -84,24 +88,27 @@ typedef struct	s_command_args
 
 typedef struct	s_op
 {
-  	int		(*func_to_be)();
+  	int		(*func_to_be)(char *, ...);
 	char	truncate;
-	char	args;
-	int		descriptor; //ops with only one option of arg has no descriptor
+	char	args; //number of args
+	int		descriptor; //the byte that describes what the following are -- ops with only one option of arg has no descriptor
 	int		cycles;
 }				t_op;
 
 typedef struct	s_process
 {
-  	t_op			ops[16];
-	int				curr_op;
-	t_command_args	arg;
-	char			*pc;
-	int				regs[REG_NUMBER];
-	char			carry;
-	int				cycle_counter;
-	char			state;
-	char			live;
+  	t_op				ops[REG_NUMBER + 1];
+	int					curr_op;
+	t_command_args		arg;
+	char				*pc;
+	int					index;
+	int					regs[REG_NUMBER];
+	char				carry;
+	int					cycle_counter;
+	char				state;
+	char				live;
+	struct s_process	*next;
+	struct s_process	*prev;
 }				t_process;
 
 typedef struct	s_champ
@@ -133,12 +140,31 @@ typedef struct		header_s
   char				comment[COMMENT_LENGTH + 1];
 }					header_t;
 
+int			read_files(int players, t_vm *vm);
+
+int			check_magic_number(int fd);
+
+void		set_index(int *index, int diff);
+
+int			set_champ_name(t_champ *champ);
+
+int			set_champ_comment(t_champ *champ);
+
+int			set_champ_size(t_champ *champ);
+
 void		set_vm_memory(t_vm *vm, int i, int players);
 
-t_process	*set_process(char *pc_start);
+void		set_champs(t_champ *champ, char *filename);
 
+t_process	*set_process(char *pc_start, int mem_start);
+
+t_process	*add_process(t_champ *champ, int index);
+
+void		kill_process(t_process *p);
 
 void		fetch(t_process *process);
+
+void		execute(t_process *process);
 
 void		init_ops(t_op *ops);
 
