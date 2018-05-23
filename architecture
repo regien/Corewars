@@ -130,3 +130,22 @@ functions struct:
 
 	if nrb_players > 4
 		general_exit(); 
+
+vm - visualizer idea:
+
+	after everything is set up
+	init_visualizer(&vm)
+--run
+	while (1)
+		For every process(process_q):
+			if (process has running function)
+				counter_func--;
+				if (clock_func == 0)
+					exec_func;
+		if (cycle % cycle_to_die == 0)
+			remove_dead_processes(process_q);
+		// for every action update the visualizer
+		++cycle
+		update_visualizer(&vm);
+	
+	cycle++;
