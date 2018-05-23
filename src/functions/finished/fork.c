@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 05:59:20 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/16 05:59:57 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/22 14:57:05 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,15 @@
 
 //	What is a different state from parent that it inherents?
 
-t_process	*fork(char index)
+void		ft_fork_cylces(t_process *process)
 {
-	t_process	*parent;
-	t_process	*child;
+	process->cylcle_counter = 800;
+}
 
-	child = parent;
-	// If parameter is an index:
-	//	{
-			execute_at_(address_of(PC) + index % IND_MOD);
-	//	}
+t_process	*ft_fork(t_champ *champ, t_process *process, int index)
+{
+	t_process *new;
+
+	new = add_process(champ, index);
 	return (child);
 }
