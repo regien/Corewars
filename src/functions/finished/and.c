@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 04:31:44 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/16 04:51:16 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/22 01:03:12 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,26 @@
 **	and(r2, %0, r3) puts r2 & 0 into r3.
 */
 
-t_process		*and(char first, char second, char third)
+/*
+** Don't really need this piece of validation.
+*/
+/*
+int			validate_args(t_command_args args)
 {
-	char		carry;
-	t_process	*process;
+	if (type[0] == 'r' && type[1] == 'r' && type[2] == 'r')
+	{
+		return (0);
+	}
+	return (1);
+}
+*/
 
-	process = NULL;
-	
-	// If the third parameter is a register:
-		r3 = (value_at_address(first) & second);
-	// Conversions.
-	
-	// t_process->carry = (1) ? 0 : 1;
-	carry = (1) ? 0 : 1;
-	return (process);
+void		*ft_and(t_process *process)
+{
+	if (reg(process, 2) == REG_CODE)
+	{
+		v[2] = v[0] & v[1];
+		process->carry = (1) ? 0 : 1;
+		process->pc += process->arg->args_size;
+	}
 }

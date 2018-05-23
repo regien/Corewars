@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 06:11:20 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/16 06:11:27 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/20 18:12:06 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
 **	REG_SIZE bytes are read from the address PC + S % IDX_MOD and copied into r1.
 */
 
-t_process		*lldi(char first, char second, char third)
+t_process		*ft_lldi(char first, char second, char third)
 {
 	char		S;
 	char		carry;

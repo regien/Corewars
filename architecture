@@ -70,6 +70,7 @@ process struct:
 	int	 cycle_counter;
 	char state;
 	char live;
+	char playr_nbr; // each process also needs to keep track of their original player number.
 
 struct champion :
 	char plyr_nbr;
@@ -79,6 +80,7 @@ struct champion :
 	struct process *prcs;
 
 struct VM:
+	int	 player_number; // used for visual representation for colors and which code belongs to who
 	char map[MEM_SIZE];
 	int		cycles;
 	int		cycle_to_die;
