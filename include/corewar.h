@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/23 12:38:37 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/23 12:42:11 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,7 @@ typedef struct	s_process
 	int					curr_op;
 	t_command_args		arg;
 	char				*pc;
-	int					index; both need to be added
+	int					index;
 	int					regs[REG_NUMBER];
 	char				carry;
 	int					cycle_counter;
