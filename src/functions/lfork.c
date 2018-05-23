@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 06:17:20 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/16 06:17:31 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/22 15:15:01 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,25 @@
 **	This program is executed at the address PC + first parameter % IDX_MOD.
 */
 
-t_process		*lfork(char index)
+//	Truncation exists
+
+void	ft_lfork_cycle(t_process *process)
+{
+	process->cycle_counter = 1000;
+}
+
+void	ft_lfork(t_champ *champ, t_process *process, int index)
+{
+	if (dir(process))
+	{
+		index = index % MEM_SIZE;
+			
+	}
+	
+}
+
+/*
+t_process		*ft_lfork(char index)
 {
 	t_process	*parent;
 	t_process	*child;
@@ -36,3 +54,5 @@ t_process		*lfork(char index)
 	//	}
 	return (child);
 }
+
+*/

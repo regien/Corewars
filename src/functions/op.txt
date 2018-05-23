@@ -1,79 +1,126 @@
-0x01 live			Only arg is 4 bytes. Allows PROCESS to stay alive.
+1) All functions when first read are cached into a priority queue.
+1a) An instruction's function call  as well as parameters are saved until execution time.
+	*function already fetched is not affected by being overwritten.
+2) Function executes at execution with original parameters.
+3) If function exectures, modifies carry.
+4) Moves the PC pointer. 
+	4a) If the operation has a coding byte, move PC according to the coding byte.
+	4b) Else if the operation doesn't, move according to the operation code.
+
+Parameters:
+Register, Direct, Indirect.
+
+Storing output:
+Register, Direct, Indirect.
+
+Storing from and to register is simple enough.
+	
+Direct:
+	Retreiving:
+		1) Decimal digit/string. The value is a simple atoi conversion.
+			
+		2) Label: 
+		Find the address of where the label was. How do we keep track of
+		this?
+		Error Handling:
+		What happens if the original place of the label address is overwritten?
+		Is the address of the label still the same regardless?
+
+	Storing:
+		Is there even storing to directs?
+	
+Indirect:
+	Retrieving:
+		1) The address of the first byte to be stored.
+			- The virtual memory is stored in big endian. As well as in 4
+			individual chars. To convert from 4 chars to int in small endian,
+			bit shifting must be done.
+
+		int i = ((int)char1 << 24) + ((int)char2 << 16) + 
+				((int)char3) << 8) + ((int)char4 << 0);
+
+	Storing: 
+		1) Take the value of an int and break it back into 4 chars. 
+
+	PC + 3 = 
+
+
+0x01 live	10c		Only arg is 4 bytes. Allows PROCESS to stay alive.
 	live(char); No coding byte.	
 
-0x02 ld				Loads (arg1) [any] into (arg2) [register]. Modify carry.
+0x02 ld		5c		Loads (arg1) [any] into (arg2) [register]. Modify carry.
 	load(*, reg);
 	reg = * % IND;
 	CARRY;
 
-0x03 st				Take (arg1) [reg] and store into [reg | indi]
+0x03 st		5c		Take (arg1) [reg] and store into [reg | indi]
 	store(reg, reg/ind);
 	ADDRESS = PC + (arg2 % IND);
 	ADDRESS_VALUE = arg1;
 
-0x04 add			Take three [regs]. r3 = r1 + r2. Modify Carry.
+0x04 add	10c		Take three [regs]. r3 = r1 + r2. Modify Carry.
 	add(r1, r2, r3); 
 	r3 = r1 + r2;
 	CARRY;
 
-0x05 sub			tale three [regs]. r3 = r1 - r2. Modify Carry.
+0x05 sub	10c		tale three [regs]. r3 = r1 - r2. Modify Carry.
 	sub(r1, r2, r3);
 	r3 = r1 - r2;
 	CARRY;
 
-0x06 and			Apply & to (arg1 & arg2) and store result in (arg3) [reg].
+0x06 and	6c		Apply & to (arg1 & arg2) and store result in (arg3) [reg].
 	and(*, *, reg);
 	reg = * & *;
 	CARRY;
 
-0x07 or				or
+0x07 or		6c		or
 	or(*, *, reg); 
 	reg = * | *;
 	CARRY;
 
-0x08 xor			Exclusive OR operation. Modifies carry.
+0x08 xor	6c		Exclusive OR operation. Modifies carry.
 	xor(*, *, reg);
 	reg = * &| *;
 	CARRY;
 
-0x09 zjmp			Takes an index and jumps to this address if the carry is 1.
+0x09 zjmp	20c		Takes an index and jumps to this address if the carry is 1.
 	zjmp(index);
 	if (carry == 1) {
 		PC = addres(index);
 	}
 
-0x0a ldi			ld without index modifer.
+0x0a ldi	25		ld without index modifer.
 	ldi(ind, ind, reg);
 	address = (ind1 + ind2) ?% IND?;
 	reg = ?reg_size?
 
-0x0b sti			Stores value of a [reg] (arg1) into address of sum of (arg2, arg3) [ind | reg].
+0x0b sti	25		Stores value of a [reg] (arg1) into address of sum of (arg2, arg3) [ind | reg].
 	sti(reg, ind/reg, ind/reg);
 	ADDRESS = arg2 + arg3;
 	ADDRESS_VALUE = arg1;
 
-0x0c fork			No arg coding byte. Take an index. Create a process.
+0x0c fork	800		No arg coding byte. Take an index. Create a process.
 	fork(index);
 	new_process = PC;
 	new_PC = PC + index % IND;
 
-0x0d lld			ld without % IND_MOD. Modify carry.
+0x0d lld	10		ld without % IND_MOD. Modify carry.
 	load(*, reg);
 	reg = *;
 	CARRY;
 
-0x0e lldi			Same as ldi. Does not apply modulo. Modify carry.
+0x0e lldi	50		Same as ldi. Does not apply modulo. Modify carry.
 	lldi(ind, ind, reg);
 	address = ind1 + ind2;
 	reg = ?reg_size?
 
 
-0x0f lfork			Same as fork but without modulo.
+0x0f lfork	1000	Same as fork but without modulo.
 	lfork(index);
 	new_process = PC;
 	new_process = PC + index;
 
-0x10 aff			
+0x10 aff	2
 	CODING_BYTE EXISTS;
 	aff(reg);
 	putchar(reg % 256);

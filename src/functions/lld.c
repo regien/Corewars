@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 06:03:09 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/16 06:03:24 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/20 18:11:58 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 
 //	t_process		*process(char first, char second);
 
-t_process		*ldd(char first, char second)
+t_process		*ft_ldd(char first, char second)
 {
 	char		carry;
 	t_process	*process;

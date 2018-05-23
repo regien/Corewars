@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 03:18:56 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/16 04:49:52 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/22 01:27:35 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,23 @@
 **	st (r3, r8) copies the content of r3 into r8.
 */
 
-t_process		*st(char first, char second)
+
+void	ft_st_cycles(t_process *process)
+{
+	process->cycles = 5;
+}
+
+void	ft_st(t_vm *virtual_machine, t_process *process)
+{
+	if (reg(process) && reg_ind(process))
+	{
+		virtual_machine[process->*pc + (process->v[1] % IND_MOD)] = process->v[0];
+	}
+
+}
+
+/*
+t_process		*ft_st(char first, char second)
 {
 	t_process	*process;
 
@@ -35,5 +51,5 @@ second = store(value_of_address_at(first), (PC + value_at_address(second) % IND_
 	//	}
 	return (process);
 }
-
+*/
 

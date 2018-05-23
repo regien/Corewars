@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   live.c                                             :+:      :+:    :+:   */
+/*   convert_direct.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/16 03:06:43 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/16 03:08:35 by eliu             ###   ########.fr       */
+/*   Created: 2018/05/20 15:53:46 by eliu              #+#    #+#             */
+/*   Updated: 2018/05/20 19:04:49 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/corewar.h"
 
-/*
-void	live(char player_number)
+int		convert_direct(char *dir)
 {
-	player_number = 1;
-}
-*/
-
-void	live(t_process *process)
-{
-	process->live = 1;
+		
 }

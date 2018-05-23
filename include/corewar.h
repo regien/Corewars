@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/17 01:39:49 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/22 14:48:14 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define COREWAR_H
 #include "../libft/libft.h"
 #include <stdio.h>
+
+// eliu: REG_SIZE in the op.h from intra says REG_SIZE is 4
 
 #define IND_SIZE				2
 #define REG_SIZE				2
@@ -82,6 +84,7 @@ typedef struct	s_op
 
 typedef struct	s_process
 {
+	int				player_number;
   	t_op			ops[16];
 	int				curr_op;
 	t_command_args	arg;
@@ -91,6 +94,8 @@ typedef struct	s_process
 	int				cycle_counter;
 	char			state;
 	char			live;
+	int				store_vm;
+	t_process		*next;
 }				t_process;
 
 typedef struct	s_champ
@@ -103,12 +108,15 @@ typedef struct	s_champ
 	t_process		*processes;
 }				t_champ;
 
+// eliu: added int: cycle_delta
+
 typedef struct	s_vm
 {
 	char	memory[MEM_SIZE];
 	int		players;
 	int		cycles;
 	int		cycle_to_die;
+//	int		cycle_delta;
 	t_champ	champs[MAX_PLAYERS];
 }				t_vm;
 
@@ -152,29 +160,41 @@ void		controller(t_vm *vm);
 
 void		dump_memory(t_vm vm);
 
+//			Function parameter types
+char			reg(t_process *process, int x);
+char			dir(t_process *process, int x);
+char			ind(t_process *process, int x);
+
+
+char			all(t_process *process, int x);
+char			reg_dir(t_process *process, int x);
+char			dir_ind(t_process *process, int x);
+char			reg_ind(t_process *process, int x);
+
+
 // 			Function protyping 
 
-void			live(t_process *process);
+void			ft_live(t_process *process);
 
-t_process		*add(char first, char second, char third);
-t_process		*sub(char first, char second, char third);
-
-
-t_process		*zjmp(char index);
-t_process		*ft_fork(char index);
-t_process		*lfork(char index);
-t_process		*aff(char rejester);
+void			*ft_add(char first, char second, char third);
+void			*ft_sub(char first, char second, char third);
 
 
-t_process		*or(char first, char second, char third);
-t_process		*and(char first, char second, char third);
-t_process		*xor(char first, char second, char third);
+void			*ft_zjmp(char index);
+void			*ft_fork(char index);
+void			*ft_lfork(char index);
+void			*ft_aff(char rejester);
 
 
-t_process		*ld(char first, char second);
-t_process		*ldd(char first, char second);
-t_process		*lldi(char first, char second, char third);
+void			*ft_or(char first, char second, char third);
+void			*ft_and(char first, char second, char third);
+void			*ft_xor(char first, char second, char third);
 
-t_process		*st(char first, char second);
-t_process		*sti(char first, char second, char third);
+
+void			*ft_ld(char first, char second);
+void			*ft_ldd(char first, char second);
+void			*ft_lldi(char first, char second, char third);
+
+void			*ft_st(char first, char second);
+void			*ft_sti(char first, char second, char third);
 #endif
