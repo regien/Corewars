@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 06:23:58 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/23 20:50:35 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/23 23:20:25 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@
 **	aff(r3) displyas ’*’ if r3 contains 42.
 */
 
-void	ft_aff(t_process *process)
+void	ft_aff(t_vm *vm, t_process *process)
 {	
-	if (reg(process, 0))
+	if (reg(process, 0) && vm.flas_args.aff == 1)
 	{
 		ft_putchar(process.index % 256);
 	}

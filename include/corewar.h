@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/23 21:54:59 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/23 23:19:58 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,11 +79,12 @@ typedef struct			s_flags
 	char				visual;
 	char				dump; // boolean to check for dump
 	unsigned int		nbrdump; // cycle to dump mem
+	char				aff;
 }						t_flags;
 
 typedef struct			s_command_args
 {
-	int					v[3];
+	int					v[3]
 	char				type[3];
 	char				args_size;
 }						t_command_args;

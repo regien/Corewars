@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 05:16:48 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/23 21:10:34 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/23 23:49:05 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,35 +20,46 @@
 **	the address PC + (4 + 5) % IDX_MOD.
 */
 
-void		ft_sti_cycles(t_process *process)
+static void	store_big_endian(t_vm *vm, int value, int index)
 {
-	process->cycle_counter = 25;
+	char	a;
+	char	b;
+	char	c;
+	char	d;
+
+	a = value & 0xff000000;
+	b = value & 0x00ff0000;
+	c = value & 0x0000ff00;
+	d = value & 0x000000ff;
+	vm.memory[index] = a;
+	vm.memory[index + 1] = b;
+	vm.memory[index + 2] = c;
+	vm.memory[index + 3] = d;
 }
 
-// Truncation exists! indecies are halved! 
-// Byte code exists! pc += 1 extra
-
-void		ft_sti(t_process *process)
+void		ft_sti(t_vm *vm, t_process *process)
 {
-	if (reg(process, 0) && all(process, 1) && reg_dir(process, 2))
+	int		index1;
+	int		index2;
+
+	if (reg(process, 0) && reg_ind(process, 1))
 	{
-		// Store 4 bytes in virtual memory. The current method is only accessing 1 byte.
-		vm->memory[process->arg.v[1] + process->arg.v[2]] = process->arg.v[0];
+		if (reg(process, 1))
+		{
+			index1 = process.regs[process->arg.v[1] - 1];
+		}
+		else if (ind(process, 1))
+		{
+			index1 = process->arg.v[1];
+		}
+		if (reg(process, 2))
+		{
+			index2 = process.regs[process->arg.v[2] - 1];
+		}
+		else if (ind(process, 2))
+		{
+			index2 = process->arg.v[2];
+		}
+		store_big_endian(vm, process.regs[process->arg.v[0]], index1 + index2);
 	}
 }
-
-/*
-t_process		*ft_sti(char first, char second, char third)
-{
-	t_process	*process;
-
-	process = NULL;
-	//	If first parameter is a regster && (second and third) are index or reg:
-	//	{
-	value_at_address(PC + (value_at_address(second) + value_at_address(third)) % INX_MOD) =
-	value_at_address(first);
-
-	//	}
-	return (process);
-}
-*/

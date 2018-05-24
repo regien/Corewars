@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 03:18:56 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/23 21:05:53 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/23 23:37:03 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,35 @@
 **	st (r3, r8) copies the content of r3 into r8.
 */
 
-void	ft_st(t_process *process)
+static void	store_big_endian(t_vm *vm, int value, int index)
 {
-	if (reg(process, 0) && reg_ind(process, 1))
+	char	a;
+	char	b;
+	char	c;
+	char	d;
+
+	a = value & 0xff000000;
+	b = value & 0x00ff0000;
+	c = value & 0x0000ff00;
+	d = value & 0x000000ff;
+	vm.memory[index] = a;
+	vm.memory[index + 1] = b;
+	vm.memory[index + 2] = c;
+	vm.memory[index + 3] = d;
+}
+
+void		ft_st(t_vm *vm, t_process *process)
+{
+	if (reg(process, 0))
 	{
-		process->args.v[1] = process->args.v[0] == 0;
+		if (reg(process, 1))
+		{
+			process.reg[process->arg.v[1] - 1] = 
+				process.reg[process->arg.v[0] - 1];
+		}
+		else if (ind(process, 1))
+		{
+			store_big_endian(vm, process->arg.v[0], process->arg.v[1] % IND_MOD);
+		}
 	}
 }
