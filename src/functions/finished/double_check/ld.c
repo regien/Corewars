@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 03:08:54 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/23 20:45:53 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/24 00:13:42 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,25 @@
 **	PC + 34 % IND_MOD into r3. 5 cycles.
 */
 
-void	ft_ld(t_process *process)
+
+void	read_4_bytes_from_vm(t_vm *vm, t_process *process)
+{
+	
+}
+
+void	ft_ld(t_vm *vm, t_process *process)
 {
 	if (dir_ind(process, 0) && reg(process, 1))
 	{
-		if ((process->reg[process->v[1]] = process->arg.v[0]) == 0)
+		if (dir(process, 1))
+		{
+			process.regs[process->arg.v[1] - 1] = process->arg.v[0];
+		}
+		else if (ind(process, 1))
+		{
+			process.regs[process->arg.v[1] - 1] = 
+		}
+		if (process->reg[process->v[1] - 1] == 0)
 		{
 			process->carry = 1;
 		}

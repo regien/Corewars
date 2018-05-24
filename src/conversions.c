@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 00:50:02 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/21 09:48:12 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/24 00:13:25 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	convert_big_endian(unsigned int *num)
 {
 	*num =	(((*num)>>24)&0xff) | // move byte 3 to byte 0
 			(((*num)<<8)&0xff0000) | // move byte 1 to byte 2
-		(((*num)>>8)&0xff00) | // move byte 2 to byte 1
+			(((*num)>>8)&0xff00) | // move byte 2 to byte 1
 			(((*num)<<24)&0xff000000); // byte 0 to byte 3
 }
 

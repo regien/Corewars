@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 05:03:52 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/23 22:19:04 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/24 00:08:58 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,21 @@
 **	adds 4 to this value.
 **	The sum is named S. 
 **	REG_SIZE bytes are read from the address PC + S % IDX_MOD and copied into r1.
+**
+**	Gerardo's notes:
+**	let's put it on revision becuase of the shift handeling
 */
 
 void	ft_ldi(t_vm *vm, t_process* process)
 {
-	short	temp;
+	int		temp;
 	int		index;
 
 	if (ind(process, 0) && ind(process, 1) && reg(process, 2))
 	{
 		index = (process->arg.v[0] + process->arg.v[1]) % IND_MOD;
 		temp = vm.memory[index];
-		temp = temp << 8;
+		temp = temp << 8; // shift handeling - reading info
 		temp = temp + vm.memory[index + 1];
 		if ((process.regs[process->arg.v[2]] = temp) == 0)
 		{
