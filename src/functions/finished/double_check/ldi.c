@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 05:03:52 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/22 14:26:34 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/23 22:19:04 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,49 +21,24 @@
 **	REG_SIZE bytes are read from the address PC + S % IDX_MOD and copied into r1.
 */
 
-void	ft_ldi_cylces(t_process *process)
+void	ft_ldi(t_vm *vm, t_process* process)
 {
-	process->cycle_counter = 25;
-}
+	short	temp;
+	int		index;
 
-// Encoding byte exists!
-// Truncating byte exists!
-
-void	ft_ldi(t_process *process)
-{
-	char	temp;
-
-	if (ind(process) && ind(process) && reg(process))
+	if (ind(process, 0) && ind(process, 1) && reg(process, 2))
 	{
-		temp = process->arg.v[0] + process->arg.v[1];
-		process->arg.v[2] = vm[process->pc + temp];
-		// Reads IND_SIZE bytes at addres (PC + v[0] % INX_MOD);
-		// Takes above value and adds v[1];
-		// Reads REG_SIZE bytes at addres (PC + S % IND_MOD);
-		// v[3] == Above value.
+		index = (process->arg.v[0] + process->arg.v[1]) % IND_MOD;
+		temp = vm.memory[index];
+		temp = temp << 8;
+		temp = temp + vm.memory[index + 1];
+		if ((process.regs[process->arg.v[2]] = temp) == 0)
+		{
+			process.carry = 1;
+		}
+		else
+		{
+			process.carry = 0;
+		}
 	}
 }
-
-/*
-t_process		*ft_ldi(char first, char second, char third)
-{
-	char		carry;
-	t_process	*process;
-
-	process = NULL;
-	// If first and second paramters are index && third parameter is a register:
-	// {
-			read_value = 0;
-	// S = read_index_size(address_of(PC) + address_of_value(first % IND_MOD));
-	read_value = read_index_size(address_of(PC) + address_of_value(first % IND_MOD));
-		
-
-	value_at_address_(third) = read_copy(address_of(PC) + S % IND_MOD);
-
-	// }
-	
-	//	process->carry = 1 ? 0 : 1;
-	carry = 1 ? 0 : 1;
-	return (process);
-}
-*/

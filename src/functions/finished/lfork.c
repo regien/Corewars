@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 06:17:20 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/22 15:15:01 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/23 20:42:50 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,34 +25,14 @@
 
 //	Truncation exists
 
-void	ft_lfork_cycle(t_process *process)
+t_process	*ft_lfork(t_champ *champ, t_process *process, int index)
 {
-	process->cycle_counter = 1000;
-}
+	t_process *new;
 
-void	ft_lfork(t_champ *champ, t_process *process, int index)
-{
-	if (dir(process))
+	if (dir(process, 0))
 	{
-		index = index % MEM_SIZE;
-			
+		new = add_process(champ, index);
+		return (new);
 	}
-	
+	return (NULL);
 }
-
-/*
-t_process		*ft_lfork(char index)
-{
-	t_process	*parent;
-	t_process	*child;
-
-	child = parent;
-	//	If parameter is an index:
-	//	{
-			execute_at(address_at(PC) + index);
-			
-	//	}
-	return (child);
-}
-
-*/

@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 22:55:43 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/18 11:42:49 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/23 21:56:02 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,7 @@ t_process	*add_process(t_champ *champ, int index)
 		return (0);
 	root = champ->processes;
 	new = set_process(root->pc, index);
+	new->champ = champ;
 	new->next = root;
 	root->prev = new;
 	champ->processes = new;

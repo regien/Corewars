@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   live.c                                             :+:      :+:    :+:   */
+/*   add.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/16 03:06:43 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/21 23:37:51 by eliu             ###   ########.fr       */
+/*   Created: 2018/05/16 03:28:13 by eliu              #+#    #+#             */
+/*   Updated: 2018/05/23 20:45:24 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/corewar.h"
 
-void	ft_fetch_live(t_process *process)
-{
-	process->cycle_counter = 10;
-}
-
 /*
-int		ft_can_call_live(t_vm *virtual_machine, t_process *process)
-{
-	// double check parameters.	
-}
+**	This operation modifies the carry.
+**	add (r2, r3, r5) add the content of r2 and r3 and puts the result into r5.
 */
 
-void	ft_live(t_vm *virtual_machine, t_process *process)
+void	ft_add(t_process *process)
 {
-	process->live = 1;
-	carry = 1;
-	// Length of instruction.
-	process->pc += 4;
+	if (reg(process, 0) && reg(process, 1) && reg(process, 2))
+	{
+		if ((process->reg[process->arg.[2]] = 
+			process->arg.v[0] + process->arg.v[1]) == 0)
+		{
+			process->carry = 1;
+		}
+		else
+		{
+			process->carry = 0;
+		}
+	}
 }

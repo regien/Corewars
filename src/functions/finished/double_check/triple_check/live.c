@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   type_combinations.c                                :+:      :+:    :+:   */
+/*   live.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/22 00:11:42 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/23 20:43:40 by eliu             ###   ########.fr       */
+/*   Created: 2018/05/16 03:06:43 by eliu              #+#    #+#             */
+/*   Updated: 2018/05/23 20:47:53 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/corewar.h"
 
-char	any(t_process *process, int x)
-{
-	return (reg(process, x) || dir(process, x) || ind(process, x));
-}
+/*
+**	I need to add a function that lets the function controller know that
+**	a champion is alive due to the processes.
+*/
 
-char	dir_ind(t_process *process, int x)
+void	ft_live(t_process *process)
 {
-	return (dir(process, x) || ind(process, x));
-}
-
-char	reg_dir(t_process *process, int x)
-{
-	return (reg(process, x) || dir(process, x));
-}
-
-char	reg_ind(t_process *process, int x)
-{
-	return (dir(process, x) || ind(process, x));
+	if (dir(process, 0))
+	{
+		process->live = process->arg->v[0];
+		// process->index += args_size;
+		// process->index += 5;
+	}
 }

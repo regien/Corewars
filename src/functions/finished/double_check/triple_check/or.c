@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 03:33:37 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/22 01:03:30 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/23 21:05:37 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,16 @@
 
 void		ft_or(t_process *process)
 {
-	if (reg(process, 2) == REG_CODE)
+	if (any(process, 0) && any(process, 1) && reg(process, 2))
 	{
-		process->v[2] = process->v[1] | process->v[2];
-		carry = (1) ? 0 : 1;
-		process->pc += process->arg->args_size;
+		if ((process->regs[process->arg.v[2]] = 
+				process->args.v[0] | process->args.v[1]) == 0)
+		{
+			process.carry = 1;
+		}
+		else
+		{
+			process.carry = 0;
+		}
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 06:03:09 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/20 18:11:58 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/23 20:48:27 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,23 +22,17 @@
 **	ld(34, r3) loads the REG_SIZE bytes starting at the address PC + 34 into r3.
 */
 
-//	t_process		*process(char first, char second);
-
-t_process		*ft_ldd(char first, char second)
+void		ft_lld(t_process *process)
 {
-	char		carry;
-	t_process	*process;
-
-	process = NULL;
-
-	//	If second parameter is a register:
-	//	{
-			
-			value_at_address(second) = size_of_reg_bytes(PC) + value_at_address(first);
-
-	//	}
-
-	//	t_process->carry = 1 ? 0 : 1;
-	carry = 1 ? 0 : 1;
-	return (process);
+	if (any(process, 0) && reg(process, 1))
+	{
+		if ((process.reg[process->arg.v[1]] = process->arg.v[0]) == 0)
+		{
+			process.carry = 1;
+		}
+		else
+		{
+			process.carry = 0;
+		}
+	}
 }

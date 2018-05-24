@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 04:31:44 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/22 01:03:12 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/23 20:54:01 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,16 @@ int			validate_args(t_command_args args)
 
 void		*ft_and(t_process *process)
 {
-	if (reg(process, 2) == REG_CODE)
+	if (any(process, 0) && any(process, 1) && reg(process, 2))
 	{
-		v[2] = v[0] & v[1];
-		process->carry = (1) ? 0 : 1;
-		process->pc += process->arg->args_size;
+		if ((process.regs[process->arg.v[2]] = 
+				process->arg.v[1] & process->arg.v[0]) == 0)
+		{
+			process.carry = 1;
+		}
+		else
+		{
+			process.carry = 0;
+		}
 	}
 }

@@ -26,20 +26,24 @@
 **	REG_SIZE bytes are read from the address PC + S % IDX_MOD and copied into r1.
 */
 
-t_process		*ft_lldi(char first, char second, char third)
+void	ft_lldi(t_vm *vm, t_process* process)
 {
-	char		S;
-	char		carry;
-	t_process	*process;
+	short	temp;
+	int		index;
 
-	process = NULL;
-	//	If first and second parameter are index, and third is a register:
-	//	{
-			S = ind_size_bytes_of((address_of(PC)) + 3 % IND_MOD) + 4;
-			value_of_address(first) = reg_size_bytes_read(address_of(PC)) + S % IND_MOD;
-	//	}
-
-	// process->carry = 1 ? 0 : 1;
-	carry = 1 ? 0 : 1;
-	return (process);
+	if (ind(process, 0) && ind(process, 1) && reg(process, 2))
+	{
+		index = process->arg.v[0] + process->arg.v[1];
+		temp = vm.memory[index];
+		temp = temp << 8;
+		temp = temp + vm.memory[index + 1];
+		if ((process.regs[process->arg.v[2]] = temp) == 0)
+		{
+			process.carry = 1;
+		}
+		else
+		{
+			process.carry = 0;
+		}
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/23 12:42:11 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/23 21:54:59 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 # define COREWAR_H
 #include "../libft/libft.h"
 #include <stdio.h>
-
-// eliu: REG_SIZE in the op.h from intra says REG_SIZE is 4
 
 #define IND_SIZE				2
 #define REG_SIZE				4
@@ -39,16 +37,20 @@
 #define NAME_CMD_STRING			".name"
 #define COMMENT_CMD_STRING		".comment"
 #define REG_NUMBER				16
+
 /*
 ** types of arguments accepted
 */
+
 #define CYCLE_TO_DIE			1536
 #define CYCLE_DELTA				50
 #define NBR_LIVE				21
 #define MAX_CHECKS				10
+
 /*
 ** types of arguments accepted
 */
+
 typedef char	t_arg_type;
 
 #define T_REG					1
@@ -62,39 +64,42 @@ typedef char	t_arg_type;
 # define COMMENT_LENGTH			(2048)
 # define COREWAR_EXEC_MAGIC		0xea83f3
 
-# define FETCH 1
-# define WAIT 2
-# define EXEC 3
+# define FETCH	1
+# define WAIT	2
+# define EXEC	3
 
 
 /*
 ** flag structure
 */
-typedef struct		s_flags
-{
-	char			visual;
-	char			dump; // boolean to check for dump
-	unsigned int	nbrdump; // cycle to dump mem
-}					t_flags;
 
-typedef struct	s_command_args
+// eliu: fixed indentation for merge
+typedef struct			s_flags
 {
-	int		v[3];
-	char	type[3];
-	char	args_size;
-}				t_command_args;
+	char				visual;
+	char				dump; // boolean to check for dump
+	unsigned int		nbrdump; // cycle to dump mem
+}						t_flags;
 
-typedef struct	s_op
+typedef struct			s_command_args
 {
-  	int		(*func_to_be)(char *, ...);
-	char	truncate;
-	char	args; //number of args
-	int		descriptor; //the byte that describes what the following are -- ops with only one option of arg has no descriptor
-	int		cycles;
-}				t_op;
+	int					v[3];
+	char				type[3];
+	char				args_size;
+}						t_command_args;
 
-typedef struct	s_process
+typedef struct			s_op
 {
+  	int					(*func_to_be)(char *, ...);
+	char				truncate;
+	char				args; //number of args
+	int					descriptor; //the byte that describes what the following are -- ops with only one option of arg has no descriptor
+	int					cycles;
+}						t_op;
+
+typedef struct			s_process
+{
+	t_champ				*father_champ;
 	int					player_number; // only eliu branch
 	t_op				ops[REG_NUMBER + 1];
 	int					curr_op;
@@ -109,146 +114,146 @@ typedef struct	s_process
 	int					store_vm; // only eliu branch
 	struct s_process	*next;
 	struct s_process	*prev;
-}				t_process;
+}						t_process;
 
-typedef struct	s_champ
+typedef struct			s_champ
 {
-	int				fd;
-	char			plyr_nbr;
-	char			name[PROG_NAME_LENGTH + 5]; //assembler has to add 4 extra empty bytes to each
-	char			comment[COMMENT_LENGTH + 5];
-	unsigned int	size;
-	t_process		*processes;
-}					t_champ;
+	int					fd;
+	char				plyr_nbr;
+	char				name[PROG_NAME_LENGTH + 5]; //assembler has to add 4 extra empty bytes to each
+	char				comment[COMMENT_LENGTH + 5];
+	unsigned int		size;
+	t_process			*processes;
+}						t_champ;
 
 // eliu: added int: cycle_delta
 
-typedef struct	s_vm
+typedef struct			s_vm
 {
-	char			memory[MEM_SIZE];
-	int				players;
-	int				cycles;
-	int				cycle_to_die;
-	t_champ			champs[MAX_PLAYERS];
-	t_flags			flags_args; // adition of flags in main_vm
-}					t_vm;
+	char				memory[MEM_SIZE];
+	int					players;
+	int					cycles;
+	int					cycle_to_die;
+	t_champ				champs[MAX_PLAYERS];
+	t_flags				flags_args; // adition of flags in main_vm
+}						t_vm;
 
 
-typedef struct		header_s
+typedef struct			header_s
 {
-  unsigned int		magic;
-  char				prog_name[PROG_NAME_LENGTH + 1];
-  unsigned int		prog_size;
-  char				comment[COMMENT_LENGTH + 1];
-}					header_t;
+  unsigned int			magic;
+  char					prog_name[PROG_NAME_LENGTH + 1];
+  unsigned int			prog_size;
+  char					comment[COMMENT_LENGTH + 1];
+}						header_t;
 
-int			read_files(int players, t_vm *vm);
+int						read_files(int players, t_vm *vm);
 
-int			check_magic_number(int fd);
+int						check_magic_number(int fd);
 
-void		set_index(int *index, int diff);
+void					set_index(int *index, int diff);
 
-int			set_champ_name(t_champ *champ);
+int						set_champ_name(t_champ *champ);
 
-int			set_champ_comment(t_champ *champ);
+int						set_champ_comment(t_champ *champ);
 
-int			set_champ_size(t_champ *champ);
+int						set_champ_size(t_champ *champ);
 
-void		set_vm_memory(t_vm *vm, int i, int players);
+void					set_vm_memory(t_vm *vm, int i, int players);
 
-void		set_champs(t_champ *champ, char *filename);
+void					set_champs(t_champ *champ, char *filename);
 
-t_process	*set_process(char *pc_start, int mem_start);
+t_process				*set_process(char *pc_start, int mem_start);
 
-t_process	*add_process(t_champ *champ, int index);
+t_process				*add_process(t_champ *champ, int index);
 
-void		kill_process(t_process *p);
+void					kill_process(t_process *p);
 
-void		fetch(t_process *process);
+void					fetch(t_process *process);
 
-void		execute(t_process *process);
+void					execute(t_process *process);
 
-void		init_ops(t_op *ops);
+void					init_ops(t_op *ops);
 
-void		controller(t_vm *vm);
+void					controller(t_vm *vm);
 
-void		dump_memory(t_vm vm);
+void					dump_memory(t_vm vm);
 
-//			Function parameter types
-char			reg(t_process *process, int x);
-char			dir(t_process *process, int x);
-char			ind(t_process *process, int x);
-
-
-char			all(t_process *process, int x);
-char			reg_dir(t_process *process, int x);
-char			dir_ind(t_process *process, int x);
-char			reg_ind(t_process *process, int x);
+//						Function parameter types
+char					reg(t_process *process, int x);
+char					dir(t_process *process, int x);
+char					ind(t_process *process, int x);
 
 
-// 			Function protyping 
-
-void			ft_live(t_process *process);
-
-void			*ft_add(char first, char second, char third);
-void			*ft_sub(char first, char second, char third);
+char					any(t_process *process, int x);
+char					reg_dir(t_process *process, int x);
+char					dir_ind(t_process *process, int x);
+char					reg_ind(t_process *process, int x);
 
 
-void			*ft_zjmp(char index);
-void			*ft_fork(char index);
-void			*ft_lfork(char index);
-void			*ft_aff(char rejester);
+// 						Function protyping 
+
+void					ft_live(t_process *process);
+
+void					*ft_add(char first, char second, char third);
+void					*ft_sub(char first, char second, char third);
 
 
-void			*ft_or(char first, char second, char third);
-void			*ft_and(char first, char second, char third);
-void			*ft_xor(char first, char second, char third);
+void					*ft_zjmp(char index);
+void					*ft_fork(char index);
+void					*ft_lfork(char index);
+void					*ft_aff(char rejester);
+
+	
+void					*ft_or(char first, char second, char third);
+void					*ft_and(char first, char second, char third);
+void					*ft_xor(char first, char second, char third);
 
 
-void			*ft_ld(char first, char second);
-void			*ft_ldd(char first, char second);
-void			*ft_lldi(char first, char second, char third);
+void					*ft_ld(char first, char second);
+void					*ft_ldd(char first, char second);
+void					*ft_lldi(char first, char second, char third);
 
-t_process		*st(char first, char second);
-t_process		*sti(char first, char second, char third);
+void					*ft_st(char first, char second);
+void					*sti(char first, char second, char third);
 
 
 // REFACTORIZING - gmalpart and some mod in alex's functions
 
-extern char		g_ivlid_dump[];
-extern char		g_ivlid_nbr[];
-extern char		g_ivlid_chmp[];
-extern char		g_ivlid_nbrpls[];
-extern char		g_ivlid_dupl[];
-extern char		g_usage[];
+extern char				g_ivlid_dump[];
+extern char				g_ivlid_nbr[];
+extern char				g_ivlid_chmp[];
+extern char				g_ivlid_nbrpls[];
+extern char				g_ivlid_dupl[];
+extern char				g_usage[];
 
 /*
 ** PARSER.c
 */
 
-void			init_vm(t_vm *vm);
-int				set_dump_number(int ac, int *i, char **av, t_flags *flags);
-void			set_up_player(t_vm vm, int temp, char *str);
-void			parser_args(int ac, char **av, t_vm *vm);
+void					init_vm(t_vm *vm);
+int						set_dump_number(int ac, int *i, char **av, t_flags *flags);
+void					set_up_player(t_vm vm, int temp, char *str);
+void					parser_args(int ac, char **av, t_vm *vm);
 
 /*
 ** SET_UP_PLAYERS.c
 */
 
-void			get_nbr_player(int ac, int *i, char **av, t_vm *vm);
-void			set_up_player_nbr(int nbr_player, t_vm *vm, t_champ *champs);
-void			set_up_player_fd(int ac, char **av, int *i, t_vm *vm);
-void			wrap_set_up_player(int ac, int *i, char **av, t_vm *vm);
-
+void					get_nbr_player(int ac, int *i, char **av, t_vm *vm);
+void					set_up_player_nbr(int nbr_player, t_vm *vm, t_champ *champs);
+void					set_up_player_fd(int ac, char **av, int *i, t_vm *vm);
+void					wrap_set_up_player(int ac, int *i, char **av, t_vm *vm);
+	
 /*
 ** ERROR_HANDELING.c
 */
 
-void		general_exit(char *str, int code);
-void		check_duplicate_players(t_vm *vm);
-int			simple_usage(int code, char *str);
-int			check_name_champ(char *str);
-int			check_for_chars(char *str);
+void					general_exit(char *str, int code);
+void					check_duplicate_players(t_vm *vm);
+int						simple_usage(int code, char *str);
+int						check_name_champ(char *str);
+int						check_for_chars(char *str);
 
 /*
 ** READ_FILE.c
@@ -260,10 +265,10 @@ int			check_for_chars(char *str);
 ** Now is executed when a player is being setting up
 */
 
-int			read_files(int players, t_vm *vm);
-int			set_champ_name(t_champ *champ);
-int			set_champ_size(t_champ *champ);
-int			set_champ_comment(t_champ *champ);
+int						read_files(int players, t_vm *vm);
+int						set_champ_name(t_champ *champ);
+int						set_champ_size(t_champ *champ);
+int						set_champ_comment(t_champ *champ);
 
 /*
 ** CHECKER.c
@@ -271,13 +276,13 @@ int			set_champ_comment(t_champ *champ);
 ** and set the fd to 2 in case of error
 */
 
-int			check_magic_number(int fd);
+int						check_magic_number(int fd);
 
 /*
 ** CONVERSIONS.c
 */
 
-void		convert_big_endian(unsigned int *num);
-void		convert_big_endian_short(unsigned short *num);
+void					convert_big_endian(unsigned int *num);
+void					convert_big_endian_short(unsigned short *num);
 
 #endif

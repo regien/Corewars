@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 04:59:36 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/22 01:56:04 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/23 20:18:14 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,29 +20,12 @@
 */
 
 //	encoding byte exists
-
-void	ft_zjmp_cycles(t_process *process)
-{
-	process->cycle_counter = 20;
-}
+//	Is Alex modifying the PC for zjmp outside of this function?
 
 void	ft_zjmp(t_process *process)
 {
-	if (dir(process) && process->carry == 1)
+	if (dir(process, 0) && process.carry == 1)
 	{
-		process->pc += process->arg.v[0];
+		process.index = process->arg.v[0];
 	}
 }
-
-
-/*
-t_process	*ft_zjmp(char index)
-{
-	//	Only executes if carry is 1:
-	//	{
-			PC = PC + value_at_address_of(index) % IDX_MOD;
-	//	}
-	
-}
-
-*/

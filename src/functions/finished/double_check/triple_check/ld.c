@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 03:08:54 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/22 01:17:15 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/23 20:45:53 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,17 @@
 **	PC + 34 % IND_MOD into r3. 5 cycles.
 */
 
-void	ft_ld_cycles(t_process *process)
-{
-	process->cylce_counter = 5;
-}
-
 void	ft_ld(t_process *process)
 {
 	if (dir_ind(process, 0) && reg(process, 1))
 	{
-		process->v[1] = process->v[0];
-		process->carry = (1) ? 0 : 1;
-		// encoding byte!
-		process->pc += process->arg->args_size;
+		if ((process->reg[process->v[1]] = process->arg.v[0]) == 0)
+		{
+			process->carry = 1;
+		}
+		else
+		{
+			process->carry = 0;
+		}
 	}
 }

@@ -1,0 +1,9 @@
+2) for fork and lfork:
+	how are we creating a new process and linking them together?
+
+1) sti takes 3 parameters.
+	I am storing the address of vm[PC + arg1 + arg2];
+	I only need one value. what do?
+
+2) ldi and lldi
+	opposite of sti
