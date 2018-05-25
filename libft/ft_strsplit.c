@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/21 20:40:32 by adubugra          #+#    #+#             */
-/*   Updated: 2018/02/24 18:57:43 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/24 16:46:18 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,16 @@ char			**ft_strsplit(char const *s, char c)
 	int		i;
 	int		j;
 	int		k;
+	int		size;
 	char	**str2;
 
 	if (!s || !(str2 = (char **)malloc(sizeof(*str2) *
 		(ft_countwords(s, c) + 1))))
 		return (NULL);
-	i = -1;
 	j = 0;
-	while (++i < ft_countwords(s, c))
+	size = ft_countwords(s, c);
+	i = -1;
+	while (++i < size)
 	{
 		k = 0;
 		if (!(str2[i] = ft_strnew(get_word_len(&s[j], c) + 1)))

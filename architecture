@@ -1,5 +1,5 @@
 Assembler:
-	Main goal: Take the .s code and convert it to binary.
+	Main goal: Take the .s code and convert it to binary. (.cor)
 	How to do it:
 		save the whole file to a char arr
 		set header in the beginning of file- MagicNumber->prog_name[128]->prog_size->comment[2048]

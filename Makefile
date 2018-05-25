@@ -6,7 +6,7 @@
 #    By: adubugra <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/03/07 18:20:10 by adubugra          #+#    #+#              #
-#    Updated: 2018/05/18 11:17:22 by adubugra         ###   ########.fr        #
+#    Updated: 2018/05/24 19:04:59 by adubugra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,23 +19,32 @@ SRC		=	read_file.c \
 			checker.c \
 			print.c \
 			init_ops.c \
+			asm_init_ops.c \
+			asm_init_ops2.c \
 			fetch_and_exec.c \
 			function_controller.c \
+			asm_name_comment.c \
+			asm_constructors.c \
+			asm_get_commands.c \
+			asm_op_table.c \
+			asm_print.c \
+			asm_op_builder.c \
+			asm_op_builder_helpers.c \
 			conversions.c 
 
 SRCALL	= $(SRC)
 SRCALL	+= corewar.c
-#SRCALL	+= assembler.c
+SRCALL	+= assembler.c
 
 SRCCW	= $(SRC)
 SRCCW	+= corewar.c
 
-#SRCAS	= $(SRC)
-#SRCAS	+= assembler.c
+SRCAS	= $(SRC)
+SRCAS	+= assembler.c
 
 OBJ	= $(addprefix $(OBJDIR),$(SRCALL:.c=.o))
 OBJCW	= $(addprefix $(OBJDIR),$(SRCCW:.c=.o))
-#OBJAS	= $(addprefix $(OBJDIR),$(SRCAS:.c=.o))
+OBJAS	= $(addprefix $(OBJDIR),$(SRCAS:.c=.o))
 
 # compiler
 CC		= gcc
@@ -67,7 +76,7 @@ $(FT_LIB):
 
 $(CWR): $(OBJ) 
 	$(CC) $(CFLAGS) $(OBJCW) $(FT_LNK) -lm -o $(CWR)
-#	$(CC) $(CFLAGS) $(OBJAS) $(FT_LNK) -lm -o $(ASM)
+	$(CC) $(CFLAGS) $(OBJAS) $(FT_LNK) -lm -o $(ASM)
 
 clean:
 	rm -rf $(OBJDIR)
