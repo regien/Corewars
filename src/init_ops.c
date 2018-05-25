@@ -12,6 +12,10 @@
 
 #include "../include/corewar.h"
 
+/*
+** Initiliazes the 16 functions in every proccess added
+*/
+
 int		ft_put(char *str)
 {
 	ft_putstr(str);
