@@ -6,7 +6,7 @@
 /*   By: gmalpart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/19 19:11:28 by gmalpart          #+#    #+#             */
-/*   Updated: 2018/05/21 03:19:23 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/24 21:03:44 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	check_duplicate_players(t_vm *vm)
 	int		i;
 	int		e;
 
-	if (vm->players <= 1)
+	if (vm->players < 1)
 		general_exit(g_ivlid_nbrpls, -1);
 	i = -1;
 	while (++i < vm->players)
