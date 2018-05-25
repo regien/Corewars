@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/24 22:03:32 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/25 10:49:24 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,14 +85,6 @@ typedef struct 	s_label
 	struct s_label	*next;
 }				t_label;
 
-typedef struct	s_label_args
-{
-	void				*arg_address;
-	char				arg_size;
-	char				*label_name;
-	struct s_label_args	*next;
-}				t_label_args;
-
 typedef struct	s_header
 {
   char				prog_name[PROG_NAME_LENGTH + 5];
@@ -100,17 +92,14 @@ typedef struct	s_header
   char				comment[COMMENT_LENGTH + 5];
 }				t_header;
 
-
 typedef struct	s_op
 {
-	char		*command;
 	char		truncate;
 	char		args; //number of args
 	char		descriptor; //the byte that describes what the following are -- ops with only one option of arg has no descriptor
 	int			cycles;
 	char		accepted_args[3];
 	char		op_code;
-	char		*message;
 }				t_op;
 
 t_op	op_table[16];

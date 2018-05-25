@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 14:58:56 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/24 19:06:39 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/25 15:58:49 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,32 +15,48 @@
 char	*get_full_line(int fd)
 {
 	char	*str;
+	char	*tmp;
 	int		i;
-	int		ret;
 
-	while ((ret = get_next_line(fd, &str)) >= 0)
+	while (get_next_line(fd, &str) >= 0)
 	{
+		remove_comments(str);
+		tmp = str;
 		if (!str)
 			break ;
 		i = 0;
 		while (str[i] && WHITESPACE(str[i]))
 			i++;
-		if (str[i] == 0)
-		{
-			free(str);
-			str = 0;
-		}
+		str = str[i] == 0 ? 0 : str;
+		if (str == 0)
+			free(tmp);
 		else
 			break ;
 	}
 	if (str)
-		return(&str[i]);
+	{
+		free(tmp);
+		return(ft_strdup(&str[i]));
+	}
 	return (str);
 }
-/*
-**checks if there is a label and returns it, also moves the pointer to the command
-**if there is one. Else frees the string and sets the pointer to NULL;
-*/
+
+int			check_label_name(t_label *label)
+{
+	char	*str;
+	int		i;
+
+	str = label->label_name;
+	i = 0;
+	while (str[i])
+	{
+		if (!ft_strchr(LABEL_CHARS, str[i]) && str[i] != LABEL_CHAR)
+			return (ft_printf("Warning: Invalid Label %s\n", label->label_name));
+		i++;
+	}
+	return (0);
+}
+
 t_label		*get_label(char **full_str)
 {
 	int		i;
@@ -55,6 +71,8 @@ t_label		*get_label(char **full_str)
 		return (0);
 	new_label = init_label();
 	new_label->label_name = ft_strsub(str, 0, (size_t)i + 1);
+	if (check_label_name(new_label))
+		return (0);
 	*full_str = &str[i + 1];
 	while (**full_str && WHITESPACE(**full_str))
 		(*full_str)++;
@@ -75,84 +93,21 @@ t_ops	*set_argument_list(int fd, t_label **label_root)
 	t_ops	*last;
 	t_label	*buf;
 	char	*str;
+	char	*tmp;
 
 	last = 0;
 	root = 0;
 	while ((str = get_full_line(fd)) != 0)
 	{
+		tmp = str;
 		buf = add_label(label_root, get_label(&str));
 		if (!str)
 			continue ;
 		if (!add_ops(&root, &last, str))
 			return (0);
+		free(tmp);
 		if (buf)
 			buf->index = last->index;
 	}
 	return (root);
 }
-
-int		get_label_arg(int arg_num, t_ops *ops, t_label *labels)
-{
-	while (*(ops->arg_name[arg_num]) == DIRECT_CHAR || *(ops->arg_name[arg_num]) == LABEL_CHAR)
-		(ops->arg_name[arg_num])++;
-	while (labels)
-	{
-		if (!ft_strcmp(labels->label_name, ops->arg_name[arg_num]))
-			break ;
-		labels = labels->next;
-	}
-	if (!labels)
-		return (ft_printf("ERROR, unkown label %s\n", ops->arg_name[arg_num]));
-	ops->args[arg_num] = labels->index - ops->index;
-	return (0);
-}
-
-void	clean_label(t_label *labels)
-{
-	t_label *buf;
-	int		i;
-
-	buf = labels;
-	i = 0;
-	while (buf)
-	{
-		while (buf->label_name[i] && buf->label_name[i] != LABEL_CHAR)
-			i++;
-		buf->label_name[i] = 0;
-		buf = buf->next;
-	}
-}
-
-int		set_label_vars(t_label *labels, t_ops *ops)
-{
-	int		ret;
-
-	ret = 0;
-	clean_label(labels);
-	while (ops)
-	{
-		if (ops->label_arg[0])
-			ret = get_label_arg(0, ops, labels);
-		if (ops->label_arg[1])
-			ret = get_label_arg(1, ops, labels);
-		if (ops->label_arg[2])
-			ret = get_label_arg(2, ops, labels);
-		if (ret)
-			break ;
-		ops = ops->next;
-	}
-	return (ret);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-

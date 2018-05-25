@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/24 14:52:09 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/24 21:55:56 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/25 11:40:36 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	remove_comments(char *str)
 {
 	int i;
 
+	if (!str)
+		return ;
 	i = 0;
 	while (str[i] && str[i] != COMMENT_CHAR)
 		i++;

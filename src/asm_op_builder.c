@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 18:33:23 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/24 18:38:02 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/25 11:49:51 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int		set_op_name(char **strreal, t_ops *op)
 {
 	int		i;
 	char	*str;
+	char	*tmp;
 
 	if (!(*strreal) || !op)
 		return (ft_printf("empty argument @opname\n"));
@@ -23,7 +24,9 @@ int		set_op_name(char **strreal, t_ops *op)
 	i = 0;
 	while (!WHITESPACE(str[i]))
 		i++;
+	tmp = op->op_name;
 	op->op_name = ft_strsub(str, 0, i);
+	free(tmp);
 	while (WHITESPACE(str[i]))
 		i++;
 	*strreal = &str[i];
@@ -51,9 +54,6 @@ int		set_arguments(char **strreal, t_ops *op)
 	}
 	if (i != op_table[op->op_code - 1].args)
 		return (ft_printf("wrong args number!\n"));
-	i = 0;
-	//while (op->arg_name[i])
-	//	printf("%s.\n", op->arg_name[i++]);
 	return (0);
 }
 
@@ -81,7 +81,8 @@ int		get_arguments_and_sizes(t_ops *op)
 		if (check_argument(op->arg_name[i]))
 			return (ft_printf("Argument parse error: %s\n", op->arg_name[i]));
 		set_bit_descriptor(&(op->descriptor), op->arg_name[i], i + 1);
-		op->label_arg[i] = (op->arg_name[i][0] == LABEL_CHAR || op->arg_name[i][1] == LABEL_CHAR) ? 1 : 0;
+		op->label_arg[i] = (op->arg_name[i][0] == LABEL_CHAR ||
+				op->arg_name[i][1] == LABEL_CHAR) ? 1 : 0;
 		op->args[i] = ft_atoi(&(op->arg_name[i][1]));
 		if (op->arg_name[i][0] == 'r')
 			op->arg_sizes[i] = 1;

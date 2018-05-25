@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 12:41:43 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/24 22:04:45 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/25 10:51:05 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ int		set_name(char name[PROG_NAME_LENGTH + 5], int fd)
 		name[j++] = str[i++];
 	if (!str[i] || j > PROG_NAME_LENGTH)
 		return (ft_printf("ERR at name, name too big\n"));
+	free(str);
 	return (0);
 }
 

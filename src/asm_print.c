@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/24 18:52:32 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/24 22:18:32 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/25 16:02:20 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,12 @@
 void	print_commands(t_ops *o, t_label *l)
 {
 	int i;
+
 	while (o)
 	{
 		if (l && o->index == l->index)
-		{
 			ft_printf("%-10d:%8s:\n", l->index, l->label_name);
-			l = l->next;
-		}
+		l = (l && o->index == l->index) ? l->next : l;
 		ft_printf("%-5d(%-3d):", o->index, o->size);
 		ft_printf("%12s", o->op_name);
 		i = -1;
@@ -37,8 +36,8 @@ void	print_commands(t_ops *o, t_label *l)
 		while (++i < op_table[(int)o->op_code - 1].args)
 			ft_printf("%12d", o->args[i]);
 		ft_printf("\n\n");
-	 	o = o->next;
-	} 
+		o = o->next;
+	}
 }
 
 int		get_total_size(t_ops *ops)
@@ -65,7 +64,6 @@ void	write_header(int fd, t_header *header)
 void	write_op(int fd, t_ops *op)
 {
 	short	s;
-	int		d;
 	char	c;
 	int		i;
 
@@ -74,7 +72,6 @@ void	write_op(int fd, t_ops *op)
 		write(fd, &(op->descriptor), 1);
 	i = -1;
 	while (++i < op_table[(int)op->op_code - 1].args)
-	{
 		if (op->arg_sizes[i] == 1)
 		{
 			c = op->args[i];
@@ -82,18 +79,14 @@ void	write_op(int fd, t_ops *op)
 		}
 		else if (op->arg_sizes[i] == 2)
 		{
-			s = op->args[i];
-			s = convert_b_endian_short(s);
+			s = convert_b_endian_short((short)op->args[i]);
 			write(fd, &s, 2);
 		}
 		else if (op->arg_sizes[i] == 4)
 		{
-			d = op->args[i];
-			d = convert_b_endian(d);
-			write(fd, &d, 4);
+			op->args[i] = convert_b_endian(op->args[i]);
+			write(fd, &(op->args[i]), 4);
 		}
-	}
-
 }
 
 void	write_file(int fd, t_ops *ops, t_label *labels, t_header *header)
@@ -107,17 +100,3 @@ void	write_file(int fd, t_ops *ops, t_label *labels, t_header *header)
 		ops = ops->next;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

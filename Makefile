@@ -6,7 +6,7 @@
 #    By: adubugra <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/03/07 18:20:10 by adubugra          #+#    #+#              #
-#    Updated: 2018/05/24 19:04:59 by adubugra         ###   ########.fr        #
+#    Updated: 2018/05/25 15:51:28 by adubugra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,7 @@ SRC		=	read_file.c \
 			asm_get_commands.c \
 			asm_op_table.c \
 			asm_print.c \
+			asm_label_args.c \
 			asm_op_builder.c \
 			asm_op_builder_helpers.c \
 			conversions.c 

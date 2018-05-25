@@ -6,11 +6,57 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 14:00:25 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/24 21:52:24 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/25 15:59:46 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/asm.h"
+
+char	*convert_cor(char	*s)
+{
+	char	*cor;
+	int		i;
+
+	cor = ft_strnew(ft_strlen(s) + 2);
+	ft_strcpy(cor, s);
+	i = 0;
+	while (cor[i] && cor[i] != '.')
+		i++;
+	if (!cor[i])
+		return (0);
+	i++;
+	cor[i] = 'c';
+	cor[i + 1] = 'o';
+	cor[i + 2] = 'r';
+	return (cor);
+}
+
+void	free_ops_and_labels(t_ops *op, t_label *label)
+{
+	t_ops	*tmp;
+	t_label	*aux;
+	int		i;
+
+	while (op)
+	{
+		i = -1;
+		while (++i < op_table[op->op_code - 1].args)
+			if (op->arg_name[i])
+				free(op->arg_name[i]);
+		free(op->arg_name);
+		free(op->op_name);
+		tmp = op->next;
+		free(op);
+		op = tmp;
+	}
+	while (label)
+	{
+		free(label->label_name);
+		aux = label->next;
+		free(label);
+		label = aux;
+	}
+}
 
 int		main(int argc, char **argv)
 {
@@ -18,9 +64,12 @@ int		main(int argc, char **argv)
 	t_ops			*ops;
 	t_label			*labels;
 	t_header		header;
+	char			*cor_name;
 
 	asm_init_ops(op_table);
-	if (argc < 2)
+	if (argc != 2)
+		return (ft_printf("Usage: ./asm name_of_file.s\n"));
+	if (!ft_strstr(argv[1], ".s"))
 		return (ft_printf("Usage: ./asm name_of_file.s\n"));
 	if ((fd = open(argv[1], O_RDONLY)) < 3)
 		return (ft_printf("invalid file\n"));
@@ -32,11 +81,17 @@ int		main(int argc, char **argv)
 		return (1);
 	if (set_label_vars(labels, ops))
 		return (1);
-	if ((fd = open("zork.cor", O_WRONLY | O_TRUNC)) < 3)
+	cor_name = convert_cor(argv[1]);
+	if ((fd = open(cor_name, O_WRONLY | O_TRUNC)) < 3)
 		return (1);
 	write_file(fd, ops, labels, &header);
+	free(cor_name);
+	free_ops_and_labels(ops, labels);
+	return (0);
 
-	//print_commands(ops, labels);
+}
+
+
 	/*ft_printf("name: %s\n", header.prog_name);
 	ft_printf("comment: %s\n\n", header.comment);
 	while (ops)
@@ -52,32 +107,5 @@ int		main(int argc, char **argv)
 			ft_printf("descriptor byte: %d\n", ops->descriptor);
 		ft_printf("\n");
 		ops = ops->next;
-	}*/
-	return (0);
-}
-
-
-	//check if file is valid OK
-	//write magic number 
-	//write everything on ram
-	//get name OK
-	//write size
-	//err if there is no NAME_CMD OK
-	//write name
-	//get comment OK
-	//err if there is no COMMENT_CMD OK
-	//write comment
-	//write command
-	//err if command doesn't exist OK
-	//err if there is more than one command per line
-	//write descriptor
-	//write arguments
-	//err if there is more args than possible
-	//err if argument is greater than possibl
-	//err if type is not compatible
-	//if argument is indirect, do math if its not label. add to list if it is
-	//if comment, skip
-	//if label, add label name and place in memory for linkedlist
-	//err if label does not exist
-	//if labels are not formed by label_chars
 	//check if label names are only valid chars and not repeated
+	*/
