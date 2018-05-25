@@ -6,7 +6,7 @@
 #    By: gmalpart <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/22 16:31:53 by gmalpart          #+#    #+#              #
-#    Updated: 2018/05/24 22:46:28 by eliu             ###   ########.fr        #
+#    Updated: 2018/05/25 03:49:11 by gmalpart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,50 +25,32 @@ SRC		=	read_file.c \
 			conversions.c \
 			parseargs.c \
 			set_up_player.c \
-			error_handling.c \
-			live.c \
-			ld.c \
-			st.c \
-			add.c \
-			sub.c \
-			and.c \
-			or.c \
-			xor.c \
-			zjmp.c \
-			ldi.c \
-			sti.c \
-			fork.c \
-			lld.c \
-			lldi.c \
-			lfork.c \
-			aff.c \
-			types.c \
-			type_combinations.c 
+			error_handling.c 
 
-#FUNCTION_PATH = ./functions/
-#FUNCTION_FILES = live.c \
-#				 ld.c \
-#				 st.c \
-#				 add.c \
-#				 sub.c \
-#				 and.c \
-#				 or.c \
-#				 xor.c \
-#				 zjmp.c \
-#				 ldi.c \
-#				 sti.c \
-#				 fork.c \
-#				 lld.c \
-#				 lldi.c \
-#				 lfork.c \
-#				 aff.c 
-#
-#FUNCTION_HELPERS = types.c \
-#				   type_combinations.c 
-#
-#FUNCTION_ALL = $(FUNCTION_FILES), $(FUNCTION_HELPERS)
-#FUNCTIONS = $(addprefix $(FUNCTION_PATH), $(FUNCTION_ALL));
-#
+FUNCTION_PATH = src/functions/
+FUNCTION_FILES = live.c \
+				 ld.c \
+				 st.c \
+				 add.c \
+				 sub.c \
+				 and.c \
+				 or.c \
+				 xor.c \
+				 zjmp.c \
+				 ldi.c \
+				 sti.c \
+				 fork.c \
+				 lld.c \
+				 lldi.c \
+				 lfork.c \
+				 aff.c
+
+FUNCTION_HELPERS = types.c \
+				   type_combinations.c
+
+FUNCTION_ALL =	$(FUNCTION_FILES) \
+				 $(FUNCTION_HELPERS)
+
 #PENDEJADA = $(SRC) $(FUNCTION_FILES) $(FUNCTION_HELPERS)
 
 # 3
@@ -82,8 +64,11 @@ SRCCW	+= corewar.c
 #SRCAS	= $(SRC)
 #SRCAS	+= assembler.c
 
+DIRFUNCT = ./src/functions/
+
 OBJ	= $(addprefix $(OBJDIR),$(SRCALL:.c=.o))
 OBJCW	= $(addprefix $(OBJDIR),$(SRCCW:.c=.o))
+OBJFUNCS = $(addprefix $(OBJFUNCDIR),$(FUNCTION_ALL:.c=.o))
 #OBJAS	= $(addprefix $(OBJDIR),$(SRCAS:.c=.o))
 
 # compiler
@@ -101,6 +86,10 @@ SRCDIR	= ./src/
 INCDIR	= ./include/
 OBJDIR	= ./obj/
 
+# Redo the objs directory for the src/functions
+OBJFUNCDIR = ./obj/
+
+
 all: obj $(FT_LIB) $(CWR)
 
 test: obj $(FT_LIB) $(ASM)
@@ -111,11 +100,15 @@ obj:
 $(OBJDIR)%.o:$(SRCDIR)%.c
 	$(CC) $(CFLAGS) $(FT_INC) -I $(INCDIR) -o $@ -c $<
 
+#special call for .c files inside src/functions/
+$(OBJFUNCDIR)%.o:$(DIRFUNCT)%.c
+	$(CC) $(CFLAGS) $(FT_INC) -I $(INCDIR) -o $@ -c $<
+
 $(FT_LIB):
 	make -C $(FT)
 
-$(CWR): $(OBJ) 
-	$(CC) $(CFLAGS) $(OBJCW) $(FT_LNK) -lm -o $(CWR)
+$(CWR): $(OBJ) $(OBJFUNCS)
+	$(CC) $(CFLAGS) $(OBJCW) $(OBJFUNCS) $(FT_LNK) -lm -o $(CWR)
 #	$(CC) $(CFLAGS) $(OBJAS) $(FT_LNK) -lm -o $(ASM)
 
 clean:
