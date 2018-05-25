@@ -19,15 +19,16 @@
 */
 
 //	What is a different state from parent that it inherents?
-
-t_process	*ft_fork(t_champ *champ, t_process *process, int index)
+//	double check all 
+int		ft_fork(t_vm *vm, t_champ *champ, t_process *process)
 {
+	vm = NULL;
+
 	t_process *new;
-	
 	if (dir(process, 0))
 	{
-		new = add_process(champ, index % IND_MOD);
-		return (new);
+		new = add_process(champ, process->index % IND_MOD);
+		return (0);
 	}
-	return (NULL);
+	return (1);
 }

@@ -6,17 +6,11 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 01:20:26 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/17 19:58:16 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/24 21:11:51 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/corewar.h"
-
-int		ft_put(char *str)
-{
-	ft_putstr(str);
-	return (1);
-}
 
 void	set_ops_cycles(t_op *ops)
 {
@@ -107,21 +101,21 @@ void	set_truncate(t_op *ops)
 
 void	init_ops(t_op *ops)
 {
-	ops[0x1].func_to_be = &ft_printf;
-	ops[0x2].func_to_be = &ft_printf;
-	ops[0x3].func_to_be = &ft_printf;
-	ops[0x4].func_to_be = &ft_printf;
-	ops[0x5].func_to_be = &ft_printf;
-	ops[0x6].func_to_be = &ft_printf;
-	ops[0x7].func_to_be = &ft_printf;
-	ops[0x8].func_to_be = &ft_printf;
-	ops[0x9].func_to_be = &ft_printf;
-	ops[0xa].func_to_be = &ft_printf;
-	ops[0xb].func_to_be = &ft_printf;
-	ops[0xc].func_to_be = &ft_printf;
-	ops[0xd].func_to_be = &ft_printf;
-	ops[0xe].func_to_be = &ft_printf;
-	ops[0xf].func_to_be = &ft_printf;
-	ops[0x10].func_to_be = &ft_printf;
+	ops[0x1].func_to_be = &ft_live;
+	ops[0x2].func_to_be = &ft_ld;
+	ops[0x3].func_to_be = &ft_st;
+	ops[0x4].func_to_be = &ft_add;
+	ops[0x5].func_to_be = &ft_sub;
+	ops[0x6].func_to_be = &ft_and;
+	ops[0x7].func_to_be = &ft_or;
+	ops[0x8].func_to_be = &ft_xor;
+	ops[0x9].func_to_be = &ft_zjmp;
+	ops[0xa].func_to_be = &ft_ldi;
+	ops[0xb].func_to_be = &ft_sti;
+	ops[0xc].func_to_be = &ft_fork;
+	ops[0xd].func_to_be = &ft_lld;
+	ops[0xe].func_to_be = &ft_lldi;
+	ops[0xf].func_to_be = &ft_lfork;
+	ops[0x10].func_to_be = &ft_aff;
 	set_truncate(ops);
 }

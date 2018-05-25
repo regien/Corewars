@@ -26,18 +26,19 @@
 **	REG_SIZE bytes are read from the address PC + S % IDX_MOD and copied into r1.
 */
 
-void	ft_lldi(t_vm *vm, t_process* process)
+int		ft_lldi(t_vm *vm, t_champ *champ, t_process* process)
 {
 	short	temp;
 	int		index;
 
+	champ = NULL;
 	if (ind(process, 0) && ind(process, 1) && reg(process, 2))
 	{
-		index = process->arg.v[0] + process->arg.v[1];
+		index = process.arg.v[0] + process.arg.v[1];
 		temp = vm.memory[index];
 		temp = temp << 8;
 		temp = temp + vm.memory[index + 1];
-		if ((process.regs[process->arg.v[2]] = temp) == 0)
+		if ((process.regs[process.arg.v[2]] = temp) == 0)
 		{
 			process.carry = 1;
 		}
@@ -45,5 +46,7 @@ void	ft_lldi(t_vm *vm, t_process* process)
 		{
 			process.carry = 0;
 		}
+		return (0);
 	}
+	return (1);
 }

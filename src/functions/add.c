@@ -17,18 +17,22 @@
 **	add (r2, r3, r5) add the content of r2 and r3 and puts the result into r5.
 */
 
-void	ft_add(t_process *process)
+int		ft_add(t_vm *vm, t_champ *champ, t_process *process)
 {
+	vm = NULL;
+	champ = NULL;	
 	if (reg(process, 0) && reg(process, 1) && reg(process, 2))
 	{
-		if ((process->reg[process->arg.[2]] = 
-			process->arg.v[0] + process->arg.v[1]) == 0)
+		if ((process.reg[process.arg.[2]] = 
+			process.arg.v[0] + process.arg.v[1]) == 0)
 		{
-			process->carry = 1;
+			process.carry = 1;
 		}
 		else
 		{
-			process->carry = 0;
+			process.carry = 0;
 		}
+		return (0);
 	}
+	return (1);
 }

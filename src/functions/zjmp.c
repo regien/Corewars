@@ -22,10 +22,12 @@
 //	encoding byte exists
 //	Is Alex modifying the PC for zjmp outside of this function?
 
-void	ft_zjmp(t_process *process)
+int		ft_zjmp(t_vm *vm, t_champ *champ, t_process *process)
 {
 	if (dir(process, 0) && process.carry == 1)
 	{
-		process.index = process->arg.v[0];
+		process.index = process.arg.v[0];
+		return (0);
 	}
+	return (1);
 }

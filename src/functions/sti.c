@@ -37,29 +37,32 @@ static void	store_big_endian(t_vm *vm, int value, int index)
 	vm.memory[index + 3] = d;
 }
 
-void		ft_sti(t_vm *vm, t_process *process)
+int		ft_sti(t_vm *vm, t_champ *champ, t_process *process)
 {
 	int		index1;
 	int		index2;
 
+	champ = NULL;
 	if (reg(process, 0) && reg_ind(process, 1))
 	{
 		if (reg(process, 1))
 		{
-			index1 = process.regs[process->arg.v[1] - 1];
+			index1 = process.regs[process.arg.v[1] - 1];
 		}
 		else if (ind(process, 1))
 		{
-			index1 = process->arg.v[1];
+			index1 = process.arg.v[1];
 		}
 		if (reg(process, 2))
 		{
-			index2 = process.regs[process->arg.v[2] - 1];
+			index2 = process.regs[process.arg.v[2] - 1];
 		}
 		else if (ind(process, 2))
 		{
-			index2 = process->arg.v[2];
+			index2 = process.arg.v[2];
 		}
-		store_big_endian(vm, process.regs[process->arg.v[0]], index1 + index2);
+		store_big_endian(vm, process.regs[process.arg.v[0]], index1 + index2);
+		return (0);
 	}
+	return (1);
 }

@@ -31,25 +31,28 @@ void	read_from_vm(t_vm *vm, t_process *process, int r, int index)
 **	process.regs has -1
 */
 
-void	ft_ld(t_vm *vm, t_process *process)
+int		ft_ld(t_vm *vm, t_champ *champ, t_process *process)
 {
+	champ = NULL;
 	if (dir_ind(process, 0) && reg(process, 1))
 	{
 		if (dir(process, 0))
 		{
-			process.regs[process->arg.v[1] - 1] = process->arg.v[0];
+			process.regs[process.arg.v[1] - 1] = process.arg.v[0];
 		}
 		else if (ind(process, 0))
 		{
 			read_from_vm(vm, process, process.arg.v[1] - 1, process.index);
 		}
-		if (process->reg[process->v[1] - 1] == 0)
+		if (process.reg[process.v[1] - 1] == 0)
 		{
-			process->carry = 1;
+			process.carry = 1;
 		}
 		else
 		{
-			process->carry = 0;
+			process.carry = 0;
 		}
+		return (0);
 	}
+	return (1);
 }

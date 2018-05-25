@@ -25,14 +25,18 @@
 
 //	Truncation exists
 
-t_process	*ft_lfork(t_champ *champ, t_process *process, int index)
+// Double check return values of add_process
+
+int		ft_lfork(t_vm *vm, t_champ *champ, t_process *process)
 {
 	t_process *new;
 
+	vm = NULL;
+	champ = NULL;
 	if (dir(process, 0))
 	{
-		new = add_process(champ, index);
-		return (new);
+		new = add_process(champ, process.index);
+		return (0);
 	}
-	return (NULL);
+	return (1);
 }

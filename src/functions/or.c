@@ -23,12 +23,15 @@
 **	and(r2, %0, r3) puts r2 | 0 into r3.
 */
 
-void		ft_or(t_process *process)
+int		ft_or(t_vm *vm, t_champ *champ, t_process *process)
 {
+	vm = NULL;
+	champ = NULL;
+
 	if (any(process, 0) && any(process, 1) && reg(process, 2))
 	{
-		if ((process->regs[process->arg.v[2]] = 
-				process->args.v[0] | process->args.v[1]) == 0)
+		if ((process.regs[process.arg.v[2]] = 
+				process.args.v[0] | process.args.v[1]) == 0)
 		{
 			process.carry = 1;
 		}
@@ -36,5 +39,7 @@ void		ft_or(t_process *process)
 		{
 			process.carry = 0;
 		}
+		return (0);
 	}
+	return (1);
 }

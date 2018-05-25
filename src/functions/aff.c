@@ -21,10 +21,13 @@
 **	aff(r3) displyas ’*’ if r3 contains 42.
 */
 
-void	ft_aff(t_vm *vm, t_process *process)
-{	
+int		ft_aff(t_vm *vm, t_champ *champ, t_process *process)
+{
+	champ = NULL;
 	if (reg(process, 0) && vm.flas_args.aff == 1)
 	{
 		ft_putchar(process.index % 256);
+		return (0);
 	}
+	return (1);
 }

@@ -17,12 +17,14 @@
 **	a champion is alive due to the processes.
 */
 
-void	ft_live(t_process *process)
+int		ft_live(t_vm *vm, t_champ *champ, t_process *process)
 {
 	if (dir(process, 0))
 	{
-		process->live = process->arg->v[0];
+		process.live = process.arg.v[0];
 		// process->index += args_size;
 		// process->index += 5;
+		return (0);
 	}
+	return (1);
 }
