@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/25 03:38:46 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/25 04:03:09 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,11 +70,9 @@ typedef char	t_arg_type;
 # define WAIT	2
 # define EXEC	3
 
-
 /*
 ** flag structure
 */
-
 
 struct					s_vm;
 struct					s_champ;
@@ -160,49 +158,6 @@ typedef struct			header_s
   char					comment[COMMENT_LENGTH + 1];
 }						header_t;
 
-
-//						Function parameter types
-char					reg(t_process *process, int x);
-char					dir(t_process *process, int x);
-char					ind(t_process *process, int x);
-
-
-char					any(t_process *process, int x);
-char					reg_dir(t_process *process, int x);
-char					dir_ind(t_process *process, int x);
-char					reg_ind(t_process *process, int x);
-
-
-// 						Function protyping 
-
-int						ft_live(t_vm *vm, t_champ *champ, t_process *process);
-
-int						ft_add(t_vm *vm, t_champ *champ, t_process *process);
-int						ft_sub(t_vm *vm, t_champ *champ, t_process *process);
-
-
-int						ft_zjmp(t_vm *vm, t_champ *champ, t_process *process);
-int						ft_fork(t_vm *vm, t_champ *champ, t_process *process);
-int						ft_lfork(t_vm *vm, t_champ *champ, t_process *process);
-int						ft_aff(t_vm *vm, t_champ *champ, t_process *process);
-
-	
-int						ft_or(t_vm *vm, t_champ *champ, t_process *process);
-int						ft_and(t_vm *vm, t_champ *champ, t_process *process);
-int						ft_xor(t_vm *vm, t_champ *champ, t_process *process);
-
-
-int						ft_ld(t_vm *vm, t_champ *champ, t_process *process);
-int						ft_lld(t_vm *vm, t_champ *champ, t_process *process);
-int						ft_ldi(t_vm *vm, t_champ *champ, t_process *process);
-int						ft_lldi(t_vm *vm, t_champ *champ, t_process *process);
-
-int						ft_st(t_vm *vm, t_champ *champ, t_process *process);
-int						ft_sti(t_vm *vm, t_champ *champ, t_process *process);
-
-
-// REFACTORIZING - gmalpart and some mod in alex's functions
-
 extern char				g_ivlid_dump[];
 extern char				g_ivlid_nbr[];
 extern char				g_ivlid_chmp[];
@@ -210,7 +165,6 @@ extern char				g_ivlid_nbrpls[];
 extern char				g_ivlid_dupl[];
 extern char				g_usage[];
 extern t_op				g_ops[OP_NUMBER + 1];
-
 
 /*
 ** PARSER.c
@@ -309,5 +263,47 @@ void					controller(t_vm *vm);
 */
 
 void					dump_memory(t_vm vm);
+
+/*
+** FUNCTIONS
+**
+** Each functions has his own file inside src/functions
+*/
+
+int						ft_live(t_vm *vm, t_champ *champ, t_process *process);
+int						ft_add(t_vm *vm, t_champ *champ, t_process *process);
+int						ft_sub(t_vm *vm, t_champ *champ, t_process *process);
+int						ft_zjmp(t_vm *vm, t_champ *champ, t_process *process);
+int						ft_fork(t_vm *vm, t_champ *champ, t_process *process);
+int						ft_lfork(t_vm *vm, t_champ *champ, t_process *process);
+int						ft_aff(t_vm *vm, t_champ *champ, t_process *process);
+int						ft_or(t_vm *vm, t_champ *champ, t_process *process);
+int						ft_and(t_vm *vm, t_champ *champ, t_process *process);
+int						ft_xor(t_vm *vm, t_champ *champ, t_process *process);
+int						ft_ld(t_vm *vm, t_champ *champ, t_process *process);
+int						ft_lld(t_vm *vm, t_champ *champ, t_process *process);
+int						ft_ldi(t_vm *vm, t_champ *champ, t_process *process);
+int						ft_lldi(t_vm *vm, t_champ *champ, t_process *process);
+int						ft_st(t_vm *vm, t_champ *champ, t_process *process);
+int						ft_sti(t_vm *vm, t_champ *champ, t_process *process);
+
+/*
+** TYPE_COMBINATIONS.c
+**
+** function parameter types
+*/
+
+char					any(t_process *process, int x);
+char					reg_dir(t_process *process, int x);
+char					dir_ind(t_process *process, int x);
+char					reg_ind(t_process *process, int x);
+
+/*
+** TYPES.c
+*/
+
+char					reg(t_process *process, int x);
+char					dir(t_process *process, int x);
+char					ind(t_process *process, int x);
 
 #endif
