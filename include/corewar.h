@@ -133,6 +133,7 @@ typedef struct			s_champ
 	char				comment[COMMENT_LENGTH + 5];
 	unsigned int		size;
 	struct s_process	*processes;
+	int					lives_counted;
 }						t_champ;
 
 // eliu: added int: cycle_delta

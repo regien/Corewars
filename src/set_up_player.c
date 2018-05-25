@@ -6,7 +6,7 @@
 /*   By: gmalpart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/19 18:55:45 by gmalpart          #+#    #+#             */
-/*   Updated: 2018/05/21 04:04:38 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/24 21:34:25 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,11 @@ void		get_nbr_player(int ac, int *i, char **av, t_vm *vm)
 		general_exit(g_ivlid_nbr, -1);
 }
 
+/*
+**	Initiliazes the number of the player and also initializes the counter
+**	of lives to 0
+*/
+
 void		set_up_player_nbr(int nbr_player, t_vm *vm, t_champ *champs)
 {
 	if (!champs)
@@ -46,6 +51,7 @@ void		set_up_player_nbr(int nbr_player, t_vm *vm, t_champ *champs)
 	if (nbr_player == 0)
 		nbr_player = vm->players;
 	champs->plyr_nbr = nbr_player;
+	champs->lives_counted = 0;
 }
 
 void		set_up_player_fd(int ac, char **av, int *i, t_vm *vm)

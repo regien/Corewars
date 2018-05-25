@@ -6,11 +6,21 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 01:20:26 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/24 21:11:51 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/25 00:49:43 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/corewar.h"
+
+/*
+** Initiliazes the 16 functions in every proccess added
+*/
+
+int		ft_put(char *str)
+{
+	ft_putstr(str);
+	return (1);
+}
 
 void	set_ops_cycles(t_op *ops)
 {
