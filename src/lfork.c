@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/corewar.h"
+#include "corewar.h"
 
 /*
 **	Similar to fork without the %IDX_MOD. This operation modifies the carry.
@@ -35,7 +35,7 @@ int		ft_lfork(t_vm *vm, t_champ *champ, t_process *process)
 	champ = NULL;
 	if (dir(process, 0))
 	{
-		new = add_process(champ, process.index);
+		new = add_process(champ, process->index);
 		return (0);
 	}
 	return (1);

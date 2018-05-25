@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/corewar.h"
+#include "corewar.h"
 
 /*
 **	Similar to ld without the %IDX_MOD. This operation modifies the carry.
@@ -24,15 +24,17 @@
 
 int		ft_lld(t_vm *vm, t_champ *champ, t_process *process)
 {
+	(void)vm;
+	(void)champ;
 	if (any(process, 0) && reg(process, 1))
 	{
-		if ((process.reg[process.arg.v[1]] = process.arg.v[0]) == 0)
+		if ((process->regs[process->arg.v[1]] = process->arg.v[0]) == 0)
 		{
-			process.carry = 1;
+			process->carry = 1;
 		}
 		else
 		{
-			process.carry = 0;
+			process->carry = 0;
 		}
 		return (0);
 	}

@@ -1,0 +1,22 @@
+1) Makefile related and compilations 
+a) Moved functions from ./src/functions/ folder up one directory so that all functions are directly in the ./src/live.c folder.
+b) Changed Makefile to include 16 functions. I have commmented out makefile stuff and messed with nothing else.
+
+
+HEADER FILE REVAMP
+2) Header files includes related:
+a) changed s_op to be below the t_vm, t_champ, and t_process structs because the function pointer to 16 functions
+b) changed ops to be a global variable so that any function can call from anywhere.
+
+3) Functions themselves:
+
+JUMP TABLE IMPLEMENTATION
+a) Updated all prototypes in .c files as well as corewar.h so that they all include t_vm, t_champ, and t_process structs.
+b) Compiles properly, next step is to confirm whether or not the functions work as intended in virtual memory.
+
+Misc:
+
+	Change the makefile so that it can compile /src/functions into .o files and be able to properly compile all functions.
+
+
+

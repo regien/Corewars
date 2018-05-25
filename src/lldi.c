@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/corewar.h"
+#include "corewar.h"
 
 /*
 **	Similar to ldi without the %IDX_MOD. This operation modifies the carry.
@@ -31,20 +31,21 @@ int		ft_lldi(t_vm *vm, t_champ *champ, t_process* process)
 	short	temp;
 	int		index;
 
-	champ = NULL;
+	(void)vm;
+	(void)champ;
 	if (ind(process, 0) && ind(process, 1) && reg(process, 2))
 	{
-		index = process.arg.v[0] + process.arg.v[1];
-		temp = vm.memory[index];
+		index = process->arg.v[0] + process->arg.v[1];
+		temp = vm->memory[index];
 		temp = temp << 8;
-		temp = temp + vm.memory[index + 1];
-		if ((process.regs[process.arg.v[2]] = temp) == 0)
+		temp = temp + vm->memory[index + 1];
+		if ((process->regs[process->arg.v[2]] = temp) == 0)
 		{
-			process.carry = 1;
+			process->carry = 1;
 		}
 		else
 		{
-			process.carry = 0;
+			process->carry = 0;
 		}
 		return (0);
 	}

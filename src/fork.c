@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   live.c                                             :+:      :+:    :+:   */
+/*   fork.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/16 03:06:43 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/23 20:47:53 by eliu             ###   ########.fr       */
+/*   Created: 2018/05/16 05:59:20 by eliu              #+#    #+#             */
+/*   Updated: 2018/05/23 20:41:44 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/corewar.h"
+#include "corewar.h"
 
 /*
-**	I need to add a function that lets the function controller know that
-**	a champion is alive due to the processes.
+**	Takes 1 parameter, which must be an index. 
+**	It creates a new program that inherits different states from the parent. 
+**	This program is executed at the address PC + first parameter % IDX_MOD.
 */
 
-int		ft_live(t_vm *vm, t_champ *champ, t_process *process)
+//	What is a different state from parent that it inherents?
+//	double check all 
+int		ft_fork(t_vm *vm, t_champ *champ, t_process *process)
 {
+	vm = NULL;
+
+	t_process *new;
 	if (dir(process, 0))
 	{
-		process.live = process.arg.v[0];
-		// process->index += args_size;
-		// process->index += 5;
+		new = add_process(champ, process->index % IDX_MOD);
 		return (0);
 	}
 	return (1);

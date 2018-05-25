@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/corewar.h"
+#include "corewar.h"
 
 /*
 **	Takes 1 parameter, which must be an index.
@@ -24,9 +24,11 @@
 
 int		ft_zjmp(t_vm *vm, t_champ *champ, t_process *process)
 {
-	if (dir(process, 0) && process.carry == 1)
+	(void)vm;
+	(void)champ;
+	if (dir(process, 0) && process->carry == 1)
 	{
-		process.index = process.arg.v[0];
+		process->index = process->arg.v[0];
 		return (0);
 	}
 	return (1);

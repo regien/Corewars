@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 22:55:43 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/24 21:06:08 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/24 22:24:49 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,6 @@ t_process	*set_process(char *pc_start, int mem_start)
 	p->cycle_counter = 0;
 	p->state = FETCH;
 	p->live = 0;
-	init_ops(p->ops);
 	p->curr_op = 0;
 	return (p);
 }
@@ -89,4 +88,3 @@ void		kill_process(t_process *p)
 		p->prev->next = p->next;
 	free(p);
 }
-

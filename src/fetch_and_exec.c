@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/18 11:16:17 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/18 11:17:04 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/24 22:29:17 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ size_t	set_arg(char **pc, char type, int *value, t_process *p)
 	short	*s;
 	int		*i;
 
-	if (type == IND_CODE || (type == DIR_CODE && p->ops[p->curr_op].truncate))
+	if (type == IND_CODE || (type == DIR_CODE && g_ops[p->curr_op].truncate))
 	{
 		s = (short *)&((*pc)[p->index]);
 		*value = *s;
@@ -44,7 +44,7 @@ size_t	set_arg(char **pc, char type, int *value, t_process *p)
 		*value = *c;
 		set_index(&(p->index), 1);
 	}
-	if (type == DIR_CODE && !p->ops[p->curr_op].truncate)
+	if (type == DIR_CODE && !g_ops[p->curr_op].truncate)
 	{
 		i = (int *)&((*pc)[p->index]);
 		*value = *i;
@@ -63,18 +63,19 @@ void	execute(t_process *p)
 	curr_op = p->curr_op;
 	type = p->pc[p->index];
 	i = -1;
-	while (++i < p->ops[curr_op].args)
-		if (p->ops[curr_op].descriptor)
+	while (++i < g_ops[curr_op].args)
+		if (g_ops[curr_op].descriptor)
 			p->arg.type[i] = get_type(p->pc[p->index], i + 1);
 		else
 			p->arg.type[i] = DIR_CODE;
-	set_index(&(p->index), p->ops[curr_op].descriptor ? 1 : 0);
+	set_index(&(p->index), g_ops[curr_op].descriptor ? 1 : 0);
 	p->arg.args_size = 0;
 	i = -1;
-	while (++i < p->ops[curr_op].args)
+	while (++i < g_ops[curr_op].args)
 		p->arg.args_size += set_arg(&(p->pc),
 		p->arg.type[i], &(p->arg.v[i]), p);
-	p->ops[curr_op].func_to_be("\nVAIII DANADA %d\n\n", curr_op);
+//	need to replace for the real function
+//	g_ops[curr_op].func_to_be("\nVAIII DANADA %d\n\n", curr_op);
 	printf("index: %d\n", p->index);
 	p->curr_op = 0;
 }
@@ -84,7 +85,7 @@ void	fetch(t_process *process)
 	if (process->pc[process->index] <= 16 && process->pc[process->index] > 0)
 	{
 		process->curr_op = process->pc[process->index];
-		process->cycle_counter = process->ops[process->curr_op].cycles;
+		process->cycle_counter = g_ops[process->curr_op].cycles;
 	}
 	else
 	{

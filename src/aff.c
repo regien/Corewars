@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   add.c                                              :+:      :+:    :+:   */
+/*   aff.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/16 03:28:13 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/23 20:45:24 by eliu             ###   ########.fr       */
+/*   Created: 2018/05/16 06:23:58 by eliu              #+#    #+#             */
+/*   Updated: 2018/05/23 23:20:25 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/corewar.h"
+#include "corewar.h"
 
 /*
-**	This operation modifies the carry.
-**	add (r2, r3, r5) add the content of r2 and r3 and puts the result into r5.
+**	Takes 1 register, which must be a register. 
+**	Prints stdout :
+**	The character whose ASCII code is the content of the register (in base 10).
+**	
+**	A 256 modulo is applied to this ASCII code.
+**	aff(r3) displyas ’*’ if r3 contains 42.
 */
 
-int		ft_add(t_vm *vm, t_champ *champ, t_process *process)
+int		ft_aff(t_vm *vm, t_champ *champ, t_process *process)
 {
-	vm = NULL;
-	champ = NULL;	
-	if (reg(process, 0) && reg(process, 1) && reg(process, 2))
+	(void)vm;
+	(void)champ;
+	if (reg(process, 0) && vm->flags_args.aff == 1)
 	{
-		if ((process.reg[process.arg.[2]] = 
-			process.arg.v[0] + process.arg.v[1]) == 0)
-		{
-			process.carry = 1;
-		}
-		else
-		{
-			process.carry = 0;
-		}
+		ft_putchar(process->index % 256);
 		return (0);
 	}
 	return (1);

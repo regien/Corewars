@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ldi.c                                              :+:      :+:    :+:   */
+/*   ldi->c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/corewar.h"
+#include "corewar.h"
 
 /*
 **	Takes 3 parameters. The first two must be indexes, the third one must be a register.
@@ -29,20 +29,20 @@ int		ft_ldi(t_vm *vm, t_champ *champ, t_process *process)
 	int		temp;
 	int		index;
 
-	champ = NULL;
+	(void)champ;
 	if (ind(process, 0) && ind(process, 1) && reg(process, 2))
 	{
-		index = (process.arg.v[0] + process.arg.v[1]) % IND_MOD;
-		temp = vm.memory[index];
+		index = (process->arg.v[0] + process->arg.v[1]) % IDX_MOD;
+		temp = vm->memory[index];
 		temp = temp << 8; // shift handeling - reading info
-		temp = temp + vm.memory[index + 1];
-		if ((process.regs[process.arg.v[2]] = temp) == 0)
+		temp = temp + vm->memory[index + 1];
+		if ((process->regs[process->arg.v[2]] = temp) == 0)
 		{
-			process.carry = 1;
+			process->carry = 1;
 		}
 		else
 		{
-			process.carry = 0;
+			process->carry = 0;
 		}
 		return (0);
 	}

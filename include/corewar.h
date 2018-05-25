@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/24 14:45:40 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/24 22:58:57 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@
 #define NAME_CMD_STRING			".name"
 #define COMMENT_CMD_STRING		".comment"
 #define REG_NUMBER				16
+
+#define OP_NUMBER				16
 
 /*
 ** types of arguments accepted
@@ -73,6 +75,10 @@ typedef char	t_arg_type;
 ** flag structure
 */
 
+
+struct					s_vm;
+struct					s_champ;
+struct					s_process;
 // eliu: fixed indentation for merge
 typedef struct			s_flags
 {
@@ -89,23 +95,22 @@ typedef struct			s_command_args
 	char				args_size;
 }						t_command_args;
 
+
+/*
 typedef struct			s_op
 {
-  	int					(*func_to_be)(char *, ...);
+//	int					(*func_to_be)(char *, ...);
+  	int					(*func_to_be)(t_vm *, t_champ *, t_process *, ...);
 	char				truncate;
 	char				args; //number of args
 	int					descriptor; //the byte that describes what the following are -- ops with only one option of arg has no descriptor
 	int					cycles;
 }						t_op;
-
-struct					s_champ;
-struct					s_process;
-	
+*/
 typedef struct			s_process
 {
 	struct s_champ		*father_champ;
 	int					player_number; // only eliu branch
-	t_op				ops[REG_NUMBER + 1];
 	int					curr_op;
 	t_command_args		arg;
 	char				*pc;
@@ -143,6 +148,22 @@ typedef struct			s_vm
 }						t_vm;
 
 
+/*
+**	GERARDO - EZEKIEL mod
+**	t_op[17] is a global variable so you dont have to allocate each time
+*/
+
+
+typedef struct			s_op
+{
+//	int					(*func_to_be)(char *, ...);
+  	int					(*func_to_be)(t_vm *, t_champ *, t_process *);
+	char				truncate;
+	char				args; //number of args
+	int					descriptor; //the byte that describes what the following are -- ops with only one option of arg has no descriptor
+	int					cycles;
+}						t_op;
+
 typedef struct			header_s
 {
   unsigned int			magic;
@@ -150,6 +171,9 @@ typedef struct			header_s
   unsigned int			prog_size;
   char					comment[COMMENT_LENGTH + 1];
 }						header_t;
+
+
+
 
 int						read_files(int players, t_vm *vm);
 
@@ -197,29 +221,30 @@ char					reg_ind(t_process *process, int x);
 
 // 						Function protyping 
 
-void					ft_live(t_process *process);
+int						ft_live(t_vm *vm, t_champ *champ, t_process *process);
 
-void					*ft_add(char first, char second, char third);
-void					*ft_sub(char first, char second, char third);
+int						ft_add(t_vm *vm, t_champ *champ, t_process *process);
+int						ft_sub(t_vm *vm, t_champ *champ, t_process *process);
 
 
-void					*ft_zjmp(char index);
-void					*ft_fork(char index);
-void					*ft_lfork(char index);
-void					*ft_aff(char rejester);
+int						ft_zjmp(t_vm *vm, t_champ *champ, t_process *process);
+int						ft_fork(t_vm *vm, t_champ *champ, t_process *process);
+int						ft_lfork(t_vm *vm, t_champ *champ, t_process *process);
+int						ft_aff(t_vm *vm, t_champ *champ, t_process *process);
 
 	
-void					*ft_or(char first, char second, char third);
-void					*ft_and(char first, char second, char third);
-void					*ft_xor(char first, char second, char third);
+int						ft_or(t_vm *vm, t_champ *champ, t_process *process);
+int						ft_and(t_vm *vm, t_champ *champ, t_process *process);
+int						ft_xor(t_vm *vm, t_champ *champ, t_process *process);
 
 
-void					*ft_ld(char first, char second);
-void					*ft_ldd(char first, char second);
-void					*ft_lldi(char first, char second, char third);
+int						ft_ld(t_vm *vm, t_champ *champ, t_process *process);
+int						ft_lld(t_vm *vm, t_champ *champ, t_process *process);
+int						ft_ldi(t_vm *vm, t_champ *champ, t_process *process);
+int						ft_lldi(t_vm *vm, t_champ *champ, t_process *process);
 
-void					*ft_st(char first, char second);
-void					*sti(char first, char second, char third);
+int						ft_st(t_vm *vm, t_champ *champ, t_process *process);
+int						ft_sti(t_vm *vm, t_champ *champ, t_process *process);
 
 
 // REFACTORIZING - gmalpart and some mod in alex's functions
@@ -230,6 +255,8 @@ extern char				g_ivlid_chmp[];
 extern char				g_ivlid_nbrpls[];
 extern char				g_ivlid_dupl[];
 extern char				g_usage[];
+
+extern t_op				g_ops[OP_NUMBER + 1];
 
 /*
 ** PARSER.c

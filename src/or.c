@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/corewar.h"
+#include "corewar.h"
 
 /*
 **	Similar to and '&', but performing a binary OR '|'.
@@ -25,19 +25,18 @@
 
 int		ft_or(t_vm *vm, t_champ *champ, t_process *process)
 {
-	vm = NULL;
-	champ = NULL;
-
+	(void)vm;
+	(void)champ;
 	if (any(process, 0) && any(process, 1) && reg(process, 2))
 	{
-		if ((process.regs[process.arg.v[2]] = 
-				process.args.v[0] | process.args.v[1]) == 0)
+		if ((process->regs[process->arg.v[2]] = 
+				process->arg.v[0] | process->arg.v[1]) == 0)
 		{
-			process.carry = 1;
+			process->carry = 1;
 		}
 		else
 		{
-			process.carry = 0;
+			process->carry = 0;
 		}
 		return (0);
 	}

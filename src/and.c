@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   and.c                                              :+:      :+:    :+:   */
+/*   and->c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/corewar.h"
+#include "corewar.h"
 
 /*
 **	Takes 3 parameters. It performs a binary AND '&' between the two parameters 
@@ -33,7 +33,7 @@ int			validate_args(t_command_args args)
 }
 */
 
-
+/*
 int		ft_and(t_vm *vm, t_champ *champ, t_process *process)
 {
 	vm = NULL;
@@ -48,6 +48,27 @@ int		ft_and(t_vm *vm, t_champ *champ, t_process *process)
 		else
 		{
 			process.carry = 0;
+		}
+		return (0);
+	}
+	return (1);
+}
+*/
+
+int		ft_and(t_vm *vm, t_champ *champ, t_process *process)
+{
+	(void)vm;
+	(void)champ;
+	if (any(process, 0) && any(process, 1) && reg(process, 2))
+	{
+		if ((process->regs[process->arg.v[2]] = 
+				process->arg.v[1] & process->arg.v[0]) == 0)
+		{
+			process->carry = 1;
+		}
+		else
+		{
+			process->carry = 0;
 		}
 		return (0);
 	}

@@ -6,11 +6,13 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 23:23:05 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/22 16:33:55 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/24 22:21:41 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/corewar.h"
+
+t_op		g_ops[OP_NUMBER + 1];
 
 int main(int argc, char **argv)
 {
@@ -22,6 +24,8 @@ int main(int argc, char **argv)
 	parser_args(argc, argv, &(vm));
 	if (!read_files(vm.players ,&vm))
 		return (1);
+	// init_op is here for testing reasons
+	init_ops(g_ops);
 	ft_printf("%x\n", vm.champs[0].processes->pc);
 	controller(&vm);
 	//play_game(vm);
