@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/23 23:19:58 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/24 14:45:40 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ typedef struct			s_flags
 
 typedef struct			s_command_args
 {
-	int					v[3]
+	int					v[3];
 	char				type[3];
 	char				args_size;
 }						t_command_args;
@@ -98,9 +98,12 @@ typedef struct			s_op
 	int					cycles;
 }						t_op;
 
+struct					s_champ;
+struct					s_process;
+	
 typedef struct			s_process
 {
-	t_champ				*father_champ;
+	struct s_champ		*father_champ;
 	int					player_number; // only eliu branch
 	t_op				ops[REG_NUMBER + 1];
 	int					curr_op;
@@ -124,7 +127,7 @@ typedef struct			s_champ
 	char				name[PROG_NAME_LENGTH + 5]; //assembler has to add 4 extra empty bytes to each
 	char				comment[COMMENT_LENGTH + 5];
 	unsigned int		size;
-	t_process			*processes;
+	struct s_process	*processes;
 }						t_champ;
 
 // eliu: added int: cycle_delta
@@ -135,8 +138,8 @@ typedef struct			s_vm
 	int					players;
 	int					cycles;
 	int					cycle_to_die;
-	t_champ				champs[MAX_PLAYERS];
-	t_flags				flags_args; // adition of flags in main_vm
+	struct s_champ		champs[MAX_PLAYERS];
+	struct s_flags		flags_args; // adition of flags in main_vm
 }						t_vm;
 
 

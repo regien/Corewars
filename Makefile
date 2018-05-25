@@ -6,7 +6,7 @@
 #    By: gmalpart <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/22 16:31:53 by gmalpart          #+#    #+#              #
-#    Updated: 2018/05/22 16:31:55 by gmalpart         ###   ########.fr        #
+#    Updated: 2018/05/24 19:11:44 by eliu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,30 @@ SRC		=	read_file.c \
 			parseargs.c \
 			set_up_player.c \
 			error_handling.c
+
+FUNCTION_PATH = ./functions/
+FUNCTION_FILES = live.c \
+				 ld.c \
+				 st.c \
+				 add.c \
+				 sub.c \
+				 and.c \
+				 or.c \
+				 xor.c \
+				 zjmp.c \
+				 ldi.c \
+				 sti.c \
+				 fork.c \
+				 lld.c \
+				 lldi.c \
+				 lfork.c \
+				 aff.c 
+
+FUNCTION_HELPERS = types.c \
+				   type_combinations.c 
+
+FUNCTION_ALL = $(FUNCTION_FILES), $(FUNCTION_HELPERS)
+FUNCTIONS = $(addprefix $(FUNCTION_PATH), $(FUNCTION_ALL));
 
 # 3
 SRCALL	= $(SRC)
