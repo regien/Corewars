@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/24 22:58:57 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/25 01:52:55 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,18 +95,6 @@ typedef struct			s_command_args
 	char				args_size;
 }						t_command_args;
 
-
-/*
-typedef struct			s_op
-{
-//	int					(*func_to_be)(char *, ...);
-  	int					(*func_to_be)(t_vm *, t_champ *, t_process *, ...);
-	char				truncate;
-	char				args; //number of args
-	int					descriptor; //the byte that describes what the following are -- ops with only one option of arg has no descriptor
-	int					cycles;
-}						t_op;
-*/
 typedef struct			s_process
 {
 	struct s_champ		*father_champ;
@@ -152,12 +140,11 @@ typedef struct			s_vm
 /*
 **	GERARDO - EZEKIEL mod
 **	t_op[17] is a global variable so you dont have to allocate each time
+**	it used to be a function pointer in printf format just for testing
 */
-
 
 typedef struct			s_op
 {
-//	int					(*func_to_be)(char *, ...);
   	int					(*func_to_be)(t_vm *, t_champ *, t_process *);
 	char				truncate;
 	char				args; //number of args
@@ -173,40 +160,6 @@ typedef struct			header_s
   char					comment[COMMENT_LENGTH + 1];
 }						header_t;
 
-
-
-
-int						read_files(int players, t_vm *vm);
-
-int						check_magic_number(int fd);
-
-void					set_index(int *index, int diff);
-
-int						set_champ_name(t_champ *champ);
-
-int						set_champ_comment(t_champ *champ);
-
-int						set_champ_size(t_champ *champ);
-
-void					set_vm_memory(t_vm *vm, int i, int players);
-
-void					set_champs(t_champ *champ, char *filename);
-
-t_process				*set_process(char *pc_start, int mem_start);
-
-t_process				*add_process(t_champ *champ, int index);
-
-void					kill_process(t_process *p);
-
-void					fetch(t_process *process);
-
-void					execute(t_process *process);
-
-void					init_ops(t_op *ops);
-
-void					controller(t_vm *vm);
-
-void					dump_memory(t_vm vm);
 
 //						Function parameter types
 char					reg(t_process *process, int x);
@@ -256,8 +209,8 @@ extern char				g_ivlid_chmp[];
 extern char				g_ivlid_nbrpls[];
 extern char				g_ivlid_dupl[];
 extern char				g_usage[];
-
 extern t_op				g_ops[OP_NUMBER + 1];
+
 
 /*
 ** PARSER.c
@@ -301,6 +254,7 @@ int						read_files(int players, t_vm *vm);
 int						set_champ_name(t_champ *champ);
 int						set_champ_size(t_champ *champ);
 int						set_champ_comment(t_champ *champ);
+void					set_vm_memory(t_vm *vm, int i, int players);
 
 /*
 ** CHECKER.c
@@ -309,6 +263,7 @@ int						set_champ_comment(t_champ *champ);
 */
 
 int						check_magic_number(int fd);
+void					set_index(int *index, int diff);
 
 /*
 ** CONVERSIONS.c
@@ -316,5 +271,43 @@ int						check_magic_number(int fd);
 
 void					convert_big_endian(unsigned int *num);
 void					convert_big_endian_short(unsigned short *num);
+
+
+/*
+** INIT_OPS.c
+** have 4 static functions inside
+** REMINDER, making them static and delete FT_PUT if not used
+*/
+
+void					init_ops(t_op *ops);
+
+/*
+** FETCH_AND_EXEC.c
+** REMINDER, get_type && set_arg are static, declare it
+*/
+
+void					fetch(t_process *process);
+void					execute(t_process *process);
+
+/*
+** CONSTRUCTOR.c
+*/
+
+//void					set_champs(t_champ *champ, char *filename);
+t_process				*set_process(char *pc_start, int mem_start);
+t_process				*add_process(t_champ *champ, int index);
+void					kill_process(t_process *p);
+
+/*
+** FUNCTION_CONTROLLER.c
+*/
+
+void					controller(t_vm *vm);
+
+/*
+** PRINT.c
+*/
+
+void					dump_memory(t_vm vm);
 
 #endif

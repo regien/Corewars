@@ -6,12 +6,22 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 22:55:43 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/24 22:24:49 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/25 01:44:21 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/corewar.h"
+#include "corewar.h"
 
+/*
+** Well set_champs is was replaced by the initial parser at the beginning of
+** the program so, in a further meeting this functions is going nowhere
+** just delete it
+**
+** CLEAR_VM_MEM
+** it was replaced by a 2 lines while loop in init_vm
+*/
+
+/*
 void	set_champs(t_champ *champ, char *filename)
 {
 	if (!champ)
@@ -35,6 +45,7 @@ void	clear_vm_mem(t_vm *vm)
 	vm->cycles = 0;
 	vm->cycle_to_die = CYCLE_TO_DIE;
 }
+*/
 
 t_process	*set_process(char *pc_start, int mem_start)
 {

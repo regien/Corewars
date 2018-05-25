@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 15:00:20 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/24 20:55:34 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/25 01:50:35 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,10 @@ void	run_processes(t_process *root, int i)
 		root = root->next;
 	}
 }
+
+/*
+** seem that's the function is currently not in use
+*/
 
 void	handle_cycle_to_die(t_vm *vm)
 {

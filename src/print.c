@@ -6,11 +6,11 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 01:17:30 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/24 20:52:56 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/25 01:51:59 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/corewar.h"
+#include "corewar.h"
 
 void	dump_memory(t_vm vm)
 {
