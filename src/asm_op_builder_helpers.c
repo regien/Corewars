@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/24 14:52:09 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/25 11:40:36 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/25 16:10:08 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,20 +49,19 @@ int		check_argument(char *str)
 		if (!ft_isdigit_sign(str[i]))
 			return (ft_printf("err on char %c\n", str[i]));
 	return (0);
-
 }
 
 int		convert_b_endian(unsigned int num)
 {
-	num =	(((num)>>24)&0xff) | // move byte 3 to byte 0
-			(((num)<<8)&0xff0000) | // move byte 1 to byte 2
-			(((num)>>8)&0xff00) | // move byte 2 to byte 1
-			(((num)<<24)&0xff000000); // byte 0 to byte 3
+	num = (((num) >> 24) & 0xff) |
+			(((num) << 8) & 0xff0000) |
+			(((num) >> 8) & 0xff00) |
+			(((num) << 24) & 0xff000000);
 	return (num);
 }
 
 int		convert_b_endian_short(unsigned short num)
 {
-	num =	((num)<<8 | (num)>>8); // move byte 2 to byte 1
+	num = ((num) << 8 | (num) >> 8);
 	return (num);
 }

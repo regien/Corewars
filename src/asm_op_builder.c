@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 18:33:23 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/25 11:49:51 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/25 16:41:29 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int		set_op_name(char **strreal, t_ops *op)
 	char	*tmp;
 
 	if (!(*strreal) || !op)
-		return (ft_printf("empty argument @opname\n"));
+		return (ft_printf_err("empty argument @opname\n"));
 	str = *strreal;
 	i = 0;
 	while (!WHITESPACE(str[i]))
@@ -40,7 +40,7 @@ int		set_arguments(char **strreal, t_ops *op)
 	char	*tmp;
 
 	if (!strreal || !op)
-		return (ft_printf("empty argument @setargs\n"));
+		return (ft_printf_err("empty argument @setargs\n"));
 	str = *strreal;
 	op->arg_name = ft_strsplit(str, ',');
 	i = 0;
@@ -53,7 +53,7 @@ int		set_arguments(char **strreal, t_ops *op)
 		i++;
 	}
 	if (i != op_table[op->op_code - 1].args)
-		return (ft_printf("wrong args number!\n"));
+		return (ft_printf_err("wrong args number!\n"));
 	return (0);
 }
 
@@ -79,7 +79,7 @@ int		get_arguments_and_sizes(t_ops *op)
 	while (op->arg_name[++i])
 	{
 		if (check_argument(op->arg_name[i]))
-			return (ft_printf("Argument parse error: %s\n", op->arg_name[i]));
+			return (ft_printf_err("Argument parse error: %s\n", op->arg_name[i]));
 		set_bit_descriptor(&(op->descriptor), op->arg_name[i], i + 1);
 		op->label_arg[i] = (op->arg_name[i][0] == LABEL_CHAR ||
 				op->arg_name[i][1] == LABEL_CHAR) ? 1 : 0;
@@ -95,7 +95,7 @@ int		get_arguments_and_sizes(t_ops *op)
 			op->arg_sizes[i] = 2;
 		}
 		else
-			return (ft_printf("unknow argument type\n"));
+			return (ft_printf_err("unknow argument type\n"));
 	}
 	return (0);
 }
@@ -108,19 +108,3 @@ int		set_size(t_ops *op)
 	op->size += op->arg_sizes[2];
 	return (1);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -6,13 +6,13 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 14:58:56 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/25 15:58:49 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/25 16:41:10 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/asm.h"
 
-char	*get_full_line(int fd)
+char		*get_full_line(int fd)
 {
 	char	*str;
 	char	*tmp;
@@ -36,7 +36,7 @@ char	*get_full_line(int fd)
 	if (str)
 	{
 		free(tmp);
-		return(ft_strdup(&str[i]));
+		return (ft_strdup(&str[i]));
 	}
 	return (str);
 }
@@ -51,7 +51,7 @@ int			check_label_name(t_label *label)
 	while (str[i])
 	{
 		if (!ft_strchr(LABEL_CHARS, str[i]) && str[i] != LABEL_CHAR)
-			return (ft_printf("Warning: Invalid Label %s\n", label->label_name));
+			return (ft_printf_err("Invalid Label %s\n", label->label_name));
 		i++;
 	}
 	return (0);
@@ -87,7 +87,8 @@ t_label		*get_label(char **full_str)
 /*
 **returns the list with all the ops and labels created
 */
-t_ops	*set_argument_list(int fd, t_label **label_root)
+
+t_ops		*set_argument_list(int fd, t_label **label_root)
 {
 	t_ops	*root;
 	t_ops	*last;
@@ -95,6 +96,7 @@ t_ops	*set_argument_list(int fd, t_label **label_root)
 	char	*str;
 	char	*tmp;
 
+	*label_root = 0;
 	last = 0;
 	root = 0;
 	while ((str = get_full_line(fd)) != 0)

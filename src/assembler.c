@@ -6,13 +6,13 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 14:00:25 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/25 15:59:46 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/25 16:40:44 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/asm.h"
 
-char	*convert_cor(char	*s)
+char	*convert_cor(char *s)
 {
 	char	*cor;
 	int		i;
@@ -67,14 +67,10 @@ int		main(int argc, char **argv)
 	char			*cor_name;
 
 	asm_init_ops(op_table);
-	if (argc != 2)
-		return (ft_printf("Usage: ./asm name_of_file.s\n"));
-	if (!ft_strstr(argv[1], ".s"))
-		return (ft_printf("Usage: ./asm name_of_file.s\n"));
+	if (argc != 2 || (argc == 2 && !ft_strstr(argv[1], ".s")))
+		return (ft_printf_err("Usage: ./asm name_of_file.s\n"));
 	if ((fd = open(argv[1], O_RDONLY)) < 3)
-		return (ft_printf("invalid file\n"));
-	ops = 0;
-	labels = 0;
+		return (ft_printf_err("invalid file\n"));
 	if (set_header(&header, fd))
 		return (1);
 	if (!(ops = set_argument_list(fd, &labels)))
@@ -87,25 +83,25 @@ int		main(int argc, char **argv)
 	write_file(fd, ops, labels, &header);
 	free(cor_name);
 	free_ops_and_labels(ops, labels);
+	ft_printf("%s became .cor... magically\n", argv[1]);
 	return (0);
-
 }
 
 
-	/*ft_printf("name: %s\n", header.prog_name);
-	ft_printf("comment: %s\n\n", header.comment);
+	/*ft_printf_err("name: %s\n", header.prog_name);
+	ft_printf_err("comment: %s\n\n", header.comment);
 	while (ops)
 	{
-		ft_printf("op: %s%\n", ops->op_name);
-		ft_printf("op_code: %d\n", ops->op_code);
-		ft_printf("size: %d\n", ops->size);
-		ft_printf("index: %d\n", ops->index);
-		ft_printf("size0: %d\n", ops->arg_sizes[0]);
-		ft_printf("size1: %d\n", ops->arg_sizes[1]);
-		ft_printf("size2: %d\n", ops->arg_sizes[2]);
+		ft_printf_err("op: %s%\n", ops->op_name);
+		ft_printf_err("op_code: %d\n", ops->op_code);
+		ft_printf_err("size: %d\n", ops->size);
+		ft_printf_err("index: %d\n", ops->index);
+		ft_printf_err("size0: %d\n", ops->arg_sizes[0]);
+		ft_printf_err("size1: %d\n", ops->arg_sizes[1]);
+		ft_printf_err("size2: %d\n", ops->arg_sizes[2]);
 		if (op_table[(int)ops->op_code - 1].descriptor)
-			ft_printf("descriptor byte: %d\n", ops->descriptor);
-		ft_printf("\n");
+			ft_printf_err("descriptor byte: %d\n", ops->descriptor);
+		ft_printf_err("\n");
 		ops = ops->next;
 	//check if label names are only valid chars and not repeated
 	*/

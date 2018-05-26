@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 19:50:04 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/23 20:07:53 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/25 16:15:02 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,4 +73,3 @@ void	asm_set_ops_accepted_args(t_op *ops)
 	ops[0xf].accepted_args[0] = T_REG;
 	asm_set_ops_accepted_args_2(ops);
 }
-

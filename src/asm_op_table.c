@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 18:21:05 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/24 12:21:51 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/25 16:10:38 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int		get_op_code(char *op_name, t_ops *op)
 		op->op_code = 10;
 	else if (!ft_strcmp(op_name, "sti"))
 		op->op_code = 11;
-	else 
+	else
 		return (get_op_code_2(op_name, op));
 	return (op->op_code);
 }

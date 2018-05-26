@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 12:41:43 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/25 10:51:05 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/25 16:13:22 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,11 @@ char	*find_line(char *cmd_string, int fd)
 	char	*tmp;
 	int		ret;
 
-	while ((ret = get_next_line(fd, &str)) == 1 && (tmp = ft_strstr(str, cmd_string)) == 0)
-		free(str);
+	while ((ret = get_next_line(fd, &str)) == 1)
+		if ((tmp = ft_strstr(str, cmd_string)) == 0)
+			free(str);
+		else
+			break ;
 	if (!tmp)
 		return (0);
 	return (str);

@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 11:21:03 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/16 01:43:09 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/25 16:39:25 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -290,6 +290,8 @@ void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 ** ------------------------------FT_PRINTF FUNCTIONS-------------------------
 */
 int				ft_printf(char *format, ...);
+
+int				ft_printf_err(char *format, ...);
 
 int				is_format_letter(char c);
 
