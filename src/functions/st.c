@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 03:18:56 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/25 19:02:01 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/25 19:15:33 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,8 @@ int		ft_st(t_vm *vm, t_champ *champ, t_process *process)
 		}
 		else if (ind(process, 1))
 		{
-			printf("the value is: %d\n the index is: %d\n", process->arg.v[0], process->arg.v[1]);
+			printf("the value if arg.v[0] is %d\nthe value of arg.v[1]: %d\n", 
+					process->arg.v[0], process->arg.v[1]);
 			store_big_endian(vm, process->arg.v[0], process->arg.v[1] % IDX_MOD);
 		}
 		ft_putendl("	exited ft_st with return 0");

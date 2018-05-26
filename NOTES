@@ -22,3 +22,10 @@ Misc:
 
 REVISION
 	ERASE TESTING_ENUM in SRC files
+
+
+Print statements: 
+Code not recognized : fetch_and_exec.c -> get_type(); 24
+index: fetch_and_exec.c -> execute(); 89
+
+
