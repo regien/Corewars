@@ -4,14 +4,24 @@ Notes:
 
 2. It seems our asm cannot overwrite existing files when the og_asm can
 
-3. We give a comment size too big error before the og_asm does
+3. We give a name size error before the og_asm (from trying to compile with path "~/Downloads/corewar/ressources/zork.s")
 
-4. The og_asm output permissions are "-rw-------" our asm output permissions are "-------r-"
+4. We give a comment size too big error before the og_asm does (seen when trying to compile run_kitty_RUN.s)
 
-5. The "thi.smightbreak" test case outputs file "thi.corghtbreak" where og_asm outputs file "thi.cor"
+5. The og_asm output permissions are "-rw-------" our asm output permissions are "------r--"
 
-6. I tried assembling helltrain.s, it didn't work with the intra's corewar... seems to be a permissions problem, our file is chmod code  '014', the og_asm outputs with '600'
+6. The "thi.smightbreak" test case outputs file "thi.corghtbreak" where og_asm outputs file "thi.cor"
 
-7. (Manually changed permissions) The behavior is different, our output's version never starts the 'train' part; a diff later showed that the values are not being set properly (see hecktrain.dump, helltrain.dump & train.diff)
+7. I tried assembling helltrain.s, it didn't work with the intra's corewar... seems to be a permissions problem, our file is chmod code  '014', the og_asm outputs with '600' (hecktrain.cor is the og_asm version)
+
+8. (Manually changed permissions of helltrain.cor to 600) The behavior is different, our output's version never starts the 'train' part; a diff later showed that the values are not being set properly (see hecktrain.dump, helltrain.dump & train.diff)
+
+9. Still compiles if there is text before the ".name" at the beggining of the file (see zerk.s)
+
+10. Compiled zork.s with our asm and the permissions code was '005' this time, seems rather arbritary...
+
+11. (Manually changed zork.cor permissions to '600') Compiled zork.cor from our asm and og_zork.cor from the og_asm and they were both the same
+
+12. Compiled a file named "s.s.s.s" with our asm and the output was named "s.cor.s", compiled "s.s.s.s" with the og_asm and got the output "s.s.s.cor"
 
 (thi.corghtbreak and zork.cor permissions were changed to 777 in order to be able to push them)
