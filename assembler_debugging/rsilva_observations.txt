@@ -1,0 +1,17 @@
+Notes:
+
+1. IDK if we should check for if .s is at the end of the filename (og_asm does not)
+
+2. It seems our asm cannot overwrite existing files when the og_asm can
+
+3. We give a comment size too big error before the og_asm does
+
+4. The og_asm output permissions are "-rw-------" our asm output permissions are "-------r-"
+
+5. The "thi.smightbreak" test case outputs file "thi.corghtbreak" where og_asm outputs file "thi.cor"
+
+6. I tried assembling helltrain.s, it didn't work with the intra's corewar... seems to be a permissions problem, our file is chmod code  '014', the og_asm outputs with '600'
+
+7. (Manually changed permissions) The behavior is different, our output's version never starts the 'train' part; a diff later showed that the values are not being set properly (see hecktrain.dump, helltrain.dump & train.diff)
+
+(thi.corghtbreak and zork.cor permissions were changed to 777 in order to be able to push them)
