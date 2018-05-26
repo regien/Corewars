@@ -75,7 +75,7 @@ void	controller(t_vm *vm)
 	int		i;
 
 		i = 0;
-	//	add_process(&(vm->champs[i]), vm->champs[i].processes->index + 16);
+		add_process(&(vm->champs[i]), vm->champs[i].processes->index + 16);
 		while (1)
 		{
 			i = 0;
