@@ -1,2 +1,0 @@
-# Corewars
-Setting enviorement
