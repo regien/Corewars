@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/24 14:52:09 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/25 17:02:20 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/25 19:47:24 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int		check_argument(char *str)
 		return (0);
 	i = 1;
 	while (str[++i] && str[1] != LABEL_CHAR)
-		if (!ft_isdigit_sign(str[i]))
+		if (!ft_isdigit_sign(str[i]) || str[i] == 'x')
 			return (ft_printf_err("err on char %c\n", str[i]));
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/25 15:50:48 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/25 17:00:51 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/25 19:14:02 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,9 @@ void	clean_label(t_label *labels)
 	int		i;
 
 	buf = labels;
-	i = 0;
 	while (buf)
 	{
+		i = 0;
 		while (buf->label_name[i] && buf->label_name[i] != LABEL_CHAR)
 			i++;
 		buf->label_name[i] = 0;

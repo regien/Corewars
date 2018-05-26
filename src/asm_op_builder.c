@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 18:33:23 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/25 17:40:37 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/25 19:31:49 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,6 +117,7 @@ int		get_arguments_and_sizes(t_ops *op)
 
 int		set_size(t_ops *op)
 {
+	op->size = 0;
 	op->size = op_table[(int)op->op_code - 1].descriptor + 1;
 	op->size += op->arg_sizes[0];
 	op->size += op->arg_sizes[1];

@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 14:58:56 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/25 16:41:10 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/25 20:11:28 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,10 +77,7 @@ t_label		*get_label(char **full_str)
 	while (**full_str && WHITESPACE(**full_str))
 		(*full_str)++;
 	if (**full_str == 0)
-	{
-		free(*full_str);
 		*full_str = 0;
-	}
 	return (new_label);
 }
 

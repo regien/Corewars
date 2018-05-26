@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 16:39:21 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/25 16:21:25 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/25 19:33:21 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ t_ops	*init_op(void)
 	new->label_arg[0] = 0;
 	new->label_arg[1] = 0;
 	new->label_arg[2] = 0;
+	new->arg_sizes[0] = 0;
+	new->arg_sizes[1] = 0;
+	new->arg_sizes[2] = 0;
 	return (new);
 }
 

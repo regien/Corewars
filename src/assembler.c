@@ -6,11 +6,12 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 14:00:25 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/25 17:00:22 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/25 20:12:05 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/asm.h"
+#include <errno.h>
 
 char	*convert_cor(char *s)
 {
@@ -78,8 +79,8 @@ int		main(int argc, char **argv)
 	if (set_label_vars(labels, ops))
 		return (1);
 	cor_name = convert_cor(argv[1]);
-	if ((fd = open(cor_name, O_WRONLY | O_TRUNC)) < 3)
-		return (1);
+	if ((fd = open(cor_name, O_WRONLY | O_TRUNC | O_CREAT)) < 3)
+		return (ft_printf_err("couldn't create file\n %d\n", fd));
 	write_file(fd, ops, labels, &header);
 	free(cor_name);
 	free_ops_and_labels(ops, labels);
