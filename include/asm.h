@@ -109,6 +109,7 @@ int				convert_b_endian(unsigned int num);
 int				convert_b_endian_short(unsigned short num);
 /*
 **ASS_NAME_COMMENT
+**	setting the rest of the functions to static functions
 */
 int				set_header(t_header *h, int fd);
 /*

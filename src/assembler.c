@@ -59,6 +59,16 @@ void	free_ops_and_labels(t_ops *op, t_label *label)
 	}
 }
 
+/*
+** name_checking revamp:
+**		check name of str equal
+**		if (ft_strque(".s", ft_strstr(argv[1], ".s")) == 0)
+**			display_error_message
+**
+**		display_error_message
+**		return (ft_printf_err("Usage: ./asm name_of_file.s\n"));
+*/
+
 int		main(int argc, char **argv)
 {
 	int				fd;
@@ -79,7 +89,7 @@ int		main(int argc, char **argv)
 	if (set_label_vars(labels, ops))
 		return (1);
 	cor_name = convert_cor(argv[1]);
-	if ((fd = open(cor_name, O_WRONLY | O_TRUNC | O_CREAT)) < 3)
+	if ((fd = open(cor_name, O_RDWR | O_TRUNC | O_CREAT)) < 3)
 		return (ft_printf_err("couldn't create file\n %d\n", fd));
 	write_file(fd, ops, labels, &header);
 	free(cor_name);

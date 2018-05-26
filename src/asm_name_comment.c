@@ -12,7 +12,11 @@
 
 #include "../include/asm.h"
 
-char	*find_line(char *cmd_string, int fd)
+/*
+** check the usage of ft_strstr it might lead to some failures
+*/
+
+static char	*find_line(char *cmd_string, int fd)
 {
 	char	*str;
 	char	*tmp;
@@ -28,7 +32,7 @@ char	*find_line(char *cmd_string, int fd)
 	return (str);
 }
 
-int		set_name(char name[PROG_NAME_LENGTH + 5], int fd)
+static int		set_name(char name[PROG_NAME_LENGTH + 5], int fd)
 {
 	char	*str;
 	int		i;
@@ -56,7 +60,7 @@ int		set_name(char name[PROG_NAME_LENGTH + 5], int fd)
 	return (0);
 }
 
-int		set_comment(char comment[COMMENT_LENGTH + 5], int fd)
+static int		set_comment(char comment[COMMENT_LENGTH + 5], int fd)
 {
 	char	*str;
 	int		i;
