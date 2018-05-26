@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 15:00:20 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/25 19:00:18 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/25 22:05:44 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,21 +74,21 @@ void	controller(t_vm *vm)
 {
 	int		i;
 
+	i = 0;
+//	add_process(&(vm->champs[i]), vm->champs[i].processes->index + 16);
+	while (1)
+	{
 		i = 0;
-	//	add_process(&(vm->champs[i]), vm->champs[i].processes->index + 16);
-		while (1)
+		while (i < vm->players)
 		{
-			i = 0;
-			while (i < vm->players)
-			{
-				run_processes(vm, PROCESS, i);
-				i++;
-			}
-			vm->cycles++;
-		//	if (vm->cycles % vm->cycle_to_die == 0)
-		//		handle_cycle_to_die(vm);
-			ft_printf("curr cycle: %d\n", vm->cycles);
-			if (vm->cycles == 10)
-				break ;
+			run_processes(vm, PROCESS, i);
+			i++;
 		}
+		vm->cycles++;
+	//	if (vm->cycles % vm->cycle_to_die == 0)
+	//		handle_cycle_to_die(vm);
+		ft_printf("curr cycle: %d\n", vm->cycles);
+		if (vm->cycles == 10)
+			break ;
+	}
 }
