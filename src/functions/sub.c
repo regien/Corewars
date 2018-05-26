@@ -21,6 +21,7 @@
 
 int		ft_sub(t_vm *vm, t_champ *champ, t_process *process)
 {
+	ft_putendl("	entered ft_sub");
 	(void)vm;
 	(void)champ;
 	if (reg(process, 0) && reg(process, 1) && reg(process, 2))
@@ -34,7 +35,9 @@ int		ft_sub(t_vm *vm, t_champ *champ, t_process *process)
 		{
 			process->carry = 0;
 		}
+		ft_putendl("	exited ft_sub with return 0");
 		return (0);
 	}
+	ft_putendl("	exited ft_sub with return 1");
 	return (1);
 }

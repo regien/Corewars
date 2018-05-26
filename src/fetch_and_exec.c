@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/18 11:16:17 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/25 01:32:12 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/25 18:41:09 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ size_t	set_arg(char **pc, char type, int *value, t_process *p)
 	return (0);
 }
 
-void	execute(t_process *p)
+void	execute(t_vm *vm, t_process *p)
 {
 	char type;
 	int		i;
@@ -74,7 +74,17 @@ void	execute(t_process *p)
 	while (++i < g_ops[curr_op].args)
 		p->arg.args_size += set_arg(&(p->pc),
 		p->arg.type[i], &(p->arg.v[i]), p);
+// eliu working area {
+	
+	(void)vm;
+	g_ops[curr_op].func_to_be(vm, p->father_champ, p);
+	dump_memory(*vm);
+	//	g_ops[curr_op].func_to_be("\nVAIII DANADA %d\n\n", curr_op);
+	
+// end working area	}
 //	need to replace for the real function
+	
+
 //	g_ops[curr_op].func_to_be("\nVAIII DANADA %d\n\n", curr_op);
 	printf("index: %d\n", p->index);
 	p->curr_op = 0;

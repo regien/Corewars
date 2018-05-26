@@ -24,6 +24,7 @@
 
 int		ft_lld(t_vm *vm, t_champ *champ, t_process *process)
 {
+	ft_putendl("	entered ft_lld");
 	(void)vm;
 	(void)champ;
 	if (any(process, 0) && reg(process, 1))
@@ -37,6 +38,8 @@ int		ft_lld(t_vm *vm, t_champ *champ, t_process *process)
 			process->carry = 0;
 		}
 		return (0);
+		ft_putendl("	exited ft_lld with return 0");
 	}
+	ft_putendl("	exited ft_lld with return 1");
 	return (1);
 }

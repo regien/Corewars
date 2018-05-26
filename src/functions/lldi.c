@@ -28,6 +28,7 @@
 
 int		ft_lldi(t_vm *vm, t_champ *champ, t_process* process)
 {
+	ft_putendl("	entered ft_lldi");
 	short	temp;
 	int		index;
 
@@ -47,7 +48,9 @@ int		ft_lldi(t_vm *vm, t_champ *champ, t_process* process)
 		{
 			process->carry = 0;
 		}
+		ft_putendl("	exited ft_lldi with return 0");
 		return (0);
 	}
+	ft_putendl("	exited ft_lldi with return 1");
 	return (1);
 }

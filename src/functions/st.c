@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 03:18:56 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/23 23:37:03 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/25 19:02:01 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,13 @@
 
 static void	store_big_endian(t_vm *vm, int value, int index)
 {
+	ft_putendl("	entered big endian");
 	char	a;
 	char	b;
 	char	c;
 	char	d;
 
+//	printf("the value is: %d\n the index is: %d\n", value, index);
 	a = value & 0xff000000;
 	b = value & 0x00ff0000;
 	c = value & 0x0000ff00;
@@ -36,13 +38,15 @@ static void	store_big_endian(t_vm *vm, int value, int index)
 	vm->memory[index + 1] = b;
 	vm->memory[index + 2] = c;
 	vm->memory[index + 3] = d;
+	ft_putendl("	store big endian");
 }
 
 int		ft_st(t_vm *vm, t_champ *champ, t_process *process)
 {
-	champ = NULL;
+	ft_putendl("	entered ft_st");
 
-	if (reg(process, 0))
+	(void)champ;
+	if (reg(process, 0) && reg_ind(process, 1))
 	{
 		if (reg(process, 1))
 		{
@@ -51,9 +55,12 @@ int		ft_st(t_vm *vm, t_champ *champ, t_process *process)
 		}
 		else if (ind(process, 1))
 		{
+			printf("the value is: %d\n the index is: %d\n", process->arg.v[0], process->arg.v[1]);
 			store_big_endian(vm, process->arg.v[0], process->arg.v[1] % IDX_MOD);
 		}
+		ft_putendl("	exited ft_st with return 0");
 		return (0);
 	}
+	ft_putendl("	exited ft_st with return 1");
 	return (1);
 }

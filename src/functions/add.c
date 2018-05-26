@@ -19,8 +19,9 @@
 
 int		ft_add(t_vm *vm, t_champ *champ, t_process *process)
 {
-	vm = NULL;
-	champ = NULL;	
+	ft_putendl("	entered ft_add");
+	(void)vm;
+	(void)champ;	
 	if (reg(process, 0) && reg(process, 1) && reg(process, 2))
 	{
 		if ((process->regs[process->arg.v[2]] = 
@@ -32,7 +33,9 @@ int		ft_add(t_vm *vm, t_champ *champ, t_process *process)
 		{
 			process->carry = 0;
 		}
+		ft_putendl("	exited ft_add with return 0");
 		return (0);
 	}
+	ft_putendl("	exited ft_add with return 1");
 	return (1);
 }

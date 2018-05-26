@@ -21,10 +21,12 @@
 
 void	read_from_vm(t_vm *vm, t_process *process, int r, int index)
 {
+	ft_putendl("	arg is an indirect: entered read from vm");
 	process->regs[r] = vm->memory[index % MEM_SIZE] << 24;
 	process->regs[r] += vm->memory[(index + 1) % MEM_SIZE] << 16;
 	process->regs[r] += vm->memory[(index + 2) % MEM_SIZE] << 8;
 	process->regs[r] += vm->memory[(index + 3) % MEM_SIZE];
+	ft_putendl("	exited read from vm");
 }
 
 /*
@@ -33,6 +35,7 @@ void	read_from_vm(t_vm *vm, t_process *process, int r, int index)
 
 int		ft_ld(t_vm *vm, t_champ *champ, t_process *process)
 {
+	ft_putendl("	entered ft_ld");
 	(void)champ;
 	if (dir_ind(process, 0) && reg(process, 1))
 	{
@@ -42,6 +45,7 @@ int		ft_ld(t_vm *vm, t_champ *champ, t_process *process)
 		}
 		else if (ind(process, 0))
 		{
+
 			read_from_vm(vm, process, process->arg.v[1] - 1, process->index);
 		}
 		if (process->regs[process->arg.v[1] - 1] == 0)
@@ -52,7 +56,9 @@ int		ft_ld(t_vm *vm, t_champ *champ, t_process *process)
 		{
 			process->carry = 0;
 		}
+		ft_putendl("	exited ft_ld with return 0");
 		return (0);
 	}
+	ft_putendl("	exited ft_ld with return 0");
 	return (1);
 }

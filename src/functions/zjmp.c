@@ -24,12 +24,15 @@
 
 int		ft_zjmp(t_vm *vm, t_champ *champ, t_process *process)
 {
+	ft_putendl("	entered ft_zjmp");
 	(void)vm;
 	(void)champ;
 	if (dir(process, 0) && process->carry == 1)
 	{
 		process->index = process->arg.v[0];
+		ft_putendl("	exited ft_zjmp with return 0");
 		return (0);
 	}
+	ft_putendl("	exited ft_zjmp with return 1");
 	return (1);
 }

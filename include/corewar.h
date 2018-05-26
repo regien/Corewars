@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/25 04:03:09 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/25 16:30:46 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -241,7 +241,7 @@ void					init_ops(t_op *ops);
 */
 
 void					fetch(t_process *process);
-void					execute(t_process *process);
+void					execute(t_vm *vm, t_process *process);
 
 /*
 ** CONSTRUCTOR.c

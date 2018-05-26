@@ -25,6 +25,7 @@
 
 int		ft_or(t_vm *vm, t_champ *champ, t_process *process)
 {
+	ft_putendl("	entered ft_or");
 	(void)vm;
 	(void)champ;
 	if (any(process, 0) && any(process, 1) && reg(process, 2))
@@ -38,7 +39,9 @@ int		ft_or(t_vm *vm, t_champ *champ, t_process *process)
 		{
 			process->carry = 0;
 		}
+		ft_putendl("	exited ft_or with return 0");
 		return (0);
 	}
+	ft_putendl("	exited ft_or with return 1");
 	return (1);
 }

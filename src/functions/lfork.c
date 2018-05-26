@@ -29,14 +29,17 @@
 
 int		ft_lfork(t_vm *vm, t_champ *champ, t_process *process)
 {
+	ft_putendl("	entered ft_lfork");
 	t_process *new;
 
-	vm = NULL;
-	champ = NULL;
+	(void)vm;
+	(void)champ;
 	if (dir(process, 0))
 	{
 		new = add_process(champ, process->index);
+		ft_putendl("	exited ft_lfork with return 0");
 		return (0);
 	}
+	ft_putendl("	exited ft_lfork with return 1");
 	return (1);
 }

@@ -22,13 +22,16 @@
 //	double check all 
 int		ft_fork(t_vm *vm, t_champ *champ, t_process *process)
 {
-	vm = NULL;
+ft_putendl("	entered ft_fork");
+	(void)vm;
 
 	t_process *new;
 	if (dir(process, 0))
 	{
 		new = add_process(champ, process->index % IDX_MOD);
+		ft_putendl("	exited ft_fork with return 0");
 		return (0);
 	}
+	ft_putendl("	exited ft_fork with return 1");
 	return (1);
 }

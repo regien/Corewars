@@ -19,6 +19,7 @@
 
 int		ft_live(t_vm *vm, t_champ *champ, t_process *process)
 {
+	ft_putendl("	entered ft_live");
 	(void)vm;
 	(void)champ;
 	if (dir(process, 0))
@@ -27,6 +28,8 @@ int		ft_live(t_vm *vm, t_champ *champ, t_process *process)
 		// process->index += args_size;
 		// process->index += 5;
 		return (0);
+		ft_putendl("	exited ft_live with return 0");
 	}
+	ft_putendl("	exited ft_live with return 1");
 	return (1);
 }

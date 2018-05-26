@@ -22,6 +22,7 @@
 
 static void	store_big_endian(t_vm *vm, int value, int index)
 {
+	ft_putendl("	entered big endian");
 	char	a;
 	char	b;
 	char	c;
@@ -35,10 +36,12 @@ static void	store_big_endian(t_vm *vm, int value, int index)
 	vm->memory[index + 1] = b;
 	vm->memory[index + 2] = c;
 	vm->memory[index + 3] = d;
+	ft_putendl("	exited big endian");
 }
 
 int		ft_sti(t_vm *vm, t_champ *champ, t_process *process)
 {
+	ft_putendl("	entered ft_sti");
 	int		index1;
 	int		index2;
 
@@ -64,7 +67,9 @@ int		ft_sti(t_vm *vm, t_champ *champ, t_process *process)
 			index2 = process->arg.v[2];
 		}
 		store_big_endian(vm, process->regs[process->arg.v[0]], index1 + index2);
+		ft_putendl("	exited ft_sti with return 0");
 		return (0);
 	}
+	ft_putendl("	exited ft_sti with return 1");
 	return (1);
 }

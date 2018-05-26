@@ -57,6 +57,7 @@ int		ft_and(t_vm *vm, t_champ *champ, t_process *process)
 
 int		ft_and(t_vm *vm, t_champ *champ, t_process *process)
 {
+	ft_putendl("	entered ft_and");
 	(void)vm;
 	(void)champ;
 	if (any(process, 0) && any(process, 1) && reg(process, 2))
@@ -70,7 +71,9 @@ int		ft_and(t_vm *vm, t_champ *champ, t_process *process)
 		{
 			process->carry = 0;
 		}
+		ft_putendl("	exited ft_and with return 0");
 		return (0);
 	}
+	ft_putendl("	exited ft_and with return 1");
 	return (1);
 }

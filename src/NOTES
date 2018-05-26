@@ -1,0 +1,42 @@
+changed checker.c while loop for index
+
+
+
+
+
+
+
+file flow:
+
+	corewar.c (main)
+	controller(&vm) (function_controller.c)
+	{
+		
+	}
+
+
+
+
+jk idc about anything under this
+	corewar.c -> 
+		init_vm ->
+		parser_args->
+		read_files->
+		init_ops->
+		controller->
+		play_game->
+		dump_memory->>
+
+	read_file.c
+
+	checker.c (magic number and setting index);
+
+	constructor.c calls set_process();
+
+	set_up_player.c	
+
+	init_ops.c ?
+
+	function_controller.c -> 
+	fetch_and_exec.c
+	

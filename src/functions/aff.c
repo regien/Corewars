@@ -23,12 +23,15 @@
 
 int		ft_aff(t_vm *vm, t_champ *champ, t_process *process)
 {
+	ft_putendl("	entered ft_aff");
 	(void)vm;
 	(void)champ;
 	if (reg(process, 0) && vm->flags_args.aff == 1)
 	{
 		ft_putchar(process->index % 256);
+		ft_putendl("	exited ft_aff with return 0");
 		return (0);
 	}
+	ft_putendl("	exited ft_aff with return 1");
 	return (1);
 }

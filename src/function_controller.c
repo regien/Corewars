@@ -6,14 +6,18 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 15:00:20 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/25 01:50:35 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/25 19:00:18 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/corewar.h"
 #define PROCESS vm->champs[i].processes
 
-void	run_processes(t_process *root, int i)
+/*
+**	eliu: Changed run_processes(t_process *root, int i) to include vm.
+*/
+
+void	run_processes(t_vm *vm, t_process *root, int i)
 {
 	int j;
 	if (!root)
@@ -25,16 +29,17 @@ void	run_processes(t_process *root, int i)
 		if (root->curr_op == 0)
 		{
 			fetch(root);
-			printf("champs %d, process %d fetched op %d\n", i + 1, j, root->curr_op);
+			//printf("champs %d, process %d fetched op %d\n", i + 1, j, root->curr_op);
 		}
 		if (root->cycle_counter == 0 && root->curr_op)
 		{
 			printf("champs %d prcss %d executing op %d:\n", i + 1, j, root->curr_op);
-			execute(root);
+			execute(vm, root);
+			printf("value is %d\n", root->arg.v[0]);
 		}
 		else if (root->cycle_counter > 0)
 		{
-			printf("champs %d prcss %d has %d cycles before executing\n", i + 1, j, root->cycle_counter);
+			//printf("champs %d prcss %d has %d cycles before executing\n", i + 1, j, root->cycle_counter);
 			root->cycle_counter--;
 		}
 		root = root->next;
@@ -70,20 +75,20 @@ void	controller(t_vm *vm)
 	int		i;
 
 		i = 0;
-		add_process(&(vm->champs[i]), vm->champs[i].processes->index + 16);
+	//	add_process(&(vm->champs[i]), vm->champs[i].processes->index + 16);
 		while (1)
 		{
 			i = 0;
 			while (i < vm->players)
 			{
-				run_processes(PROCESS, i);
+				run_processes(vm, PROCESS, i);
 				i++;
 			}
 			vm->cycles++;
 		//	if (vm->cycles % vm->cycle_to_die == 0)
 		//		handle_cycle_to_die(vm);
 			ft_printf("curr cycle: %d\n", vm->cycles);
-			if (vm->cycles == 200)
+			if (vm->cycles == 10)
 				break ;
 		}
 }
