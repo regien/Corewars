@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 03:18:56 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/25 19:15:33 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/25 19:52:58 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,15 @@ static void	store_big_endian(t_vm *vm, int value, int index)
 	char	c;
 	char	d;
 
+	value = -1;
+	index = 128;
+
 //	printf("the value is: %d\n the index is: %d\n", value, index);
-	a = value & 0xff000000;
-	b = value & 0x00ff0000;
-	c = value & 0x0000ff00;
+	a = (value & 0xff000000) >> 24;
+	b = (value & 0x00ff0000) >> 16;
+	c = (value & 0x0000ff00) >> 8;
 	d = value & 0x000000ff;
+	printf("a, b, c, d are :%c %c %c %c \n", a, b, c, d);
 	vm->memory[index] = a;
 	vm->memory[index + 1] = b;
 	vm->memory[index + 2] = c;
