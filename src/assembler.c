@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 14:00:25 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/25 16:40:44 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/25 17:00:22 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,22 +86,3 @@ int		main(int argc, char **argv)
 	ft_printf("%s became .cor... magically\n", argv[1]);
 	return (0);
 }
-
-
-	/*ft_printf_err("name: %s\n", header.prog_name);
-	ft_printf_err("comment: %s\n\n", header.comment);
-	while (ops)
-	{
-		ft_printf_err("op: %s%\n", ops->op_name);
-		ft_printf_err("op_code: %d\n", ops->op_code);
-		ft_printf_err("size: %d\n", ops->size);
-		ft_printf_err("index: %d\n", ops->index);
-		ft_printf_err("size0: %d\n", ops->arg_sizes[0]);
-		ft_printf_err("size1: %d\n", ops->arg_sizes[1]);
-		ft_printf_err("size2: %d\n", ops->arg_sizes[2]);
-		if (op_table[(int)ops->op_code - 1].descriptor)
-			ft_printf_err("descriptor byte: %d\n", ops->descriptor);
-		ft_printf_err("\n");
-		ops = ops->next;
-	//check if label names are only valid chars and not repeated
-	*/

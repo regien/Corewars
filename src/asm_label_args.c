@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/25 15:50:48 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/25 16:42:34 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/25 17:00:51 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int		get_label_arg(int arg_num, t_ops *ops, t_label *labels)
 		labels = labels->next;
 	}
 	if (!labels)
-		return (ft_printf_err("ERROR, unkown label %s\n", ops->arg_name[arg_num]));
+		return (ft_printf_err("unkown label %s\n", ops->arg_name[arg_num]));
 	ops->args[arg_num] = labels->index - ops->index;
 	ops->arg_name[arg_num] = ft_strdup(&str[i]);
 	free(str);

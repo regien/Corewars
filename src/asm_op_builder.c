@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 18:33:23 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/25 16:41:29 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/25 17:01:19 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ int		get_arguments_and_sizes(t_ops *op)
 	while (op->arg_name[++i])
 	{
 		if (check_argument(op->arg_name[i]))
-			return (ft_printf_err("Argument parse error: %s\n", op->arg_name[i]));
+			return (ft_printf_err("parse error: %s\n", op->arg_name[i]));
 		set_bit_descriptor(&(op->descriptor), op->arg_name[i], i + 1);
 		op->label_arg[i] = (op->arg_name[i][0] == LABEL_CHAR ||
 				op->arg_name[i][1] == LABEL_CHAR) ? 1 : 0;

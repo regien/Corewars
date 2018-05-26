@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 12:41:43 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/25 16:13:22 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/25 17:01:44 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,22 +36,22 @@ int		set_name(char name[PROG_NAME_LENGTH + 5], int fd)
 	char	*tmp;
 
 	if ((str = find_line(NAME_CMD_STRING, fd)) == 0)
-		return (ft_printf("ERR at name: couldn't find name\n"));
+		return (ft_printf_err("ERR at name: couldn't find name\n"));
 	if ((tmp = ft_strstr(str, NAME_CMD_STRING)) == 0)
-		return (ft_printf("ERR at name: no %s\n", NAME_CMD_STRING));
+		return (ft_printf_err("ERR at name: no %s\n", NAME_CMD_STRING));
 	i = 0;
 	while (&str[i] != tmp)
 		i++;
 	while (str[i] && str[i] != 34)
 		i++;
 	if (!(str[i]))
-		return (ft_printf("ERR at name, missing quotes %d\n", i));
+		return (ft_printf_err("ERR at name, missing quotes %d\n", i));
 	i++;
 	j = 0;
 	while (str[i] && str[i] != 34 && j <= PROG_NAME_LENGTH)
 		name[j++] = str[i++];
 	if (!str[i] || j > PROG_NAME_LENGTH)
-		return (ft_printf("ERR at name, name too big\n"));
+		return (ft_printf_err("ERR at name, name too big\n"));
 	free(str);
 	return (0);
 }
@@ -64,22 +64,22 @@ int		set_comment(char comment[COMMENT_LENGTH + 5], int fd)
 	char	*tmp;
 
 	if ((str = find_line(COMMENT_CMD_STRING, fd)) == 0)
-		return (ft_printf("ERR at comment: couldn't find comment\n"));
+		return (ft_printf_err("ERR at comment: couldn't find comment\n"));
 	if ((tmp = ft_strstr(str, COMMENT_CMD_STRING)) == 0)
-		return (ft_printf("ERR at comment: no %s\n", COMMENT_CMD_STRING));
+		return (ft_printf_err("ERR at comment: no %s\n", COMMENT_CMD_STRING));
 	i = 0;
 	while (&str[i] != tmp)
 		i++;
 	while (str[i] && str[i] != 34)
 		i++;
 	if (!(str[i]))
-		return (ft_printf("ERR at comment, missing quotes %d\n", i));
+		return (ft_printf_err("ERR at comment, missing quotes %d\n", i));
 	i++;
 	j = 0;
 	while (str[i] && str[i] != 34 && j <= COMMENT_LENGTH)
 		comment[j++] = str[i++];
 	if (!str[i] || j > COMMENT_LENGTH)
-		return (ft_printf("ERR at comment, comment too big\n"));
+		return (ft_printf_err("ERR at comment, comment too big\n"));
 	free(str);
 	return (0);
 }
