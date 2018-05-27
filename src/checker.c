@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 01:05:08 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/25 14:59:39 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/26 19:00:32 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,3 +32,12 @@ void	set_index(int *index, int diff)
 	while (*index >= MEM_SIZE)
 		*index -= MEM_SIZE;
 }
+
+
+
+int	set_index()
+
+
+
+
+VMmemory[set_index(i, anotherfunctions(45))]

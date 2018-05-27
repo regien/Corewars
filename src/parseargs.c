@@ -6,17 +6,15 @@
 /*   By: gmalpart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 17:04:29 by gmalpart          #+#    #+#             */
-/*   Updated: 2018/05/21 05:19:32 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/26 18:41:28 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "corewar.h"
-#include <stdio.h>
-
 
 /*
-** just initiliazing some values to 0, prefer to do it outside the main
-** for space purposes
+** Just initiliazing some values to 0, prefer to do it outside the main
+** for space purposes.
 */
 
 void		init_vm(t_vm *vm)
@@ -35,7 +33,6 @@ void		init_vm(t_vm *vm)
 	holder->dump = 0;
 	holder->nbrdump = 0;
 }
-
 
 int		set_dump_number(int ac, int *i, char **av, t_flags *flags)
 {
@@ -57,7 +54,6 @@ int		set_dump_number(int ac, int *i, char **av, t_flags *flags)
 		general_exit(g_ivlid_dump, -1);
 	return (1);
 }
-
 
 void	parser_args(int ac, char **av, t_vm *vm)
 {
