@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   constructor.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/26 23:26:27 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/26 23:26:53 by eliu             ###   ########.fr       */
+/*   Created: 2018/05/15 22:55:43 by adubugra          #+#    #+#             */
+/*   Updated: 2018/05/26 23:24:19 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,11 @@ void	set_champs(t_champ *champ, char *filename)
 	champ->size = 0;
 	champ->processes = 0;
 }
+
 void	clear_vm_mem(t_vm *vm)
 {
 	int		i;
+
 	i = 0;
 	while (i < MEM_SIZE)
 	{
@@ -72,11 +74,11 @@ t_process	*set_process(char *pc_start, int mem_start)
 	return (p);
 }
 
-/*
 t_process	*add_process(t_champ *champ, int index)
 {
 	t_process *new;
 	t_process *root;
+
 	if (!(champ && champ->processes))
 		return (0);
 	root = champ->processes;
@@ -87,7 +89,6 @@ t_process	*add_process(t_champ *champ, int index)
 	champ->processes = new;
 	return (new);
 }
-*/
 
 void		kill_process(t_process *p)
 {

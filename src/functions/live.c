@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 03:06:43 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/24 22:55:02 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/27 01:57:16 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int		ft_live(t_vm *vm, t_champ *champ, t_process *process)
 	(void)champ;
 	if (dir(process, 0))
 	{
-		process->live = process->arg.v[0];
+		process->process_alive = process->arg.v[0];
 		// process->index += args_size;
 		// process->index += 5;
 		return (0);

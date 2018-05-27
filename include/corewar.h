@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/26 23:21:43 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/27 02:32:22 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -168,6 +168,8 @@ typedef struct			s_vm
 
 typedef struct			s_op
 {
+//  	int					(*func_to_be)(t_vm *, t_process *);
+//  	one to be used
   	int					(*func_to_be)(t_vm *, t_champ *, t_process *);
 	char				truncate;
 	char				args; //number of args
@@ -290,6 +292,19 @@ void					kill_process(t_process *p);
 */
 
 void					controller(t_vm *vm);
+
+//void					add_processes(t_vm *vm);
+
+	// ELIU REFACTOR
+
+void			init_arg(t_command_args *arg);
+void			add_processes(t_vm *vm, int i);
+void	kill_processes(t_process **current);
+void		now_we_are_free(t_process *enya);
+t_process	*init_process(t_vm *vm, int i);
+void			init_arg(t_command_args *arg);
+void			init_regs(t_process *new, int player_number);
+
 
 /*
 ** PRINT.c

@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/18 11:16:17 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/25 22:06:09 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/26 23:32:53 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,8 +74,8 @@ void	execute(t_vm *vm, t_process *p)
 	while (++i < g_ops[curr_op].args)
 		p->arg.args_size += set_arg(&(p->pc),
 		p->arg.type[i], &(p->arg.v[i]), p);
-// eliu working area {
-	g_ops[curr_op].func_to_be(vm, p->father_champ, p);
+// eliu working area  - vm->champ[0] is just dummy testing
+	g_ops[curr_op].func_to_be(vm, &(vm->champs[0]), p);
 	dump_memory(*vm);
 // end working area	}
 	printf("index: %d\n", p->index);
