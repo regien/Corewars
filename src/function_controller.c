@@ -17,6 +17,7 @@
 **	eliu: Changed run_processes(t_process *root, int i) to include vm.
 */
 
+/*
 void	run_processes(t_vm *vm, t_process *root, int i)
 {
 	int j;
@@ -45,11 +46,14 @@ void	run_processes(t_vm *vm, t_process *root, int i)
 		root = root->next;
 	}
 }
+*/
+
 
 /*
 ** seem that's the function is currently not in use
 */
 
+/*
 void	handle_cycle_to_die(t_vm *vm)
 {
 	int			i;
@@ -69,6 +73,7 @@ void	handle_cycle_to_die(t_vm *vm)
 		i++;
 	}
 }
+*/
 
 
 t_process	*init_process(t_vm *vm)
@@ -115,7 +120,7 @@ void	controller(t_vm *vm)
 		i = 0;
 		while (i < vm->players)
 		{
-			run_processes(vm, PROCESS, i);
+//			run_processes(vm, PROCESS, i);
 			i++;
 		}
 		vm->cycles++;
