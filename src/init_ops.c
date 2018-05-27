@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 01:20:26 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/25 00:49:43 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/26 18:37:41 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,49 @@ int		ft_put(char *str)
 {
 	ft_putstr(str);
 	return (1);
+}
+
+void	set_truncate(t_op *ops)
+{
+	ops[0].truncate = 0;
+	ops[0x1].truncate = 0;
+	ops[0x2].truncate = 0;
+	ops[0x3].truncate = 0;
+	ops[0x4].truncate = 0;
+	ops[0x5].truncate = 0;
+	ops[0x6].truncate = 0;
+	ops[0x7].truncate = 0;
+	ops[0x8].truncate = 0;
+	ops[0x9].truncate = 1;
+	ops[0xa].truncate = 1;
+	ops[0xb].truncate = 1;
+	ops[0xc].truncate = 1;
+	ops[0xd].truncate = 0;
+	ops[0xe].truncate = 1;
+	ops[0xf].truncate = 1;
+	ops[0x10].truncate = 0;
+}
+
+void	set_ops_acb(t_op *ops)
+{
+	ops[0].descriptor= 0;
+	ops[0x1].descriptor = 0;
+	ops[0x2].descriptor = 1;
+	ops[0x3].descriptor = 1;
+	ops[0x4].descriptor = 1;
+	ops[0x5].descriptor = 1;
+	ops[0x6].descriptor = 1;
+	ops[0x7].descriptor = 1;
+	ops[0x8].descriptor = 1;
+	ops[0x9].descriptor = 0;
+	ops[0xa].descriptor = 1;
+	ops[0xb].descriptor = 1;
+	ops[0xc].descriptor = 0;
+	ops[0xd].descriptor = 1;
+	ops[0xe].descriptor = 1;
+	ops[0xf].descriptor = 0;
+	ops[0x10].descriptor = 1;
+	set_truncate(ops);
 }
 
 void	set_ops_cycles(t_op *ops)
@@ -41,28 +84,7 @@ void	set_ops_cycles(t_op *ops)
 	ops[0xe].cycles = 50;
 	ops[0xf].cycles = 1000;
 	ops[0x10].cycles = 2;
-}
-
-void	set_ops_descriptor(t_op *ops)
-{
-	ops[0].descriptor= 0;
-	ops[0x1].descriptor = 0;
-	ops[0x2].descriptor = 1;
-	ops[0x3].descriptor = 1;
-	ops[0x4].descriptor = 1;
-	ops[0x5].descriptor = 1;
-	ops[0x6].descriptor = 1;
-	ops[0x7].descriptor = 1;
-	ops[0x8].descriptor = 1;
-	ops[0x9].descriptor = 0;
-	ops[0xa].descriptor = 1;
-	ops[0xb].descriptor = 1;
-	ops[0xc].descriptor = 0;
-	ops[0xd].descriptor = 1;
-	ops[0xe].descriptor = 1;
-	ops[0xf].descriptor = 0;
-	ops[0x10].descriptor = 1;
-	set_ops_cycles(ops);
+	set_ops_acb(ops);
 }
 
 void	set_ops_args(t_op *ops)
@@ -84,29 +106,7 @@ void	set_ops_args(t_op *ops)
 	ops[0xe].args = 3;
 	ops[0xf].args = 1;
 	ops[0x10].args = 1;
-	set_ops_descriptor(ops);
-}
-
-void	set_truncate(t_op *ops)
-{
-	ops[0].truncate = 0;
-	ops[0x1].truncate = 0;
-	ops[0x2].truncate = 0;
-	ops[0x3].truncate = 0;
-	ops[0x4].truncate = 0;
-	ops[0x5].truncate = 0;
-	ops[0x6].truncate = 0;
-	ops[0x7].truncate = 0;
-	ops[0x8].truncate = 0;
-	ops[0x9].truncate = 1;
-	ops[0xa].truncate = 1;
-	ops[0xb].truncate = 1;
-	ops[0xc].truncate = 1;
-	ops[0xd].truncate = 0;
-	ops[0xe].truncate = 1;
-	ops[0xf].truncate = 1;
-	ops[0x10].truncate = 1;
-	set_ops_args(ops);
+	set_ops_cycles(ops);
 }
 
 void	init_ops(t_op *ops)
@@ -127,5 +127,5 @@ void	init_ops(t_op *ops)
 	ops[0xe].func_to_be = &ft_lldi;
 	ops[0xf].func_to_be = &ft_lfork;
 	ops[0x10].func_to_be = &ft_aff;
-	set_truncate(ops);
+	set_ops_args(ops);
 }

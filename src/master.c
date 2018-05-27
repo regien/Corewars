@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 22:21:28 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/21 23:32:59 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/26 16:41:07 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,13 +90,15 @@ int		champs_alive(processes)
 
 int		ft_fight()
 {	
-	while (champs_alive(processes) != 1)
+	while (!(all_process_alive))
+//	while (champs_alive(processes) != 1)
 	{
-		if (cycles == cycle_to_die)
+		if (cycles >= CYCLE_TO_DIE)
 		{
 			kill_processes(all_processes_without_live);
 			cycle_to_die = cycle_to_die - delta_cycle;
 		}
+		cycles += CYCLE_COUNTER;
 		cycles = cycles + process_with_lowest_cycle_counter();
 	}	
 	declare_winner();
