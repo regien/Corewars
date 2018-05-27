@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/26 16:29:40 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/26 19:26:02 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -215,10 +215,15 @@ void					set_vm_memory(t_vm *vm, int i, int players);
 ** CHECKER.c
 ** modifications so far, is that i change the printfs to ft_putstr_fd
 ** and set the fd to 2 in case of error
+**
+** gmalpart:
+** set_index is not actually currently in use or its gonna be modified
+** by index_mod
 */
 
 int						check_magic_number(int fd);
 void					set_index(int *index, int diff);
+int						index_mod(int index, int diff)
 
 /*
 ** CONVERSIONS.c
