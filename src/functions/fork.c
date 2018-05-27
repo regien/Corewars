@@ -24,11 +24,14 @@ int		ft_fork(t_vm *vm, t_champ *champ, t_process *process)
 {
 ft_putendl("	entered ft_fork");
 	(void)vm;
+	(void)champ;
 
 	t_process *new;
+
+	new = NULL; // gerardo: nullyfing this pointer for FLAGS_ERRORS
 	if (dir(process, 0))
 	{
-		new = add_process(champ, process->index % IDX_MOD);
+		//new = add_process(champ, process->index % IDX_MOD);
 		ft_putendl("	exited ft_fork with return 0");
 		return (0);
 	}

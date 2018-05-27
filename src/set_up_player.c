@@ -60,7 +60,7 @@ void		set_up_player_fd(int ac, char **av, int *i, t_vm *vm)
 		general_exit(g_ivlid_nbr, -1);
 	vm->champs[vm->players - 1].fd = open(av[*i], O_RDONLY);
 	vm->champs[vm->players - 1].size = 0;
-	vm->champs[vm->players - 1].processes = 0;
+//	vm->champs[vm->players - 1].processes = 0;
 	if (vm->champs[vm->players - 1].fd < 0)
 		general_exit(g_ivlid_chmp, -1);
 }

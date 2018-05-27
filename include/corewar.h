@@ -142,7 +142,7 @@ typedef struct			s_champ
 	char				name[PROG_NAME_LENGTH + 5]; //assembler has to add 4 extra empty bytes to each
 	char				comment[COMMENT_LENGTH + 5];
 	unsigned int		size;
-	struct s_process	*processes;
+	//struct s_process	*processes;
 	//gmalpart|eliu : move to the VM_structure
 	int					lives_counted;
 }						t_champ;
@@ -157,7 +157,7 @@ typedef struct			s_vm
 	int					cycle_to_die;
 	struct s_champ		champs[MAX_PLAYERS];
 	struct s_flags		flags_args; // adition of flags in main_vm
-	//struct s_process	*processes;
+	struct s_process	*processes;
 }						t_vm;
 
 
@@ -276,11 +276,14 @@ void					execute(t_vm *vm, t_process *process);
 
 /*
 ** CONSTRUCTOR.c
+** process of reconstruction
+** set_process | add_process | kill_process are might not be going to be used
 */
 
 //void					set_champs(t_champ *champ, char *filename);
 t_process				*set_process(char *pc_start, int mem_start);
-t_process				*add_process(t_champ *champ, int index);
+//t_process				*add_process(t_champ *champ, int index);
+// using champs->processes
 void					kill_process(t_process *p);
 
 /*
@@ -306,7 +309,9 @@ int						ft_add(t_vm *vm, t_champ *champ, t_process *process);
 int						ft_sub(t_vm *vm, t_champ *champ, t_process *process);
 int						ft_zjmp(t_vm *vm, t_champ *champ, t_process *process);
 int						ft_fork(t_vm *vm, t_champ *champ, t_process *process);
+// FORK CURRENTLY IN REVAMP - was using add_process(deprecated one)
 int						ft_lfork(t_vm *vm, t_champ *champ, t_process *process);
+// LFORK CURRENTLY IN REVAMP - was using add_process(deprecated one)
 int						ft_aff(t_vm *vm, t_champ *champ, t_process *process);
 int						ft_or(t_vm *vm, t_champ *champ, t_process *process);
 int						ft_and(t_vm *vm, t_champ *champ, t_process *process);

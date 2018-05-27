@@ -73,6 +73,7 @@ t_process	*set_process(char *pc_start, int mem_start)
 	return (p);
 }
 
+/*
 t_process	*add_process(t_champ *champ, int index)
 {
 	t_process *new;
@@ -88,6 +89,7 @@ t_process	*add_process(t_champ *champ, int index)
 	champ->processes = new;
 	return (new);
 }
+*/
 
 void		kill_process(t_process *p)
 {
