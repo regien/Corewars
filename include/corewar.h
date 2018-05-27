@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/26 19:26:02 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/26 22:51:33 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@
 #define CYCLE_DELTA				50
 #define NBR_LIVE				21
 #define MAX_CHECKS				10
-#define CYCLE_COUNTER			1
+//#define CYCLE_COUNTER			1 //eliu | added it for organization
 
 /*
 ** types of arguments accepted
@@ -87,12 +87,27 @@ typedef struct			s_flags
 	char				aff;
 }						t_flags;
 
+/*
+**	not currently initializes
+**	Make it match to types.c
+*/
+
 typedef struct			s_command_args
 {
 	int					v[3];
+	// argument lectures
+	// -> convert to litle endian
+	// 3 is the maximen but this is read at the moment of execution
 	char				type[3];
-	char				args_size;
+	// type [0] = 1  | 01 -> REG_CODE
+	// type [1] = 2  | 10 -> DIR_SIZE
+	// type [2] = 3  | 11 -> IND_SIZE
+	char				args_size; // move to process
+	// after reading the arguments and the encoding byte, it moves
+	// the index.
+	// index + args_size
 }						t_command_args;
+
 
 typedef struct			s_process
 {
@@ -102,11 +117,19 @@ typedef struct			s_process
 	t_command_args		arg;
 	char				*pc;
 	int					index;
-	int					regs[REG_NUMBER];
+	int					regs[REG_NUMBER + 1]; // have to be initiliazed
+	// regs[0] == not_used
+	// regs[1] == player_number
+	// everything else is set to 0; right now is initialized to -1 - somewhere
 	char				carry;
 	int					cycle_counter;
-	char				state;
+	char				state; // review if this is being used
+	// 0 ready to move
+	// 1 waiting
 	char				live;
+	//char				process_live; replace it for live
+	//char				player_live; adding it
+	//unsigned int		cycle_to_execute; (cycle + wait_op_cycles)
 	int					store_vm; // only eliu branch
 	struct s_process	*next;
 	struct s_process	*prev;
@@ -120,6 +143,7 @@ typedef struct			s_champ
 	char				comment[COMMENT_LENGTH + 5];
 	unsigned int		size;
 	struct s_process	*processes;
+	//gmalpart|eliu : move to the VM_structure
 	int					lives_counted;
 }						t_champ;
 
@@ -133,6 +157,7 @@ typedef struct			s_vm
 	int					cycle_to_die;
 	struct s_champ		champs[MAX_PLAYERS];
 	struct s_flags		flags_args; // adition of flags in main_vm
+	//struct s_process	*processes;
 }						t_vm;
 
 
@@ -223,7 +248,7 @@ void					set_vm_memory(t_vm *vm, int i, int players);
 
 int						check_magic_number(int fd);
 void					set_index(int *index, int diff);
-int						index_mod(int index, int diff)
+int						index_mod(int index, int diff);
 
 /*
 ** CONVERSIONS.c
