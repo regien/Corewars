@@ -11,4 +11,4 @@ Bugs:
 
 6. The syntax 'fork%:gear_second' in
 
-7. The .cor outputs are not properly compiles (intra's corewar Can't read it), this is still under investigation... (see Day00: 8 Day01: 3)
+7. The .cor outputs are not properly compiling (intra's corewar Can't read it): the zjmp (opcode 09) and fork (opcode 0c) values are not being set properly, I have yet to pinpoint the exact reason... (see Day00: 8 Day01: 3 & 5)
