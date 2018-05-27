@@ -1,0 +1,14 @@
+Bugs:
+1. Permissions are not being set properly in the .cor files (see Day00: 5, 7, & 10 Day01: 1 & 4)
+
+2. name and comment size error comes up before they do in og_asm (see Day00: 3 & 4)
+
+3. og_asm finds the last instance of '.s' and truncates from the '.s' onward with '.cor', our asm replaces the first instance of '.s' with '.cor' without tuncating any text afterward (see Day00: 1, 6, & 12)
+
+4. Our asm does not overwrite files (see Day00: 2)
+
+5. The .s files are still compiled if there is extra text before '.name' at the beginning of a file (see Day00: 9)
+
+6. The syntax 'fork%:gear_second' in
+
+7. The .cor outputs are not properly compiles (intra's corewar Can't read it), this is still under investigation... (see Day00: 8 Day01: 3)

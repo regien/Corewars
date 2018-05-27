@@ -1,5 +1,7 @@
 Notes:
 
+Day00:
+
 1. IDK if we should check for if .s is at the end of the filename (og_asm does not)
 
 2. It seems our asm cannot overwrite existing files when the og_asm can
@@ -16,7 +18,7 @@ Notes:
 
 8. (Manually changed permissions of helltrain.cor to 600) The behavior is different, our output's version never starts the 'train' part; a diff later showed that the values are not being set properly (see hecktrain.dump, helltrain.dump & train.diff)
 
-9. Still compiles if there is text before the ".name" at the beggining of the file (see zerk.s)
+9. Still compiles if there is text before the ".name" at the beginning of the file (see zerk.s)
 
 10. Compiled zork.s with our asm and the permissions code was '005' this time, seems rather arbritary...
 
@@ -25,3 +27,24 @@ Notes:
 12. Compiled a file named "s.s.s.s" with our asm and the output was named "s.cor.s", compiled "s.s.s.s" with the og_asm and got the output "s.s.s.cor"
 
 (thi.corghtbreak and zork.cor permissions were changed to 777 in order to be able to push them)
+
+Day01:
+There may have been changes to the assembler to fix some issues, let's see here...
+
+1. Our asm now compiles files with chmod code '755' where og_asm is '600' (see s.cor.s, which was recompiled after updating the asm)
+
+2. (Manually edited the comment to bypass comment length error) Our asm gives "Invalid Label fork%" (referring to line 5 of run_Kitty_RUN.s where the command fork is not followed by a space) where the og_asm compiles th file without error (see run_Kitty_RUN.s, ran_Kitty_RAN.s, & ran_Kitty_RAN.cor)
+
+3. (Created copy of run_Kitty_RUN.s called fixed_Kitty.s where the 'fork% error' was fixed) Compiled fixed_Kitty.s with our asm, when I tried to run it through the intra supplied corewar I got the error "Can't read source file fixed_Kitty.cor"...
+
+4. While trying to hexdump I realized the permissions of fixed_Kitty.cor were set under '014'
+
+5. (Manually changed permissions of fixed_Kitty.cor to '600') created a diff between ran_Kitty_RAN.cor and fixed_Kitty.cor, it seems that the errors in values seem to happen when zjmp (seen as 09 in the .cor file) and fork (seen as 0c in the .cor file) are converted (see ran_Kitty_RAN.dump, fixed_kitty.dump & Kitty.diff)
+
+(I realized that I was testing the version of the assembler before the permissions fix...)  
+
+To do:
+Feel free to add cases you want me to test \(^_^)/
+(Put as asap at top of the list if it is really urgent)
+
+1. Pass a champion over a kilobyte in size to our corewar
