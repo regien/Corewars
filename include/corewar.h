@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/26 22:51:33 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/26 23:12:51 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,28 +111,27 @@ typedef struct			s_command_args
 
 typedef struct			s_process
 {
-	struct s_champ		*father_champ;
+//	struct s_champ		*father_champ; eliu removing
 	int					player_number; // only eliu branch
-	int					curr_op;
+	int					curr_op; // do we need?
 	t_command_args		arg;
-	char				*pc;
-	int					index;
+	char				*pc; // we're not even using
+	int					index; // actual pc
 	int					regs[REG_NUMBER + 1]; // have to be initiliazed
 	// regs[0] == not_used
 	// regs[1] == player_number
 	// everything else is set to 0; right now is initialized to -1 - somewhere
-	char				carry;
-	int					cycle_counter;
+	char				carry; // carry flag
+	int					cycle_counter; // number of cycles it needs to wait
 	char				state; // review if this is being used
 	// 0 ready to move
 	// 1 waiting
-	char				live;
-	//char				process_live; replace it for live
-	//char				player_live; adding it
+	char				process_alive;// replace it for live
+	char				player_alive; //adding it
 	//unsigned int		cycle_to_execute; (cycle + wait_op_cycles)
 	int					store_vm; // only eliu branch
 	struct s_process	*next;
-	struct s_process	*prev;
+	struct s_process	*prev; // i hate double link lists
 }						t_process;
 
 typedef struct			s_champ
@@ -157,7 +156,7 @@ typedef struct			s_vm
 	int					cycle_to_die;
 	struct s_champ		champs[MAX_PLAYERS];
 	struct s_flags		flags_args; // adition of flags in main_vm
-	//struct s_process	*processes;
+	struct s_process	*processes; // <- mess with this processes
 }						t_vm;
 
 

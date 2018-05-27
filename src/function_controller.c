@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 15:00:20 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/26 16:24:55 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/26 23:13:58 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,11 +70,43 @@ void	handle_cycle_to_die(t_vm *vm)
 	}
 }
 
+
+t_process	*init_process(t_vm *vm)
+{
+	t_process *new;
+
+	new = ft_memalloc(sizeof(*new));
+	new->player_number = i * -1;
+
+}
+
+void	add_processes(t_vm *vm)
+{
+	if (vm->processes == NULL)
+	{
+		init_process(t_vm *vm);
+	}
+}
+
+
+void	link_processes(t_vm *vm)
+{
+	int		i;
+
+	i = 0;
+	while (i < players)
+	{
+		vm->processes = add_process(vm, i);
+	}
+}
+
 void	controller(t_vm *vm)
 {
 	int		i;
 
 	i = 0;
+	vm->processes = link_processes(vm);
+//	vm->process = init_me_motherfucker 
 //	add_process(&(vm->champs[i]), vm->champs[i].processes->index + 16);
 	while (1)
 	{
