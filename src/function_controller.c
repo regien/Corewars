@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 15:00:20 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/26 23:13:58 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/26 23:19:30 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,7 +105,9 @@ void	controller(t_vm *vm)
 	int		i;
 
 	i = 0;
+//	while (
 	vm->processes = link_processes(vm);
+
 //	vm->process = init_me_motherfucker 
 //	add_process(&(vm->champs[i]), vm->champs[i].processes->index + 16);
 	while (1)
