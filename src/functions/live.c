@@ -19,11 +19,19 @@
 
 int		ft_live(t_vm *vm, t_champ *champ, t_process *process)
 {
+	int 	jndex;
+
+	jndex = process->index + 1;
+	if (g_ops[process->curr_op].descriptor == 1)
+	{
+		jndex += 1;
+	}
 	ft_putendl("	entered ft_live");
 	(void)vm;
 	(void)champ;
 	if (dir(process, 0))
 	{
+		store_values(vm, process, jndex, 1);
 		process->process_alive = process->arg.v[0];
 		// process->index += args_size;
 		// process->index += 5;

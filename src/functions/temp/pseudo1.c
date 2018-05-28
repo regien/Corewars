@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/26 21:33:29 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/26 23:19:27 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/27 21:35:47 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,13 @@
 
 	functions without ACB:
 		always work	
+
+
+	EXECUTING PROCCESS IN ORDER:
+		- for every new proccess created - sort the list with
+		 (insertion sort)
+		- CHECKER - Player_nbr :
+		
 
 */
 

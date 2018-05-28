@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 05:59:20 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/23 20:41:44 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/28 01:35:23 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,13 @@
 //	double check all 
 int		ft_fork(t_vm *vm, t_champ *champ, t_process *process)
 {
+	int 	jndex;
+
+	jndex = process->index + 1;
+	if (g_ops[process->curr_op].descriptor == 1)
+	{
+		jndex += 1;
+	}
 ft_putendl("	entered ft_fork");
 	(void)vm;
 	(void)champ;
@@ -31,6 +38,7 @@ ft_putendl("	entered ft_fork");
 	new = NULL; // gerardo: nullyfing this pointer for FLAGS_ERRORS
 	if (dir(process, 0))
 	{
+		store_values(vm, process, jndex, 1);
 		//new = add_process(champ, process->index % IDX_MOD);
 		ft_putendl("	exited ft_fork with return 0");
 		return (0);

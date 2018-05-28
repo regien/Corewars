@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 03:34:00 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/23 20:46:29 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/28 05:35:24 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,22 @@
 
 int		ft_sub(t_vm *vm, t_champ *champ, t_process *process)
 {
+	int 	jndex;
+
+	jndex = process->index + 1;
+	if (g_ops[process->curr_op].descriptor == 1)
+	{
+		jndex += 1;
+	}
 	ft_putendl("	entered ft_sub");
 	(void)vm;
 	(void)champ;
 	if (reg(process, 0) && reg(process, 1) && reg(process, 2))
 	{
-		if ((process->regs[process->arg.v[2]] = 
-				process->arg.v[0] + process->arg.v[1]) == 0)
+		store_values(vm, process, jndex, 3);
+		if ((process->regs[process->arg.v[2]] = \
+			process->regs[process->arg.v[0]] - \
+			process->regs[process->arg.v[1]]) == 0)
 		{
 			process->carry = 1;
 		}

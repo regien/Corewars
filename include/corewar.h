@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/27 02:32:22 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/28 02:10:16 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@
 #define CYCLE_DELTA				50
 #define NBR_LIVE				21
 #define MAX_CHECKS				10
+#define MAX_OP_CODES			16
 //#define CYCLE_COUNTER			1 //eliu | added it for organization
 
 /*
@@ -118,6 +119,7 @@ typedef struct			s_process
 	char				*pc; // we're not even using
 	int					index; // actual pc
 	int					regs[REG_NUMBER + 1]; // have to be initiliazed
+	char 				truncate;
 	// regs[0] == not_used
 	// regs[1] == player_number
 	// everything else is set to 0; right now is initialized to -1 - somewhere
@@ -174,6 +176,7 @@ typedef struct			s_op
 	char				truncate;
 	char				args; //number of args
 	int					descriptor; //the byte that describes what the following are -- ops with only one option of arg has no descriptor
+	// encoding byte
 	int					cycles;
 }						t_op;
 
@@ -297,13 +300,13 @@ void					controller(t_vm *vm);
 
 	// ELIU REFACTOR
 
-void			init_arg(t_command_args *arg);
-void			add_processes(t_vm *vm, int i);
-void	kill_processes(t_process **current);
-void		now_we_are_free(t_process *enya);
-t_process	*init_process(t_vm *vm, int i);
-void			init_arg(t_command_args *arg);
-void			init_regs(t_process *new, int player_number);
+void					init_arg(t_command_args *arg);
+void					add_processes(t_vm *vm, int i);
+void					kill_processes(t_process **current);
+void					now_we_are_free(t_process *enya);
+t_process				*init_process(t_vm *vm, int i);
+void					init_arg(t_command_args *arg);
+void					init_regs(t_process *new, int player_number);
 
 
 /*
@@ -355,5 +358,19 @@ char					reg_ind(t_process *process, int x);
 char					reg(t_process *process, int x);
 char					dir(t_process *process, int x);
 char					ind(t_process *process, int x);
+
+/*
+** FIND_VALUES.c
+*/
+
+void	read_4_bytes(t_vm *vm, t_process *process, int index, int i);
+void 	read_2_bytes(t_vm *vm, t_process *process, int index, int i);
+void	find_direct(t_vm *vm, t_process *process, int index, int i);
+void	find_register(t_vm *vm, t_process *process, int index, int i);
+int 	find_arg_size(t_process *process, int i);
+void	find_value(t_vm *vm, t_process *process, int jndex, char type, int param);
+void	store_values(t_vm *vm, t_process *process, int jndex, int argc);
+void	dummy_testing(t_vm *vm);
+
 
 #endif

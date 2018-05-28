@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 15:00:20 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/27 02:32:10 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/28 02:40:08 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -233,25 +233,28 @@ void	controller(t_vm *vm)
 	int		vm_cycles;
 	int		ctd;
 
-	i = 1;
+	i = vm->players;
 	vm->processes = NULL;
 	printf("the number of players is: %d\n", vm->players);
-	while (i < vm->players + 1)
+	while (i)
 	{
-		add_processes(vm, i);
-		
-		i++;
+		add_processes(vm, i);	
+		i--;
 	}
+	
+
 	vm_cycles = 0;
 	ctd = CYCLE_TO_DIE;
 	t_vm *temp;
 	temp = vm;
-	while (temp->processes)
+/*	while (temp->processes)
 	{
 	//	printf("the player number is: |%d|, the index is: |%d| \n", P->player_number, P->index);
 		P = P->next;
 	}
-	while (vm->processes)
+	*/
+	temp = vm;
+	while (temp->processes)
 	{
 		if (vm_cycles == ctd)
 		{
@@ -259,6 +262,10 @@ void	controller(t_vm *vm)
 			ctd -= CYCLE_DELTA;
 		}
 		vm_cycles += 1;
+		if (vm_cycles == 20)
+			break ;
 	}
+	dump_memory(*vm);
+	dummy_testing(vm); // testing store_values
 	dump_memory(*vm);
 }

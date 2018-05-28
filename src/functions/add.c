@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 03:28:13 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/23 20:45:24 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/28 05:54:57 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,24 @@
 
 int		ft_add(t_vm *vm, t_champ *champ, t_process *process)
 {
+	int 	jndex;
+
+	jndex = process->index + 1;
+	if (g_ops[process->curr_op].descriptor == 1)
+	{
+		jndex += 1;
+	}
 	ft_putendl("	entered ft_add");
 	(void)vm;
-	(void)champ;	
+	(void)champ;
 	if (reg(process, 0) && reg(process, 1) && reg(process, 2))
 	{
-		if ((process->regs[process->arg.v[2]] = 
-			process->arg.v[0] + process->arg.v[1]) == 0)
+		store_values(vm, process, jndex, 3);
+		if ((process->regs[process->arg.v[2]] = \
+			process->regs[process->arg.v[0]] + \
+			process->regs[process->arg.v[1]]) == 0)
 		{
+			ft_putendl("carry == 1");
 			process->carry = 1;
 		}
 		else

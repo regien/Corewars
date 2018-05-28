@@ -41,6 +41,13 @@ static void	store_big_endian(t_vm *vm, int value, int index)
 
 int		ft_sti(t_vm *vm, t_champ *champ, t_process *process)
 {
+	int 	jndex;
+
+	jndex = process->index + 1;
+	if (g_ops[process->curr_op].descriptor == 1)
+	{
+		jndex += 1;
+	}
 	ft_putendl("	entered ft_sti");
 	int		index1;
 	int		index2;
@@ -48,25 +55,20 @@ int		ft_sti(t_vm *vm, t_champ *champ, t_process *process)
 	(void)champ;
 	index1 = 0;
 	index2 = 0;
-	if (reg(process, 0) && reg_ind(process, 1))
+	if (reg(process, 0) && any(process, 1) && reg_dir(process, 2))
 	{
+		store_values(vm, process, jndex, 2);
 		if (reg(process, 1))
 		{
-			index1 = process->regs[process->arg.v[1] - 1];
-		}
-		else if (ind(process, 1))
-		{
-			index1 = process->arg.v[1];
+			//index1 = process->regs[process->arg.v[1]];
+			process->arg.v[1] = process->regs[process->arg.v[1]];
 		}
 		if (reg(process, 2))
 		{
-			index2 = process->regs[process->arg.v[2] - 1];
+			process->arg.v[2] = process->regs[process->arg.v[2]];
 		}
-		else if (ind(process, 2))
-		{
-			index2 = process->arg.v[2];
-		}
-		store_big_endian(vm, process->regs[process->arg.v[0]], index1 + index2);
+		store_big_endian(vm, process->regs[process->arg.v[0]], 
+							process->arg.v[1] + process->arg.v[2]);
 		ft_putendl("	exited ft_sti with return 0");
 		return (0);
 	}

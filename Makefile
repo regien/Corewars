@@ -6,7 +6,7 @@
 #    By: gmalpart <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/22 16:31:53 by gmalpart          #+#    #+#              #
-#    Updated: 2018/05/25 03:49:11 by gmalpart         ###   ########.fr        #
+#    Updated: 2018/05/28 01:33:09 by eliu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,8 @@ FUNCTION_FILES = live.c \
 				 lld.c \
 				 lldi.c \
 				 lfork.c \
-				 aff.c
+				 aff.c \
+				 find_value.c
 
 FUNCTION_HELPERS = types.c \
 				   type_combinations.c

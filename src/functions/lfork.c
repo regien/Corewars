@@ -29,6 +29,13 @@
 
 int		ft_lfork(t_vm *vm, t_champ *champ, t_process *process)
 {
+	int 	jndex;
+
+	jndex = process->index + 1;
+	if (g_ops[process->curr_op].descriptor == 1)
+	{
+		jndex += 1;
+	}
 	ft_putendl("	entered ft_lfork");
 	t_process *new;
 
@@ -37,6 +44,7 @@ int		ft_lfork(t_vm *vm, t_champ *champ, t_process *process)
 	(void)champ;
 	if (dir(process, 0))
 	{
+		store_values(vm, process, jndex, 1);
 		//new = add_process(champ, process->index);
 		ft_putendl("	exited ft_lfork with return 0");
 		return (0);
