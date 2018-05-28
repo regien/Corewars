@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/18 11:16:17 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/25 22:06:09 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/28 06:24:20 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void	execute(t_vm *vm, t_process *p)
 		p->arg.type[i], &(p->arg.v[i]), p);
 // eliu working area {
 	g_ops[curr_op].func_to_be(vm, p->father_champ, p);
-	dump_memory(*vm);
+	dump_memory(*vm); // <_ HERE _ DUMP _ MEMORY
 // end working area	}
 	printf("index: %d\n", p->index);
 	p->curr_op = 0;

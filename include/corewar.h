@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/26 22:51:33 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/28 06:21:51 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -193,7 +193,7 @@ extern char				g_usage[];
 extern t_op				g_ops[OP_NUMBER + 1];
 
 /*
-** PARSER.c
+** PARSER_ARG.c
 */
 
 void					init_vm(t_vm *vm);
@@ -234,7 +234,8 @@ int						read_files(int players, t_vm *vm);
 int						set_champ_name(t_champ *champ);
 int						set_champ_size(t_champ *champ);
 int						set_champ_comment(t_champ *champ);
-void					set_vm_memory(t_vm *vm, int i, int players);
+//void					set_vm_memory(t_vm *vm, int i, int players);
+void					set_vm_memory(t_vm *vm, int i, int players, t_champ *champ);
 
 /*
 ** CHECKER.c
@@ -279,7 +280,7 @@ void					execute(t_vm *vm, t_process *process);
 */
 
 //void					set_champs(t_champ *champ, char *filename);
-t_process				*set_process(char *pc_start, int mem_start);
+t_process				*set_process(char *pc_start, int mem_start, int player);
 t_process				*add_process(t_champ *champ, int index);
 void					kill_process(t_process *p);
 
@@ -288,6 +289,8 @@ void					kill_process(t_process *p);
 */
 
 void					controller(t_vm *vm);
+int						players_alive(t_vm *vm);
+int						handle_modular(t_vm *vm);
 
 /*
 ** PRINT.c

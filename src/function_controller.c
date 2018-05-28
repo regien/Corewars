@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 15:00:20 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/26 16:24:55 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/28 06:26:58 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 /*
 **	eliu: Changed run_processes(t_process *root, int i) to include vm.
+** actually curr_op has an unknow ussage
 */
 
 void	run_processes(t_vm *vm, t_process *root, int i)
@@ -48,6 +49,7 @@ void	run_processes(t_vm *vm, t_process *root, int i)
 
 /*
 ** seem that's the function is currently not in use
+**		NOT FULLY FUNCTIONAL
 */
 
 void	handle_cycle_to_die(t_vm *vm)
@@ -74,8 +76,9 @@ void	controller(t_vm *vm)
 {
 	int		i;
 
-	i = 0;
-//	add_process(&(vm->champs[i]), vm->champs[i].processes->index + 16);
+	i = -1; // proccess are already initialized when the champion is being checked
+//	while (++i < vm->players)
+//		add_process(&(vm->champs[i]), vm->champs[i].processes->index + 16);
 	while (1)
 	{
 		i = 0;
@@ -85,10 +88,52 @@ void	controller(t_vm *vm)
 			i++;
 		}
 		vm->cycles++;
-	//	if (vm->cycles % vm->cycle_to_die == 0)
-	//		handle_cycle_to_die(vm);
+		// handles correctly
+/*		if (((int)((*vm).cycles) % (int)((*vm).cycle_to_die)) == 0)
+		{
+			handle_cycle_to_die(vm);
+			if (players_alive(vm) == 1)
+				break ;
+		}
+*/
 		ft_printf("curr cycle: %d\n", vm->cycles);
 		if (vm->cycles == 10)
 			break ;
 	}
+//	declare_winner;
 }
+
+int		players_alive(t_vm *vm)
+{
+	int	i;
+	int	players_alive;
+
+	players_alive = 0;
+	i = -1;
+	while (++i < vm->players)
+		if (!((*vm).champs[i].processes))
+			players_alive++;
+	printf("pendejada PLAYERS_ALIVE = |%d|\n", players_alive);
+	if (players_alive == 1)
+		return (1);
+	if (players_alive == 0) // in this case, 1 player wins
+		return (1);
+	else
+		return (0);
+}
+
+/*
+int		handle_modular(t_vm *vm)
+{
+	int	cycles_handler;
+	int	cycles_to_die_handler;
+
+	cycles_handler = (int)vm->cycles;
+	cycles_to_die_handler = (int)vm->cycle_to_die;
+	printf("cycles_to_die_handler = |%d|\n", cycles_to_die_handler);
+	if ((cycles_handler % cycles_to_die_handler) == 0)
+		return (0);
+	else
+		return (42);
+}
+*/

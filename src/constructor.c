@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 22:55:43 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/26 19:25:25 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/28 06:27:15 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	clear_vm_mem(t_vm *vm)
 }
 */
 
-t_process	*set_process(char *pc_start, int mem_start)
+t_process	*set_process(char *pc_start, int mem_start, int player_nbr)
 {
 	t_process	*p;
 	int			i;
@@ -60,11 +60,16 @@ t_process	*set_process(char *pc_start, int mem_start)
 	p->next = 0;
 	p->prev = 0;
 	i = 0;
+	// INITIALIZING REGISTERS
 	while (i < 16)
 	{
-		p->regs[i] = -1;
+		p->regs[i] = 0;
 		i++;
 	}
+	p->regs[1] = player_nbr * -1;
+	// testing_only
+	for (i = 0; i < 16; i++)
+		printf("p->regs[i] = %d\n", p->regs[i]);
 	p->carry = 0;
 	p->cycle_counter = 0;
 	p->state = FETCH;
@@ -72,6 +77,14 @@ t_process	*set_process(char *pc_start, int mem_start)
 	p->curr_op = 0;
 	return (p);
 }
+
+/*
+** modify add process and set_process to:
+	- initializes the register
+		| everything in arg (t_command_arg)
+	- initialize the types
+	- initiliaze the arg.v
+*/
 
 t_process	*add_process(t_champ *champ, int index)
 {
@@ -81,7 +94,7 @@ t_process	*add_process(t_champ *champ, int index)
 	if (!(champ && champ->processes))
 		return (0);
 	root = champ->processes;
-	new = set_process(root->pc, index);
+	new = set_process(root->pc, index, champ->plyr_nbr);
 	new->father_champ = champ;
 	new->next = root;
 	root->prev = new;

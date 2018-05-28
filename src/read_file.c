@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 22:22:19 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/22 16:34:07 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/28 06:25:02 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int		read_files(int players, t_vm *vm)
 			return (0);
 		if (set_champ_comment(&vm->champs[i]))
 			return (0);
-		set_vm_memory(vm, i, vm->players);
+		set_vm_memory(vm, i, vm->players, &(vm->champs[i]));
 		i++;
 	}
 	return (1);
@@ -76,12 +76,14 @@ int		set_champ_comment(t_champ *champ)
 	return (0);
 }
 
-void	set_vm_memory(t_vm *vm, int i, int players)
+#define PNBR champ->plyr_nbr
+
+void	set_vm_memory(t_vm *vm, int i, int players, t_champ *champ)
 {
 	int mem_start;
 
 	mem_start = MEM_SIZE / players * i;
-	vm->champs[i].processes = set_process(&(vm->memory[0]), mem_start);
+	vm->champs[i].processes = set_process(&(vm->memory[0]), mem_start, PNBR);
 	read(vm->champs[i].fd, &(vm->memory[mem_start]), vm->champs[i].size);
 	//ft_printf("memory: %x\n", vm->memory[mem_start + vm->champs[i].size - 1]);
 }

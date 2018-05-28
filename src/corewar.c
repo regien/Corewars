@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 23:23:05 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/26 18:54:05 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/28 05:43:19 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,11 @@ int main(int argc, char **argv)
 		return (1);
 	// init_op is here for testing reasons
 	init_ops(g_ops);
-	//ft_printf("%x\n", vm.champs[0].processes->pc);
+	ft_printf("%x\n", vm.champs[0].processes->pc);
 	//ft_printf("procceses->pc = |%x|\n", vm.champs[0].processes->pc);
 	//ft_printf("pendjeada = |%d|\n", vm.champs[0].lives_counted);
-	ft_printf("pendjeada = |%d|\n", vm.champs[0].processes->index);
-	ft_printf("pendjeada = |%d|\n", vm.champs[1].processes->index);
-	ft_printf("pendjeada = |%d|\n", vm.champs[2].processes->index);
-	ft_printf("pendjeada = |%d|\n", vm.champs[3].processes->index);
 	controller(&vm);
 	//play_game(vm);
-	//dump_memory(vm);
+	dump_memory(vm);
+	ft_printf("%x\n", vm.champs[0].processes->pc);
 }

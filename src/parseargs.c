@@ -6,7 +6,7 @@
 /*   By: gmalpart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 17:04:29 by gmalpart          #+#    #+#             */
-/*   Updated: 2018/05/26 18:41:28 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/28 05:57:31 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void		init_vm(t_vm *vm)
 		vm->memory[i] = 0;
 	vm->players = 0;
 	vm->cycles = 0;
-	vm->cycle_to_die = 0;
+	vm->cycle_to_die = CYCLE_TO_DIE;
 	holder = &(vm->flags_args);
 	holder->visual = 0;
 	holder->dump = 0;
