@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 06:23:58 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/23 23:20:25 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/28 09:50:38 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int		ft_aff(t_vm *vm, t_champ *champ, t_process *process)
 	if (reg(process, 0) && vm->flags_args.aff == 1)
 	{
 		store_values(vm, process, jndex, 1);
-		ft_putchar(process->regs[[process->arg.v[0]]] % 256);
+		ft_putchar(process->regs[process->arg.v[0]] % 256);
 		ft_putendl("	exited ft_aff with return 0");
 		return (0);
 	}

@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 06:11:20 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/20 18:12:06 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/28 09:46:12 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,10 @@ int		ft_lldi(t_vm *vm, t_champ *champ, t_process* process)
 			process->arg.v[1] = process->regs[process->arg.v[1]];
 		}
 		s = process->arg.v[0] + process->arg.v[1];
-		if ((process->regs[process->arg.v[2]] = \
-			read_2_bytes(vm, process, s, 2)) == 0)
+//		if ((process->regs[process->arg.v[2]] = \
+//			read_2_bytes(vm, process, s, 2)) == 0)
+		read_2_bytes(vm, process, s, 2);
+		if (process->regs[process->arg.v[2]] == 0)
 		{
 			process->carry = 1;
 		}

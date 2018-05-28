@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 05:03:52 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/24 00:08:58 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/28 09:44:46 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@
 **	let's put it on revision becuase of the shift handeling
 */
 
+#define READ_2_BYTES read_2_bytes(vm, process, s, 2)
+
 int		ft_ldi(t_vm *vm, t_champ *champ, t_process *process)
 {
 	int 	s;
@@ -35,8 +37,8 @@ int		ft_ldi(t_vm *vm, t_champ *champ, t_process *process)
 		jndex += 1;
 	}
 	ft_putendl("	entered ft_ldi");
-	int		temp;
-	int		index;
+//	int		temp;
+//	int		index;
 
 	(void)champ;
 	if (any(process, 0) && reg_dir(process, 1) && reg(process, 2))
@@ -53,8 +55,10 @@ int		ft_ldi(t_vm *vm, t_champ *champ, t_process *process)
 			process->arg.v[1] = process->regs[process->arg.v[1]];
 		}
 		s = (process->arg.v[0] + process->arg.v[1]) % IDX_MOD;
-		if ((process->regs[process->arg.v[2]] = \
-			read_2_bytes(vm, process, s, 2)) == 0)
+//		if ((process->regs[process->arg.v[2]] = \
+//			read_2_bytes(vm, process, s, 2)) == 0)
+		read_2_bytes(vm, process, s, 2);
+		if (process->regs[process->arg.v[2]] == 0)
 		{
 			process->carry = 1;
 		}
