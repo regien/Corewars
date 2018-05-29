@@ -6,7 +6,7 @@
 /*   By: gmalpart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 17:04:29 by gmalpart          #+#    #+#             */
-/*   Updated: 2018/05/29 04:19:34 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/29 05:24:56 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void		init_vm(t_vm *vm)
 	i = -1; // clear vm memory
 	while (++i < MEM_SIZE)
 		vm->memory[i] = 0;
+	vm->last_to_live = 0;
 	vm->nbr_checks = 0;
 	vm->nbr_lives = 0;
 	vm->players = 0;

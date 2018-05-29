@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 23:23:05 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/29 00:39:42 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/29 04:46:54 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,4 @@ int main(int argc, char **argv)
 	//play_game(vm);
 	dump_memory(vm);
 	// declare_winner(&(vm));
-	ft_printf("%x\n", vm.champs[0].processes->pc);
 }

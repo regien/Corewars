@@ -6,7 +6,7 @@
 /*   By: gmalpart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/29 01:05:21 by gmalpart          #+#    #+#             */
-/*   Updated: 2018/05/29 04:28:17 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/29 05:31:03 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ EZEKIEL:
 		live before the game ends (*when there's no processes)
 */
 
+// SETTING THE WINNER INCORRECTLY
 int		procceses_alive(t_vm *vm)
 {
 	int	i;
@@ -51,44 +52,6 @@ int		procceses_alive(t_vm *vm)
 		return (0);
 }
 
-/*
-int		procceses_alive(t_vm *vm)
-{
-	int	i;
-	int	players_alive;
-
-	players_alive = 0;
-	i = -1;
-	vm->champs[0].processes->live = 1;
-	while (++i < vm->players)
-		if ((vm->champs[i].processes != 0))
-			players_alive++;
-	printf("pendejada PLAYERS_ALIVE = |%d|\n", players_alive);
-	if (players_alive == 1)
-		return (1);
-	if (players_alive == 0) // in this case, 1 player wins
-		return (1);
-	else
-		return (0);
-}
-*/
-
-int		solid_winner(t_process *proceses)
-{
-	t_process *iter;
-
-	iter = proceses;
-	if (!proceses)
-		return (0);
-	while (iter)
-	{
-		if (proceses->live == 1)
-			return (1);
-		iter = iter->next;
-	}
-	return (0);
-}
-
 void	display_information_winner(t_champ *champ)
 {
 	ft_printf("The winner is Player %d\n\tName: %s\n", \
@@ -96,26 +59,18 @@ void	display_information_winner(t_champ *champ)
 			champ->name);
 	ft_printf("\tComment: %s\n", champ->comment);
 	ft_printf("\tSize: %u\n", champ->size);
+	exit(0);
 }
-
-// check for last_one-to_called_alive
 
 void	declare_winner(t_vm *vm)
 {
 	int		i;
-	char	win_for_pc_alive;
 
-	win_for_pc_alive = 0;
 	i = -1;
+	vm->last_to_live *= -1;
+	printf("vm->last_to_live = |%d|\n", vm->last_to_live);
 	while (++i < vm->players)
-	{
-		if (solid_winner(vm->champs[i].processes) == 1)
-		{
-			display_information_winner(&(vm->champs[i]));
-			win_for_pc_alive = 1;
-		}
-	}
-	// if no proccess is alive -> champ[0] always win
-	if (win_for_pc_alive == 0)
-		display_information_winner(&(vm->champs[0]));
+		if (vm->last_to_live == vm->champs[i].plyr_nbr)
+			display_information_winner(&(vm->champs[vm->last_to_live]));
+	display_information_winner(&(vm->champs[0]));
 }

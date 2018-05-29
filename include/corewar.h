@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/29 04:19:20 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/29 05:24:01 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,7 +122,7 @@ typedef struct			s_process
 	// regs[1] == player_number
 	// everything else is set to 0; right now is initialized to -1 - somewhere
 	char				carry;
-	int					cycle_counter;
+	int					cycle_counter; // cycles to execute
 	char				state; // review if this is being used
 	// 1 FETCH
 	// 2 WAIT
@@ -152,6 +152,7 @@ typedef struct			s_champ
 
 typedef struct			s_vm
 {
+	int					last_to_live;
 	char				nbr_checks;
 	int					nbr_lives;
 	char				memory[MEM_SIZE];
