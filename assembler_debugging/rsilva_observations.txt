@@ -41,10 +41,16 @@ There may have been changes to the assembler to fix some issues, let's see here.
 
 5. (Manually changed permissions of fixed_Kitty.cor to '600') created a diff between ran_Kitty_RAN.cor and fixed_Kitty.cor, it seems that the errors in values seem to happen when zjmp (seen as 09 in the .cor file) and fork (seen as 0c in the .cor file) are converted (see ran_Kitty_RAN.dump, fixed_kitty.dump & Kitty.diff)
 
-(I realized that I was testing the version of the assembler before the permissions fix...)  
+(I realized that I was testing the version of the assembler before the permissions fix...)
+
+Day02:
+
+1. Compiled zirk.s into zirk.cor with our asm and found the permissions to be set to chmod code '005' instead of the '600' that og_asm compiles to
+
+2. (Made two copies of zork.s named 'zurk.s' & 'sork.s') Ran './og_asm zurk.s sork.s' and it compiled into a file called sork.cor, when the same command is run with our asm it outputs 'Usage: ./asm name_of_file.s' instead
+
+3. (Made a copy of Kitty.s named 'Khajiit.s') Ran './og_asm Khajiit.s zurk.s' to confirm that the output (zurk.cor in this case) is only the code of the second file
 
 To do:
 Feel free to add cases you want me to test \(^_^)/
 (Put as asap at top of the list if it is really urgent)
-
-1. Pass a champion over a kilobyte in size to our corewar
