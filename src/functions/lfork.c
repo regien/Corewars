@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 06:17:20 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/23 20:42:50 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/29 08:24:53 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,8 @@ int		ft_lfork(t_vm *vm, t_champ *champ, t_process *process)
 	if (dir(process, 0))
 	{
 		store_values(vm, process, jndex, 1);
-		process->arg.v[0] = circulate_memory(process->arg.v[0]);
-		new = add_process(champ, process->arg.v[0]);
+		process->arg.v[0] = circulate_index(process->arg.v[0]);
+//		new = add_process(champ, process->arg.v[0]);
 		ft_putendl("	exited ft_lfork with return 0");
 		return (0);
 	}

@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/27 23:35:02 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/29 01:14:10 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/29 08:25:51 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -151,7 +151,7 @@ void	dummy_testing(t_vm *vm)
 	vm->memory[4093] = 6;
 	vm->memory[4094] = 6;
 	vm->memory[4095] = 6;
-	vm->memory[4096] = 6;
+	vm->memory[circulate_index(4096)] = 6;
 	vm->memory[0] = 6;
 	vm->memory[1] = 0xA8;
 	vm->memory[2] = 2;

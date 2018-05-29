@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42->fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 05:16:48 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/23 23:49:05 by eliu             ###   ########->fr       */
+/*   Updated: 2018/05/29 08:21:08 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,8 +60,8 @@ int		ft_sti(t_vm *vm, t_champ *champ, t_process *process)
 	if (reg(process, 0) && any(process, 1) && reg_dir(process, 2))
 	{
 		store_values(vm, process, jndex, 2);
-		convert_register_number_to_value(process, 1);
-		convert_register_number_to_value(process, 2);
+		convert_if_register_number_to_value(process, 1);
+		convert_if_register_number_to_value(process, 2);
 		store_big_endian(vm, process->regs[process->arg.v[0]], 
 						(process->arg.v[1] + process->arg.v[2] % IND_SIZE));
 		ft_putendl("	exited ft_sti with return 0");

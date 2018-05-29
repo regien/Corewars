@@ -6,7 +6,7 @@
 #    By: gmalpart <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/22 16:31:53 by gmalpart          #+#    #+#              #
-#    Updated: 2018/05/28 01:33:09 by eliu             ###   ########.fr        #
+#    Updated: 2018/05/29 08:20:37 by eliu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,9 @@ FUNCTION_FILES = live.c \
 				 lldi.c \
 				 lfork.c \
 				 aff.c \
-				 find_value.c
+				 find_value.c \
+				 convert_registers.c \
+				 circulate_index.c 
 
 FUNCTION_HELPERS = types.c \
 				   type_combinations.c

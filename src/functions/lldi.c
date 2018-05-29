@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 06:11:20 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/28 09:46:12 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/29 08:24:33 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int		ft_lldi(t_vm *vm, t_champ *champ, t_process* process)
 		convert_if_register_number_to_value(process, 0);
 		convert_if_register_number_to_value(process, 1);
 		s = process->arg.v[0] + process->arg.v[1];
-		s = circulate_memory(s);
+		s = circulate_index(s);
 		read_2_bytes(vm, process, s, 2);
 		if (process->regs[process->arg.v[2]] == 0)
 		{

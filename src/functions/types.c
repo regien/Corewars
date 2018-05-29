@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 23:50:39 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/28 07:01:51 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/29 08:26:57 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	reg_bounds(int reg)
 {
-	return (0 <= reg && reg <= 15)
+	return (0 <= reg && reg <= 15);
 }
 
 char	reg(t_process *process, int x)

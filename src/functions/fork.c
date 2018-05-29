@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 05:59:20 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/28 01:35:23 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/29 08:24:08 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ ft_putendl("	entered ft_fork");
 	{
 		store_values(vm, process, jndex, 1);
 		// process->arg.v[0] = circulate_memory(process->arg.v[0]);
-		new = add_process(champ, circulate_memory(process->arg.v[0] % IDX_MOD));
+//		new = add_process(champ, circulate_index(process->arg.v[0] % IDX_MOD));
 		ft_putendl("	exited ft_fork with return 0");
 		return (0);
 	}
