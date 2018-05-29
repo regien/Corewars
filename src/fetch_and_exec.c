@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/18 11:16:17 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/28 06:24:20 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/28 08:59:31 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,9 @@ char	get_type(char octet, char arg_num)
 	return (0);
 }
 
+
+// MAKE IT MODIFY The argument_size and to decode the encoding byte
+// and moving correctly
 size_t	set_arg(char **pc, char type, int *value, t_process *p)
 {
 	char	*c;
@@ -71,7 +74,7 @@ void	execute(t_vm *vm, t_process *p)
 	set_index(&(p->index), g_ops[curr_op].descriptor ? 1 : 0);
 	p->arg.args_size = 0;
 	i = -1;
-	while (++i < g_ops[curr_op].args)
+	while (++i < g_ops[curr_op].args) // you only need to pass the type for the func
 		p->arg.args_size += set_arg(&(p->pc),
 		p->arg.type[i], &(p->arg.v[i]), p);
 // eliu working area {
@@ -94,5 +97,5 @@ void	fetch(t_process *process)
 		process->curr_op = 0;
 		process->cycle_counter = 0;
 	}
-	set_index(&(process->index), 1);
+	set_index(&(process->index), 1); // review this
 }

@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/28 06:21:51 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/28 08:45:53 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,8 +124,9 @@ typedef struct			s_process
 	char				carry;
 	int					cycle_counter;
 	char				state; // review if this is being used
-	// 0 ready to move
-	// 1 waiting
+	// 1 FETCH
+	// 2 WAIT
+	// 3 EXEC
 	char				live;
 	//char				process_live; replace it for live
 	//char				player_live; adding it
