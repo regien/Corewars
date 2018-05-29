@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   and->c                                              :+:      :+:    :+:   */
+/*   and.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 04:31:44 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/28 06:30:20 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/29 00:59:58 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,14 @@ int		ft_and(t_vm *vm, t_champ *champ, t_process *process)
 	if (any(process, 0) && any(process, 1) && reg(process, 2))
 	{
 		store_values(vm, process, jndex, 3);
+		// egister_number_to_value(process, 0);
 		if (reg(process, 0))
 		{
 			printf("the register number is: %d\n", process->arg.v[0]);
 			printf("the register value is: %d\n", process->regs[process->arg.v[0]]);
 			process->arg.v[0] = process->regs[process->arg.v[0]];
 		}
+		// register_number_to_value(process, 1);
 		if (reg(process, 1))
 		{
 			printf("the register number is: %d\n", process->arg.v[1]);

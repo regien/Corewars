@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/27 23:35:02 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/28 07:24:13 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/29 01:14:10 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,12 +134,43 @@ void	dummy_testing(t_vm *vm)
 	//st.c
 	//
 	//pc -> memory[0];
+	vm->memory[4080] = 6;
+	vm->memory[4081] = 6;
+	vm->memory[4082] = 6;
+	vm->memory[4083] = 6;
+	vm->memory[4084] = 6;
+	vm->memory[4085] = 6;
+	vm->memory[4086] = 6;
+	vm->memory[4087] = 6;
+	vm->memory[4088] = 6;
+	vm->memory[4089] = 6;
+	vm->memory[4090] = 6;
+	vm->memory[4091] = 6;
+	vm->memory[4092] = 6;
+	vm->memory[4093] = 6;
+	vm->memory[4094] = 6;
+	vm->memory[4095] = 6;
+	vm->memory[4096] = 6;
+	vm->memory[0] = 6;
 	vm->memory[1] = 0xA8;
 	vm->memory[2] = 2;
 	vm->memory[3] = 3;
 	vm->memory[4] = 4;
 	vm->memory[5] = 5;
+	vm->memory[7] = 6;
+	vm->memory[8] = 7;
+	vm->memory[9] = 8;
+	vm->memory[10] = 10;
+	vm->memory[11] = 11;
+	vm->memory[12] = 12;
+	vm->memory[13] = 13;
+	vm->memory[14] = 14;
+	vm->memory[15] = 15;
+	vm->memory[16] = 16;
 	vm->memory[6] = 6;
+	vm->memory[6] = 6;
+	vm->memory[6] = 6;
+
 	vm->processes->arg.type[0] = 2;
 	vm->processes->arg.type[1] = 2;
 	vm->processes->arg.type[2] = 1;
@@ -160,7 +191,24 @@ void	dummy_testing(t_vm *vm)
 	printf("ENDING DUMMY TESTING\n\n");
 */
 	print_regs(vm->processes->regs);
+	ft_live(vm, &(vm->champs[0]), vm->processes);
+	ft_ld(vm, &(vm->champs[0]), vm->processes);
+	ft_st(vm, &(vm->champs[0]), vm->processes);
+	ft_add(vm, &(vm->champs[0]), vm->processes);
+	ft_sub(vm, &(vm->champs[0]), vm->processes);
+	ft_and(vm, &(vm->champs[0]), vm->processes);
+	ft_or(vm, &(vm->champs[0]), vm->processes);
 	ft_xor(vm, &(vm->champs[0]), vm->processes);
+	ft_zjmp(vm, &(vm->champs[0]), vm->processes);
+	ft_ldi(vm, &(vm->champs[0]), vm->processes);
+	ft_sti(vm, &(vm->champs[0]), vm->processes);
+	ft_fork(vm, &(vm->champs[0]), vm->processes);
+	ft_lld(vm, &(vm->champs[0]), vm->processes);
+	ft_lldi(vm, &(vm->champs[0]), vm->processes);
+	ft_lfork(vm, &(vm->champs[0]), vm->processes);
+	ft_aff(vm, &(vm->champs[0]), vm->processes);
+//	ft_xor(vm, &(vm->champs[0]), vm->processes);
+//	ft_xor(vm, &(vm->champs[0]), vm->processes);
 	print_regs(vm->processes->regs);
 	printf("TESTING DUMMY TESTING\n\n");
 	printf("pendejada vm->processes->arg.v[0] = %d\n", vm->processes->arg.v[0]);

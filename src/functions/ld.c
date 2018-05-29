@@ -55,7 +55,7 @@ int		ft_ld(t_vm *vm, t_champ *champ, t_process *process)
 		}
 		else if (ind(process, 0))
 		{
-			read_4_bytes(vm, process, jndex, 0);
+			read_2_bytes(vm, process, jndex, 0);
 			//read_from_vm(vm, process, process->arg.v[1] - 1, process->index);
 		}
 		if ((process->regs[process->arg.v[1]] = process->arg.v[0]) == 0)

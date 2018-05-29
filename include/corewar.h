@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/28 02:10:16 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/29 01:03:53 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -152,6 +152,7 @@ typedef struct			s_champ
 
 typedef struct			s_vm
 {
+	char				last_to_live;
 	char				memory[MEM_SIZE];
 	int					players;
 	int					cycles;
@@ -261,6 +262,11 @@ int						index_mod(int index, int diff);
 void					convert_big_endian(unsigned int *num);
 void					convert_big_endian_short(unsigned short *num);
 
+/*
+** CONVERT_REGISTERS.c
+*/
+
+void					register_number_to_value(t_process *process, int arg);
 
 /*
 ** INIT_OPS.c

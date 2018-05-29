@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 03:06:43 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/27 01:57:16 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/29 01:08:34 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,19 @@
 **	a champion is alive due to the processes.
 */
 
-int		ft_live(t_vm *vm, t_champ *champ, t_process *process)
+static void	last_to_live(t_vm *vm, int player)
+{
+	if (0 < player && player <= 5)
+		vm->last_to_live = player;
+}
+
+static void	show_alive(t_process *process)
+{
+	ft_printf("A process shows that Player %d %s is alive.\n", \
+				process->plyr_nbr, process->name);
+}
+
+int			ft_live(t_vm *vm, t_champ *champ, t_process *process)
 {
 	int 	jndex;
 
@@ -32,7 +44,10 @@ int		ft_live(t_vm *vm, t_champ *champ, t_process *process)
 	if (dir(process, 0))
 	{
 		store_values(vm, process, jndex, 1);
-		process->process_alive = process->arg.v[0];
+		process->process_alive = 1;
+		process->player_alive = process->arg.v[0];
+		last_to_live(vm, process->arg.v[0]);
+//		show_alive(process);
 		// process->index += args_size;
 		// process->index += 5;
 		return (0);
