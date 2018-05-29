@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 22:55:43 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/29 03:21:47 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/29 06:26:09 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ t_process	*add_process(t_champ *champ, int index)
 	t_process *root;
 
 	if (!(champ && champ->processes))
-		return (0);
+		return (NULL);
 	root = champ->processes;
 	new = set_process(root->pc, index, champ->plyr_nbr);
 	new->father_champ = champ;
