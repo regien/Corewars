@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 15:00:20 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/29 04:36:15 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/29 04:39:38 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,7 +121,6 @@ void	handle_cycle_to_die(t_vm *vm)
 		vm->nbr_checks = 0;
 	}
 	i = 0;
-	vm->champs[0].processes->live = 1;
 	while (i < vm->players)
 	{
 //		buffer = PROCESS;
