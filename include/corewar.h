@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/28 08:45:53 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/29 02:43:06 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -145,7 +145,7 @@ typedef struct			s_champ
 	unsigned int		size;
 	struct s_process	*processes;
 	//gmalpart|eliu : move to the VM_structure
-	int					lives_counted;
+	int					lives_counted; // review if this is being used
 }						t_champ;
 
 // eliu: added int: cycle_delta
@@ -290,8 +290,16 @@ void					kill_process(t_process *p);
 */
 
 void					controller(t_vm *vm);
-int						players_alive(t_vm *vm);
-int						handle_modular(t_vm *vm);
+
+/*
+** WINNER.c
+*/
+
+int						procceses_alive(t_vm *vm);
+int						solid_winner(t_process *proccesses);
+void					display_information_winner(t_champ *champ);
+void					declare_winner(t_vm *vm);
+
 
 /*
 ** PRINT.c

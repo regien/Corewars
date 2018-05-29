@@ -6,11 +6,23 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/18 11:16:17 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/29 00:34:17 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/29 03:18:08 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "corewar.h"
+
+/*
+** DEPRECATED -> moving to eliu's one
+	eliu's merging, - what to do:
+		only passsing the types of the argument;
+		but set the arg_size
+	
+	EXECUTION TIME:
+		- avoid overflow check every char you are modifying
+		- mod_index(index, arg_size);
+*/
+
 
 char	get_type(char octet, char arg_num)
 {

@@ -6,7 +6,7 @@
 #    By: gmalpart <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/22 16:31:53 by gmalpart          #+#    #+#              #
-#    Updated: 2018/05/25 03:49:11 by gmalpart         ###   ########.fr        #
+#    Updated: 2018/05/29 01:09:20 by gmalpart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,8 @@ SRC		=	read_file.c \
 			conversions.c \
 			parseargs.c \
 			set_up_player.c \
-			error_handling.c 
+			error_handling.c \
+			winner.c
 
 FUNCTION_PATH = src/functions/
 FUNCTION_FILES = live.c \

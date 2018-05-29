@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 22:55:43 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/28 06:27:15 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/29 03:08:19 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,8 +57,8 @@ t_process	*set_process(char *pc_start, int mem_start, int player_nbr)
 	p = malloc(sizeof(t_process));
 	p->pc = pc_start;
 	p->index = mem_start;
-	p->next = 0;
-	p->prev = 0;
+	p->next = NULL; // it was 0
+	p->prev = NULL; // it was 0
 	i = 0;
 	// INITIALIZING REGISTERS
 	while (i < 16)
