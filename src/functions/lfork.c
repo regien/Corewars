@@ -45,7 +45,8 @@ int		ft_lfork(t_vm *vm, t_champ *champ, t_process *process)
 	if (dir(process, 0))
 	{
 		store_values(vm, process, jndex, 1);
-		//new = add_process(champ, process->index);
+		process->arg.v[0] = circulate_memory(process->arg.v[0]);
+		new = add_process(champ, process->arg.v[0]);
 		ft_putendl("	exited ft_lfork with return 0");
 		return (0);
 	}

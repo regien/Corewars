@@ -33,8 +33,8 @@ int		ft_add(t_vm *vm, t_champ *champ, t_process *process)
 	{
 		store_values(vm, process, jndex, 3);
 		if ((process->regs[process->arg.v[2]] = \
-			process->regs[process->arg.v[0]] + \
-			process->regs[process->arg.v[1]]) == 0)
+			(process->regs[process->arg.v[0]]) + \
+			(process->regs[process->arg.v[1]])) == 0)
 		{
 			ft_putendl("carry == 1");
 			process->carry = 1;

@@ -43,19 +43,10 @@ int		ft_lldi(t_vm *vm, t_champ *champ, t_process* process)
 	if (any(process, 0) && reg_dir(process, 1) && reg(process, 2))
 	{
 		store_values(vm, process, jndex, 3);
-		// If parameter is a register, store the value (v[i]) as the value
-		// Inside the reigster #
-		if (reg(process, 0))
-		{
-			process->arg.v[0] = process->regs[process->arg.v[0]];
-		}
-		if (reg(process, 1))
-		{
-			process->arg.v[1] = process->regs[process->arg.v[1]];
-		}
+		convert_if_register_number_to_value(process, 0);
+		convert_if_register_number_to_value(process, 1);
 		s = process->arg.v[0] + process->arg.v[1];
-//		if ((process->regs[process->arg.v[2]] = \
-//			read_2_bytes(vm, process, s, 2)) == 0)
+		s = circulate_memory(s);
 		read_2_bytes(vm, process, s, 2);
 		if (process->regs[process->arg.v[2]] == 0)
 		{

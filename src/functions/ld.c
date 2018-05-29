@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 03:08:54 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/24 12:27:39 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/29 06:30:09 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,6 @@ void	read_from_vm(t_vm *vm, t_process *process, int r, int index)
 }
 */
 
-/*
-**	process.regs has -1
-*/
-
 int		ft_ld(t_vm *vm, t_champ *champ, t_process *process)
 {
 	int 	jndex;
@@ -49,16 +45,13 @@ int		ft_ld(t_vm *vm, t_champ *champ, t_process *process)
 	if (dir_ind(process, 0) && reg(process, 1))
 	{
 		store_values(vm, process, jndex, 2);
-		if (reg(process, 0))
-		{
-			process->arg.v[0] = process->regs[process->arg.v[0]];
-		}
-		else if (ind(process, 0))
+		convert_if_register_number_to_value(process, 0);
+		if (ind(process, 0))
 		{
 			read_2_bytes(vm, process, jndex, 0);
 			//read_from_vm(vm, process, process->arg.v[1] - 1, process->index);
 		}
-		if ((process->regs[process->arg.v[1]] = process->arg.v[0]) == 0)
+		if ((process->regs[process->arg.v[1]] = (process->arg.v[0]) % IDX_MOD) == 0)
 		{
 			process->carry = 1;
 		}

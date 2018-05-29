@@ -15,19 +15,19 @@
 void	read_4_bytes(t_vm *vm, t_process *process, int index, int i)
 {
 	ft_putendl("	arg is an indirect: entered read_4_bytes");
-	process->arg.v[i] = (vm->memory[index % MEM_SIZE] & 0xFF) << 24;
-	process->arg.v[i] += (vm->memory[(index + 1) % MEM_SIZE] & 0xFF) << 16;
-	process->arg.v[i] += (vm->memory[(index + 2) % MEM_SIZE] & 0xFF) << 8;
-	process->arg.v[i] += (vm->memory[(index + 3) % MEM_SIZE] & 0xFF);
+	process->arg.v[i] = (vm->memory[circulate_index(index)] & 0xFF) << 24;
+	process->arg.v[i] += (vm->memory[circulate_index(index + 1)] & 0xFF) << 16;
+	process->arg.v[i] += (vm->memory[circulate_index(index + 2)] & 0xFF) << 8;
+	process->arg.v[i] += (vm->memory[circulate_index(index + 3)] & 0xFF);
 	ft_putendl("	exited read_4_bytes");
 }
 
 void 	read_2_bytes(t_vm *vm, t_process *process, int index, int i)
 {
 	printf("	arg is an indirect: entered read_2_bytes index = %d\n", index);
-	process->arg.v[i] = vm->memory[(index) % MEM_SIZE];
+	process->arg.v[i] = vm->memory[circulate_index(index)];
 	process->arg.v[i] = (process->arg.v[i] & 0xFF) << 8; //cast to char
-	process->arg.v[i] += vm->memory[(index + 1) % MEM_SIZE] & 0xFF;
+	process->arg.v[i] += vm->memory[circulate_index(index + 1)] & 0xFF;
 	printf("i value = %d shift = %d\n", i, process->arg.v[i]);
 	ft_putendl("	exited read_2_bytes");
 }
@@ -48,12 +48,15 @@ void	find_register(t_vm *vm, t_process *process, int index, int i)
 {
 	int register_number;
 
-	register_number = vm->memory[index];
+	register_number = vm->memory[circulate_index(index)] /* & 0xFF */;
 	// find register number;
 	//if ((0 < register_number && register_number <= REG_NUMBER))
-	process->arg.v[i] = register_number;
+//	if (0 <= register_number && register_number <= 16)	
+		process->arg.v[i] = register_number;
+//	else
+//		process->arg.v[i] = 0;
 	// store register value;
-	printf("arg v[%d] is :%d\n", i, process->arg.v[i]);
+//	printf("arg v[%d] is :%d\n", i, process->arg.v[i]);
 }
 
 int 	find_arg_size(t_process *process, int i)
@@ -77,23 +80,21 @@ int 	find_arg_size(t_process *process, int i)
 	{
 		return (2);
 	}
+	ft_putendl("\n\n\n!!!!!error finding arg size\n\n\n");
 	return (0);
 }
 
-void	find_value(t_vm *vm, t_process *process, int jndex, char type, int param)
+void	find_value(t_vm *vm, t_process *process, int jndex, int param)
 {
-	int i;
-
-	i = 0;
-	if (type == 1)
+	if (process->arg.type[param] == 1)
 	{
 		find_register(vm, process, jndex, param);
 	}
-	else if (type == 2)
+	else if (process->arg.type[param] == 2)
 	{
 		find_direct(vm, process, jndex, param);
 	}
-	else if (type == 3)
+	else if (process->arg.type[param] == 3)
 	{
 		read_2_bytes(vm, process,  jndex, param);
 	}
@@ -106,9 +107,9 @@ void	store_values(t_vm *vm, t_process *process, int jndex, int argc)
 	i = 0;
 	while (argc != 0)
 	{
-		find_value(vm, process, jndex, process->arg.type[i], i);
+		find_value(vm, process, jndex, i);
 		printf("stored values:\n process->arg.v[%d] = %d\n\n\n", i, process->arg.v[i]);
-		jndex += find_arg_size(process, i);
+		jndex = circulate_index(jndex + find_arg_size(process, i));
 		argc--;
 		i++;
 	}

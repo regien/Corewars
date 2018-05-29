@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 03:06:43 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/29 01:08:34 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/29 06:28:09 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,13 @@
 
 static void	last_to_live(t_vm *vm, int player)
 {
-	if (0 < player && player <= 5)
-		vm->last_to_live = player;
+	vm->last_to_live = player;
 }
 
 static void	show_alive(t_process *process)
 {
-	ft_printf("A process shows that Player %d %s is alive.\n", \
-				process->plyr_nbr, process->name);
+	ft_printf("A process shows that Player %d (%s) is alive.\n", \
+				process->player_number, "process->name");
 }
 
 int			ft_live(t_vm *vm, t_champ *champ, t_process *process)
@@ -46,13 +45,13 @@ int			ft_live(t_vm *vm, t_champ *champ, t_process *process)
 		store_values(vm, process, jndex, 1);
 		process->process_alive = 1;
 		process->player_alive = process->arg.v[0];
+
+
 		last_to_live(vm, process->arg.v[0]);
-//		show_alive(process);
-		// process->index += args_size;
-		// process->index += 5;
+		show_alive(process);
+		ft_putendl("	argument is a direct: return 0");
 		return (0);
-		ft_putendl("	exited ft_live with return 0");
 	}
-	ft_putendl("	exited ft_live with return 1");
+	ft_putendl("	argument not a direct: return 1");
 	return (1);
 }

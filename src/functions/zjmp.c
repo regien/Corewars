@@ -38,10 +38,10 @@ int		ft_zjmp(t_vm *vm, t_champ *champ, t_process *process)
 	if (dir(process, 0) && process->carry == 1)
 	{
 		store_values(vm, process, jndex, 1);
-		process->index = process->arg.v[0];
-		ft_putendl("	exited ft_zjmp with return 0");
+		process->index = process->arg.v[0] % IDX_MOD;
+		ft_putendl("	carry is one, zjump successful");
 		return (0);
 	}
-	ft_putendl("	exited ft_zjmp with return 1");
+	ft_putendl("	carry was zero, zjump failed");
 	return (1);
 }

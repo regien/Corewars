@@ -39,7 +39,8 @@ ft_putendl("	entered ft_fork");
 	if (dir(process, 0))
 	{
 		store_values(vm, process, jndex, 1);
-		//new = add_process(champ, process->index % IDX_MOD);
+		// process->arg.v[0] = circulate_memory(process->arg.v[0]);
+		new = add_process(champ, circulate_memory(process->arg.v[0] % IDX_MOD));
 		ft_putendl("	exited ft_fork with return 0");
 		return (0);
 	}

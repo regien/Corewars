@@ -34,28 +34,10 @@ int		ft_and(t_vm *vm, t_champ *champ, t_process *process)
 	if (any(process, 0) && any(process, 1) && reg(process, 2))
 	{
 		store_values(vm, process, jndex, 3);
-		// egister_number_to_value(process, 0);
-		if (reg(process, 0))
-		{
-			printf("the register number is: %d\n", process->arg.v[0]);
-			printf("the register value is: %d\n", process->regs[process->arg.v[0]]);
-			process->arg.v[0] = process->regs[process->arg.v[0]];
-		}
-		// register_number_to_value(process, 1);
-		if (reg(process, 1))
-		{
-			printf("the register number is: %d\n", process->arg.v[1]);
-			printf("the register value is: %d\n", process->regs[process->arg.v[1]]);
-			process->arg.v[1] = process->regs[process->arg.v[1]];
-		}
-		int i = 0;
-		while (i < 3)
-		{
-			printf("stored values:\n process->arg.[%d] = %d\n\n\n", i, process->arg.v[i]);
-			i++;
-		}
-		if ((process->regs[process->arg.v[2]] = 
-				process->arg.v[0] & process->arg.v[1]) == 0)
+		convert_if_register_number_to_value(process, 0);
+		convert_if_register_number_to_value(process, 1);
+		if ((process->regs[process->arg.v[2]] = \
+			(process->arg.v[0] & process->arg.v[1])/* % IDX_MOD */) == 0)
 		{
 			process->carry = 1;
 		}
@@ -63,6 +45,7 @@ int		ft_and(t_vm *vm, t_champ *champ, t_process *process)
 		{
 			process->carry = 0;
 		}
+		printf("carry is :%d\n", process->carry);
 		ft_putendl("	exited ft_and with return 0");
 		return (0);
 	}

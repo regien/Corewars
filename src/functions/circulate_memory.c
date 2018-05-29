@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   convert_registers.c                                :+:      :+:    :+:   */
+/*   circulate_index.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/29 00:38:09 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/29 00:47:39 by eliu             ###   ########.fr       */
+/*   Created: 2018/05/29 02:38:38 by eliu              #+#    #+#             */
+/*   Updated: 2018/05/29 02:40:31 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "corewar.h"
 
-void	convert_if_register_number_to_value(t_process *process, int arg)
+int		circulate_index(int index)
 {
-	int	reg_number;
-
-	if (0 <= arg && arg <= 2 && process->arg.type[arg] == REG_CODE)
+	printf("Index before entering circulate: %d\n", index);
+	while (index < 0)
 	{
-		reg_number = process->arg.v[arg];
-		if (1 <= reg_number && reg_number <= 16)
-		{
-			process->arg.v[arg] = process->regs[reg_number];
-		}
-		else
-		{
-			// Undefined reg_number behavior;
-			process->arg.v[arg] = 0;
-		}
+		index = index + MEM_SIZE;
 	}
+	while (index >= MEM_SIZE)
+	{
+		index = index - MEM_SIZE;
+	}
+	printf("Index after exiting circulate: %d\n", index);
+	return (index);
 }

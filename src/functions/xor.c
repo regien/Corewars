@@ -34,22 +34,10 @@ int		ft_xor(t_vm *vm, t_champ *champ, t_process *process)
 	if (any(process, 0) && any(process, 1) && reg(process, 2))
 	{
 		store_values(vm, process, jndex, 3);
-		if (reg(process, 0))
-		{
-			printf("the reigster number is: %d\n", process->arg.v[0]);
-			printf("the reigster value is: %d\n", process->regs[process->arg.v[0]]);
-
-			process->arg.v[0] = process->regs[process->arg.v[0]];
-		}
-		printf("TYPE: %d\n", process->arg.type[1]);
-		if (reg(process, 1))
-		{
-			printf("the reigster number is: %d\n", process->arg.v[1]);
-			printf("the reigster value is: %d\n", process->regs[process->arg.v[1]]);
-			process->arg.v[1] = process->regs[process->arg.v[1]];
-		}
+		convert_if_register_number_to_value(process, 0);
+		convert_if_register_number_to_value(process, 1);
 		if ((process->regs[process->arg.v[2]] = 
-				process->arg.v[0] ^ process->arg.v[1]) == 0)
+			(process->arg.v[0] ^ process->arg.v[1]) /* % IDX_MOD */) == 0)
 		{
 			process->carry = 1;
 		}

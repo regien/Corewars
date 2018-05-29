@@ -37,10 +37,7 @@ int		ft_lld(t_vm *vm, t_champ *champ, t_process *process)
 	if (any(process, 0) && reg(process, 1))
 	{
 		store_values(vm, process, jndex, 2);
-		if (reg(process, 0))
-		{
-			process->arg.v[0] = process->regs[process->arg.v[0]];
-		}
+		convert_if_register_number_to_value(process, 0);
 		if ((process->regs[process->arg.v[1]] = process->arg.v[0]) == 0)
 		{
 			process->carry = 1;

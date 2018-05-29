@@ -13,10 +13,6 @@
 #include "corewar.h"
 
 /*
-**	Similar to and '&', but performing a binary OR '|'.
-*/
-
-/*
 **	Takes 3 parameters. It performs a binary OR '|' between the two parameters 
 **	and stores the result into the third one (which must be a register).
 **	This operation modifies the carry.
@@ -38,22 +34,10 @@ int		ft_or(t_vm *vm, t_champ *champ, t_process *process)
 	if (any(process, 0) && any(process, 1) && reg(process, 2))
 	{
 		store_values(vm, process, jndex, 3);
-		if (reg(process, 0))
-		{
-			printf("the reigster number is: %d\n", process->arg.v[0]);
-			printf("the reigster value is: %d\n", process->regs[process->arg.v[0]]);
-
-			process->arg.v[0] = process->regs[process->arg.v[0]];
-		}
-		printf("TYPE: %d\n", process->arg.type[1]);
-		if (reg(process, 1))
-		{
-			printf("the reigster number is: %d\n", process->arg.v[1]);
-			printf("the reigster value is: %d\n", process->regs[process->arg.v[1]]);
-			process->arg.v[1] = process->regs[process->arg.v[1]];
-		}
-		if ((process->regs[process->arg.v[2]] = 
-				process->arg.v[0] | process->arg.v[1]) == 0)
+		convert_if_register_number_to_value(process, 0);
+		convert_if_register_number_to_value(process, 1);
+		if ((process->regs[process->arg.v[2]] = \
+			(process->arg.v[0] | process->arg.v[1]) /* IDX_MOD */) == 0)
 		{
 			process->carry = 1;
 		}
@@ -61,6 +45,7 @@ int		ft_or(t_vm *vm, t_champ *champ, t_process *process)
 		{
 			process->carry = 0;
 		}
+		printf("process carry is %d\n", process->carry);
 		ft_putendl("	exited ft_or with return 0");
 		return (0);
 	}
