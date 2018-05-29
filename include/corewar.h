@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/29 05:24:01 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/29 10:52:58 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,8 +128,8 @@ typedef struct			s_process
 	// 2 WAIT
 	// 3 EXEC
 	char				live;
-	//char				process_live; replace it for live
-	//char				player_live; adding it
+	char				process_alive; //replace it for live
+	char				player_alive; // adding it
 	//unsigned int		cycle_to_execute; (cycle + wait_op_cycles)
 	int					store_vm; // only eliu branch
 	struct s_process	*next;
@@ -351,5 +351,32 @@ char					reg_ind(t_process *process, int x);
 char					reg(t_process *process, int x);
 char					dir(t_process *process, int x);
 char					ind(t_process *process, int x);
+
+
+/*
+** CONVERT_REGISTERS.c
+*/
+
+void					convert_if_register_number_to_value(t_process *process, int arg);
+
+/*
+** CIRCULATE_INDEX.C
+*/
+
+int						circulate_index(int index);
+
+
+/*
+** FIND_VALUES.c
+*/
+
+void					read_4_bytes(t_vm *vm, t_process *process, int index, int i);
+void				 	read_2_bytes(t_vm *vm, t_process *process, int index, int i);
+void					find_direct(t_vm *vm, t_process *process, int index, int i);
+void					find_register(t_vm *vm, t_process *process, int index, int i);
+int 					find_arg_size(t_process *process, int i);
+void					find_value(t_vm *vm, t_process *process, int jndex, int param);
+void					store_values(t_vm *vm, t_process *process, int jndex, int argc);
+
 
 #endif

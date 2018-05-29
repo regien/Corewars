@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/18 11:16:17 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/29 05:46:07 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/29 09:57:15 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 		- mod_index(index, arg_size);
 */
 
-
+/*
 char	get_type(char octet, char arg_num)
 {
 	printf("octet %hhd\n", octet);
@@ -36,11 +36,20 @@ char	get_type(char octet, char arg_num)
 	ft_printf("Code not recognized\n");
 	return (0);
 }
+*/
+
+void		get_type(t_command_args *arg, char octet)
+{
+	arg->type[0] = (octet >> 6) & 3;
+	arg->type[1] = (octet >> 4) & 3;
+	arg->type[2] = (octet >> 2) & 3;
+}
 
 
 // MAKE IT MODIFY The argument_size and to decode the encoding byte
 // and moving correctly
-size_t	set_arg(char **pc, char type, int *value, t_process *p)
+
+/*size_t	set_arg(char **pc, char type, int *value, t_process *p)
 {
 	char	*c;
 	short	*s;
@@ -67,8 +76,9 @@ size_t	set_arg(char **pc, char type, int *value, t_process *p)
 		set_index(&(p->index), 4);
 	}
 	return (0);
-}
+}*/
 
+/*
 void	execute(t_vm *vm, t_process *p)
 {
 	char type;
@@ -96,6 +106,32 @@ void	execute(t_vm *vm, t_process *p)
 	printf("index: %d\n", p->index);
 	p->curr_op = 0;
 }
+*/
+
+
+void	execute(t_vm *vm, t_process *p)
+{
+	int		i;
+	int		curr_op;
+
+	curr_op = p->curr_op;
+	if (g_ops[curr_op].descriptor)
+		get_type(&(p->arg), p->pc[index_mod(p->index, 1)]);
+	set_index(&(p->index), g_ops[curr_op].descriptor ? 1 : 0);
+//	set_index(&(p->index), 100);
+	// moving the cursor if ACB exist 
+	p->arg.args_size = 0;
+	i = -1;
+	g_ops[curr_op].func_to_be(vm, p->father_champ, p);
+	// we are setting the arg.size inside the function
+//	dump_memory(*vm); // <_ HERE _ DUMP _ MEMORY
+// end working area	}
+	printf("index: %d\n", p->index);
+	//modify index here
+//	set_index(&(p->index), );
+	p->curr_op = 0;
+}
+
 
 void	fetch(t_process *process)
 {
@@ -109,6 +145,7 @@ void	fetch(t_process *process)
 		process->curr_op = 0;
 		process->cycle_counter = 0;
 	}
-	set_index(&(process->index), 1); // review this
+	if (process->curr_op == 0)
+		set_index(&(process->index), 1); // review this
 	//setting the index in the ACB
 }

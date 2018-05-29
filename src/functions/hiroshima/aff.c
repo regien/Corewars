@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 06:23:58 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/28 09:50:38 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/23 23:20:25 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,20 +23,12 @@
 
 int		ft_aff(t_vm *vm, t_champ *champ, t_process *process)
 {
-	int 	jndex;
-
-	jndex = process->index + 1;
-	if (g_ops[process->curr_op].descriptor == 1)
-	{
-		jndex += 1;
-	}
 	ft_putendl("	entered ft_aff");
 	(void)vm;
 	(void)champ;
 	if (reg(process, 0) && vm->flags_args.aff == 1)
 	{
-		store_values(vm, process, jndex, 1);
-		ft_putchar(process->regs[process->arg.v[0]] % 256);
+		ft_putchar(process->index % 256);
 		ft_putendl("	exited ft_aff with return 0");
 		return (0);
 	}

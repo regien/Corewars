@@ -1,39 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   types.c                                            :+:      :+:    :+:   */
+/*   circulate_index.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/21 23:50:39 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/29 08:26:57 by eliu             ###   ########.fr       */
+/*   Created: 2018/05/29 02:38:38 by eliu              #+#    #+#             */
+/*   Updated: 2018/05/29 02:40:31 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "corewar.h"
 
-char	reg_bounds(int reg)
+int		circulate_index(int index)
 {
-	return (0 <= reg && reg <= 15);
-}
-
-char	reg(t_process *process, int x)
-{
-	if (process->arg.type[x] == REG_CODE && reg_bounds(x))
-		return (REG_CODE);
-	return (0);
-}
-
-char	dir(t_process *process, int x)
-{
-	if (process->arg.type[x] == DIR_CODE)
-		return (DIR_CODE);
-	return (0);
-}
-
-char	ind(t_process *process, int x)
-{
-	if (process->arg.type[x] == IND_CODE)
-		return (IND_CODE);
-	return (0);
+	printf("Index before entering circulate: %d\n", index);
+	while (index < 0)
+	{
+		index = index + MEM_SIZE;
+	}
+	while (index >= MEM_SIZE)
+	{
+		index = index - MEM_SIZE;
+	}
+	printf("Index after exiting circulate: %d\n", index);
+	return (index);
 }
