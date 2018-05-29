@@ -6,7 +6,7 @@
 /*   By: gmalpart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/29 01:05:21 by gmalpart          #+#    #+#             */
-/*   Updated: 2018/05/29 02:55:48 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/29 04:28:17 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,15 @@ int		procceses_alive(t_vm *vm)
 
 	players_alive = 0;
 	i = -1;
-	vm->champs[0].processes->live = 1;
 	while (++i < vm->players)
 	{
-		temp = vm->champs[i].processes;
+		temp = (vm->champs[i].processes);
 		if (temp)
+		{
+			printf("PENDEJADA TEMP->PROCCESES->ALIVE = |%d|\n", \
+				temp->live);
 			players_alive++;
+		}
 	}
 	printf("pendejada PLAYERS_ALIVE = |%d|\n", players_alive);
 	if (players_alive == 1)

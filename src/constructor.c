@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 22:55:43 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/29 03:08:19 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/29 03:21:47 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ t_process	*set_process(char *pc_start, int mem_start, int player_nbr)
 	p->pc = pc_start;
 	p->index = mem_start;
 	p->next = NULL; // it was 0
-	p->prev = NULL; // it was 0
+//	p->prev = NULL; // it was 0
 	i = 0;
 	// INITIALIZING REGISTERS
 	while (i < 16)
@@ -67,9 +67,10 @@ t_process	*set_process(char *pc_start, int mem_start, int player_nbr)
 		i++;
 	}
 	p->regs[1] = player_nbr * -1;
-	// testing_only
+	// testing_only <-- erase me
 	for (i = 0; i < 16; i++)
 		printf("p->regs[i] = %d\n", p->regs[i]);
+	// testing_end <-- erase me
 	p->carry = 0;
 	p->cycle_counter = 0;
 	p->state = FETCH;
@@ -86,6 +87,7 @@ t_process	*set_process(char *pc_start, int mem_start, int player_nbr)
 	- initiliaze the arg.v
 */
 
+// this is the new head
 t_process	*add_process(t_champ *champ, int index)
 {
 	t_process *new;
@@ -97,11 +99,13 @@ t_process	*add_process(t_champ *champ, int index)
 	new = set_process(root->pc, index, champ->plyr_nbr);
 	new->father_champ = champ;
 	new->next = root;
-	root->prev = new;
+//	root->prev = new;
 	champ->processes = new;
 	return (new);
 }
 
+// not working
+/*
 void		kill_process(t_process *p)
 {
 	if (!p)
@@ -112,3 +116,4 @@ void		kill_process(t_process *p)
 		p->prev->next = p->next;
 	free(p);
 }
+*/

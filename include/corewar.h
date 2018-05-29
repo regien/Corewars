@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/29 02:43:06 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/29 04:19:20 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,7 +133,7 @@ typedef struct			s_process
 	//unsigned int		cycle_to_execute; (cycle + wait_op_cycles)
 	int					store_vm; // only eliu branch
 	struct s_process	*next;
-	struct s_process	*prev;
+//	struct s_process	*prev;
 }						t_process;
 
 typedef struct			s_champ
@@ -152,6 +152,8 @@ typedef struct			s_champ
 
 typedef struct			s_vm
 {
+	char				nbr_checks;
+	int					nbr_lives;
 	char				memory[MEM_SIZE];
 	int					players;
 	int					cycles;

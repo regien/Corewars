@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 15:00:20 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/29 02:59:43 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/29 04:36:15 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,29 +48,94 @@ void	run_processes(t_vm *vm, t_process *root, int i)
 }
 
 /*
+//t_process	*kill_processes(t_process *head)
+void	kill_processes(t_process **head)
+{
+	t_process	*newhead;
+	t_process	*iter;
+	t_process	*temp_erase;
+
+	temp_erase = NULL;
+	newhead = head;
+	iter = newhead;
+	while(iter)
+	{
+		if (!iter->live) // kill_process
+		{
+			temp_erase = iter;
+			iter = iter->next;
+			free(temp_erase);
+		}
+		else
+			iter = iter->next;
+	}
+//	return (newhead);
+}
+*/
+
+void	kill_processes(t_process **newhead)
+{
+//	t_process	*newhead;
+	t_process	*tmp;
+
+//	newhead = *head;
+	tmp = NULL;
+	while((*newhead)->next)
+	{
+		if (!((*newhead)->next->live)) // kill_process
+		{
+			tmp = (*newhead)->next;
+			(*newhead)->next = (*newhead)->next->next;
+			free(tmp);
+		}
+		else
+			(*newhead) = (*newhead)->next;
+	}
+	if (!((*newhead)->live))
+	{
+		free(*newhead);
+		*newhead = NULL;
+	}
+//	return (newhead);
+}
+
+
+/*
 ** seem that's the function is currently not in use
 **		NOT FULLY FUNCTIONAL
 ** Fix this first
 */
 
+#define INCREASE_NRB_CHECKS vm->nbr_checks += 1
+
 void	handle_cycle_to_die(t_vm *vm)
 {
 	int			i;
-	t_process	*buffer;
+//	t_process	*buffer;
 
-	vm->cycle_to_die -= CYCLE_DELTA;
+	if (vm->nbr_lives >= NBR_LIVE || \
+		vm->nbr_checks == MAX_CHECKS)
+	{
+		vm->cycle_to_die -= CYCLE_DELTA;
+		vm->nbr_lives = 0;
+		vm->nbr_checks = 0;
+	}
 	i = 0;
+	vm->champs[0].processes->live = 1;
 	while (i < vm->players)
 	{
-		buffer = PROCESS;
-		while (buffer)
-		{
-			if (!buffer->live)
-				kill_process(buffer); // not working
-			buffer = buffer->next;
-		}
+//		buffer = PROCESS;
+//		while (buffer)
+//		{
+//			if (!buffer->live)
+//				//kill_process(buffer); // not working
+//			buffer = buffer->next;
+//		}
+//		PROCESS = kill_processes(PROCESS);
+		kill_processes(&(PROCESS));
 		i++;
 	}
+	INCREASE_NRB_CHECKS;
 }
 
 void	controller(t_vm *vm)
