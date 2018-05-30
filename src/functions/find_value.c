@@ -6,31 +6,11 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/27 23:35:02 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/29 23:21:04 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/30 03:41:07 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "corewar.h"
-
-void	read_4_bytes(t_vm *vm, t_process *process, int index, int i)
-{
-	ft_putendl("	arg is an indirect: entered read_4_bytes");
-	process->arg.v[i] = (vm->memory[circulate_index(index)] & 0xFF) << 24;
-	process->arg.v[i] += (vm->memory[circulate_index(index + 1)] & 0xFF) << 16;
-	process->arg.v[i] += (vm->memory[circulate_index(index + 2)] & 0xFF) << 8;
-	process->arg.v[i] += (vm->memory[circulate_index(index + 3)] & 0xFF);
-	ft_putendl("	exited read_4_bytes");
-}
-
-void 	read_2_bytes(t_vm *vm, t_process *process, int index, int i)
-{
-	printf("	arg is an indirect: entered read_2_bytes index = %d\n", index);
-	process->arg.v[i] = vm->memory[circulate_index(index)];
-	process->arg.v[i] = (process->arg.v[i] & 0xFF) << 8; //cast to char
-	process->arg.v[i] += vm->memory[circulate_index(index + 1)] & 0xFF;
-	printf("i value = %d shift = %d\n", i, process->arg.v[i]);
-	ft_putendl("	exited read_2_bytes");
-}
 
 void	find_direct(t_vm *vm, t_process *process, int index, int i)
 {
@@ -103,7 +83,7 @@ void	find_value(t_vm *vm, t_process *process, int jndex, int param)
 	{
 		read_4_bytes(vm, process, jndex, param);
 		printf("The address from where we want to read from is: %d\n", circulate_index(process->arg.v[param]));
-		read_4_bytes(vm, process, process->arg.v[param], param);
+		read_4_bytes(vm, process, process->index + process->arg.v[param], param);
 		printf("The value at address of dir is: %d\n", process->arg.v[param]);
 	}
 }
@@ -113,6 +93,7 @@ void	store_values(t_vm *vm, t_process *process, int jndex, int argc)
 	int i;
 
 	i = 0;
+	jndex = circulate_index(jndex);
 	while (argc != 0)
 	{
 		find_value(vm, process, jndex, i);
@@ -156,34 +137,33 @@ void	dummy_testing(t_vm *vm)
 	vm->memory[4089] = 0xa2;
 	vm->memory[4090] = 0xa2;
 	vm->memory[4091] = 0xa2;
-	vm->memory[4092] = 0x02;
-	vm->memory[4093] = 0x87;
-	vm->memory[4094] = 0x57;
-	vm->memory[4095] = 0xb2;
+	vm->memory[4092] = 0xff;
+	vm->memory[4093] = 0xff;
+	vm->memory[4094] = 0xff;
+	vm->memory[4095] = 0xbc;
 	vm->memory[circulate_index(4096)] = 6;
 
 int i = 0;
 
-	vm->memory[i] = 6;			i++;		// 0
-	vm->memory[i] = 0xac;		i++;		// 1
-
-//	vm->memory[i] = 0x00;		i++;		// 14
-//	vm->memory[i] = 0x00;		i++;		// 15
-
-	vm->memory[i] = 0x00;		i++;		// 2
+	vm->processes->index = 0;
+	
+	vm->memory[i] = 0x02;		i++;		// op_code
+	vm->memory[i] = 0x10;		i++;		// acb 1
+	// parameters start here
+	vm->memory[i] = 0x02;		i++;		// 2
 	vm->memory[i] = 0x00;		i++;		// 3
 
-	vm->memory[i] = 0xff;		i++;		// 4
-	vm->memory[i] = 0xfc;		i++;		// 5
-	
-	vm->memory[i] = 0x00;		i++;		// 6
-	vm->memory[i] = 0x00;		i++;		// 7
+	vm->memory[i] = 0x00;		i++;		// 4
+	vm->memory[i] = 0x00;		i++;		// 5
 
+	vm->memory[i] = 0x08;		i++;		// 6
+	vm->memory[i] = 0x00;		i++;		// 7
+	
 	vm->memory[i] = 0x00;		i++;		// 8
 	vm->memory[i] = 0x00;		i++;		// 9
 
 	vm->memory[i] = 0x00;		i++;		// 10
-	vm->memory[i] = 0x00;		i++;		// 11
+	vm->memory[i] = 0x40;		i++;		// 11
 
 	vm->memory[i] = 0x00;		i++;		// 12
 	vm->memory[i] = 0x00;		i++;		// 13
@@ -194,19 +174,17 @@ int i = 0;
 	vm->memory[i] = 0x00;		i++;		// 16
 	vm->memory[i] = 0x00;		i++;		// 17
 
-	vm->processes->curr_op = 2;
-	vm->processes->arg.type[0] = 3;
-	vm->processes->arg.type[1] = 1;
-	vm->processes->arg.type[2] = 1;
-	vm->processes->regs[2] = 0x00;
+	vm->memory[i] = 0x00;		i++;		// 18
+	vm->memory[i] = 0x00;		i++;		// 19
+
+	vm->processes->regs[2] = 4342338;
 	vm->processes->regs[3] = 0x00;
 	vm->processes->regs[4] = 0x00;
 	vm->processes->regs[5] = 0x00;
 //	vm->processes->descriptor = 1;
 //	g_ops[vm->processes->curr_op].truncate = 1;
-	vm->processes->index = 0;
-	vm->processes->truncate = 1;
-
+//	vm->processes->truncate = 1;
+	dump_memory(*vm);
 	
 /*	store_values(vm, vm->processes, vm->processes->index + 1 + 1, 2);
 
@@ -219,11 +197,15 @@ int i = 0;
 	print_regs(vm->processes->regs);
 	printf("^ registers at initiation ^\n\n");
 	
+	vm->processes->curr_op = 3;
+	vm->processes->arg.type[0] = 1;
+	vm->processes->arg.type[1] = 3;
+	vm->processes->arg.type[2] = 1;
 //	ft_live(vm, &(vm->champs[0]), vm->processes);
 
-	ft_ld(vm, &(vm->champs[0]), vm->processes);
+//	ft_ld(vm, &(vm->champs[0]), vm->processes);
 
-//	ft_st(vm, &(vm->champs[0]), vm->processes);
+	ft_st(vm, &(vm->champs[0]), vm->processes); // reg, ind | reg
 //	ft_add(vm, &(vm->champs[0]), vm->processes);
 //	ft_sub(vm, &(vm->champs[0]), vm->processes);
 //	ft_and(vm, &(vm->champs[0]), vm->processes);

@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 23:50:39 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/29 08:26:57 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/30 04:23:15 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,15 @@
 
 char	reg_bounds(int reg)
 {
-	return (0 <= reg && reg <= 15);
+	if (1 <= reg && reg <= 16)
+		return (0);
+	printf("out of register bounds!\n");
+	return (1);
 }
 
 char	reg(t_process *process, int x)
 {
-	if (process->arg.type[x] == REG_CODE && reg_bounds(x))
+	if (process->arg.type[x] == REG_CODE)
 		return (REG_CODE);
 	return (0);
 }

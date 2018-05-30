@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 00:11:42 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/25 12:11:59 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/30 02:50:20 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ char	reg_dir(t_process *process, int x)
 
 char	reg_ind(t_process *process, int x)
 {
-	return (dir(process, x) || ind(process, x));
+	return (reg(process, x) || ind(process, x));
 }

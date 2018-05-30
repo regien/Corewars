@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/29 19:37:49 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/30 02:46:00 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -369,16 +369,25 @@ int						circulate_index(int index);
 ** TYPES.c
 */
 
+
+char					reg_bounds(int reg);
 char					reg(t_process *process, int x);
 char					dir(t_process *process, int x);
 char					ind(t_process *process, int x);
 
 /*
-** FIND_VALUES.c
+** ENDIANESS.c
 */
+
 
 void					read_4_bytes(t_vm *vm, t_process *process, int index, int i);
 void				 	read_2_bytes(t_vm *vm, t_process *process, int index, int i);
+void					store_big_endian(t_vm *vm, int value, int index);
+
+/*
+** FIND_VALUES.c
+*/
+
 void					find_direct(t_vm *vm, t_process *process, int index, int i);
 void					find_register(t_vm *vm, t_process *process, int index, int i);
 int 					find_arg_size(t_process *process, int i);

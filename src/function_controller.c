@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 15:00:20 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/28 02:40:08 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/30 03:26:01 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -265,7 +265,6 @@ void	controller(t_vm *vm)
 		if (vm_cycles == 20)
 			break ;
 	}
-	dump_memory(*vm);
 	dummy_testing(vm); // testing store_values
 	dump_memory(*vm);
 }

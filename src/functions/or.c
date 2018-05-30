@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 03:33:37 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/28 06:43:34 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/30 03:49:20 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,16 @@ int		ft_or(t_vm *vm, t_champ *champ, t_process *process)
 	{
 		jndex += 1;
 	}
-	ft_putendl("	entered ft_or");
+	ft_putendl("ft_or\n");
 	(void)vm;
 	(void)champ;
 	if (any(process, 0) && any(process, 1) && reg(process, 2))
 	{
 		store_values(vm, process, jndex, 3);
-		convert_if_register_number_to_value(process, 0);
-		convert_if_register_number_to_value(process, 1);
+		if (reg(process, 0) && reg_bounds(process->arg.v[0]))
+			return (1);
+		if (reg(process, 1) && reg_bounds(process->arg.v[1]))
+			return (1);
 		if ((process->regs[process->arg.v[2]] = \
 			(process->arg.v[0] | process->arg.v[1]) /* IDX_MOD */) == 0)
 		{
@@ -46,9 +48,8 @@ int		ft_or(t_vm *vm, t_champ *champ, t_process *process)
 			process->carry = 0;
 		}
 		printf("process carry is %d\n", process->carry);
-		ft_putendl("	exited ft_or with return 0");
 		return (0);
 	}
-	ft_putendl("	exited ft_or with return 1");
+	ft_putendl("ft_or did not execute");
 	return (1);
 }
