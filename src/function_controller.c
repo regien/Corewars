@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 15:00:20 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/29 09:56:29 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/30 03:12:50 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ void	kill_processes(t_process **newhead)
 	t_process	*tmp;
 
 	tmp = NULL;
+	if (!((*newhead)))
+		return ;
 	while((*newhead)->next)
 	{
 		if (!((*newhead)->next->live)) // kill_process

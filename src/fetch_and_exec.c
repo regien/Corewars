@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/18 11:16:17 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/29 12:27:24 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/30 03:14:03 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -154,6 +154,9 @@ void	fetch(t_process *process)
 		process->cycle_counter = 0;
 	}
 	if (process->curr_op == 0)
+	{
+//		printf("process->index : %d\n", process->index);
 		set_index(&(process->index), 1); // review this
+	}
 	//setting the index in the ACB
 }

@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/29 12:03:57 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/30 04:39:44 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -286,12 +286,13 @@ void					execute(t_vm *vm, t_process *process);
 //void					set_champs(t_champ *champ, char *filename);
 t_process				*set_process(char *pc_start, int mem_start, int player);
 t_process				*add_process(t_champ *champ, int index);
-void					kill_process(t_process *p);
+//void					kill_process(t_process *p);
 
 /*
 ** FUNCTION_CONTROLLER.c
 */
 
+void					kill_processes(t_process **newhead);
 void					controller(t_vm *vm);
 
 /*
@@ -371,7 +372,7 @@ int						circulate_index(int index);
 */
 
 void					read_4_bytes(t_vm *vm, t_process *process, int index, int i);
-void				 	read_2_bytes(t_vm *vm, t_process *process, int index, int i);
+void					read_2_bytes(t_vm *vm, t_process *process, int index, int i);
 void					find_direct(t_vm *vm, t_process *process, int index, int i);
 void					find_register(t_vm *vm, t_process *process, int index, int i);
 int 					find_arg_size(t_process *process, int i);

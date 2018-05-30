@@ -6,7 +6,7 @@
 /*   By: gmalpart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/29 01:05:21 by gmalpart          #+#    #+#             */
-/*   Updated: 2018/05/29 05:31:03 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/30 03:14:22 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ EZEKIEL:
 */
 
 // SETTING THE WINNER INCORRECTLY
+/*
 int		procceses_alive(t_vm *vm)
 {
 	int	i;
@@ -50,6 +51,31 @@ int		procceses_alive(t_vm *vm)
 		return (1);
 	else
 		return (0);
+}
+*/
+
+int		procceses_alive(t_vm *vm)
+{
+	int	i;
+	int	process_alive;
+	t_process *temp;
+
+	process_alive = 0;
+	i = -1;
+	while (++i < vm->players)
+	{
+		temp = (vm->champs[i].processes);
+		if (temp)
+		{
+			printf("PENDEJADA TEMP->PROCCESES->ALIVE = |%d|\n", \
+				temp->live);
+			process_alive++;
+		}
+	}
+	printf("pendejada PROCESSES_ALIVE _ PENDEJADA NBR = |%d|\n", process_alive);
+	if (process_alive == 0) // GAME SHOULD END HERE
+		return (1);
+	return (0);
 }
 
 void	display_information_winner(t_champ *champ)
