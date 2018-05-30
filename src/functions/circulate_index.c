@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/29 02:38:38 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/29 02:40:31 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/29 12:42:57 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		circulate_index(int index)
 {
-	printf("Index before entering circulate: %d\n", index);
+//	printf("Index before entering circulate: %d\n", index);
 	while (index < 0)
 	{
 		index = index + MEM_SIZE;
@@ -23,6 +23,6 @@ int		circulate_index(int index)
 	{
 		index = index - MEM_SIZE;
 	}
-	printf("Index after exiting circulate: %d\n", index);
+//	printf("Index after exiting circulate: %d\n", index);
 	return (index);
 }

@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/27 23:35:02 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/29 10:56:21 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/29 12:39:37 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,11 @@ void	find_direct(t_vm *vm, t_process *process, int index, int i)
 	}
 }
 
+
+/*
+** modified BY GMALPART
+*/
+
 void	find_register(t_vm *vm, t_process *process, int index, int i)
 {
 	int register_number;
@@ -52,7 +57,15 @@ void	find_register(t_vm *vm, t_process *process, int index, int i)
 	// find register number;
 	//if ((0 < register_number && register_number <= REG_NUMBER))
 //	if (0 <= register_number && register_number <= 16)	
+//
+
+
 		process->arg.v[i] = register_number;
+//		process->arg.v[i] = process->regs[register_number];
+
+
+
+
 //	else
 //		process->arg.v[i] = 0;
 	// store register value;
@@ -62,24 +75,16 @@ void	find_register(t_vm *vm, t_process *process, int index, int i)
 int 	find_arg_size(t_process *process, int i)
 {
 	if (process->arg.type[i] == 1)
-	{
 		return (1);
-	}
 	else if (process->arg.type[i] == 2)
 	{
 		if (g_ops[process->curr_op].truncate == 1)
-		{
 			return (2);
-		}
 		else
-		{
 			return (4);
-		}
 	}
 	if (process->arg.type[i] == 3)
-	{
 		return (2);
-	}
 	ft_putendl("\n\n\n!!!!!error finding arg size\n\n\n");
 	return (0);
 }

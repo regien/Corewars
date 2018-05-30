@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/18 11:16:17 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/29 09:57:15 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/29 12:27:24 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,13 +116,21 @@ void	execute(t_vm *vm, t_process *p)
 
 	curr_op = p->curr_op;
 	if (g_ops[curr_op].descriptor)
-		get_type(&(p->arg), p->pc[index_mod(p->index, 1)]);
-	set_index(&(p->index), g_ops[curr_op].descriptor ? 1 : 0);
+		get_type(&(p->arg), p->pc[circulate_index(p->index + 1)]);
+//		get_type(&(p->arg), p->pc[circulate_index(p->index)]);
+//	set_index(&(p->index), g_ops[curr_op].descriptor ? 1 : 0);
 //	set_index(&(p->index), 100);
 	// moving the cursor if ACB exist 
-	p->arg.args_size = 0;
-	i = -1;
 	g_ops[curr_op].func_to_be(vm, p->father_champ, p);
+
+
+
+	i = -1;
+	p->arg.args_size = 0;
+	while (++i < g_ops[p->curr_op].args)
+		p->arg.args_size += find_arg_size(p, i);
+	set_index(&(p->index), p->arg.args_size + \
+			(g_ops[curr_op].descriptor ? 1 : 0));
 	// we are setting the arg.size inside the function
 //	dump_memory(*vm); // <_ HERE _ DUMP _ MEMORY
 // end working area	}

@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 03:18:56 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/28 04:05:03 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/29 12:40:38 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ int		ft_st(t_vm *vm, t_champ *champ, t_process *process)
 	if (reg(process, 0) && reg_ind(process, 1))
 	{
 		store_values(vm, process, jndex, 2);
+		convert_if_register_number_to_value(process, 0);
 		if (reg(process, 1))
 		{
 			process->regs[process->arg.v[1]] = \

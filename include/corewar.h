@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/29 10:52:58 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/29 12:03:57 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -253,7 +253,7 @@ void					set_vm_memory(t_vm *vm, int i, int players, t_champ *champ);
 
 int						check_magic_number(int fd);
 void					set_index(int *index, int diff);
-int						index_mod(int index, int diff);
+//int						index_mod(int index, int diff);
 
 /*
 ** CONVERSIONS.c
