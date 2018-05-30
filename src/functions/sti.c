@@ -20,6 +20,7 @@
 **	the address PC + (4 + 5) % IDX_MOD->
 */
 
+
 static void	store_big_endian(t_vm *vm, int value, int index)
 {
 	ft_putendl("	entered big endian");
@@ -28,10 +29,10 @@ static void	store_big_endian(t_vm *vm, int value, int index)
 	unsigned char	c;
 	unsigned char	d;
 
-	a = value & 0xff000000;
-	b = value & 0x00ff0000;
-	c = value & 0x0000ff00;
-	d = value & 0x000000ff;
+	a = (value & 0xff000000) >> 24;
+	b = (value & 0x00ff0000) >> 16;
+	c = (value & 0x0000ff00) >> 8;
+	d = (value & 0x000000ff);
 	vm->memory[circulate_index(index)] = a;
 	vm->memory[circulate_index(index + 1)] = b;
 	vm->memory[circulate_index(index + 2)] = c;

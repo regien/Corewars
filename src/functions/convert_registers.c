@@ -23,10 +23,5 @@ void	convert_if_register_number_to_value(t_process *process, int arg)
 		{
 			process->arg.v[arg] = process->regs[reg_number];
 		}
-		else
-		{
-			// Undefined reg_number behavior;
-			process->arg.v[arg] = 0;
-		}
 	}
 }

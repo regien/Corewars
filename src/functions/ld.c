@@ -13,22 +13,19 @@
 #include "corewar.h"
 
 /*
-**	Loads the value of the first parameter into the second parameter,
-**	which must be a register (not the PC). This operation modiefies the carry.
-**	ld(34, r3) loads the REG_SIZE bytes (4 bytes aka int) starting at the address PC
-**	PC + 34 % IND_MOD into r3. 5 cycles.
+**	Load takes two parameters, the second must be a register.
+**	If the first parameter is a indirect, store the value of REG_SIZE direct
+**	into the reigster.
+**	Else if the second parameter is an direct, go to the address of the value
+**	of direct, and read REG_SIZE bytes into the register.
+**	Modify carry if the stored value is zero.
 */
 
 /*
-void	read_from_vm(t_vm *vm, t_process *process, int r, int index)
-{
-	ft_putendl("	arg is an indirect: entered read from vm");
-	process->regs[r] = vm->memory[index % MEM_SIZE] << 24;
-	process->regs[r] += vm->memory[(index + 1) % MEM_SIZE] << 16;
-	process->regs[r] += vm->memory[(index + 2) % MEM_SIZE] << 8;
-	process->regs[r] += vm->memory[(index + 3) % MEM_SIZE];
-	ft_putendl("	exited read from vm");
-}
+**	Loads the value of the first parameter into the second parameter,
+**	which must be a register (not the PC). This operation modifies the carry.
+**	ld(34, r3) loads the REG_SIZE bytes (4 bytes aka int) starting at the address PC
+**	PC + 34 % IND_MOD into r3. 5 cycles.
 */
 
 int		ft_ld(t_vm *vm, t_champ *champ, t_process *process)
@@ -40,17 +37,11 @@ int		ft_ld(t_vm *vm, t_champ *champ, t_process *process)
 	{
 		jndex += 1;
 	}
-	ft_putendl("	entered ft_ld");
+	ft_putendl("ft_ld");
 	(void)champ;
 	if (dir_ind(process, 0) && reg(process, 1))
 	{
 		store_values(vm, process, jndex, 2);
-		convert_if_register_number_to_value(process, 0);
-		if (ind(process, 0))
-		{
-			read_2_bytes(vm, process, jndex, 0);
-			//read_from_vm(vm, process, process->arg.v[1] - 1, process->index);
-		}
 		if ((process->regs[process->arg.v[1]] = (process->arg.v[0]) % IDX_MOD) == 0)
 		{
 			process->carry = 1;
@@ -59,9 +50,8 @@ int		ft_ld(t_vm *vm, t_champ *champ, t_process *process)
 		{
 			process->carry = 0;
 		}
-		ft_putendl("	exited ft_ld with return 0");
 		return (0);
 	}
-	ft_putendl("	exited ft_ld with return 0");
+	ft_putendl("ft_load error\n");
 	return (1);
 }

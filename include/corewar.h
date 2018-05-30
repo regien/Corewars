@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/29 08:25:13 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/29 19:37:49 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,7 +129,7 @@ typedef struct			s_process
 	// 0 ready to move
 	// 1 waiting
 	char				process_alive;// replace it for live
-	char				player_alive; //adding it
+	int					player_alive; //adding it
 	//unsigned int		cycle_to_execute; (cycle + wait_op_cycles)
 	int					store_vm; // only eliu branch
 	struct s_process	*next;
@@ -153,6 +153,7 @@ typedef struct			s_champ
 typedef struct			s_vm
 {
 	int					last_to_live;
+//	int					total_lives;
 	char				memory[MEM_SIZE];
 	int					players;
 	int					cycles;

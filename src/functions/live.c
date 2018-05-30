@@ -16,16 +16,17 @@
 **	I need to add a function that lets the function controller know that
 **	a champion is alive due to the processes.
 */
-
+/*
 static void	last_to_live(t_vm *vm, int player)
 {
 	vm->last_to_live = player;
 }
+*/
 
 static void	show_alive(t_process *process)
 {
 	ft_printf("A process shows that Player %d (%s) is alive.\n", \
-				process->player_number, "process->name");
+				process->player_alive, "process->name");
 }
 
 int			ft_live(t_vm *vm, t_champ *champ, t_process *process)
@@ -37,21 +38,24 @@ int			ft_live(t_vm *vm, t_champ *champ, t_process *process)
 	{
 		jndex += 1;
 	}
-	ft_putendl("	entered ft_live");
-	(void)vm;
-	(void)champ;
+	ft_putendl("ft_live:");
 	if (dir(process, 0))
 	{
 		store_values(vm, process, jndex, 1);
+		printf("stored value of v[0] is: |%d|\n", process->arg.v[0]);
 		process->process_alive = 1;
 		process->player_alive = process->arg.v[0];
-
-
-		last_to_live(vm, process->arg.v[0]);
+		// This is currently the champ who owns the process. Need to change for
+		// The number for who we called live for.
+		champ->lives_counted += 1;
+		vm->last_to_live = process->arg.v[0];
+//		vm->total_lives += 1;
+		printf("The latest player to call live is player: |%d|\n", vm->last_to_live);
+//		last_to_live(vm, process->arg.v[0]);
 		show_alive(process);
-		ft_putendl("	argument is a direct: return 0");
+		ft_putendl("");
 		return (0);
 	}
-	ft_putendl("	argument not a direct: return 1");
+	ft_putendl("live error");
 	return (1);
 }
