@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 03:34:00 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/30 03:46:15 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/30 04:38:30 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int		ft_sub(t_vm *vm, t_champ *champ, t_process *process)
 	{
 		store_values(vm, process, jndex, 3);
 		if (reg_bounds(process->arg.v[0]) || reg_bounds(process->arg.v[1]) ||
-				reg_bounds(proces->arg.v[2]))
+				reg_bounds(process->arg.v[2]))
 			return (1);
 		if ((process->regs[process->arg.v[2]] = \
 			(process->regs[process->arg.v[0]]) - \
