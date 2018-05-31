@@ -6,7 +6,7 @@
 /*   By: gmalpart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 17:04:29 by gmalpart          #+#    #+#             */
-/*   Updated: 2018/05/29 05:24:56 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/30 05:21:41 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ void		init_vm(t_vm *vm)
 	holder->visual = 0;
 	holder->dump = 0;
 	holder->nbrdump = 0;
+	// DUMMY TESTING
+	vm->flags_args.aff = 1;
 }
 
 int		set_dump_number(int ac, int *i, char **av, t_flags *flags)

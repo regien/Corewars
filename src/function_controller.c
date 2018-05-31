@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 15:00:20 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/30 03:12:50 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/30 19:34:28 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,10 @@ void	run_processes(t_vm *vm, t_process *root, int i)
 	j = 0;
 	while (root)
 	{
+		root->contador_delete_me += 1;
+		printf(" RUN_PROCCESES_index ROOT: %d\n | number of time = |%d|\n", root->index, root->contador_delete_me);
+		printf("CURRENT OP = %d\n", root->curr_op);
+
 		j++;
 		if (root->curr_op == 0)
 		{
@@ -57,7 +61,7 @@ void	kill_processes(t_process **newhead)
 		return ;
 	while((*newhead)->next)
 	{
-		if (!((*newhead)->next->live)) // kill_process
+		if (!((*newhead)->next->process_alive)) // kill_process
 		{
 			tmp = (*newhead)->next;
 			(*newhead)->next = (*newhead)->next->next;

@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 06:11:20 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/20 18:12:06 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/29 08:24:33 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,19 +28,27 @@
 
 int		ft_lldi(t_vm *vm, t_champ *champ, t_process* process)
 {
+	int 	s;
+	int 	jndex;
+
+	jndex = process->index + 1;
+	if (g_ops[process->curr_op].descriptor == 1)
+	{
+		jndex += 1;
+	}
 	ft_putendl("	entered ft_lldi");
-	short	temp;
-	int		index;
 
 	(void)vm;
 	(void)champ;
-	if (ind(process, 0) && ind(process, 1) && reg(process, 2))
+	if (any(process, 0) && reg_dir(process, 1) && reg(process, 2))
 	{
-		index = process->arg.v[0] + process->arg.v[1];
-		temp = vm->memory[index];
-		temp = temp << 8;
-		temp = temp + vm->memory[index + 1];
-		if ((process->regs[process->arg.v[2]] = temp) == 0)
+		store_values(vm, process, jndex, 3);
+		convert_if_register_number_to_value(process, 0);
+		convert_if_register_number_to_value(process, 1);
+		s = process->arg.v[0] + process->arg.v[1];
+		s = circulate_index(s);
+		read_2_bytes(vm, process, s, 2);
+		if (process->regs[process->arg.v[2]] == 0)
 		{
 			process->carry = 1;
 		}

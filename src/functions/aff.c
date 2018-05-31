@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 06:23:58 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/28 09:50:38 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/30 04:22:10 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,16 +30,17 @@ int		ft_aff(t_vm *vm, t_champ *champ, t_process *process)
 	{
 		jndex += 1;
 	}
-	ft_putendl("	entered ft_aff");
+	ft_putendl("ft_aff");
 	(void)vm;
 	(void)champ;
 	if (reg(process, 0) && vm->flags_args.aff == 1)
 	{
 		store_values(vm, process, jndex, 1);
+		if (reg_bounds(process->arg.v[0]))
+			return (1);
 		ft_putchar(process->regs[process->arg.v[0]] % 256);
-		ft_putendl("	exited ft_aff with return 0");
 		return (0);
 	}
-	ft_putendl("	exited ft_aff with return 1");
+	ft_putendl("ft_aff did not execute");
 	return (1);
 }

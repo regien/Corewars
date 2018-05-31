@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 22:55:43 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/29 06:26:09 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/30 19:31:37 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ t_process	*set_process(char *pc_start, int mem_start, int player_nbr)
 	p->state = FETCH;
 	p->live = 0;
 	p->curr_op = 0;
+	p->contador_delete_me = 0; // DELETE ME NIGgA
 	return (p);
 }
 

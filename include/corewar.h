@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/30 04:39:44 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/30 19:31:41 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,13 +127,14 @@ typedef struct			s_process
 	// 1 FETCH
 	// 2 WAIT
 	// 3 EXEC
-	char				live;
+	char				live; // might be deleted , see constructor.c
 	char				process_alive; //replace it for live
 	char				player_alive; // adding it
 	//unsigned int		cycle_to_execute; (cycle + wait_op_cycles)
 	int					store_vm; // only eliu branch
 	struct s_process	*next;
 //	struct s_process	*prev;
+	int					contador_delete_me;
 }						t_process;
 
 typedef struct			s_champ
@@ -349,10 +350,19 @@ char					reg_ind(t_process *process, int x);
 ** TYPES.c
 */
 
+char					reg_bounds(int reg);
 char					reg(t_process *process, int x);
 char					dir(t_process *process, int x);
 char					ind(t_process *process, int x);
 
+
+/*
+** ENDIANESS.c
+*/
+
+void					read_4_bytes(t_vm *vm, t_process *process, int index, int i);
+void				 	read_2_bytes(t_vm *vm, t_process *process, int index, int i);
+void					store_big_endian(t_vm *vm, int value, int index);
 
 /*
 ** CONVERT_REGISTERS.c
@@ -371,8 +381,6 @@ int						circulate_index(int index);
 ** FIND_VALUES.c
 */
 
-void					read_4_bytes(t_vm *vm, t_process *process, int index, int i);
-void					read_2_bytes(t_vm *vm, t_process *process, int index, int i);
 void					find_direct(t_vm *vm, t_process *process, int index, int i);
 void					find_register(t_vm *vm, t_process *process, int index, int i);
 int 					find_arg_size(t_process *process, int i);

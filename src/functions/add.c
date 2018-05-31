@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 03:28:13 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/28 05:54:57 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/30 03:43:41 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,26 +26,30 @@ int		ft_add(t_vm *vm, t_champ *champ, t_process *process)
 	{
 		jndex += 1;
 	}
-	ft_putendl("	entered ft_add");
+	ft_putendl("ft_add");
 	(void)vm;
 	(void)champ;
 	if (reg(process, 0) && reg(process, 1) && reg(process, 2))
 	{
 		store_values(vm, process, jndex, 3);
+		if (reg_bounds(process->arg.v[0]) || reg_bounds(process->arg.v[1]) ||
+				reg_bounds(process->arg.v[2]))
+		{
+			return (1);
+		}
 		if ((process->regs[process->arg.v[2]] = \
 			(process->regs[process->arg.v[0]]) + \
 			(process->regs[process->arg.v[1]])) == 0)
 		{
-			ft_putendl("carry == 1");
 			process->carry = 1;
 		}
 		else
 		{
 			process->carry = 0;
 		}
-		ft_putendl("	exited ft_add with return 0");
+		printf("carry is %d\n", process->carry);
 		return (0);
 	}
-	ft_putendl("	exited ft_add with return 1");
+	ft_putendl("ft_add did not execute");
 	return (1);
 }

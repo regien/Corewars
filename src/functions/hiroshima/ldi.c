@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 05:03:52 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/24 00:08:58 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/28 09:44:46 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,20 +24,30 @@
 **	let's put it on revision becuase of the shift handeling
 */
 
+#define READ_2_BYTES read_2_bytes(vm, process, s, 2)
+
+
 int		ft_ldi(t_vm *vm, t_champ *champ, t_process *process)
 {
-	ft_putendl("	entered ft_ldi");
-	int		temp;
-	int		index;
+	int 	s;
+	int 	jndex;
 
-	(void)champ;
-	if (ind(process, 0) && ind(process, 1) && reg(process, 2))
+	jndex = process->index + 1;
+	if (g_ops[process->curr_op].descriptor == 1)
 	{
-		index = (process->arg.v[0] + process->arg.v[1]) % IDX_MOD;
-		temp = vm->memory[index];
-		temp = temp << 8; // shift handeling - reading info
-		temp = temp + vm->memory[index + 1];
-		if ((process->regs[process->arg.v[2]] = temp) == 0)
+		jndex += 1;
+	}
+	ft_putendl("	entered ft_ldi");
+	(void)champ;
+	if (any(process, 0) && reg_dir(process, 1) && reg(process, 2))
+	{
+		store_values(vm, process, jndex, 3);
+		convert_if_register_number_to_value(process, 0);
+		convert_if_register_number_to_value(process, 1);
+		s = (process->arg.v[0] + process->arg.v[1]) % IDX_MOD;
+		s = circulate_index(s);
+		read_4_bytes(vm, process, s, 2);
+		if (process->regs[process->arg.v[2]] == 0)
 		{
 			process->carry = 1;
 		}

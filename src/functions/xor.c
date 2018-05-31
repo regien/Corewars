@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 04:29:31 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/28 07:19:47 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/30 03:50:32 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,16 @@ int		ft_xor(t_vm *vm, t_champ *champ, t_process *process)
 	{
 		jndex += 1;
 	}
-	ft_putendl("	entered ft_xor");
+	ft_putendl("ft_xor");
 	(void)vm;
 	(void)champ;
 	if (any(process, 0) && any(process, 1) && reg(process, 2))
 	{
 		store_values(vm, process, jndex, 3);
-		convert_if_register_number_to_value(process, 0);
-		convert_if_register_number_to_value(process, 1);
+		if (reg(process, 0) && reg_bounds(process->arg.v[0]))
+			return (1);
+		if (reg(process, 1) && reg_bounds(process->arg.v[1]))
+			return (1);
 		if ((process->regs[process->arg.v[2]] = 
 			(process->arg.v[0] ^ process->arg.v[1]) /* % IDX_MOD */) == 0)
 		{
@@ -45,9 +47,9 @@ int		ft_xor(t_vm *vm, t_champ *champ, t_process *process)
 		{
 			process->carry = 0;
 		}
-		ft_putendl("	exited ft_xor with return 0");
+		printf("process carry is |%d|\n", process->carry);
 		return (0);
 	}
-	ft_putendl("	exited ft_xor with return 1");
+	ft_putendl("ft_xor did not execute");
 	return (1);
 }
