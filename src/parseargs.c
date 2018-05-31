@@ -31,6 +31,7 @@ void		init_vm(t_vm *vm)
 	vm->players = 0;
 	vm->cycles = 0;
 	vm->cycle_to_die = CYCLE_TO_DIE;
+	vm->cycle_to_die_last = CYCLE_TO_DIE;
 	holder = &(vm->flags_args);
 	holder->visual = 0;
 	holder->dump = 0;
@@ -39,6 +40,7 @@ void		init_vm(t_vm *vm)
 	vm->flags_args.aff = 1;
 
 	vm->total_lives = 0;
+	vm->cycle_to_die_last = CYCLE_TO_DIE;
 }
 
 int		set_dump_number(int ac, int *i, char **av, t_flags *flags)

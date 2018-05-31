@@ -156,12 +156,13 @@ typedef struct			s_vm
 	int					last_to_live;
 	unsigned int		total_lives;
 	char				nbr_checks;
-	int					nbr_lives;
+	int					nbr_lives; // not currently in use - taco
 	char				memory[MEM_SIZE];
 	int					players;
 //	int					cycles;
 	unsigned int		cycles;
 	int					cycle_to_die;
+	int					cycle_to_die_last;
 	struct s_champ		champs[MAX_PLAYERS];
 	struct s_flags		flags_args; // adition of flags in main_vm
 	//struct s_process	*processes;

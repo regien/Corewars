@@ -52,10 +52,11 @@ void	execute(t_vm *vm, t_process *p)
 		}
 	else
 		if (p->curr_op == 1)
-			p->arg.args_size += 5;
+			p->arg.args_size += 4;
 		else
 			p->arg.args_size += 3;
-	set_index(&(p->index), p->arg.args_size + \
+	if (curr_op != 9)
+		set_index(&(p->index), p->arg.args_size + \
 			(g_ops[curr_op].descriptor ? 1 : 0) + 1);
 	printf("MOD THE INDEX BY : |%d|\n", p->arg.args_size + \
 		(g_ops[curr_op].descriptor ? 1 : 0) + 1);
@@ -66,7 +67,7 @@ void	execute(t_vm *vm, t_process *p)
 	//modify index here
 //	set_index(&(p->index), );
 	p->curr_op = 0;
-	dump_memory(*vm);
+	//dump_memory(*vm); DONT REMOVE THIS DEBUG STATEMENT
 }
 
 

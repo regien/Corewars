@@ -30,9 +30,14 @@ int		ft_zjmp(t_vm *vm, t_champ *champ, t_process *process)
 	(void)champ;
 	if (process->carry == 1)
 	{
-		read_2_bytes(vm, process, (process->arg.v[0] + process->index + 1) /* % IDX_MOD */, 0);
-		process->index = circulate_index(process->arg.v[0] % IDX_MOD + process->index);
+		printf("previous index was |%d|\n", process->index);
+		read_2_bytes(vm, process, process->index + 1 /* % IDX_MOD */, 0);
+		printf("read 2 bytes value is: |%d|\n", process->arg.v[0]);
+		printf("read 2 bytes value modify is: |%d|\n", ((short)(process->arg.v[0])));
+		process->index = (circulate_index(process->index + ((short)(process->arg.v[0]) % IDX_MOD)));
+		printf("modifed index is |%d|\n", process->index);
 		ft_putendl("Carry == 1, zjmp success!");
+
 		return (0);
 	}
 	ft_putendl("Carry == 0, zjmp fail!");
