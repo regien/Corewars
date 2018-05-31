@@ -12,6 +12,24 @@
 
 #include "corewar.h"
 
+void	print_regs(int a[])
+{
+	int i = 0;
+	while (i <= 16)
+	{
+		printf("| register %d : %d |\n", i, a[i]);
+		i++;
+	}
+}
+
+char	reg_bounds(int reg)
+{
+	if (1 <= reg && reg <= 16)
+		return (0);
+	printf("out of register bounds!\n");
+	return (1);
+}
+
 void	convert_if_register_number_to_value(t_process *process, int arg)
 {
 	int	reg_number;

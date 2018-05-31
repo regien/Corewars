@@ -33,8 +33,9 @@ int		ft_add(t_vm *vm, t_champ *champ, t_process *process)
 	{
 		store_values(vm, process, jndex, 3);
 		if (reg_bounds(process->arg.v[0]) || reg_bounds(process->arg.v[1]) ||
-				reg_bounds(process->arg.v[2]))
+			(reg_bounds(process->arg.v[2])))
 		{
+			proces->carry = 0;
 			return (1);
 		}
 		if ((process->regs[process->arg.v[2]] = \
@@ -47,7 +48,6 @@ int		ft_add(t_vm *vm, t_champ *champ, t_process *process)
 		{
 			process->carry = 0;
 		}
-		printf("carry is %d\n", process->carry);
 		return (0);
 	}
 	ft_putendl("ft_add did not execute");

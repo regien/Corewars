@@ -13,11 +13,6 @@
 #include "corewar.h"
 
 /*
-**	
-*/
-
-
-/*
 **	Takes 3 parameters. The first two must be indexes, the third one must be a register.
 **	This operation modifies the carry and functions as follows:
 **	ldi(3, %4, r1 ) reads IND_SIZE bytes from the address PC + 3 % IDX_MOD , 
@@ -48,14 +43,26 @@ int		ft_ldi(t_vm *vm, t_champ *champ, t_process *process)
 	{
 		store_values(vm, process, jndex, 3);
 		if (reg(process, 0) && reg_bounds(process->arg.v[0]))
+		{	
+			process->carry = 0;
 			return (1);
+		}
 		if (reg(process, 1) && reg_bounds(process->arg.v[1]))
+		{	
+			process->carry = 0;
 			return (1);
+		}
+		if (reg_bounds(process->arg.v[2]))
+		{	
+			process->carry = 0;
+			return (1);
+		}
 		convert_if_register_number_to_value(process, 0);
 		convert_if_register_number_to_value(process, 1);
-		s = (process->arg.v[0] + process->arg.v[1]) % IDX_MOD;
+		s = process->index + (process->arg.v[0] + process->arg.v[1]) % IDX_MOD;
 		s = circulate_index(s);
-		read_4_bytes(vm, process, s, 2);
+		read_2_bytes(vm, process, s, 2);
+		read_4_bytes(vm, process, process->index + s % IDX_MOD, 2);
 		if (process->regs[process->arg.v[2]] == 0)
 		{
 			process->carry = 1;

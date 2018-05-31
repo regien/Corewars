@@ -33,12 +33,15 @@ int		ft_aff(t_vm *vm, t_champ *champ, t_process *process)
 	ft_putendl("ft_aff");
 	(void)vm;
 	(void)champ;
-	if (reg(process, 0) && vm->flags_args.aff == 1)
+	if (vm->flags_args.aff == 1)
 	{
-		store_values(vm, process, jndex, 1);
+		find_register(vm, process, process->index + 2, 0);
 		if (reg_bounds(process->arg.v[0]))
+		{
+			process->carry = 0;
 			return (1);
-		ft_putchar(process->regs[process->arg.v[0]] % 256);
+		}
+		ft_putchar((process->regs[process->arg.v[0]]) % 256);
 		return (0);
 	}
 	ft_putendl("ft_aff did not execute");

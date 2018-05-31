@@ -12,17 +12,3 @@
 
 #include "corewar.h"
 
-int		circulate_index(int index)
-{
-//	printf("Index before entering circulate: %d\n", index);
-	while (index < 0)
-	{
-		index = index + MEM_SIZE;
-	}
-	while (index >= MEM_SIZE)
-	{
-		index = index - MEM_SIZE;
-	}
-//	printf("Index after exiting circulate: %d\n", index);
-	return (index);
-}

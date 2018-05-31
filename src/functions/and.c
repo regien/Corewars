@@ -19,6 +19,11 @@
 **	and(r2, %0, r3) puts r2 & 0 into r3.
 */
 
+// First arg can be anything
+// If reg, take the value of process->regs[]
+// If dir, take the value of a non truncated read 4 bytes. 
+// if ind, take the value of read 2 bytes, go to that address, and read 4 bytes.
+
 int		ft_and(t_vm *vm, t_champ *champ, t_process *process)
 {
 	int 	jndex;
@@ -35,9 +40,23 @@ int		ft_and(t_vm *vm, t_champ *champ, t_process *process)
 	{
 		store_values(vm, process, jndex, 3);
 		if (reg(process, 0) && reg_bounds(process->arg.v[0]))
+		{	
+			process->carry = 0;
 			return (1);
+		}
 		if (reg(process, 1) && reg_bounds(process->arg.v[1]))
+		{
+			process->carry = 0;
 			return (1);
+		}
+		if (ind(process, 0))
+		{
+			read_4_bytes(vm, process, (process->arg.v[0] + process->carry) /*% IDX_MOD*/, 0);
+		}
+		if (ind(process, 1))
+		{
+			read_4_bytes(vm, process, (process->arg.v[1] + process->carry) /*% IDX_MOD*/, 1);
+		}
 		if ((process->regs[process->arg.v[2]] = \
 			(process->arg.v[0] & process->arg.v[1])/* % IDX_MOD */) == 0)
 		{

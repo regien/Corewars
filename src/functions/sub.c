@@ -36,7 +36,10 @@ int		ft_sub(t_vm *vm, t_champ *champ, t_process *process)
 		store_values(vm, process, jndex, 3);
 		if (reg_bounds(process->arg.v[0]) || reg_bounds(process->arg.v[1]) ||
 				reg_bounds(process->arg.v[2]))
+		{
+			process->carry = 0;
 			return (1);
+		}
 		if ((process->regs[process->arg.v[2]] = \
 			(process->regs[process->arg.v[0]]) - \
 			(process->regs[process->arg.v[1]])) == 0)

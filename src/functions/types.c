@@ -12,14 +12,6 @@
 
 #include "corewar.h"
 
-char	reg_bounds(int reg)
-{
-	if (1 <= reg && reg <= 16)
-		return (0);
-	printf("out of register bounds!\n");
-	return (1);
-}
-
 char	reg(t_process *process, int x)
 {
 	if (process->arg.type[x] == REG_CODE)

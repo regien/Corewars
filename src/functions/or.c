@@ -35,11 +35,25 @@ int		ft_or(t_vm *vm, t_champ *champ, t_process *process)
 	{
 		store_values(vm, process, jndex, 3);
 		if (reg(process, 0) && reg_bounds(process->arg.v[0]))
+		{	
+			process->carry = 0;
 			return (1);
+		}
 		if (reg(process, 1) && reg_bounds(process->arg.v[1]))
+		{	
+			process->carry = 0;
 			return (1);
+		}
+		if (ind(process, 0))
+		{
+			read_4_bytes(vm, process, (process->arg.v[0] + process->index) /* % IDX_MOD */, 0);
+		}
+		if (ind(process, 1))
+		{
+			read_4_bytes(vm, process, (process->arg.v[1] + process->index) /* % IDX_MOD */, 1);
+		}
 		if ((process->regs[process->arg.v[2]] = \
-			(process->arg.v[0] | process->arg.v[1]) /* IDX_MOD */) == 0)
+			(process->arg.v[0] | process->arg.v[1]) /* % IDX_MOD */) == 0)
 		{
 			process->carry = 1;
 		}

@@ -44,17 +44,29 @@ int		ft_lldi(t_vm *vm, t_champ *champ, t_process* process)
 	{
 		store_values(vm, process, jndex, 3);
 		if (reg(process, 0) && reg_bounds(process->arg.v[0]))
+		{
+			process->carry = 0;
 			return (1);
+		}
 		if (reg(process, 1) && reg_bounds(process->arg.v[1]))
+		{
+			process->carry = 0;
 			return (1);
+		}
+		if (reg_bounds(process->arg.v[2]))
+		{
+			process->carry = 0;
+			return (1);
+		}
 		convert_if_register_number_to_value(process, 0);
+		if (ind(process, 0))
+		{
+			read_2_bytes(vm, process, process->arg.v[0] + process->index, 0);
+		}
 		convert_if_register_number_to_value(process, 1);
 		s = process->arg.v[0] + process->arg.v[1];
 		s = circulate_index(s);
-		read_4_bytes(vm, process, s, 2);
-		
-		if (reg_bounds(process->arg.v[2]))
-			return (1);
+		read_4_bytes(vm, process, s + process->index, 2);
 		if (process->regs[process->arg.v[2]] == 0)
 		{
 			process->carry = 1;

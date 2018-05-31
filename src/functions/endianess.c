@@ -12,6 +12,21 @@
 
 #include "corewar.h"
 
+int		circulate_index(int index)
+{
+//	printf("Index before entering circulate: %d\n", index);
+	while (index < 0)
+	{
+		index = index + MEM_SIZE;
+	}
+	while (index >= MEM_SIZE)
+	{
+		index = index - MEM_SIZE;
+	}
+//	printf("Index after exiting circulate: %d\n", index);
+	return (index);
+}
+
 void	read_4_bytes(t_vm *vm, t_process *process, int index, int i)
 {
 	ft_putendl("	arg is an indirect: entered read_4_bytes");
@@ -34,17 +49,7 @@ void 	read_2_bytes(t_vm *vm, t_process *process, int index, int i)
 
 void	store_big_endian(t_vm *vm, int value, int index)
 {
-	ft_putendl("	entered big endian");
-
-	/*
-	unsigned char	a;
-	unsigned char	b;
-	unsigned char	c;
-	unsigned char	d;
-	*/
-
-//	unsigned int pendejada;
-
+	ft_putendl("	entered big endian")
 	char	a;
 	char	b;
 	char	c;
@@ -60,15 +65,7 @@ void	store_big_endian(t_vm *vm, int value, int index)
 	printf("value of c = %d\n", c);
 	d = value & 0x000000ff;
 	printf("value of d = %d\n", d);
-/*
-	a = (pendejada & 0xff000000) >> 24;
-	printf("value of a = %d\n", a);
-	b = (pendejada & 0x00ff0000) >> 16;
-	printf("value of b = %d\n", b);
-	c = (pendejada & 0x0000ff00) >> 8;
-	printf("value of c = %d\n", c);
-	d = pendejada & 0x000000ff;
-*/
+
 //	printf("value of d = %d\n", d);
 	vm->memory[circulate_index(index)] = a;
 	printf("value of a = %d\n", vm->memory[circulate_index(index)]);

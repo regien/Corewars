@@ -42,19 +42,26 @@ int		ft_st(t_vm *vm, t_champ *champ, t_process *process)
 	if (reg(process, 0) && reg_ind(process, 1))
 	{
 		store_values(vm, process, jndex, 2);
-		if (reg_bounds(process->arg.v[0]))
+		if (reg_bounds(process->arg.v[0]) == 1)
+		{
+			process->carry = 0;
 			return (1);
+		}
 		if (reg(process, 1))
 		{
-			if (reg_bounds(process->arg.v[1]))
+			if (reg_bounds(process->arg.v[1]) == 1)
+			{
+				process->carry = 0;
 				return (1);
+			}
 			process->regs[process->arg.v[1]] = \
 			process->regs[process->arg.v[0]];
 		}
 		else if (ind(process, 1))
 		{
 			convert_if_register_number_to_value(process, 0);
-			store_big_endian(vm, process->arg.v[0], process->arg.v[1] % IDX_MOD);
+			// argv1 is the address of where we store, not the value itself
+			store_big_endian(vm, process->arg.v[0], process->arg.v[1] % IDX_MOD + process->index);
 		}
 		return (0);
 	}

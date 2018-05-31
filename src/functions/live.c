@@ -31,32 +31,25 @@ static void	show_alive(t_process *process)
 
 int			ft_live(t_vm *vm, t_champ *champ, t_process *process)
 {
-	int 	jndex;
-
-	jndex = process->index + 1;
-	if (g_ops[process->curr_op].descriptor == 1)
-	{
-		jndex += 1;
-	}
 	ft_putendl("ft_live:");
-//	if (dir(process, 0))
-//	{
-		store_values(vm, process, jndex, 1);
-		printf("stored value of v[0] is: |%d|\n", process->arg.v[0]);
-		process->process_alive = 1;
-		process->player_alive = process->arg.v[0];
-		// This is currently the champ who owns the process. Need to change for
-		// The number for who we called live for.
-		champ->lives_counted += 1;
+	read_4_bytes(vm, process, process->index + 1, 0);
+	process->process_alive = 1;
+	process->player_alive = process->arg.v[0];
+	int i;
+
+	i = -1;
+/*	while ()
+	if (process->player_alive == vm.champs[++i].plyr_nbr)
+	if (process->arg.v[0] < MAX_CHAMPS)
+	{
+		-1, -
+		vm->champ[process->arg.v[0].lives_counted += 1;
+	}
+*/	if (-4 <= process->arg.v[0] && process->arg.v[0] <= -1)
 		vm->last_to_live = process->arg.v[0];
-		printf("vm->last_live = %d <-------- MODIFYED PENDEJADA\n", process->arg.v[0]);
-//		vm->total_lives += 1;
-		printf("The latest player to call live is player: |%d|\n", vm->last_to_live);
-//		last_to_live(vm, process->arg.v[0]);
-		show_alive(process);
-		ft_putendl("");
-		return (0);
-//	}
-	ft_putendl("live error");
+	printf("vm->last_live = %d <-------- MODIFYED PENDEJADA\n", process->arg.v[0]);
+	vm->total_lives += 1;
+	printf("The latest player to call live is player: |%d|\n", vm->last_to_live);
+	show_alive(process);
 	return (1);
 }
