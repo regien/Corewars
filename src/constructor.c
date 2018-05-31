@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 22:55:43 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/30 21:22:51 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/31 10:34:55 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,9 +50,12 @@ t_process	*set_process(char *pc_start, int mem_start, int player_nbr)
 	p->state = FETCH;
 	p->live = 0;
 	p->curr_op = 0;
-	p->contador_delete_me = 0; // DELETE ME NIGgA
+	p->contador_delete_me = 0; // DELETE ME
 	return (p);
 }
+
+
+//void		copy_registers()
 
 
 // this is the new head
@@ -62,12 +65,17 @@ t_process	*add_process(t_champ *champ, int index)
 	t_process *root;
 
 	if (!(champ && champ->processes))
+	{
+		ft_putendl("Constructor.c : Setting a new process failed!\n");
 		return (NULL);
+	}	
+	printf("Contructor.c : the index of where we are setting the \
+			new process is: |%d|\n", index);
 	root = champ->processes;
 	new = set_process(root->pc, index, champ->plyr_nbr);
 	new->father_champ = champ;
 	new->next = root;
-//	root->prev = new;
+	// here copy the registers of the next node (old head)
 	champ->processes = new;
 	return (new);
 }
