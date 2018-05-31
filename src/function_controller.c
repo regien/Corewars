@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 15:00:20 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/31 07:12:31 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/31 07:41:32 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ void	run_processes(t_vm *vm, t_process *root, int i)
 	while (root)
 	{
 		root->contador_delete_me += 1;
-		printf(" RUN_PROCCESES_index ROOT: %d\n | number of time = |%d|\n", root->index, root->contador_delete_me);
+//		printf(" RUN_PROCCESES_index ROOT: %d\n | number of time = |%d|\n", root->index, root->contador_delete_me);
+		printf(" RUN_PROCCESES_index ROOT: %d\n | number of CYCLES = |%d|\n", root->index, vm->cycles);
 		printf("CURRENT OP = %d\n", root->curr_op);
 
 		j++;
@@ -41,6 +42,8 @@ void	run_processes(t_vm *vm, t_process *root, int i)
 		{
 			printf("champs %d prcss %d executing op %d:\n", i + 1, j, root->curr_op);
 			execute(vm, root);
+			fetch(root);
+//			root->cycle_counter--;
 			printf("value is %d\n", root->arg.v[0]);
 		}
 		else if (root->cycle_counter > 0)
