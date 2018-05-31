@@ -30,10 +30,17 @@ void	find_register(t_vm *vm, t_process *process, int index, int i)
 	int register_number;
 
 	register_number = vm->memory[circulate_index(index)] /* & 0xFF */;
-	if (reg_bounds(register_number))	
+	printf("find register: the value found was |%d|, ", register_number);
+	if (!reg_bounds(register_number))
+	{
 		process->arg.v[i] = register_number;
+		printf("stored number is: |%d|\n", process->arg.v[i]);
+	}
 	else
+	{
+		printf("does this fail\n");
 		process->arg.v[i] = 0;
+	}
 }
 
 // is indirect finding a value or is it finding an address?
@@ -102,7 +109,7 @@ void	store_values(t_vm *vm, t_process *process, int jndex, int argc)
 	while (argc != 0)
 	{
 		find_value(vm, process, jndex, i);
-		printf("stored values:\n process->arg.v[%d] = %d\n\n\n", i, process->arg.v[i]);
+		printf("\nstored values:\n process->arg.v[%d] = %d\n\n\n", i, process->arg.v[i]);
 		jndex = circulate_index(jndex + find_arg_size(process, i));
 
 		argc--;

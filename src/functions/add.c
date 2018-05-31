@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 03:28:13 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/30 03:43:41 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/30 22:58:49 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int		ft_add(t_vm *vm, t_champ *champ, t_process *process)
 		if (reg_bounds(process->arg.v[0]) || reg_bounds(process->arg.v[1]) ||
 			(reg_bounds(process->arg.v[2])))
 		{
-			proces->carry = 0;
+			process->carry = 0;
 			return (1);
 		}
 		if ((process->regs[process->arg.v[2]] = \

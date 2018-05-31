@@ -13,9 +13,12 @@
 #include "corewar.h"
 
 
-void		get_type(t_command_args *arg, char octet)
+//void		get_type(t_command_args *arg, char octet)
+void		get_type(t_command_args *arg, unsigned char octet)
 {
+	printf("value of octect to get TYPE FROM : %d\n", octet);
 	arg->type[0] = (octet >> 6) & 3;
+	printf("GET_TYPE of arg 0 is %d", arg->type[0]);
 	arg->type[1] = (octet >> 4) & 3;
 	arg->type[2] = (octet >> 2) & 3;
 }
@@ -29,7 +32,7 @@ void	execute(t_vm *vm, t_process *p)
 
 	curr_op = p->curr_op;
 	if (g_ops[curr_op].descriptor)
-		get_type(&(p->arg), p->pc[circulate_index(p->index + 1)]);
+		get_type(&(p->arg), (unsigned char)p->pc[circulate_index(p->index + 1)]);
 
 //		get_type(&(p->arg), p->pc[circulate_index(p->index)]);
 //	set_index(&(p->index), g_ops[curr_op].descriptor ? 1 : 0);
@@ -43,14 +46,19 @@ void	execute(t_vm *vm, t_process *p)
 	p->arg.args_size = 0;
 	if (g_ops[p->curr_op].descriptor == 1)
 		while (++i < g_ops[p->curr_op].args)
+		{
 			p->arg.args_size += find_arg_size(p, i);
+			printf("ARGS_SIZE OF |%d| PARAMETER  = SIZE OF |%d|", i, p->arg.args_size);
+		}
 	else
 		if (p->curr_op == 1)
-			p->arg.args_size += 4;
+			p->arg.args_size += 5;
 		else
-			p->arg.args_size += 2;
+			p->arg.args_size += 3;
 	set_index(&(p->index), p->arg.args_size + \
-			(g_ops[curr_op].descriptor ? 1 : 0));
+			(g_ops[curr_op].descriptor ? 1 : 0) + 1);
+	printf("MOD THE INDEX BY : |%d|\n", p->arg.args_size + \
+		(g_ops[curr_op].descriptor ? 1 : 0) + 1);
 	// we are setting the arg.size inside the function
 //	dump_memory(*vm); // <_ HERE _ DUMP _ MEMORY
 // end working area	}

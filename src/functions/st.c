@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 03:18:56 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/30 22:54:31 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/30 23:10:59 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ int		ft_st(t_vm *vm, t_champ *champ, t_process *process)
 		store_values(vm, process, jndex, 2);
 		if (reg_bounds(process->arg.v[0]) == 1)
 		{
+			printf("enters an exit");
 			process->carry = 0;
 			return (1);
 		}
@@ -60,7 +61,9 @@ int		ft_st(t_vm *vm, t_champ *champ, t_process *process)
 		}
 		else if (ind(process, 1))
 		{
+			printf("reg value before conversion: |%d|\n", process->arg.v[0]);
 			convert_if_register_number_to_value(process, 0);
+			printf("else if: ind value of reg is |%d|\n", process->arg.v[0]);
 			store_big_endian(vm, process->arg.v[0], (process->arg.v[1] % IDX_MOD) + process->index);
 		}
 		return (0);

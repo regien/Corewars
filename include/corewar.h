@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/30 21:59:07 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/30 22:57:37 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -154,6 +154,7 @@ typedef struct			s_champ
 typedef struct			s_vm
 {
 	int					last_to_live;
+	unsigned int		total_lives;
 	char				nbr_checks;
 	int					nbr_lives;
 	char				memory[MEM_SIZE];

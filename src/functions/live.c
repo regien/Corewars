@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 03:06:43 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/30 05:38:12 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/30 22:58:25 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ static void	show_alive(t_process *process)
 
 int			ft_live(t_vm *vm, t_champ *champ, t_process *process)
 {
+	(void)champ;
 	ft_putendl("ft_live:");
 	read_4_bytes(vm, process, process->index + 1, 0);
 	process->process_alive = 1;

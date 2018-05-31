@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/29 23:46:48 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/30 21:06:15 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/30 22:59:16 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,12 +46,12 @@ void 	read_2_bytes(t_vm *vm, t_process *process, int index, int i)
 
 void	store_big_endian(t_vm *vm, int value, int index)
 {
-	ft_putendl("	entered big endian")
 	char	a;
 	char	b;
 	char	c;
 	char	d;
 
+	printf("store big endian: value is: |%d|, index is |%d|\n", value, index);
 	printf("\n\n\n\nMOTHER FCKING INDEX IS: %d\n\n\n", index);
 //	pendejada = (unsigned int)value;
 	a = (value & 0xff000000) >> 24;
@@ -72,5 +72,4 @@ void	store_big_endian(t_vm *vm, int value, int index)
 	printf("value of c = %d\n", vm->memory[circulate_index(index + 2)]);
 	vm->memory[circulate_index(index + 3)] = d;
 	printf("value of d = %d\n", vm->memory[circulate_index(index + 3)]);
-	ft_putendl("	store big endian");
 }

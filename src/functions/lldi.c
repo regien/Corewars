@@ -30,6 +30,7 @@ int		ft_lldi(t_vm *vm, t_champ *champ, t_process* process)
 {
 	int 	s;
 	int 	jndex;
+	int 	register_temp;
 
 	jndex = process->index + 1;
 	if (g_ops[process->curr_op].descriptor == 1)
@@ -58,6 +59,7 @@ int		ft_lldi(t_vm *vm, t_champ *champ, t_process* process)
 			process->carry = 0;
 			return (1);
 		}
+		register_temp = process->arg.v[2];
 		convert_if_register_number_to_value(process, 0);
 		if (ind(process, 0))
 		{
@@ -65,9 +67,21 @@ int		ft_lldi(t_vm *vm, t_champ *champ, t_process* process)
 		}
 		convert_if_register_number_to_value(process, 1);
 		s = process->arg.v[0] + process->arg.v[1];
+
 		s = circulate_index(s);
+		printf("sum of s is |%d|\n", s);
+		printf("sum of s + process->index is |%d|\n", s + process->index);
 		read_4_bytes(vm, process, s + process->index, 2);
-		if (process->regs[process->arg.v[2]] == 0)
+		printf("read4 value is: |%d|\n", process->arg.v[2]);
+		process->regs[register_temp] = process->arg.v[2];
+//		process->regs[process->arg.v[2]] = process->arg.v[2];
+//		printf("reg value is : |%d|\n", process->regs[2]);
+		if (reg_bounds(register_temp))
+		{
+			process->carry = 0;
+			return (1);
+		}
+		if (process->regs[register_temp] == 0)
 		{
 			process->carry = 1;
 		}
