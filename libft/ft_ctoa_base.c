@@ -5,6 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/05/25 20:34:00 by adubugra          #+#    #+#             */
+/*   Updated: 2018/05/25 20:45:14 by adubugra         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_ctoa_base.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 01:31:04 by adubugra          #+#    #+#             */
 /*   Updated: 2018/05/16 01:50:35 by adubugra         ###   ########.fr       */
 /*                                                                            */
@@ -35,6 +48,25 @@ static int	size(int n, int base)
 	return (counter);
 }
 
+static int	ft_2(int *value, unsigned char v, char **ctoa, int base)
+{
+	int	len;
+
+	*value = v;
+	len = size(*value, base);
+	if (value <= 0)
+		len++;
+	if (len == 1)
+	{
+		len++;
+		*ctoa = ft_strnew(len);
+		*ctoa[0] = '0';
+	}
+	else
+		*ctoa = ft_strnew(len);
+	return (len);
+}
+
 char		*ft_ctoa_base(unsigned char v, int base)
 {
 	char	*ctoa;
@@ -42,18 +74,7 @@ char		*ft_ctoa_base(unsigned char v, int base)
 	int		len;
 	int		i;
 
-	value = v;
-	len = size(value, base);
-	if (value <= 0)
-		len++;
-	if (len == 1)
-	{
-		len++;
-		ctoa = ft_strnew(len);
-		ctoa[0] = '0';
-	}
-	else
-		ctoa = ft_strnew(len);
+	len = ft_2(&value, v, &ctoa, base);
 	if (value < 0)
 	{
 		ctoa[0] = 'f';

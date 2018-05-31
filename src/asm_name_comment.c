@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 12:41:43 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/25 17:01:44 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/29 15:25:50 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*find_line(char *cmd_string, int fd)
 	char	*tmp;
 	int		ret;
 
+	if (!cmd_string || fd < 0)
+		return (0);
 	while ((ret = get_next_line(fd, &str)) == 1)
 		if ((tmp = ft_strstr(str, cmd_string)) == 0)
 			free(str);
@@ -88,6 +90,8 @@ int		set_header(t_header *h, int fd)
 {
 	int i;
 
+	if (!h || fd < 0)
+		return (ft_printf_err("invalid fd or header\n"));
 	i = -1;
 	while (++i <= COMMENT_LENGTH + 4)
 		h->prog_name[i] = 0;

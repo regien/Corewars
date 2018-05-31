@@ -6,7 +6,7 @@
 #    By: adubugra <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/03/19 20:33:37 by adubugra          #+#    #+#              #
-#    Updated: 2018/05/16 01:35:29 by adubugra         ###   ########.fr        #
+#    Updated: 2018/05/25 20:43:24 by adubugra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,8 +33,8 @@ SRCS=ft_memset.c \
 				ft_get_last_char.c \
 				ft_mod.c \
 				ft_itoa_base.c \
-				ft_ltoa_base.c \
 				ft_ctoa_base.c \
+				ft_ltoa_base.c \
 				ft_wput.c \
 				ft_strupper.c \
 				ft_return_mod.c \

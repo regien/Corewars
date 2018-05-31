@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/25 15:50:48 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/25 19:14:02 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/29 15:26:23 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@ int		get_label_arg(int arg_num, t_ops *ops, t_label *labels)
 	char	*str;
 	int		i;
 
-	str = ops->arg_name[arg_num];
-	if (!str)
+	if (!ops || !labels || !(str = ops->arg_name[arg_num]))
 		return (1);
 	i = 0;
 	while (str[i] == DIRECT_CHAR || str[i] == LABEL_CHAR)
@@ -42,6 +41,8 @@ void	clean_label(t_label *labels)
 	t_label *buf;
 	int		i;
 
+	if (!labels)
+		return ;
 	buf = labels;
 	while (buf)
 	{
@@ -57,6 +58,8 @@ int		set_label_vars(t_label *labels, t_ops *ops)
 {
 	int		ret;
 
+	if (!labels || !ops)
+		return (0);
 	ret = 0;
 	clean_label(labels);
 	while (ops)

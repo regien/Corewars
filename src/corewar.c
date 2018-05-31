@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 23:23:05 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/17 16:08:45 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/25 20:46:39 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ int main(int argc, char **argv)
 	ft_printf("%x\n", vm.champs[0].processes->pc);
 	controller(&vm);
 	//play_game(vm);
-	//dump_memory(vm);
+	dump_memory(vm);
 }

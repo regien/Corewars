@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 14:58:56 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/25 20:11:28 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/29 16:08:21 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ char		*get_full_line(int fd)
 	char	*tmp;
 	int		i;
 
+	str = 0;
 	while (get_next_line(fd, &str) >= 0)
 	{
 		remove_comments(str);
-		tmp = str;
-		if (!str)
+		if (!(tmp = str))
 			break ;
 		i = 0;
 		while (str[i] && WHITESPACE(str[i]))
@@ -33,7 +33,7 @@ char		*get_full_line(int fd)
 		else
 			break ;
 	}
-	if (str)
+	if (str && tmp)
 	{
 		free(tmp);
 		return (ft_strdup(&str[i]));
@@ -96,6 +96,7 @@ t_ops		*set_argument_list(int fd, t_label **label_root)
 	*label_root = 0;
 	last = 0;
 	root = 0;
+	buf = 0;
 	while ((str = get_full_line(fd)) != 0)
 	{
 		tmp = str;
@@ -104,8 +105,9 @@ t_ops		*set_argument_list(int fd, t_label **label_root)
 			continue ;
 		if (!add_ops(&root, &last, str))
 			return (0);
-		free(tmp);
-		if (buf)
+		if (tmp)
+			free(tmp);
+		if (buf && last)
 			buf->index = last->index;
 	}
 	return (root);

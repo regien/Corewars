@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 18:33:23 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/25 19:31:49 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/29 15:19:47 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,8 @@ int		set_bit_descriptor(t_ops *op, char *arg_name, int arg_num)
 	char	d;
 	char	descriptor;
 
+	if (!op || !arg_name)
+		return (ft_printf_err("no op or arg_name at bit descriptor\n"));
 	descriptor = op->descriptor;
 	d = arg_name[0] == 'r' ? 1 : 0;
 	if (arg_name[0] == 'r' &&
@@ -91,7 +93,7 @@ int		get_arguments_and_sizes(t_ops *op)
 	int		i;
 
 	i = -1;
-	while (op->arg_name[++i])
+	while (op && op->arg_name[++i])
 	{
 		if (check_argument(op->arg_name[i]))
 			return (ft_printf_err("parse error: %s\n", op->arg_name[i]));
@@ -117,6 +119,8 @@ int		get_arguments_and_sizes(t_ops *op)
 
 int		set_size(t_ops *op)
 {
+	if (!op)
+		return (0);
 	op->size = 0;
 	op->size = op_table[(int)op->op_code - 1].descriptor + 1;
 	op->size += op->arg_sizes[0];

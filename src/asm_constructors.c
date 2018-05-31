@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 16:39:21 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/25 19:33:21 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/29 15:21:22 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ t_ops	*add_ops(t_ops **root, t_ops **last, char *str)
 {
 	t_ops	*new;
 
-	if (!str || !root)
+	if (!str || !root || !last)
 		return (0);
 	if ((new = init_op()) == 0)
 		return (0);
@@ -76,7 +76,7 @@ t_label	*init_label(void)
 
 t_label	*add_label(t_label **root, t_label *new)
 {
-	if (!new)
+	if (!new || !root)
 		return (0);
 	if (*root == 0)
 		return (*root = new);

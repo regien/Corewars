@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/24 14:52:09 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/25 19:47:24 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/29 15:20:20 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ int		check_argument(char *str)
 {
 	int	i;
 
+	if (!str)
+		return (ft_printf_err("no str at check_argument\n"));
 	if (str[0] != 'r' && str[0] != DIRECT_CHAR &&
 			str[0] != LABEL_CHAR && !ft_isdigit_sign(str[0]))
 		return (ft_printf_err("err on char %c\n", str[0]));
