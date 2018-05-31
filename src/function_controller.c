@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 15:00:20 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/30 21:59:36 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/30 22:41:56 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,12 +92,12 @@ void	handle_cycle_to_die(t_vm *vm)
 		vm->nbr_lives = 0;
 		vm->nbr_checks = -1;
 	}
-	i = 0;
-	while (i < vm->players)
-	{
+	i = -1;
+	while (++i < vm->players)
 		kill_processes(&(PROCESS));
-		i++;
-	}
+	i = -1;
+//	while (++i < vm->players)
+//		vm->champs[i].lives_counted = 0;
 	INCREASE_NRB_CHECKS;
 }
 
