@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/18 11:16:17 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/30 19:49:55 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/31 07:03:56 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void	fetch(t_process *process)
 	if (process->pc[process->index] <= 16 && process->pc[process->index] > 0)
 	{
 		process->curr_op = process->pc[process->index];
-		process->cycle_counter = g_ops[process->curr_op].cycles;
+		process->cycle_counter = g_ops[process->curr_op].cycles + 1;
 	}
 	else
 	{

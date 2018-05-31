@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 15:00:20 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/30 22:41:56 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/31 07:12:31 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,12 +87,12 @@ void	reset_values_processes(t_process **p)
 	iter = *p;
 	while (iter)
 	{
-		iter->procceses_alive = 0;
+		iter->process_alive = 0;
 		iter = iter->next;
 	}
 }
 
-#define INCREASE_NRB_CHECKS vm->nbr_checks += 1
+//#define INCREASE_NRB_CHECKS vm->nbr_checks += 1
 
 /*
 **	// if cycle_to_die == cycle_to_die_temp && checks == MAX_CHECKS
@@ -112,31 +112,35 @@ void	handle_cycle_to_die(t_vm *vm)
 	if (vm->total_lives >= NBR_LIVE || vm->nbr_checks >= MAX_CHECKS)
 	{
 		vm->cycle_to_die -= CYCLE_DELTA;
-		vm->cycle_to_die_last = (int)vm->cycles + (int)vm->cycle_to_die;
-		ft_printf("MOTHERFUCKER WE ARE DECREMENTING CYCLE TO DIE, new value = %d\n", vm->cycle_to_die);
+//		if (vm->cycle_to_die <= 0)
+//			continue ;
+		vm->cycle_to_die_last = (unsigned int)vm->cycles + (unsigned int)vm->cycle_to_die;
+		printf("MOTHERFUCKER WE ARE DECREMENTING CYCLE TO DIE, new value = %u\n", vm->cycle_to_die);
+		printf("IF STATEMENT WE ARE PRINTING, new value = %u\n", vm->cycle_to_die_last);
+	printf("Total number of lives before reseting = |%d|\n", vm->total_lives);
 		vm->nbr_lives = 0;
 		vm->nbr_checks = -1;
 		vm->total_lives = 0;
 	//	vm->cycle_to_die_last = vm->cycle_to_die;
 	}
+	else
+	{
+		vm->cycle_to_die_last = vm->cycles + vm->cycle_to_die;
+		printf("ELSE STATEMENT new value = %u\n", vm->cycle_to_die_last);
+	}
 	i = -1;
 	while (++i < vm->players)
 		kill_processes(&(PROCESS));
 
-	t_process	*tmp;
 	i = -1;
 	while (++i < vm->players)
 	{
 		vm->champs[i].lives_counted = 0;
-		tmp = vm->champs[i].processes;
-		while (tmp)
-		{
-			tmp->process_alive = 0;
-			tmp = tmp->next;
-		}
+		reset_values_processes(&(vm->champs[i].processes));
 	}
 	printf("Total number of lives = |%d|\n", vm->total_lives);
-	INCREASE_NRB_CHECKS;
+	vm->nbr_checks += 1;
+	printf("Total number of checks = |%d|\n", vm->nbr_checks);
 }
 
 int		operation_cycle_to_die(int cycles, int cytodie)
@@ -158,7 +162,6 @@ void	controller(t_vm *vm)
 		i = vm->players;
 		while (0 <= --i)
 			run_processes(vm, PROCESS, i);
-		vm->cycles++;
 		// handles correctly
 //		if (((int)((*vm).cycles) % (int)((*vm).cycle_to_die)) == 0)
 //		if ((((int)vm->cycles) % (int)(vm->cycle_to_die)) == 0)
@@ -173,5 +176,6 @@ void	controller(t_vm *vm)
 		if (vm->flags_args.dump == 1)
 			if (vm->flags_args.nbrdump == vm->cycles)
 				dump_memory_wrapper(*vm);
+		vm->cycles++;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/30 22:57:37 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/31 05:20:47 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -155,14 +155,14 @@ typedef struct			s_vm
 {
 	int					last_to_live;
 	unsigned int		total_lives;
-	char				nbr_checks;
+	int				nbr_checks;
 	int					nbr_lives; // not currently in use - taco
 	char				memory[MEM_SIZE];
 	int					players;
 //	int					cycles;
 	unsigned int		cycles;
 	int					cycle_to_die;
-	int					cycle_to_die_last;
+	unsigned int					cycle_to_die_last;
 	struct s_champ		champs[MAX_PLAYERS];
 	struct s_flags		flags_args; // adition of flags in main_vm
 	//struct s_process	*processes;
