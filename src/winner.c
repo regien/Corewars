@@ -6,25 +6,12 @@
 /*   By: gmalpart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/29 01:05:21 by gmalpart          #+#    #+#             */
-/*   Updated: 2018/05/30 03:14:22 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/30 21:24:42 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "corewar.h"
 
-/*
-**	CHECK - champion for this value
-		so wen you 
-	int					lives_counted;
-
-EZEKIEL:
-	value on the vm
-		-last_one_to_called_live is the person who is gonna win the game
-		- it always update for the latest player (players[i]) to called a function
-		live before the game ends (*when there's no processes)
-*/
-
-// SETTING THE WINNER INCORRECTLY
 /*
 int		procceses_alive(t_vm *vm)
 {

@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 22:22:19 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/29 06:25:40 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/30 21:25:07 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ int		read_files(int players, t_vm *vm)
 	int	i;
 
 	i = 0;
-//	clear_vm_mem(vm); clear vm its now a 2 lines while loop in init_vm
 	while (i < players)
 	{
 		if (check_magic_number(vm->champs[i].fd))
@@ -41,7 +40,6 @@ int		set_champ_name(t_champ *champ)
 
 	r = read(champ->fd, champ->name, PROG_NAME_LENGTH + 4);
 	(champ->name)[PROG_NAME_LENGTH + 4] = '\0';
-	//ft_printf("name: %s\n", champ->name);
 	if (!champ->name[0])
 	{
 		ft_putstr_fd("name starts with null terminator\n", 2);
@@ -55,7 +53,6 @@ int		set_champ_size(t_champ *champ)
 {
 	read(champ->fd, &(champ->size), 4);
 	convert_big_endian(&(champ->size));
-	//ft_printf("size: %d\n", champ->size);
 	if (champ->size == 0 || champ->size > CHAMP_MAX_SIZE)
 	{
 		ft_putstr_fd("champ is too big..., or no champ\n", 2);

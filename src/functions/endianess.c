@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/29 23:46:48 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/30 06:56:59 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/30 21:06:15 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,22 +29,19 @@ int		circulate_index(int index)
 
 void	read_4_bytes(t_vm *vm, t_process *process, int index, int i)
 {
-	ft_putendl("	arg is an indirect: entered read_4_bytes");
+	printf("index we are reading from is: |%d|", index);
 	process->arg.v[i] = (vm->memory[circulate_index(index)] & 0xFF) << 24;
 	process->arg.v[i] += (vm->memory[circulate_index(index + 1)] & 0xFF) << 16;
 	process->arg.v[i] += (vm->memory[circulate_index(index + 2)] & 0xFF) << 8;
 	process->arg.v[i] += (vm->memory[circulate_index(index + 3)] & 0xFF);
-	ft_putendl("	exited read_4_bytes");
 }
 
 void 	read_2_bytes(t_vm *vm, t_process *process, int index, int i)
 {
-	printf("	arg is an indirect: entered read_2_bytes index = %d\n", index);
 	process->arg.v[i] = vm->memory[circulate_index(index)];
 	process->arg.v[i] = (process->arg.v[i] & 0xFF) << 8; //cast to char
 	process->arg.v[i] += vm->memory[circulate_index(index + 1)] & 0xFF;
 	printf("i value = %d shift = %d\n", i, process->arg.v[i]);
-	ft_putendl("	exited read_2_bytes");
 }
 
 void	store_big_endian(t_vm *vm, int value, int index)

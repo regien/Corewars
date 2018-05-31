@@ -6,7 +6,7 @@
 /*   By: gmalpart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/19 19:11:28 by gmalpart          #+#    #+#             */
-/*   Updated: 2018/05/24 21:03:44 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/30 22:02:47 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ char	g_ivlid_chmp[] = "Invalid champion file, see -h or --help\n";
 char	g_ivlid_nbrpls[] = "Invalid Numbers of players, see -h or --help\n";
 char	g_ivlid_dupl[] = "Duplicated number in players\n";
 char	g_usage[] =
-"\nExtras\n\t-v\tvisual flag\n"
 "\t-n\tChoose the number of the player\n"
 "\t-dump\tChoose the number of cycles to dump\n"
 "\t\t* print the address of the map on the screen 😫\n";

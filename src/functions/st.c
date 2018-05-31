@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 03:18:56 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/30 03:11:32 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/30 22:54:31 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ int		ft_st(t_vm *vm, t_champ *champ, t_process *process)
 	{
 		jndex += 1;
 	}
+	printf("ft_st: original address = |%d|, parameter reading address: |%d| ", process->index, jndex);
 	ft_putendl("ft_st");
 	(void)champ;
 	if (reg(process, 0) && reg_ind(process, 1))
@@ -60,8 +61,7 @@ int		ft_st(t_vm *vm, t_champ *champ, t_process *process)
 		else if (ind(process, 1))
 		{
 			convert_if_register_number_to_value(process, 0);
-			// argv1 is the address of where we store, not the value itself
-			store_big_endian(vm, process->arg.v[0], process->arg.v[1] % IDX_MOD + process->index);
+			store_big_endian(vm, process->arg.v[0], (process->arg.v[1] % IDX_MOD) + process->index);
 		}
 		return (0);
 	}

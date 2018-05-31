@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/30 19:31:41 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/30 21:59:07 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -158,7 +158,8 @@ typedef struct			s_vm
 	int					nbr_lives;
 	char				memory[MEM_SIZE];
 	int					players;
-	int					cycles;
+//	int					cycles;
+	unsigned int		cycles;
 	int					cycle_to_die;
 	struct s_champ		champs[MAX_PLAYERS];
 	struct s_flags		flags_args; // adition of flags in main_vm
@@ -254,7 +255,6 @@ void					set_vm_memory(t_vm *vm, int i, int players, t_champ *champ);
 
 int						check_magic_number(int fd);
 void					set_index(int *index, int diff);
-//int						index_mod(int index, int diff);
 
 /*
 ** CONVERSIONS.c
@@ -310,6 +310,7 @@ void					declare_winner(t_vm *vm);
 ** PRINT.c
 */
 
+void					dump_memory_wrapper(t_vm vm);
 void					dump_memory(t_vm vm);
 
 /*

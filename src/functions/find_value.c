@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/27 23:35:02 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/30 04:53:59 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/30 22:55:52 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ void	find_direct(t_vm *vm, t_process *process, int index, int i)
 	}
 	else
 	{
+		printf("reading from index |%d}\n", index);
 		read_4_bytes(vm, process, index, i);
 	}
 }
