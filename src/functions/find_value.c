@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/27 23:35:02 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/30 04:53:59 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/30 21:00:02 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ void	find_direct(t_vm *vm, t_process *process, int index, int i)
 	}
 	else 
 	{
+		printf("reading from index |%d}\n", index);
 		read_4_bytes(vm, process, index, i);
 	}
 }
@@ -81,10 +82,10 @@ void	find_value(t_vm *vm, t_process *process, int jndex, int param)
 	}
 	else if (process->arg.type[param] == 3)
 	{
-		read_4_bytes(vm, process, jndex, param);
+		read_2_bytes(vm, process, jndex, param);
 		printf("The address from where we want to read from is: %d\n", circulate_index(process->arg.v[param]));
-		read_4_bytes(vm, process, process->index + process->arg.v[param], param);
-		printf("The value at address of dir is: %d\n", process->arg.v[param]);
+		//read_4_bytes(vm, process, process->index + process->arg.v[param], param);
+		//printf("The value at address of dir is: %d\n", process->arg.v[param]);
 	}
 }
 
