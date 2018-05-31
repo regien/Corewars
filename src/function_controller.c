@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 15:00:20 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/30 19:34:28 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/30 21:59:36 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,17 +105,11 @@ void	controller(t_vm *vm)
 {
 	int		i;
 
-//	i = -1; // proccess are already initialized when the champion is being checked
-//	while (++i < vm->players)
-//		add_process(&(vm->champs[i]), vm->champs[i].processes->index + 16);
 	while (1)
 	{
 		i = vm->players;
 		while (0 <= --i)
-		{
 			run_processes(vm, PROCESS, i);
-//			i++;
-		}
 		vm->cycles++;
 		// handles correctly
 		if (((int)((*vm).cycles) % (int)((*vm).cycle_to_die)) == 0)
@@ -124,8 +118,8 @@ void	controller(t_vm *vm)
 			if (procceses_alive(vm) == 1)
 				break ;
 		}
-//		ft_printf("curr cycle: %d\n", vm->cycles);
-//		if (vm->cycles == 10)
-//			break ;
+		if (vm->flags_args.dump == 1)
+			if (vm->flags_args.nbrdump == vm->cycles)
+				dump_memory_wrapper(*vm);
 	}
 }

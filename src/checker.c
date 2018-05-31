@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 01:05:08 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/26 19:26:59 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/30 21:27:33 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,24 +32,3 @@ void	set_index(int *index, int diff)
 	while (*index >= MEM_SIZE)
 		*index -= MEM_SIZE;
 }
-
-/*
-** set_index replacer
-** replacer:  index_modification
-*/
-
-int			index_mod(int index, int diff)
-{
-	int		new_index;
-
-	index += diff;
-	if (index >= MEM_SIZE)
-		while (index >= MEM_SIZE)
-			index -= MEM_SIZE;
-	else
-		while (index <= MEM_SIZE)
-			index += MEM_SIZE;
-	new_index = index;
-	return (new_index);
-}
-

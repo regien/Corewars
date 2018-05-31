@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 22:55:43 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/30 19:31:37 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/30 21:22:51 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,32 +19,6 @@
 **
 ** CLEAR_VM_MEM
 ** it was replaced by a 2 lines while loop in init_vm
-*/
-
-/*
-void	set_champs(t_champ *champ, char *filename)
-{
-	if (!champ)
-		champ = malloc(sizeof(champ));
-	champ->fd = open(filename, O_RDONLY);
-	champ->plyr_nbr = 0;
-	champ->size = 0;
-	champ->processes = 0;
-}
-
-void	clear_vm_mem(t_vm *vm)
-{
-	int		i;
-
-	i = 0;
-	while (i < MEM_SIZE)
-	{
-		vm->memory[i] = 0;
-		i++;
-	}
-	vm->cycles = 0;
-	vm->cycle_to_die = CYCLE_TO_DIE;
-}
 */
 
 t_process	*set_process(char *pc_start, int mem_start, int player_nbr)
@@ -80,13 +54,6 @@ t_process	*set_process(char *pc_start, int mem_start, int player_nbr)
 	return (p);
 }
 
-/*
-** modify add process and set_process to:
-	- initializes the register
-		| everything in arg (t_command_arg)
-	- initialize the types
-	- initiliaze the arg.v
-*/
 
 // this is the new head
 t_process	*add_process(t_champ *champ, int index)
@@ -104,17 +71,3 @@ t_process	*add_process(t_champ *champ, int index)
 	champ->processes = new;
 	return (new);
 }
-
-// not working
-/*
-void		kill_process(t_process *p)
-{
-	if (!p)
-		return ;
-	if (p->next)
-		p->next->prev = p->prev;
-	if (p->prev)
-		p->prev->next = p->next;
-	free(p);
-}
-*/
