@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 03:06:43 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/30 22:58:25 by eliu             ###   ########.fr       */
+/*   Updated: 2018/05/31 08:09:05 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ int			ft_live(t_vm *vm, t_champ *champ, t_process *process)
 		vm->last_to_live = process->arg.v[0];
 	printf("vm->last_live = %d <-------- MODIFYED PENDEJADA\n", process->arg.v[0]);
 	vm->total_lives += 1;
+	printf("Total_lives so far = %d\n", vm->total_lives);
 	printf("The latest player to call live is player: |%d|\n", vm->last_to_live);
 	show_alive(process);
 	return (1);

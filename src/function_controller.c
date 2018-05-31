@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 15:00:20 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/31 07:41:32 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/31 10:25:28 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	run_processes(t_vm *vm, t_process *root, int i)
 			printf("champs %d prcss %d executing op %d:\n", i + 1, j, root->curr_op);
 			execute(vm, root);
 			fetch(root);
-//			root->cycle_counter--;
+			root->cycle_counter--;
 			printf("value is %d\n", root->arg.v[0]);
 		}
 		else if (root->cycle_counter > 0)
@@ -120,27 +120,34 @@ void	handle_cycle_to_die(t_vm *vm)
 		vm->cycle_to_die_last = (unsigned int)vm->cycles + (unsigned int)vm->cycle_to_die;
 		printf("MOTHERFUCKER WE ARE DECREMENTING CYCLE TO DIE, new value = %u\n", vm->cycle_to_die);
 		printf("IF STATEMENT WE ARE PRINTING, new value = %u\n", vm->cycle_to_die_last);
-	printf("Total number of lives before reseting = |%d|\n", vm->total_lives);
+		printf("Total number of lives before reseting = |%d|\n", vm->total_lives);
 		vm->nbr_lives = 0;
-		vm->nbr_checks = -1;
+		vm->nbr_checks = 0;
 		vm->total_lives = 0;
 	//	vm->cycle_to_die_last = vm->cycle_to_die;
+		i = -1;
+		while (++i < vm->players)
+			kill_processes(&(PROCESS));
+		i = -1;
+		while (++i < vm->players)
+		{
+			vm->champs[i].lives_counted = 0;
+			reset_values_processes(&(vm->champs[i].processes));
+		}
 	}
 	else
 	{
 		vm->cycle_to_die_last = vm->cycles + vm->cycle_to_die;
 		printf("ELSE STATEMENT new value = %u\n", vm->cycle_to_die_last);
 	}
-	i = -1;
-	while (++i < vm->players)
-		kill_processes(&(PROCESS));
 
-	i = -1;
-	while (++i < vm->players)
-	{
-		vm->champs[i].lives_counted = 0;
-		reset_values_processes(&(vm->champs[i].processes));
-	}
+		i = -1;
+		vm->total_lives = 0;
+		while (++i < vm->players)
+		{
+			vm->champs[i].lives_counted = 0;
+			reset_values_processes(&(vm->champs[i].processes));
+		}
 	printf("Total number of lives = |%d|\n", vm->total_lives);
 	vm->nbr_checks += 1;
 	printf("Total number of checks = |%d|\n", vm->nbr_checks);
