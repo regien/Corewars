@@ -25,7 +25,7 @@ int		ft_sub(t_vm *vm, t_champ *champ, t_process *process)
 	(void)champ;
 	if (reg(process, 0) && reg(process, 1) && reg(process, 2))
 	{
-		store_values(vm, process, process->index + 2, 3);
+		find_and_store_values(vm, process, process->index + 2, 3);
 		if (reg_bounds(process->arg.v[0]) || reg_bounds(process->arg.v[1]) ||
 				reg_bounds(process->arg.v[2]))
 		{

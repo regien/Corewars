@@ -99,7 +99,7 @@ void	find_value(t_vm *vm, t_process *process, int jndex, int param)
 	}
 }
 
-void	store_values(t_vm *vm, t_process *process, int jndex, int argc)
+void	find_and_store_values(t_vm *vm, t_process *process, int jndex, int argc)
 {
 	int i;
 

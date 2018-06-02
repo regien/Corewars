@@ -37,7 +37,7 @@ int		ft_lldi(t_vm *vm, t_champ *champ, t_process* process)
 	(void)champ;
 	if (any(process, 0) && reg_dir(process, 1) && reg(process, 2))
 	{
-		store_values(vm, process, process->index + 2, 3);
+		find_and_store_values(vm, process, process->index + 2, 3);
 		if (reg(process, 0) && reg_bounds(process->arg.v[0]))
 		{
 			process->carry = 0;

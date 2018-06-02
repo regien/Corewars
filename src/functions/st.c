@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 03:18:56 by eliu              #+#    #+#             */
-/*   Updated: 2018/06/02 15:29:26 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/06/02 15:33:07 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,12 @@
 
 int		ft_st(t_vm *vm, t_champ *champ, t_process *process)
 {
+	printf("ft_st: original address = |%d|, parameter reading address: |%d| ", process->index, process->index + 2);
 	ft_putendl("ft_st");
 	(void)champ;
 	if (reg(process, 0) && reg_ind(process, 1))
 	{
-		store_values(vm, process, process->index + 2, 2);
+		find_and_store_values(vm, process, process->index + 2, 2);
 //		check_boundaries(process->arg, 
 		if (reg_bounds(process->arg.v[0]) == 1)
 		{
