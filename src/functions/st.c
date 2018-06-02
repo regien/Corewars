@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 03:18:56 by eliu              #+#    #+#             */
-/*   Updated: 2018/06/02 00:36:05 by eliu             ###   ########.fr       */
+/*   Updated: 2018/06/02 15:16:04 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,28 +32,22 @@ int		ft_st(t_vm *vm, t_champ *champ, t_process *process)
 {
 	int 	jndex;
 
-	jndex = process->index + 1;
-	if (g_ops[process->curr_op].descriptor == 1)
-	{
-		jndex += 1;
-	}
 	printf("ft_st: original address = |%d|, parameter reading address: |%d| ", process->index, jndex);
 	ft_putendl("ft_st");
 	(void)champ;
 	if (reg(process, 0) && reg_ind(process, 1))
 	{
 		store_values(vm, process, jndex, 2);
+//		check_boundaries(process->arg, 
 		if (reg_bounds(process->arg.v[0]) == 1)
 		{
 			printf("enters an exit");
-			process->carry = 0;
 			return (1);
 		}
 		if (reg(process, 1))
 		{
 			if (reg_bounds(process->arg.v[1]) == 1)
 			{
-				process->carry = 0;
 				return (1);
 			}
 			process->regs[process->arg.v[1]] = \
