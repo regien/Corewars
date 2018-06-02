@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 15:00:20 by adubugra          #+#    #+#             */
-/*   Updated: 2018/06/01 23:37:55 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/06/02 00:33:24 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,10 @@ void	kill_processes(t_process **newhead)
 		free(tmp);
 	}
 }
+*/
+
+/*
+** might not be working correctly because the head is not being modified correctly
 */
 
 void	kill_processes(t_process **newhead)
