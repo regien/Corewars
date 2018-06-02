@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 22:55:43 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/31 10:34:55 by eliu             ###   ########.fr       */
+/*   Updated: 2018/06/01 19:09:23 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,9 @@
 **
 ** CLEAR_VM_MEM
 ** it was replaced by a 2 lines while loop in init_vm
+**
+** REMEMBER To copy the register from the parent processes to the child
+** process
 */
 
 t_process	*set_process(char *pc_start, int mem_start, int player_nbr)
@@ -47,6 +50,7 @@ t_process	*set_process(char *pc_start, int mem_start, int player_nbr)
 	// testing_end <-- erase me
 	p->carry = 0;
 	p->cycle_counter = 0;
+	p->process_alive = 0;
 	p->state = FETCH;
 	p->live = 0;
 	p->curr_op = 0;

@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 15:00:20 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/31 10:25:28 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/06/01 19:18:05 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,7 +112,8 @@ void	handle_cycle_to_die(t_vm *vm)
 //	{
 //		vm->cycle_to_die -= CYCLE_DELTA;
 //	}
-	if (vm->total_lives >= NBR_LIVE || vm->nbr_checks >= MAX_CHECKS)
+	if (vm->total_lives >= NBR_LIVE || (int)(vm->last_to_live) == 0 \
+		|| vm->nbr_checks >= MAX_CHECKS)
 	{
 		vm->cycle_to_die -= CYCLE_DELTA;
 //		if (vm->cycle_to_die <= 0)
