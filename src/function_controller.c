@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 15:00:20 by adubugra          #+#    #+#             */
-/*   Updated: 2018/06/02 00:33:24 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/06/02 14:57:51 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,6 +101,51 @@ void	kill_processes(t_process **newhead)
 	{
 		if (!(iter->process_alive)) // kill_process
 		{
+			tmp = iter;
+			iter = iter->next;
+			free(tmp);
+		}
+		else
+			iter = iter->next;
+	}
+	if (!((*newhead)->process_alive))
+	{
+		tmp = *newhead;
+		*newhead = (*newhead)->next;
+		free(tmp);
+	}
+}
+
+/*
+t_process	*kill_processes(t_process **head)
+{
+	t_process	*newhead;
+	t_process	*iter;
+	t_process	*tmp;
+	int			i;
+
+	newhead = *head;
+	iter = head;
+	while (iter)
+	{
+		if (iter->process_alive == 0)
+		{
+			a
+		}
+	}
+
+	// you figure out a better way 
+	t_process	*tmp;
+	t_process	*iter;
+
+	tmp = NULL;
+	if (!((*newhead)))
+		return ;
+	iter = (*newhead)->next;
+	while(iter)
+	{
+		if (!(iter->process_alive)) // kill_process
+		{
 			tmp = iter->next;
 			iter = iter->next;
 			free(tmp);
@@ -115,6 +160,8 @@ void	kill_processes(t_process **newhead)
 		free(tmp);
 	}
 }
+*/
+
 
 void	reset_values_processes(t_process **p)
 {
