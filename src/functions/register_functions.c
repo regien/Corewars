@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/29 00:38:09 by eliu              #+#    #+#             */
-/*   Updated: 2018/06/01 05:53:21 by eliu             ###   ########.fr       */
+/*   Updated: 2018/06/01 21:41:17 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	copy_registers(t_process *process, t_process *new)
 	{
 		new->regs[i] = process->regs[i];
 
-		ft_printf("process->regs[%d] = |%d|		new->regs[%d] = |%d|\n", process->regs[i], new->regs[i]);
+		printf("process->regs[%d] = |%d|		new->regs[%d] = |%d|\n", i, process->regs[i], i, new->regs[i]);
 		i++;
 	}
 }

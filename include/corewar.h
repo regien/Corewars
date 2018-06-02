@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/06/01 20:52:14 by eliu             ###   ########.fr       */
+/*   Updated: 2018/06/01 21:16:27 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -371,7 +371,9 @@ void					store_big_endian(t_vm *vm, int value, int index);
 ** CONVERT_REGISTERS.c
 */
 
+void					print_regs(int a[]);
 void					convert_if_register_number_to_value(t_process *process, int arg);
+void					copy_registers(t_process *process, t_process *new);
 
 /*
 ** CIRCULATE_INDEX.C

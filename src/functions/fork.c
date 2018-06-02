@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 05:59:20 by eliu              #+#    #+#             */
-/*   Updated: 2018/06/01 20:41:10 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/06/01 21:42:48 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,14 @@
 int		ft_fork(t_vm *vm, t_champ *champ, t_process *process)
 {
 	ft_putendl("ft_fork");
-	t_process *new;
+//	t_process *new;
 
-	new = NULL; // gerardo: nullyfing this pointer for FLAGS_ERRORS
+//	new = NULL; // gerardo: nullyfing this pointer for FLAGS_ERRORS
 	
 	read_2_bytes(vm, process, process->index + 1, 0);
-	new = add_process(champ, circulate_index(process->arg.v[0] % IDX_MOD));
+	champ->processes = add_process(champ, \
+			circulate_index(process->arg.v[0] % IDX_MOD));
+	copy_registers(champ->processes->next, champ->processes);
+	printf("printing here instead\n");
 	return (1);
 }

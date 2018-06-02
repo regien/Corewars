@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/18 11:16:17 by adubugra          #+#    #+#             */
-/*   Updated: 2018/06/01 05:57:38 by eliu             ###   ########.fr       */
+/*   Updated: 2018/06/01 21:54:06 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void	execute(t_vm *vm, t_process *p)
 		if (p->curr_op == 1)
 			p->arg.args_size += 4;
 		else
-			p->arg.args_size += 3;
+			p->arg.args_size += 2; // it was 3
 	if (curr_op != 9)
 		set_index(&(p->index), p->arg.args_size + \
 			(g_ops[curr_op].descriptor ? 1 : 0) + 1);

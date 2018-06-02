@@ -6,7 +6,7 @@
 /*   By: gmalpart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 17:04:29 by gmalpart          #+#    #+#             */
-/*   Updated: 2018/06/01 04:36:32 by eliu             ###   ########.fr       */
+/*   Updated: 2018/06/01 21:15:05 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ void		init_vm(t_vm *vm)
 	vm->nbr_checks = 0;
 	vm->nbr_lives = 0;
 	vm->players = 0;
-	vm->player_color = 0;
 	vm->cycles = 0;
 	vm->cycle_to_die = CYCLE_TO_DIE;
 	vm->cycle_to_die_last = CYCLE_TO_DIE;

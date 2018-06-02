@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 01:17:30 by adubugra          #+#    #+#             */
-/*   Updated: 2018/06/01 04:52:23 by eliu             ###   ########.fr       */
+/*   Updated: 2018/06/01 21:14:33 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 #define CYN   "\x1B[36m"
 #define WHT   "\x1B[37m"
 #define RESET "\x1B[0m"
-
+/*
 void	init_colors(t_vm vm)
 {
 	int i;
@@ -32,7 +32,7 @@ void	init_colors(t_vm vm)
 		i++;
 	}
 }
-
+*/
 void	dump_memory_wrapper(t_vm vm)
 {
 	dump_memory(vm);

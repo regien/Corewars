@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 06:17:20 by eliu              #+#    #+#             */
-/*   Updated: 2018/06/01 20:38:46 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/06/01 21:10:22 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,12 @@
 int		ft_lfork(t_vm *vm, t_champ *champ, t_process *process)
 {
 	ft_putendl("ft_long_fork");
-	t_process *new;
+//	t_process *new;
 
-	new = NULL; // NULLYFYING this pointer for FLAGS_ERROS
+//	new = NULL; // NULLYFYING this pointer for FLAGS_ERROS
 	read_2_bytes(vm, process, process->index + 1, 0);
 //	new = add_process(champ, circulate_index(process->arg.v[0]));
-	champ->proce add_process();
+	champ->processes = add_process(champ, circulate_index(process->arg.v[0]));
+	copy_registers(champ->processes->next, champ->processes);
 	return (1);
 }
