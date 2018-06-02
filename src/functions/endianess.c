@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/29 23:46:48 by eliu              #+#    #+#             */
-/*   Updated: 2018/06/01 23:58:59 by eliu             ###   ########.fr       */
+/*   Updated: 2018/06/02 16:26:13 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int		circulate_index(int index)
 
 void	read_4_bytes(t_vm *vm, t_process *process, int index, int i)
 {
-	printf("index we are reading from is: |%d|", index);
+	printf("index we are reading from is: |%d|\n", index);
 	process->arg.v[i] = (vm->memory[circulate_index(index)] & 0xFF) << 24;
 	process->arg.v[i] += (vm->memory[circulate_index(index + 1)] & 0xFF) << 16;
 	process->arg.v[i] += (vm->memory[circulate_index(index + 2)] & 0xFF) << 8;
@@ -43,6 +43,12 @@ void 	read_2_bytes(t_vm *vm, t_process *process, int index, int i)
 	process->arg.v[i] += vm->memory[circulate_index(index + 1)] & 0xFF;
 	process->arg.v[i] = (short)(process->arg.v[i]);
 	printf("arg.v[%d] is : |%d|\n", i, process->arg.v[i]);
+}
+
+void	print_big_endian(int x)
+{
+	printf("print big endian |%x| |%x| |%x| |%x|\n", (x << 24) & 0xff000000, (x << 16) & 0xff0000,
+		(x << 8) & 0xff00, x & 0xff);
 }
 
 void	store_big_endian(t_vm *vm, int value, int index)

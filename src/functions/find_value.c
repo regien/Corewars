@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/27 23:35:02 by eliu              #+#    #+#             */
-/*   Updated: 2018/06/01 05:09:50 by eliu             ###   ########.fr       */
+/*   Updated: 2018/06/02 15:58:29 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,15 @@ void	find_direct(t_vm *vm, t_process *process, int index, int i)
 {
 	if (g_ops[process->curr_op].truncate == 1)
 	{
+		printf("Reading truncated direct (2_bytes) at index: |%d|\n", index);
 		read_2_bytes(vm, process, index, i);
+		printf("The read value was: |%d|\n", process->arg.v[i]);
 	}
 	else
 	{
-		printf("reading from index |%d}\n", index);
+		printf("Reading from direct (4_bytes) at index |%d|\n", index);
 		read_4_bytes(vm, process, index, i);
+		printf("The read value was: |%d|\n", process->arg.v[i]);
 	}
 }
 
@@ -46,12 +49,8 @@ void	find_register(t_vm *vm, t_process *process, int index, int i)
 
 void	find_indirect(t_vm *vm, t_process *process, int index, int i)
 {
-	// first find the value of where we currently are
-	// read for size of indirect (2)
+	printf("Reading indirect (2_bytes)	");
 	read_2_bytes(vm, process, index, i);
-
-	// go to that address, and then find the new value
-	// 
 }
 
 int 	find_arg_size(t_process *process, int i)
@@ -62,15 +61,10 @@ int 	find_arg_size(t_process *process, int i)
 	}
 	else if (process->arg.type[i] == 2)
 	{
-		printf("curret op is: %d \n", process->curr_op);
 		if (g_ops[process->curr_op].truncate == 1)
-		{
 			return (2);
-		}
 		else
-		{
 			return (4);
-		}
 	}
 	if (process->arg.type[i] == 3)
 	{
@@ -94,8 +88,6 @@ void	find_value(t_vm *vm, t_process *process, int jndex, int param)
 	{
 		find_indirect(vm, process, jndex, param);
 		printf("The address from where we want to read from is: %d\n", circulate_index(process->arg.v[param]));
-//		read_4_bytes(vm, process, process->index + process->arg.v[param], param);
-//		printf("The value at address of dir is: %d\n", process->arg.v[param]);
 	}
 }
 
@@ -107,10 +99,9 @@ void	find_and_store_values(t_vm *vm, t_process *process, int jndex, int argc)
 	jndex = circulate_index(jndex);
 	while (argc != 0)
 	{
-		find_value(vm, process, jndex, i);
+		find_value(vm, process, circulate_index(jndex), i);
 		printf("\nstored values:\n process->arg.v[%d] = %d\n", i, process->arg.v[i]);
 		jndex = circulate_index(jndex + find_arg_size(process, i));
-
 		argc--;
 		i++;
 	}

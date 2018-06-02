@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 03:08:54 by eliu              #+#    #+#             */
-/*   Updated: 2018/06/02 15:34:11 by eliu             ###   ########.fr       */
+/*   Updated: 2018/06/02 16:28:05 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,12 @@
 
 // Double check idx_mod;
 
+void	print_big_endian(int x)
+{
+	printf("print big endian |%x| |%x| |%x| |%x|\n", (x << 24) & 0xff000000, (x << 16) & 0xff0000,
+		(x << 8) & 0xff00, x & 0xff);
+}
+
 int		ft_ld(t_vm *vm, t_champ *champ, t_process *process)
 {
 	int		i;
@@ -46,10 +52,12 @@ int		ft_ld(t_vm *vm, t_champ *champ, t_process *process)
 				i = process->index + circulate_index(process->arg.v[0]) % IDX_MOD;
 				read_4_bytes(vm, process, i, 0);
 			}
-			printf("\nThe loaded value is: |%d|\n", process->arg.v[0]);
+			print_big_endian(process->arg.v[0]);
 			if ((process->regs[process->arg.v[1]] = (process->arg.v[0])/* % IDX_MOD*/) == 0)
+			{
 				process->carry = 1;
-			printf("Register value is: |%d|\n", process->arg.v[1]);
+				print_big_endian(process->arg.v[1]);
+			}
 		}
 		else
 			process->carry = 0;

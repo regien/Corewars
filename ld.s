@@ -4,11 +4,18 @@ value of the first argument into the second argument which is always a registry
 (the first argument can be a direct or indirect and the second value is always
 a registry)."
 
+# test positive direct, and indirect, and negative indirect. registers bounds.
+
+
 loadval:
-	ld -4092, r2
+	ld 0, r2
+#	ld 8184, r2
+#	ld %513, r2
+#	ld %-514, r2
+
 
 display:
-	st r2, 17
+	st r2, -2
 
 jump:
 	and r3, %0, r3
