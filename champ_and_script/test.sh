@@ -1,4 +1,6 @@
-echo 'VM:'
+echo '-------------------------------------------------------------------------------'
+echo 'V M :'
+echo '-------------------------------------------------------------------------------'
 echo 'Big champ: ./corewar test_champs/kilochamp.cor'
 ./corewar test_champs/kilochamp.cor
 echo ''
@@ -14,8 +16,9 @@ echo ''
 echo 'No code: ./corewar test_champs/nocode.cor'
 ./corewar test_champs/nocode.cor
 echo ''
-echo ''
-echo 'ASM:'
+echo '-------------------------------------------------------------------------------'
+echo 'A S M :'
+echo '-------------------------------------------------------------------------------'
 echo 'Nameless champ: ./asm test_champs/nameless.s'
 ./asm test_champs/nameless.s
 echo ''
@@ -40,4 +43,24 @@ echo ''
 echo 'No code: ./asm test_champs/nocode.s'
 ./asm test_champs/nocode.s
 echo ''
+echo 'Invalid char in label: ./asm test_champs/invldchar.s'
+./asm test_champs/invldchar.s
+echo ''
+echo 'Invalid op: ./asm test_champs/invldop.s'
+./asm test_champs/invldop.s
+echo ''
+echo 'Extra arg in op: ./asm test_champs/extra_arg.s'
+./asm test_champs/extra_arg.s
+echo ''
+echo 'Wrong arg type in op: ./asm test_champs/wrong_arg_type.s'
+./asm test_champs/wrong_arg_type.s
+echo ''
+echo 'No colon at end of label: ./asm test_champs/no_colon.s'
+./asm test_champs/no_colon.s
+echo ''
 echo 'Testing Complete!'
+
+#Manualy tests:
+#
+#VM:
+# 
