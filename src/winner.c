@@ -6,7 +6,7 @@
 /*   By: gmalpart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/29 01:05:21 by gmalpart          #+#    #+#             */
-/*   Updated: 2018/06/01 23:03:08 by eliu             ###   ########.fr       */
+/*   Updated: 2018/06/02 15:21:50 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ int		procceses_alive(t_vm *vm)
 	i = -1;
 	while (++i < vm->players)
 	{
+//		kill_processes(&(vm->champs[i].processes));
 		temp = (vm->champs[i].processes);
 		while (temp)
 		{
