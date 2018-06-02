@@ -29,7 +29,7 @@ int		ft_lld(t_vm *vm, t_champ *champ, t_process *process)
 	(void)champ;
 	if (any(process, 0) && reg(process, 1))
 	{
-		store_values(vm, process, process->index + 2, 2);
+		find_and_store_values(vm, process, process->index + 2, 2);
 		if (reg(process, 0) && reg_bounds(process->arg.v[0]))
 		{	
 			process->carry = 0;

@@ -30,14 +30,12 @@
 
 int		ft_st(t_vm *vm, t_champ *champ, t_process *process)
 {
-	int 	jndex;
-
-	printf("ft_st: original address = |%d|, parameter reading address: |%d| ", process->index, jndex);
+	printf("ft_st: original address = |%d|, parameter reading address: |%d| ", process->index, process->index + 2);
 	ft_putendl("ft_st");
 	(void)champ;
 	if (reg(process, 0) && reg_ind(process, 1))
 	{
-		store_values(vm, process, process->index + 2, 2);
+		find_and_store_values(vm, process, process->index + 2, 2);
 //		check_boundaries(process->arg, 
 		if (reg_bounds(process->arg.v[0]) == 1)
 		{
