@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 15:00:20 by adubugra          #+#    #+#             */
-/*   Updated: 2018/06/01 20:08:43 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/06/01 22:41:09 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -166,7 +166,8 @@ void	handle_cycle_to_die(t_vm *vm)
 		while (++i < vm->players)
 		{
 			vm->champs[i].lives_counted = 0;
-			reset_values_processes(&(vm->champs[i].processes));
+//			reset_values_processes(&(vm->champs[i].processes)); reseting the value of
+//			processes withouth reseting
 		}
 	printf("Total number of lives = |%d|\n", vm->total_lives);
 	vm->nbr_checks += 1;
