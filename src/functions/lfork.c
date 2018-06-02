@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 06:17:20 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/31 10:15:11 by eliu             ###   ########.fr       */
+/*   Updated: 2018/06/01 20:38:46 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int		ft_lfork(t_vm *vm, t_champ *champ, t_process *process)
 
 	new = NULL; // NULLYFYING this pointer for FLAGS_ERROS
 	read_2_bytes(vm, process, process->index + 1, 0);
-	new = add_process(champ, circulate_index(process->arg.v[0]));
+//	new = add_process(champ, circulate_index(process->arg.v[0]));
+	champ->proce add_process();
 	return (1);
 }

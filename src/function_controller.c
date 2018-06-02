@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 15:00:20 by adubugra          #+#    #+#             */
-/*   Updated: 2018/06/01 19:18:05 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/06/01 20:08:43 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,27 @@ void	reset_values_processes(t_process **p)
 	}
 }
 
-//#define INCREASE_NRB_CHECKS vm->nbr_checks += 1
+int		nbr_of_pc_alive(t_vm *vm)
+{
+	int			pc_alive;
+	int			i;
+	t_process	*temp;
+
+	pc_alive = 0;
+	i = -1;
+	while (++i < vm->players)
+	{
+		temp = vm->champs[i].processes;
+		while (temp)
+		{
+			if (temp->process_alive == 1)
+				pc_alive++;
+			temp = temp->next;
+		}
+	}
+	printf("INNER FUNCTION - number of process that are still alive = %d\n", pc_alive);
+	return (pc_alive);
+}
 
 /*
 **	// if cycle_to_die == cycle_to_die_temp && checks == MAX_CHECKS
@@ -107,17 +127,17 @@ void	handle_cycle_to_die(t_vm *vm)
 {
 	int			i;
 
-	// check nbr_lives - count lives of every proccess
-//	if ((vm->nbr_checks == MAX_CHECKS) && (vm->cycle_to_die == vm->cycle_to_die_last))
-//	{
-//		vm->cycle_to_die -= CYCLE_DELTA;
-//	}
-	if (vm->total_lives >= NBR_LIVE || (int)(vm->last_to_live) == 0 \
+	// kill HAVE TO BE HERE
+	// DOUBLE CHECK
+	i = -1;
+	while (++i < vm->players)
+		kill_processes(&(PROCESS));
+	
+//	if (vm->total_lives >= NBR_LIVE || (int)(vm->last_to_live) == 0 
+	if (vm->total_lives >= NBR_LIVE || nbr_of_pc_alive(vm) == 0 \
 		|| vm->nbr_checks >= MAX_CHECKS)
 	{
 		vm->cycle_to_die -= CYCLE_DELTA;
-//		if (vm->cycle_to_die <= 0)
-//			continue ;
 		vm->cycle_to_die_last = (unsigned int)vm->cycles + (unsigned int)vm->cycle_to_die;
 		printf("MOTHERFUCKER WE ARE DECREMENTING CYCLE TO DIE, new value = %u\n", vm->cycle_to_die);
 		printf("IF STATEMENT WE ARE PRINTING, new value = %u\n", vm->cycle_to_die_last);
@@ -125,10 +145,9 @@ void	handle_cycle_to_die(t_vm *vm)
 		vm->nbr_lives = 0;
 		vm->nbr_checks = 0;
 		vm->total_lives = 0;
-	//	vm->cycle_to_die_last = vm->cycle_to_die;
-		i = -1;
-		while (++i < vm->players)
-			kill_processes(&(PROCESS));
+//		i = -1;
+//		while (++i < vm->players)
+//			kill_processes(&(PROCESS));
 		i = -1;
 		while (++i < vm->players)
 		{
@@ -173,10 +192,6 @@ void	controller(t_vm *vm)
 		i = vm->players;
 		while (0 <= --i)
 			run_processes(vm, PROCESS, i);
-		// handles correctly
-//		if (((int)((*vm).cycles) % (int)((*vm).cycle_to_die)) == 0)
-//		if ((((int)vm->cycles) % (int)(vm->cycle_to_die)) == 0)
-//		if ((unsigned int)((*vm).cycles) == (unsigned int)((*vm).cycle_to_die_last))
 		if (operation_cycle_to_die(vm->cycles, vm->cycle_to_die_last) == 1 || \
 			vm->cycle_to_die <= 0)
 		{

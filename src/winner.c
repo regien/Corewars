@@ -6,7 +6,7 @@
 /*   By: gmalpart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/29 01:05:21 by gmalpart          #+#    #+#             */
-/*   Updated: 2018/05/31 05:06:16 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/06/01 20:16:45 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,10 +80,15 @@ void	declare_winner(t_vm *vm)
 	int		i;
 
 	i = -1;
-	vm->last_to_live *= -1;
+	(vm->last_to_live) *= -1;
 	printf("vm->last_to_live = |%d|\n", vm->last_to_live);
 	while (++i < vm->players)
 		if (vm->last_to_live == vm->champs[i].plyr_nbr)
+		{
+			printf("COMP previus comparision| %d == %d |\n", vm->last_to_live, \
+					vm->champs[i].plyr_nbr);
 			display_information_winner(&(vm->champs[vm->last_to_live]));
-	display_information_winner(&(vm->champs[0]));
+		}
+//	display_information_winner(&(vm->champs[0]));
+	display_information_winner(&(vm->champs[(vm->players - 1)]));
 }
