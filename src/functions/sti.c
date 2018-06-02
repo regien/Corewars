@@ -24,18 +24,11 @@
 
 int		ft_sti(t_vm *vm, t_champ *champ, t_process *process)
 {
-	int 	jndex;
-
-	jndex = process->index + 1;
-	if (g_ops[process->curr_op].descriptor == 1)
-	{
-		jndex += 1;
-	}
 	ft_putendl("ft_sti");
 	(void)champ;
 	if (reg(process, 0) && any(process, 1) && reg_dir(process, 2))
 	{
-		store_values(vm, process, jndex, 3);
+		store_values(vm, process, process->index + 2, 3);
 		if (reg(process, 0) && reg_bounds(process->arg.v[0]))
 			return (1);
 		if (reg(process, 1) && reg_bounds(process->arg.v[1]))

@@ -29,21 +29,15 @@
 int		ft_lldi(t_vm *vm, t_champ *champ, t_process* process)
 {
 	int 	s;
-	int 	jndex;
 	int 	register_temp;
 
-	jndex = process->index + 1;
-	if (g_ops[process->curr_op].descriptor == 1)
-	{
-		jndex += 1;
-	}
 	ft_putendl("ft_lldi");
 
 	(void)vm;
 	(void)champ;
 	if (any(process, 0) && reg_dir(process, 1) && reg(process, 2))
 	{
-		store_values(vm, process, jndex, 3);
+		store_values(vm, process, process->index + 2, 3);
 		if (reg(process, 0) && reg_bounds(process->arg.v[0]))
 		{
 			process->carry = 0;

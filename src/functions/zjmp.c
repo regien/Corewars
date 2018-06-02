@@ -26,7 +26,6 @@
 int		ft_zjmp(t_vm *vm, t_champ *champ, t_process *process)
 {
 	ft_putendl("ft_zjmp\n");
-	(void)vm;
 	(void)champ;
 	if (process->carry == 1)
 	{
