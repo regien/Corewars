@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 15:00:20 by adubugra          #+#    #+#             */
-/*   Updated: 2018/06/02 16:08:10 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/06/02 16:25:55 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,73 +55,8 @@ void	run_processes(t_vm *vm, t_process *root, int i)
 	}
 }
 
-/*
-void	kill_processes(t_process **newhead)
-{
-	t_process	*tmp;
-	t_process	*
-
-	tmp = NULL;
-	if (!((*newhead)))
-		return ;
-	while((*newhead)->next)
-	{
-		if (!((*newhead)->next->process_alive)) // kill_process
-		{
-			tmp = (*newhead)->next;
-			(*newhead)->next = (*newhead)->next->next;
-			free(tmp);
-		}
-		else
-			(*newhead) = (*newhead)->next;
-	}
-	if (!((*newhead)->process_alive))
-	{
-		tmp = *newhead;
-		*newhead = (*newhead)->next;
-		free(tmp);
-	}
-}
-*/
-
-/*
-** might not be working correctly because the head is not being modified correctly
-*/
-
-/*
-void	kill_processes(t_process **newhead)
-{
-	t_process	*tmp;
-	t_process	*iter;
-
-	tmp = NULL;
-	if (!((*newhead)))
-		return ;
-	iter = (*newhead)->next;
-	while(iter)
-	{
-		if (!(iter->process_alive)) // kill_process
-		{
-			tmp = iter;
-			iter = tmp->next;
-			free(tmp);
-			printf("PROCESS DELETED\n");
-		}
-		else
-			iter = iter->next;
-	}
-	if (!((*newhead)->process_alive))
-	{
-		tmp = *newhead;
-		*newhead = (*newhead)->next;
-		free(tmp);
-	}
-}
-*/
-
 void	kill_processes(t_process **head)
 {
-//	t_process	*newhead;
 	t_process	*previus;
 	t_process	*current;
 
