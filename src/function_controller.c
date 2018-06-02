@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 15:00:20 by adubugra          #+#    #+#             */
-/*   Updated: 2018/06/01 22:41:09 by eliu             ###   ########.fr       */
+/*   Updated: 2018/06/01 23:37:55 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,9 +55,11 @@ void	run_processes(t_vm *vm, t_process *root, int i)
 	}
 }
 
+/*
 void	kill_processes(t_process **newhead)
 {
 	t_process	*tmp;
+	t_process	*
 
 	tmp = NULL;
 	if (!((*newhead)))
@@ -72,6 +74,35 @@ void	kill_processes(t_process **newhead)
 		}
 		else
 			(*newhead) = (*newhead)->next;
+	}
+	if (!((*newhead)->process_alive))
+	{
+		tmp = *newhead;
+		*newhead = (*newhead)->next;
+		free(tmp);
+	}
+}
+*/
+
+void	kill_processes(t_process **newhead)
+{
+	t_process	*tmp;
+	t_process	*iter;
+
+	tmp = NULL;
+	if (!((*newhead)))
+		return ;
+	iter = (*newhead)->next;
+	while(iter)
+	{
+		if (!(iter->process_alive)) // kill_process
+		{
+			tmp = iter->next;
+			iter = iter->next;
+			free(tmp);
+		}
+		else
+			iter = iter->next;
 	}
 	if (!((*newhead)->process_alive))
 	{
@@ -129,6 +160,7 @@ void	handle_cycle_to_die(t_vm *vm)
 
 	// kill HAVE TO BE HERE
 	// DOUBLE CHECK
+	nbr_of_pc_alive(vm);
 	i = -1;
 	while (++i < vm->players)
 		kill_processes(&(PROCESS));
