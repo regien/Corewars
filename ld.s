@@ -5,7 +5,7 @@ value of the first argument into the second argument which is always a registry
 a registry)."
 
 loadval:
-	ld -1, r2
+	ld -4092, r2
 
 display:
 	st r2, 17

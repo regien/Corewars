@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 05:03:52 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/30 04:39:05 by eliu             ###   ########.fr       */
+/*   Updated: 2018/06/02 00:37:41 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int		ft_ldi(t_vm *vm, t_champ *champ, t_process *process)
 		}
 		convert_if_register_number_to_value(process, 0);
 		convert_if_register_number_to_value(process, 1);
-		s = process->index + (process->arg.v[0] + process->arg.v[1]) % IDX_MOD;
+		s = process->index + cirulate_index((process->arg.v[0] + process->arg.v[1])) % IDX_MOD;
 		s = circulate_index(s);
 		read_2_bytes(vm, process, s, 2);
 		read_4_bytes(vm, process, process->index + s % IDX_MOD, 2);

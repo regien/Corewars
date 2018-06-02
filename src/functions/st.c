@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 03:18:56 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/30 23:10:59 by eliu             ###   ########.fr       */
+/*   Updated: 2018/06/02 00:36:05 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ int		ft_st(t_vm *vm, t_champ *champ, t_process *process)
 			printf("reg value before conversion: |%d|\n", process->arg.v[0]);
 			convert_if_register_number_to_value(process, 0);
 			printf("else if: ind value of reg is |%d|\n", process->arg.v[0]);
-			store_big_endian(vm, process->arg.v[0], (process->arg.v[1] % IDX_MOD) + process->index);
+			store_big_endian(vm, process->arg.v[0], (circulate_index(process->arg.v[1]) % IDX_MOD) + process->index);
 		}
 		return (0);
 	}
