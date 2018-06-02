@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 15:00:20 by adubugra          #+#    #+#             */
-/*   Updated: 2018/06/02 14:57:51 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/06/02 15:27:16 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,8 +102,9 @@ void	kill_processes(t_process **newhead)
 		if (!(iter->process_alive)) // kill_process
 		{
 			tmp = iter;
-			iter = iter->next;
+			iter = tmp->next;
 			free(tmp);
+			printf("PROCESS DELETED\n");
 		}
 		else
 			iter = iter->next;
