@@ -6,7 +6,7 @@
 /*   By: gmalpart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 17:04:29 by gmalpart          #+#    #+#             */
-/*   Updated: 2018/05/30 22:58:04 by eliu             ###   ########.fr       */
+/*   Updated: 2018/06/01 04:36:32 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void		init_vm(t_vm *vm)
 	vm->nbr_checks = 0;
 	vm->nbr_lives = 0;
 	vm->players = 0;
+	vm->player_color = 0;
 	vm->cycles = 0;
 	vm->cycle_to_die = CYCLE_TO_DIE;
 	vm->cycle_to_die_last = CYCLE_TO_DIE;
@@ -40,7 +41,6 @@ void		init_vm(t_vm *vm)
 	vm->flags_args.aff = 1;
 
 	vm->total_lives = 0;
-	vm->cycle_to_die_last = CYCLE_TO_DIE;
 }
 
 int		set_dump_number(int ac, int *i, char **av, t_flags *flags)

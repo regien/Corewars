@@ -6,11 +6,25 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 22:22:19 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/30 21:25:07 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/06/01 04:11:35 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/corewar.h"
+
+#define PNBR champ->plyr_nbr
+
+void	set_vm_memory(t_vm *vm, int i, int players, t_champ *champ)
+{
+	int mem_start;
+
+	mem_start = MEM_SIZE / players * i;
+	vm->champs[i].processes = set_process(&(vm->memory[0]), mem_start, PNBR);
+	// init_father_champ in every proccess
+	vm->champs[i].processes->father_champ = &(vm->champs[i]);
+	read(vm->champs[i].fd, &(vm->memory[mem_start]), vm->champs[i].size);
+	//ft_printf("memory: %x\n", vm->memory[mem_start + vm->champs[i].size - 1]);
+}
 
 int		read_files(int players, t_vm *vm)
 {
@@ -73,16 +87,3 @@ int		set_champ_comment(t_champ *champ)
 	return (0);
 }
 
-#define PNBR champ->plyr_nbr
-
-void	set_vm_memory(t_vm *vm, int i, int players, t_champ *champ)
-{
-	int mem_start;
-
-	mem_start = MEM_SIZE / players * i;
-	vm->champs[i].processes = set_process(&(vm->memory[0]), mem_start, PNBR);
-	// init_father_champ in every proccess
-	vm->champs[i].processes->father_champ = &(vm->champs[i]);
-	read(vm->champs[i].fd, &(vm->memory[mem_start]), vm->champs[i].size);
-	//ft_printf("memory: %x\n", vm->memory[mem_start + vm->champs[i].size - 1]);
-}

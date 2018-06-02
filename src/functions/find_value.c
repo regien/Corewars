@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/27 23:35:02 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/30 22:55:52 by eliu             ###   ########.fr       */
+/*   Updated: 2018/06/01 05:09:50 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,14 @@ void	find_register(t_vm *vm, t_process *process, int index, int i)
 	int register_number;
 
 	register_number = vm->memory[circulate_index(index)] /* & 0xFF */;
-	printf("find register: the value found was |%d|, ", register_number);
 	if (!reg_bounds(register_number))
 	{
 		process->arg.v[i] = register_number;
-		printf("stored number is: |%d|\n", process->arg.v[i]);
+		printf("The register number found and stored is: |%d|\n", process->arg.v[i]);
 	}
 	else
 	{
-		printf("does this fail\n");
+		printf("Register out of bounds, regX set to 0\n");
 		process->arg.v[i] = 0;
 	}
 }
@@ -77,7 +76,7 @@ int 	find_arg_size(t_process *process, int i)
 	{
 		return (2);
 	}
-	ft_putendl("\n\n\n!!!!!error finding arg size\n\n\n");
+	ft_putendl("\n			ERROR FINDING ARGUMENT SIZE\n");
 	return (0);
 }
 
@@ -109,7 +108,7 @@ void	store_values(t_vm *vm, t_process *process, int jndex, int argc)
 	while (argc != 0)
 	{
 		find_value(vm, process, jndex, i);
-		printf("\nstored values:\n process->arg.v[%d] = %d\n\n\n", i, process->arg.v[i]);
+		printf("\nstored values:\n process->arg.v[%d] = %d\n", i, process->arg.v[i]);
 		jndex = circulate_index(jndex + find_arg_size(process, i));
 
 		argc--;

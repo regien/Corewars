@@ -6,11 +6,25 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/29 00:38:09 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/30 05:45:30 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/06/01 05:53:21 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "corewar.h"
+
+void	copy_registers(t_process *process, t_process *new)
+{
+	int	i;
+
+	i = 0;
+	while (i <= REG_NUMBER)
+	{
+		new->regs[i] = process->regs[i];
+
+		ft_printf("process->regs[%d] = |%d|		new->regs[%d] = |%d|\n", process->regs[i], new->regs[i]);
+		i++;
+	}
+}
 
 void	print_regs(int a[])
 {
@@ -26,7 +40,7 @@ char	reg_bounds(int reg)
 {
 	if (1 <= reg && reg <= 16)
 		return (0);
-	printf("out of register bounds!\n");
+	printf("out of register bounds! \n");
 	return (1);
 }
 

@@ -6,21 +6,36 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 01:20:26 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/26 18:37:41 by eliu             ###   ########.fr       */
+/*   Updated: 2018/06/01 04:27:37 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/corewar.h"
 
 /*
-** Initiliazes the 16 functions in every proccess added
+**	#DEFINE PLACE_HOLDER	ops[0x00]
+**	#DEFINE LIVE			ops[0x01]
+**	#DEFINE LD				ops[0x02]
+**	#DEFINE ST				ops[0x03]
+**	#DEFINE ADD				ops[0x04]
+**	#DEFINE	SUB				ops[0x05]
+**	#DEFINE AND				ops[0x06]
+**	#DEFINE OR				ops[0x07]
+**	#DEFINE XOR				ops[0x08]
+**	#DEFINE ZJMP			ops[0x09]
+**	#DEFINE LDI				ops[0x0a]
+**	#DEFINE STI				ops[0x0b]
+**	#DEFINE FORK			ops[0x0c]
+**	#DEFINE LLD				ops[0x0d]
+**	#DEFINE LLDI			ops[0x0e]
+**	#DEFINE LFORK			ops[0x0f]
+**	#DEFINE AFF				ops[0x10]
 */
 
-int		ft_put(char *str)
-{
-	ft_putstr(str);
-	return (1);
-}
+/*
+**	Truncations apply to direct (DIR) values. A normal direct size is REG_SIZE
+**	(4) bytes and a truncated is two.
+*/
 
 void	set_truncate(t_op *ops)
 {
@@ -42,6 +57,18 @@ void	set_truncate(t_op *ops)
 	ops[0xf].truncate = 1;
 	ops[0x10].truncate = 0;
 }
+
+/*
+**	Acb also known as Access method Control Block is a discriptor of the
+**	parameters following the operation execution code. In binary, it is an
+**	octect containing potentially up to 3 parameters (max) and described in 
+**	duplets. 01 is the code for register (1 byte), 10 is the code for direct
+**	(2 or 4 bytes) and 11 is the code for indirect (2 bytes).
+**	Eg: An opcode consisting of 01 10 11 00 for size of char contains
+**	a register for the first parameter, a direct for the second, and
+**	An indirect for the last. The following is an initilization whether or not
+**	an encoding byte (acb) exists for the following operations.
+*/
 
 void	set_ops_acb(t_op *ops)
 {
@@ -65,6 +92,11 @@ void	set_ops_acb(t_op *ops)
 	set_truncate(ops);
 }
 
+/*
+**	The following is the amount of cycles it takes for each operaration needed
+**	to wait before execution.
+*/
+
 void	set_ops_cycles(t_op *ops)
 {
 	ops[0].cycles = 0;
@@ -87,6 +119,10 @@ void	set_ops_cycles(t_op *ops)
 	set_ops_acb(ops);
 }
 
+/*
+**	Below is the declaration of the number of arguments each operation takes in.
+*/
+
 void	set_ops_args(t_op *ops)
 {
 	ops[0].args = 0;
@@ -108,6 +144,10 @@ void	set_ops_args(t_op *ops)
 	ops[0x10].args = 1;
 	set_ops_cycles(ops);
 }
+
+/*
+**	Function pointers in C. I'm sure you know what those are ;)
+*/
 
 void	init_ops(t_op *ops)
 {

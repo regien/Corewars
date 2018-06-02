@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/18 11:16:17 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/31 10:01:39 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/06/01 05:57:38 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 //void		get_type(t_command_args *arg, char octet)
 void		get_type(t_command_args *arg, unsigned char octet)
 {
-	printf("value of octect to get TYPE FROM : %d\n", octet);
+	printf("Octect int value: |%d|\n", octet);
 	arg->type[0] = (octet >> 6) & 3;
-	printf("GET_TYPE of arg 0 is %d", arg->type[0]);
+	printf("Type is: |%d|\n", arg->type[0]);
 	arg->type[1] = (octet >> 4) & 3;
 	arg->type[2] = (octet >> 2) & 3;
 }
@@ -58,10 +58,10 @@ void	execute(t_vm *vm, t_process *p)
 	if (curr_op != 9)
 		set_index(&(p->index), p->arg.args_size + \
 			(g_ops[curr_op].descriptor ? 1 : 0) + 1);
-	printf("MOD THE INDEX BY : |%d|\n", p->arg.args_size + \
+	printf("Index modifed by: |%d|\n", p->arg.args_size + \
 		(g_ops[curr_op].descriptor ? 1 : 0) + 1);
 	// we are setting the arg.size inside the function
-//	dump_memory(*vm); // <_ HERE _ DUMP _ MEMORY
+	dump_memory(*vm); // <_ HERE _ DUMP _ MEMORY
 // end working area	}
 	printf("index: %d\n", p->index);
 	//modify index here

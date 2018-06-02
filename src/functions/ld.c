@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 03:08:54 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/29 06:30:09 by eliu             ###   ########.fr       */
+/*   Updated: 2018/06/01 06:06:17 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ int		ft_ld(t_vm *vm, t_champ *champ, t_process *process)
 	if (dir_ind(process, 0) && reg(process, 1))
 	{
 		store_values(vm, process, jndex, 2);
+print_regs(process->regs);
+print_regs(process->regs);
 		if (reg_bounds(process->arg.v[1]) == 0)
 		{
 			if (ind(process, 0))
@@ -59,6 +61,8 @@ int		ft_ld(t_vm *vm, t_champ *champ, t_process *process)
 		{
 			process->carry = 0;
 		}
+ft_putendl("new process reg");
+print_regs(process->regs);		
 		return (0);
 	}
 	ft_putendl("ft_load error\n");
