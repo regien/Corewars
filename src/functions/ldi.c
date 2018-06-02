@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 05:03:52 by eliu              #+#    #+#             */
-/*   Updated: 2018/06/02 00:42:20 by eliu             ###   ########.fr       */
+/*   Updated: 2018/06/02 15:34:28 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@
 int		ft_ldi(t_vm *vm, t_champ *champ, t_process *process)
 {
 	int 	s;
-	int 	jndex;
 
 	ft_putendl("ft_ldi");
 	(void)champ;

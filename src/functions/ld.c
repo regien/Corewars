@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 03:08:54 by eliu              #+#    #+#             */
-/*   Updated: 2018/06/02 15:06:52 by eliu             ###   ########.fr       */
+/*   Updated: 2018/06/02 15:34:11 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@
 
 int		ft_ld(t_vm *vm, t_champ *champ, t_process *process)
 {
+	int		i;
+
 	ft_putendl("ft_ld");
 	(void)champ;
 	if (dir_ind(process, 0) && reg(process, 1))
