@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42->fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 05:16:48 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/30 20:03:22 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/06/02 15:10:41 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,20 +37,11 @@ int		ft_sti(t_vm *vm, t_champ *champ, t_process *process)
 	{
 		store_values(vm, process, jndex, 3);
 		if (reg(process, 0) && reg_bounds(process->arg.v[0]))
-		{	
-			process->carry = 0;
 			return (1);
-		}
 		if (reg(process, 1) && reg_bounds(process->arg.v[1]))
-		{	
-			process->carry = 0;
 			return (1);
-		}
 		if (reg(process, 2) && reg_bounds(process->arg.v[2]))
-		{	
-			process->carry = 0;
 			return (1);
-		}
 		convert_if_register_number_to_value(process, 0);
 		convert_if_register_number_to_value(process, 1);
 		convert_if_register_number_to_value(process, 2);
