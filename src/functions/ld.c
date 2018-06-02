@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 03:08:54 by eliu              #+#    #+#             */
-/*   Updated: 2018/06/01 23:50:41 by eliu             ###   ########.fr       */
+/*   Updated: 2018/06/02 00:14:42 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int		ft_ld(t_vm *vm, t_champ *champ, t_process *process)
 		{
 			if (ind(process, 0))
 			{
-				read_4_bytes(vm, process, process->index + process->arg.v[0] % IDX_MOD, 0);
+				read_4_bytes(vm, process, process->index + circulate_index(process->arg.v[0]) % IDX_MOD, 0);
 			}
 			printf("\nThe loaded value is: |%d|\n", process->arg.v[0]);
 			if ((process->regs[process->arg.v[1]] = (process->arg.v[0])/* % IDX_MOD*/) == 0)
