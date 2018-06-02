@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 03:18:56 by eliu              #+#    #+#             */
-/*   Updated: 2018/06/02 15:16:04 by eliu             ###   ########.fr       */
+/*   Updated: 2018/06/02 15:17:32 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int		ft_st(t_vm *vm, t_champ *champ, t_process *process)
 	(void)champ;
 	if (reg(process, 0) && reg_ind(process, 1))
 	{
-		store_values(vm, process, jndex, 2);
+		store_values(vm, process, process->index + 2, 2);
 //		check_boundaries(process->arg, 
 		if (reg_bounds(process->arg.v[0]) == 1)
 		{

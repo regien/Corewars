@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 03:06:43 by eliu              #+#    #+#             */
-/*   Updated: 2018/05/31 08:09:05 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/06/02 14:58:13 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,17 +36,8 @@ int			ft_live(t_vm *vm, t_champ *champ, t_process *process)
 	read_4_bytes(vm, process, process->index + 1, 0);
 	process->process_alive = 1;
 	process->player_alive = process->arg.v[0];
-	int i;
 
-	i = -1;
-/*	while ()
-	if (process->player_alive == vm.champs[++i].plyr_nbr)
-	if (process->arg.v[0] < MAX_CHAMPS)
-	{
-		-1, -
-		vm->champ[process->arg.v[0].lives_counted += 1;
-	}
-*/	if (-4 <= process->arg.v[0] && process->arg.v[0] <= -1)
+	if (-4 <= process->arg.v[0] && process->arg.v[0] <= -1)
 		vm->last_to_live = process->arg.v[0];
 	printf("vm->last_live = %d <-------- MODIFYED PENDEJADA\n", process->arg.v[0]);
 	vm->total_lives += 1;

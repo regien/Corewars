@@ -19,19 +19,11 @@
 
 int		ft_add(t_vm *vm, t_champ *champ, t_process *process)
 {
-	int 	jndex;
-
-	jndex = process->index + 1;
-	if (g_ops[process->curr_op].descriptor == 1)
-	{
-		jndex += 1;
-	}
 	ft_putendl("ft_add");
-	(void)vm;
 	(void)champ;
 	if (reg(process, 0) && reg(process, 1) && reg(process, 2))
 	{
-		store_values(vm, process, jndex, 3);
+		store_values(vm, process, process->index + 2, 3);
 		if (reg_bounds(process->arg.v[0]) || reg_bounds(process->arg.v[1]) ||
 			(reg_bounds(process->arg.v[2])))
 		{
