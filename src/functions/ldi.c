@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 05:03:52 by eliu              #+#    #+#             */
-/*   Updated: 2018/06/02 15:34:28 by eliu             ###   ########.fr       */
+/*   Updated: 2018/06/02 22:19:48 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@
 int		ft_ldi(t_vm *vm, t_champ *champ, t_process *process)
 {
 	int 	s;
+	int		temp;
 
 	ft_putendl("ft_ldi");
 	(void)champ;
@@ -51,13 +52,16 @@ int		ft_ldi(t_vm *vm, t_champ *champ, t_process *process)
 			process->carry = 0;
 			return (1);
 		}
+		temp = process->arg.v[2];
 		convert_if_register_number_to_value(process, 0);
 		convert_if_register_number_to_value(process, 1);
-		s = process->index + circulate_index((process->arg.v[0] + process->arg.v[1])) % IDX_MOD;
+		printf("The values os arg.v[0] and arg.v[1] are: |%d| |%d|\n", process->arg.v[0], process->arg.v[1]);
+		s = process->index + (process->arg.v[0] + process->arg.v[1]) % IDX_MOD;
 		s = circulate_index(s);
-		read_2_bytes(vm, process, s, 2);
-		read_4_bytes(vm, process, process->index + s % IDX_MOD, 2);
-		if (process->regs[process->arg.v[2]] == 0)
+		printf("The value of s is: |%d|\n", s);
+		read_4_bytes(vm, process, s, 2);
+		process->regs[temp] = process->arg.v[2];
+		if (process->regs[temp] == 0)
 		{
 			process->carry = 1;
 		}

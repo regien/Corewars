@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/29 23:46:48 by eliu              #+#    #+#             */
-/*   Updated: 2018/06/02 20:59:24 by eliu             ###   ########.fr       */
+/*   Updated: 2018/06/02 21:59:52 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@ void	read_4_bytes(t_vm *vm, t_process *process, int index, int i)
 	process->arg.v[i] += (vm->memory[circulate_index(index + 1)] & 0xFF) << 16;
 	process->arg.v[i] += (vm->memory[circulate_index(index + 2)] & 0xFF) << 8;
 	process->arg.v[i] += (vm->memory[circulate_index(index + 3)] & 0xFF);
-	print_big_endian(process->arg.v[i]);
+	printf("4 bytes read is: |%d|\n", process->arg.v[i]);
+	//print_big_endian(process->arg.v[i]);
 }
 
 void 	read_2_bytes(t_vm *vm, t_process *process, int index, int i)

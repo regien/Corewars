@@ -22,6 +22,9 @@ display:
 	st r5, r6
 	st r6, -500
 
+
+
+
 jump:
 	and r3, %0, r3
 	zjmp %:jump
