@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/06/02 15:39:08 by eliu             ###   ########.fr       */
+/*   Updated: 2018/06/02 20:58:17 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -366,6 +366,8 @@ char					ind(t_process *process, int x);
 void					read_4_bytes(t_vm *vm, t_process *process, int index, int i);
 void				 	read_2_bytes(t_vm *vm, t_process *process, int index, int i);
 void					store_big_endian(t_vm *vm, int value, int index);
+void					print_big_endian(int x);
+
 
 /*
 ** CONVERT_REGISTERS.c

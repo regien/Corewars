@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/29 23:46:48 by eliu              #+#    #+#             */
-/*   Updated: 2018/06/02 20:59:24 by eliu             ###   ########.fr       */
+/*   Updated: 2018/06/02 16:26:13 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	read_4_bytes(t_vm *vm, t_process *process, int index, int i)
 
 void 	read_2_bytes(t_vm *vm, t_process *process, int index, int i)
 {
-	printf("index we are reading from is: |%d|\n", index);
+	printf("index we are reading from is: |%d|\n"), index;
 	process->arg.v[i] = vm->memory[circulate_index(index)];
 	process->arg.v[i] = (process->arg.v[i] & 0xFF) << 8; //cast to char
 	process->arg.v[i] += vm->memory[circulate_index(index + 1)] & 0xFF;

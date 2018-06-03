@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 03:08:54 by eliu              #+#    #+#             */
-/*   Updated: 2018/06/02 16:28:05 by eliu             ###   ########.fr       */
+/*   Updated: 2018/06/02 20:58:43 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,6 @@
 */
 
 // Double check idx_mod;
-
-void	print_big_endian(int x)
-{
-	printf("print big endian |%x| |%x| |%x| |%x|\n", (x << 24) & 0xff000000, (x << 16) & 0xff0000,
-		(x << 8) & 0xff00, x & 0xff);
-}
 
 int		ft_ld(t_vm *vm, t_champ *champ, t_process *process)
 {
