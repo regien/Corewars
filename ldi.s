@@ -1,15 +1,20 @@
 .name "tacos"
 .comment "forever ese"
 
+#first params: REG | DIR | IND 
+#second params: DIR | REG
+#third param: REG
 pendejada:	
-			ldi r1, %0, r2
-			ldi	r1, r2, r3
+			ld %5, r2
+			ldi r1, %-1, r2
+			ldi	r1, r9, r3
 			
-			ldi %2, %2, r4
-			ldi %2, r4, r5
+			ldi %-2, %2, r4
+			ldi %-4097, r10, r5
 
-			ldi 0, %0, r6
-			ldi 0, r6, r7
+			ldi -9, %512, r6
+#			4245686019  -4519
+			ldi -4135, r16, r7
 
 			st r2,	500
 			st r3,	500
