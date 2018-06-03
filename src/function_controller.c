@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 15:00:20 by adubugra          #+#    #+#             */
-/*   Updated: 2018/06/02 15:27:16 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/06/02 16:25:55 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,113 +55,37 @@ void	run_processes(t_vm *vm, t_process *root, int i)
 	}
 }
 
-/*
-void	kill_processes(t_process **newhead)
+void	kill_processes(t_process **head)
 {
-	t_process	*tmp;
-	t_process	*
+	t_process	*previus;
+	t_process	*current;
 
-	tmp = NULL;
-	if (!((*newhead)))
-		return ;
-	while((*newhead)->next)
+	current = *head;
+	previus = NULL;
+	while (current)
 	{
-		if (!((*newhead)->next->process_alive)) // kill_process
+		if (current->process_alive == 0)
 		{
-			tmp = (*newhead)->next;
-			(*newhead)->next = (*newhead)->next->next;
-			free(tmp);
+			if (previus == NULL)
+			{
+				current = current->next;
+				free(*head);
+				*head = current;
+			}
+			else
+			{
+				previus->next = current->next;
+				free(current);
+				current = previus->next;
+			}
 		}
 		else
-			(*newhead) = (*newhead)->next;
-	}
-	if (!((*newhead)->process_alive))
-	{
-		tmp = *newhead;
-		*newhead = (*newhead)->next;
-		free(tmp);
-	}
-}
-*/
-
-/*
-** might not be working correctly because the head is not being modified correctly
-*/
-
-void	kill_processes(t_process **newhead)
-{
-	t_process	*tmp;
-	t_process	*iter;
-
-	tmp = NULL;
-	if (!((*newhead)))
-		return ;
-	iter = (*newhead)->next;
-	while(iter)
-	{
-		if (!(iter->process_alive)) // kill_process
 		{
-			tmp = iter;
-			iter = tmp->next;
-			free(tmp);
-			printf("PROCESS DELETED\n");
-		}
-		else
-			iter = iter->next;
-	}
-	if (!((*newhead)->process_alive))
-	{
-		tmp = *newhead;
-		*newhead = (*newhead)->next;
-		free(tmp);
-	}
-}
-
-/*
-t_process	*kill_processes(t_process **head)
-{
-	t_process	*newhead;
-	t_process	*iter;
-	t_process	*tmp;
-	int			i;
-
-	newhead = *head;
-	iter = head;
-	while (iter)
-	{
-		if (iter->process_alive == 0)
-		{
-			a
+			previus = current;
+			current = current->next;
 		}
 	}
-
-	// you figure out a better way 
-	t_process	*tmp;
-	t_process	*iter;
-
-	tmp = NULL;
-	if (!((*newhead)))
-		return ;
-	iter = (*newhead)->next;
-	while(iter)
-	{
-		if (!(iter->process_alive)) // kill_process
-		{
-			tmp = iter->next;
-			iter = iter->next;
-			free(tmp);
-		}
-		else
-			iter = iter->next;
-	}
-	if (!((*newhead)->process_alive))
-	{
-		tmp = *newhead;
-		*newhead = (*newhead)->next;
-		free(tmp);
-	}
 }
-*/
 
 
 void	reset_values_processes(t_process **p)
