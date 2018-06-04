@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 22:55:43 by adubugra          #+#    #+#             */
-/*   Updated: 2018/06/01 23:04:19 by eliu             ###   ########.fr       */
+/*   Updated: 2018/06/04 00:01:05 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,7 @@ t_process	*add_process(t_champ *champ, int index)
 	new = set_process(root->pc, index, champ->plyr_nbr);
 	new->father_champ = champ;
 	new->next = root;
+	new->carry = new->next->carry;
 	// here copy the registers of the next node (old head)
 	champ->processes = new;
 	return (new);

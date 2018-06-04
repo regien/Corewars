@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/18 11:16:17 by adubugra          #+#    #+#             */
-/*   Updated: 2018/06/01 21:54:06 by eliu             ###   ########.fr       */
+/*   Updated: 2018/06/03 23:47:58 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,13 @@ void		get_type(t_command_args *arg, unsigned char octet)
 	arg->type[2] = (octet >> 2) & 3;
 }
 
+int		check_carry(t_process *p)
+{
+	if (p->curr_op == 9 && p->carry == 0)
+		return (1);
+	else
+		return (0);
+}
 
 
 void	execute(t_vm *vm, t_process *p)
@@ -55,11 +62,15 @@ void	execute(t_vm *vm, t_process *p)
 			p->arg.args_size += 4;
 		else
 			p->arg.args_size += 2; // it was 3
-	if (curr_op != 9)
+	if (curr_op != 9 /*&& check_carry(p) == 0*/)
 		set_index(&(p->index), p->arg.args_size + \
 			(g_ops[curr_op].descriptor ? 1 : 0) + 1);
 	printf("Index modifed by: |%d|\n", p->arg.args_size + \
 		(g_ops[curr_op].descriptor ? 1 : 0) + 1);
+	if (curr_op == 9 && p->carry == 0)
+	{
+		set_index(&(p->index), 3);
+	}
 	// we are setting the arg.size inside the function
 	dump_memory(*vm); // <_ HERE _ DUMP _ MEMORY
 // end working area	}
