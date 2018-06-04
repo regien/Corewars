@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sti->c                                              :+:      :+:    :+:   */
+/*   sti.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eliu <marvin@42->fr>                        +#+  +:+       +#+        */
+/*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/16 05:16:48 by eliu              #+#    #+#             */
-/*   Updated: 2018/06/02 15:10:41 by eliu             ###   ########.fr       */
+/*   Created: 2018/06/03 16:33:25 by eliu              #+#    #+#             */
+/*   Updated: 2018/06/03 16:47:10 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,14 @@ int		ft_sti(t_vm *vm, t_champ *champ, t_process *process)
 		convert_if_register_number_to_value(process, 0);
 		convert_if_register_number_to_value(process, 1);
 		convert_if_register_number_to_value(process, 2);
+
+
 		if (ind(process, 1))
 		{
 			read_2_bytes(vm, process, (process->arg.v[1] + process->index) /* % IDX_MOD */, 1);
 		}
 		store_big_endian(vm, process->arg.v[0], \
-						((process->arg.v[1] + process->arg.v[2])) /*% IDX_MOD*/ + process->index);
+						(process->index + (process->arg.v[1] + process->arg.v[2])) /*% IDX_MOD*/);
 		return (0);
 	}
 	ft_putendl("ft_sti did not execute");
