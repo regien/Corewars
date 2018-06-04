@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 05:59:20 by eliu              #+#    #+#             */
-/*   Updated: 2018/06/03 00:01:44 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/06/04 00:20:42 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ int		ft_fork(t_vm *vm, t_champ *champ, t_process *process)
 	read_2_bytes(vm, process, process->index + 1, 0);
 //	champ->processes = add_process(champ, \
 //			circulate_index(process->arg.v[0] % IDX_MOD));
-	add_process(champ, circulate_index(process->index + /*(short)*/process->arg.v[0] % IDX_MOD));
+//	add_process(champ, circulate_index(process->index + /*(short)*/process->arg.v[0] % IDX_MOD));
+	add_process(process,champ, circulate_index(process->index + /*(short)*/process->arg.v[0] % IDX_MOD));
 	copy_registers(champ->processes->next, champ->processes);
-	printf("printing here instead\n");
 	return (1);
 }

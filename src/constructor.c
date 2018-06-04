@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 22:55:43 by adubugra          #+#    #+#             */
-/*   Updated: 2018/06/04 00:01:05 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/06/04 00:46:32 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,18 +51,16 @@ t_process	*set_process(char *pc_start, int mem_start, int player_nbr)
 	p->carry = 0;
 	p->cycle_counter = 0;
 	p->process_alive = 0;
-	p->state = FETCH;
+//	p->state = FETCH;
 	p->live = 0;
 	p->curr_op = 0;
+	
 	p->contador_delete_me = 0; // DELETE ME
 	return (p);
 }
 
-
-//void		copy_registers()
-
-
 // this is the new head
+/*
 t_process	*add_process(t_champ *champ, int index)
 {
 	t_process *new;
@@ -80,6 +78,32 @@ t_process	*add_process(t_champ *champ, int index)
 	new->father_champ = champ;
 	new->next = root;
 	new->carry = new->next->carry;
+	// here copy the registers of the next node (old head)
+	champ->processes = new;
+	return (new);
+}
+*/
+
+
+// New version - V.B.0
+t_process	*add_process(t_process *p, t_champ *champ, int index)
+{
+	t_process *new;
+	t_process *root;
+
+	if (!(champ && champ->processes))
+	{
+		ft_putendl("Constructor.c : Setting a new process failed!\n");
+		return (NULL);
+	}	
+	printf("Contructor.c : the index of where we are setting the \
+			new process is: |%d|\n", index);
+	root = champ->processes;
+	new = set_process(root->pc, index, champ->plyr_nbr);
+	new->father_champ = champ;
+	new->next = root;
+	new->carry = p->carry;
+	new->process_alive = p->carry;
 	// here copy the registers of the next node (old head)
 	champ->processes = new;
 	return (new);
