@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 05:03:52 by eliu              #+#    #+#             */
-/*   Updated: 2018/06/02 22:19:48 by eliu             ###   ########.fr       */
+/*   Updated: 2018/06/03 00:29:57 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@
 */
 
 //#define READ_2_BYTES read_2_bytes(vm, process, s, 2)
+
+
 
 
 int		ft_ldi(t_vm *vm, t_champ *champ, t_process *process)
@@ -52,10 +54,21 @@ int		ft_ldi(t_vm *vm, t_champ *champ, t_process *process)
 			process->carry = 0;
 			return (1);
 		}
+
 		temp = process->arg.v[2];
 		convert_if_register_number_to_value(process, 0);
 		convert_if_register_number_to_value(process, 1);
+		if (ind(process, 0))
+		{
+			read_4_bytes(vm, process, process->index + process->arg.v[0], 0);
+		}
+		if (ind(process, 1))
+		{
+			read_4_bytes(vm, process, process->index + process->arg.v[1], 1);
+		}
 		printf("The values os arg.v[0] and arg.v[1] are: |%d| |%d|\n", process->arg.v[0], process->arg.v[1]);
+	//	s = process->index + (process->arg.v[0] % IDX_MOD) + process->arg.v[1];
+		
 		s = process->index + (process->arg.v[0] + process->arg.v[1]) % IDX_MOD;
 		s = circulate_index(s);
 		printf("The value of s is: |%d|\n", s);
