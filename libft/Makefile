@@ -6,7 +6,7 @@
 #    By: adubugra <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/03/19 20:33:37 by adubugra          #+#    #+#              #
-#    Updated: 2018/05/16 01:35:29 by adubugra         ###   ########.fr        #
+#    Updated: 2018/06/03 18:00:56 by regien           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -111,12 +111,14 @@ OBJS = $(SRCS:.c=.o)
 all: $(NAME)
 
 comp: 
-		$(CC) -Wall -Wextra -I. -o libft_exec $(SRCS) main.c && ./libft_exec
+		$(CC) -I. -o libft_exec $(SRCS) main.c && ./libft_exec
+#		$(CC) -Wall -Wextra -I. -o libft_exec $(SRCS) main.c && ./libft_exec
 
 $(NAME):
-		@$(CC) $(FLAG) $(SRCS)
-		@$(LIB) $(NAME) $(OBJS)
-		@$(RLIB) $(NAME)
+		$(CC) -c -I. $(SRCS)
+		$(LIB) $(NAME) $(OBJS)
+		$(RLIB) $(NAME)
+#		@$(CC) $(FLAG) $(SRCS)
 
 clean:
 		@/bin/rm -f $(OBJS)

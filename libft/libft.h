@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 11:21:03 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/16 01:43:09 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/06/03 17:40:14 by regien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@
 # include <uuid/uuid.h>
 # include <time.h>
 # include <assert.h>
+# include <stdint.h>
+# include <inttypes.h>
 
 # define FALSE 0
 # define TRUE 1
