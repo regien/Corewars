@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/03 16:33:25 by eliu              #+#    #+#             */
-/*   Updated: 2018/06/03 16:47:10 by eliu             ###   ########.fr       */
+/*   Updated: 2018/06/04 00:41:54 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int		ft_sti(t_vm *vm, t_champ *champ, t_process *process)
 
 		if (ind(process, 1))
 		{
-			read_2_bytes(vm, process, (process->arg.v[1] + process->index) /* % IDX_MOD */, 1);
+			read_4_bytes(vm, process, (process->arg.v[1] + process->index) /* % IDX_MOD */, 1);
 		}
 		store_big_endian(vm, process->arg.v[0], \
 						(process->index + (process->arg.v[1] + process->arg.v[2])) /*% IDX_MOD*/);
