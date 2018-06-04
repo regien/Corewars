@@ -6,7 +6,7 @@
 /*   By: adubugra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 17:26:06 by adubugra          #+#    #+#             */
-/*   Updated: 2018/06/02 20:58:17 by eliu             ###   ########.fr       */
+/*   Updated: 2018/06/04 00:42:21 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,18 +123,16 @@ typedef struct			s_process
 	// everything else is set to 0; right now is initialized to -1 - somewhere
 	char				carry;
 	int					cycle_counter; // cycles to execute
-	char				state; // review if this is being used
+//	char				state; // review if this is being used
 	// 1 FETCH
 	// 2 WAIT
 	// 3 EXEC
 	char				live; // might be deleted , see constructor.c
 	char				process_alive; //replace it for live
 	char				player_alive; // adding it
-	//unsigned int		cycle_to_execute; (cycle + wait_op_cycles)
-	int					store_vm; // only eliu branch
 	struct s_process	*next;
 //	struct s_process	*prev;
-	int					contador_delete_me;
+	int					contador_delete_me; // delete in last step refactor
 }						t_process;
 
 typedef struct			s_champ
@@ -288,7 +286,8 @@ void					execute(t_vm *vm, t_process *process);
 
 //void					set_champs(t_champ *champ, char *filename);
 t_process				*set_process(char *pc_start, int mem_start, int player);
-t_process				*add_process(t_champ *champ, int index);
+//t_process				*add_process(t_champ *champ, int index);
+t_process				*add_process(t_process *p, t_champ *champ, int index);
 //void					kill_process(t_process *p);
 
 /*

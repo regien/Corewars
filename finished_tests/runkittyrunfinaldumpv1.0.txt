@@ -1,0 +1,1496 @@
+index: 1669
+value is 33554431
+ RUN_PROCCESES_index ROOT: 1666
+ | number of CYCLES = |178253|
+CURRENT OP = 9
+champs 1 prcss 2 executing op 9:
+ft_zjmp
+
+Carry == 0, zjmp fail!
+Index modifed by: |3|
+
+0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f
+0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54
+02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04
+0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b
+54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54
+04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff
+0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b
+54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff
+ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c
+0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff
+ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f
+0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff
+ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06
+0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01
+ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54
+06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f
+01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b
+54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f
+0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c
+0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09
+8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f
+0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c
+09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03
+0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08
+0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54
+03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01
+08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff
+0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b
+54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff
+ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c
+0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff
+ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f
+0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff
+ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06
+0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01
+ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54
+06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f
+01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b
+54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f
+0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c
+0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09
+8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f
+0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c
+09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03
+0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08
+0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54
+03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01
+08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b
+54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54
+01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c
+0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b
+54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f
+0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c
+0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05
+0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e
+0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54
+05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07
+0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b
+54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54
+07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c
+0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b
+54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f
+0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c
+0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02
+index: 1669
+value is 1409421068
+ RUN_PROCCESES_index ROOT: 1674
+ | number of CYCLES = |178253|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1669
+ | number of CYCLES = |178254|
+CURRENT OP = 1
+ RUN_PROCCESES_index ROOT: 1669
+ | number of CYCLES = |178254|
+CURRENT OP = 1
+ RUN_PROCCESES_index ROOT: 1674
+ | number of CYCLES = |178254|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1669
+ | number of CYCLES = |178255|
+CURRENT OP = 1
+ RUN_PROCCESES_index ROOT: 1669
+ | number of CYCLES = |178255|
+CURRENT OP = 1
+ RUN_PROCCESES_index ROOT: 1674
+ | number of CYCLES = |178255|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1669
+ | number of CYCLES = |178256|
+CURRENT OP = 1
+ RUN_PROCCESES_index ROOT: 1669
+ | number of CYCLES = |178256|
+CURRENT OP = 1
+ RUN_PROCCESES_index ROOT: 1674
+ | number of CYCLES = |178256|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1669
+ | number of CYCLES = |178257|
+CURRENT OP = 1
+ RUN_PROCCESES_index ROOT: 1669
+ | number of CYCLES = |178257|
+CURRENT OP = 1
+ RUN_PROCCESES_index ROOT: 1674
+ | number of CYCLES = |178257|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1669
+ | number of CYCLES = |178258|
+CURRENT OP = 1
+ RUN_PROCCESES_index ROOT: 1669
+ | number of CYCLES = |178258|
+CURRENT OP = 1
+ RUN_PROCCESES_index ROOT: 1674
+ | number of CYCLES = |178258|
+CURRENT OP = 11
+INNER FUNCTION - number of process that are still alive = 1
+INNER FUNCTION - number of process that are still alive = 1
+ELSE STATEMENT new value = 178444
+Total number of lives = |0|
+Total number of checks = |2|
+PENDEJADA TEMP->PROCCESES->ALIVE = |0|
+pendejada PROCESSES_ALIVE _ PENDEJADA NBR = |1|
+ RUN_PROCCESES_index ROOT: 1674
+ | number of CYCLES = |178259|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1674
+ | number of CYCLES = |178260|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1674
+ | number of CYCLES = |178261|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1674
+ | number of CYCLES = |178262|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1674
+ | number of CYCLES = |178263|
+CURRENT OP = 11
+champs 1 prcss 1 executing op 11:
+Octect int value: |84|
+Type is: |1|
+ft_sti
+Argument: |0| is a register
+Argument: |1| is a register
+Argument: |2| is a register
+The register number found and stored is: |2|
+
+stored values:
+ process->arg.v[0] = 2
+The register number found and stored is: |15|
+
+stored values:
+ process->arg.v[1] = 15
+The register number found and stored is: |12|
+
+stored values:
+ process->arg.v[2] = 12
+Argument: |0| is a register
+Argument: |1| is a register
+Argument: |2| is a register
+
+Storing index starting at: |1676|
+value of a = |2| value of b = |15| value of c = |12| value of d = 11
+ARGS_SIZE OF |0| PARAMETER  = SIZE OF |1|ARGS_SIZE OF |1| PARAMETER  = SIZE OF |2|ARGS_SIZE OF |2| PARAMETER  = SIZE OF |3|Index modifed by: |5|
+
+0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f
+0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54
+02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04
+0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b
+54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54
+04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff
+0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b
+54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff
+ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c
+0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff
+ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f
+0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff
+ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06
+0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01
+ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54
+06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f
+01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b
+54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f
+0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c
+0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09
+8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f
+0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c
+09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03
+0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08
+0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54
+03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01
+08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff
+0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b
+54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff
+ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c
+0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff
+ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f
+0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff
+ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06
+0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01
+ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54
+06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f
+01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b
+54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f
+0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c
+0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09
+8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f
+0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c
+09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03
+0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08
+0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54
+03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01
+08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b
+54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54
+01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c
+0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b
+54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f
+0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c
+0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05
+0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e
+0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54
+05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07
+0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b
+54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54
+07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c
+0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b
+54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f
+0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c
+0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02
+index: 1679
+value is 34540555
+ RUN_PROCCESES_index ROOT: 1679
+ | number of CYCLES = |178264|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1679
+ | number of CYCLES = |178265|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1679
+ | number of CYCLES = |178266|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1679
+ | number of CYCLES = |178267|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1679
+ | number of CYCLES = |178268|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1679
+ | number of CYCLES = |178269|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1679
+ | number of CYCLES = |178270|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1679
+ | number of CYCLES = |178271|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1679
+ | number of CYCLES = |178272|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1679
+ | number of CYCLES = |178273|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1679
+ | number of CYCLES = |178274|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1679
+ | number of CYCLES = |178275|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1679
+ | number of CYCLES = |178276|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1679
+ | number of CYCLES = |178277|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1679
+ | number of CYCLES = |178278|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1679
+ | number of CYCLES = |178279|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1679
+ | number of CYCLES = |178280|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1679
+ | number of CYCLES = |178281|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1679
+ | number of CYCLES = |178282|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1679
+ | number of CYCLES = |178283|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1679
+ | number of CYCLES = |178284|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1679
+ | number of CYCLES = |178285|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1679
+ | number of CYCLES = |178286|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1679
+ | number of CYCLES = |178287|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1679
+ | number of CYCLES = |178288|
+CURRENT OP = 11
+champs 1 prcss 1 executing op 11:
+Octect int value: |1|
+Type is: |0|
+ft_sti
+ft_sti did not execute
+
+			ERROR FINDING ARGUMENT SIZE
+
+
+			ERROR FINDING ARGUMENT SIZE
+
+
+			ERROR FINDING ARGUMENT SIZE
+
+ARGS_SIZE OF |0| PARAMETER  = SIZE OF |0|ARGS_SIZE OF |1| PARAMETER  = SIZE OF |0|ARGS_SIZE OF |2| PARAMETER  = SIZE OF |0|Index modifed by: |2|
+
+0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f
+0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54
+02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04
+0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b
+54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54
+04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff
+0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b
+54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff
+ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c
+0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff
+ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f
+0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff
+ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06
+0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01
+ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54
+06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f
+01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b
+54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f
+0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c
+0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09
+8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f
+0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c
+09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03
+0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08
+0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54
+03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01
+08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff
+0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b
+54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff
+ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c
+0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff
+ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f
+0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff
+ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06
+0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01
+ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54
+06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f
+01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b
+54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f
+0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c
+0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09
+8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f
+0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c
+09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03
+0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08
+0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54
+03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01
+08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b
+54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54
+01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c
+0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b
+54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f
+0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c
+0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05
+0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e
+0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54
+05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07
+0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b
+54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54
+07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c
+0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b
+54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f
+0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c
+0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02
+index: 1681
+value is 34540555
+ RUN_PROCCESES_index ROOT: 1682
+ | number of CYCLES = |178289|
+CURRENT OP = 0
+ RUN_PROCCESES_index ROOT: 1683
+ | number of CYCLES = |178290|
+CURRENT OP = 0
+ RUN_PROCCESES_index ROOT: 1684
+ | number of CYCLES = |178291|
+CURRENT OP = 0
+ RUN_PROCCESES_index ROOT: 1685
+ | number of CYCLES = |178292|
+CURRENT OP = 0
+ RUN_PROCCESES_index ROOT: 1685
+ | number of CYCLES = |178293|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1685
+ | number of CYCLES = |178294|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1685
+ | number of CYCLES = |178295|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1685
+ | number of CYCLES = |178296|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1685
+ | number of CYCLES = |178297|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1685
+ | number of CYCLES = |178298|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1685
+ | number of CYCLES = |178299|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1685
+ | number of CYCLES = |178300|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1685
+ | number of CYCLES = |178301|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1685
+ | number of CYCLES = |178302|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1685
+ | number of CYCLES = |178303|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1685
+ | number of CYCLES = |178304|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1685
+ | number of CYCLES = |178305|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1685
+ | number of CYCLES = |178306|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1685
+ | number of CYCLES = |178307|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1685
+ | number of CYCLES = |178308|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1685
+ | number of CYCLES = |178309|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1685
+ | number of CYCLES = |178310|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1685
+ | number of CYCLES = |178311|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1685
+ | number of CYCLES = |178312|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1685
+ | number of CYCLES = |178313|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1685
+ | number of CYCLES = |178314|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1685
+ | number of CYCLES = |178315|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1685
+ | number of CYCLES = |178316|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1685
+ | number of CYCLES = |178317|
+CURRENT OP = 11
+champs 1 prcss 1 executing op 11:
+Octect int value: |84|
+Type is: |1|
+ft_sti
+Argument: |0| is a register
+Argument: |1| is a register
+Argument: |2| is a register
+The register number found and stored is: |2|
+
+stored values:
+ process->arg.v[0] = 2
+The register number found and stored is: |15|
+
+stored values:
+ process->arg.v[1] = 15
+The register number found and stored is: |12|
+
+stored values:
+ process->arg.v[2] = 12
+Argument: |0| is a register
+Argument: |1| is a register
+Argument: |2| is a register
+
+Storing index starting at: |1687|
+value of a = |2| value of b = |15| value of c = |12| value of d = 11
+ARGS_SIZE OF |0| PARAMETER  = SIZE OF |1|ARGS_SIZE OF |1| PARAMETER  = SIZE OF |2|ARGS_SIZE OF |2| PARAMETER  = SIZE OF |3|Index modifed by: |5|
+
+0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f
+0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54
+02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04
+0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b
+54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54
+04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff
+0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b
+54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff
+ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c
+0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff
+ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f
+0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff
+ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06
+0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01
+ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54
+06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f
+01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b
+54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f
+0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c
+0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09
+8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f
+0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c
+09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03
+0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08
+0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54
+03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01
+08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff
+0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b
+54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff
+ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c
+0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff
+ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f
+0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff
+ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06
+0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01
+ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54
+06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f
+01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b
+54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f
+0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c
+0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09
+8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f
+0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c
+09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03
+0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08
+0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54
+03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01
+08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b
+54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54
+01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c
+0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b
+54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f
+0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c
+0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05
+0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e
+0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54
+05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07
+0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b
+54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54
+07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c
+0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b
+54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f
+0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c
+0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02
+index: 1690
+value is 34540555
+ RUN_PROCCESES_index ROOT: 1690
+ | number of CYCLES = |178318|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1690
+ | number of CYCLES = |178319|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1690
+ | number of CYCLES = |178320|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1690
+ | number of CYCLES = |178321|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1690
+ | number of CYCLES = |178322|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1690
+ | number of CYCLES = |178323|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1690
+ | number of CYCLES = |178324|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1690
+ | number of CYCLES = |178325|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1690
+ | number of CYCLES = |178326|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1690
+ | number of CYCLES = |178327|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1690
+ | number of CYCLES = |178328|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1690
+ | number of CYCLES = |178329|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1690
+ | number of CYCLES = |178330|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1690
+ | number of CYCLES = |178331|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1690
+ | number of CYCLES = |178332|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1690
+ | number of CYCLES = |178333|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1690
+ | number of CYCLES = |178334|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1690
+ | number of CYCLES = |178335|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1690
+ | number of CYCLES = |178336|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1690
+ | number of CYCLES = |178337|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1690
+ | number of CYCLES = |178338|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1690
+ | number of CYCLES = |178339|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1690
+ | number of CYCLES = |178340|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1690
+ | number of CYCLES = |178341|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1690
+ | number of CYCLES = |178342|
+CURRENT OP = 11
+champs 1 prcss 1 executing op 11:
+Octect int value: |84|
+Type is: |1|
+ft_sti
+Argument: |0| is a register
+Argument: |1| is a register
+Argument: |2| is a register
+The register number found and stored is: |5|
+
+stored values:
+ process->arg.v[0] = 5
+The register number found and stored is: |15|
+
+stored values:
+ process->arg.v[1] = 15
+The register number found and stored is: |12|
+
+stored values:
+ process->arg.v[2] = 12
+Argument: |0| is a register
+Argument: |1| is a register
+Argument: |2| is a register
+
+Storing index starting at: |1692|
+value of a = |5| value of b = |15| value of c = |12| value of d = 11
+ARGS_SIZE OF |0| PARAMETER  = SIZE OF |1|ARGS_SIZE OF |1| PARAMETER  = SIZE OF |2|ARGS_SIZE OF |2| PARAMETER  = SIZE OF |3|Index modifed by: |5|
+
+0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f
+0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54
+02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04
+0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b
+54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54
+04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff
+0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b
+54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff
+ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c
+0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff
+ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f
+0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff
+ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06
+0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01
+ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54
+06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f
+01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b
+54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f
+0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c
+0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09
+8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f
+0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c
+09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03
+0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08
+0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54
+03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01
+08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff
+0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b
+54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff
+ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c
+0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff
+ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f
+0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff
+ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06
+0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01
+ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54
+06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f
+01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b
+54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f
+0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c
+0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09
+8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f
+0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c
+09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03
+0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08
+0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54
+03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01
+08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b
+54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54
+01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c
+0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b
+54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f
+0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c
+0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05
+0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e
+0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54
+05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07
+0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b
+54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54
+07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c
+0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b
+54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f
+0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c
+0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02
+index: 1695
+value is 84872203
+ RUN_PROCCESES_index ROOT: 1695
+ | number of CYCLES = |178343|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1695
+ | number of CYCLES = |178344|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1695
+ | number of CYCLES = |178345|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1695
+ | number of CYCLES = |178346|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1695
+ | number of CYCLES = |178347|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1695
+ | number of CYCLES = |178348|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1695
+ | number of CYCLES = |178349|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1695
+ | number of CYCLES = |178350|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1695
+ | number of CYCLES = |178351|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1695
+ | number of CYCLES = |178352|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1695
+ | number of CYCLES = |178353|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1695
+ | number of CYCLES = |178354|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1695
+ | number of CYCLES = |178355|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1695
+ | number of CYCLES = |178356|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1695
+ | number of CYCLES = |178357|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1695
+ | number of CYCLES = |178358|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1695
+ | number of CYCLES = |178359|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1695
+ | number of CYCLES = |178360|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1695
+ | number of CYCLES = |178361|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1695
+ | number of CYCLES = |178362|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1695
+ | number of CYCLES = |178363|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1695
+ | number of CYCLES = |178364|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1695
+ | number of CYCLES = |178365|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1695
+ | number of CYCLES = |178366|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1695
+ | number of CYCLES = |178367|
+CURRENT OP = 11
+champs 1 prcss 1 executing op 11:
+Octect int value: |84|
+Type is: |1|
+ft_sti
+Argument: |0| is a register
+Argument: |1| is a register
+Argument: |2| is a register
+The register number found and stored is: |3|
+
+stored values:
+ process->arg.v[0] = 3
+The register number found and stored is: |15|
+
+stored values:
+ process->arg.v[1] = 15
+The register number found and stored is: |12|
+
+stored values:
+ process->arg.v[2] = 12
+Argument: |0| is a register
+Argument: |1| is a register
+Argument: |2| is a register
+
+Storing index starting at: |1697|
+value of a = |3| value of b = |15| value of c = |12| value of d = 11
+ARGS_SIZE OF |0| PARAMETER  = SIZE OF |1|ARGS_SIZE OF |1| PARAMETER  = SIZE OF |2|ARGS_SIZE OF |2| PARAMETER  = SIZE OF |3|Index modifed by: |5|
+
+0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f
+0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54
+02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04
+0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b
+54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54
+04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff
+0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b
+54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff
+ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c
+0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff
+ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f
+0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff
+ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06
+0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01
+ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54
+06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f
+01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b
+54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f
+0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c
+0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09
+8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f
+0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c
+09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03
+0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08
+0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54
+03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01
+08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff
+0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b
+54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff
+ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c
+0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff
+ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f
+0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff
+ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06
+0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01
+ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54
+06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f
+01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b
+54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f
+0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c
+0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09
+8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f
+0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c
+09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03
+0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08
+0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54
+03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01
+08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b
+54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54
+01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c
+0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b
+54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f
+0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c
+0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05
+0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e
+0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54
+05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07
+0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b
+54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54
+07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c
+0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b
+54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f
+0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c
+0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02
+index: 1700
+value is 51317771
+ RUN_PROCCESES_index ROOT: 1700
+ | number of CYCLES = |178368|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1700
+ | number of CYCLES = |178369|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1700
+ | number of CYCLES = |178370|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1700
+ | number of CYCLES = |178371|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1700
+ | number of CYCLES = |178372|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1700
+ | number of CYCLES = |178373|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1700
+ | number of CYCLES = |178374|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1700
+ | number of CYCLES = |178375|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1700
+ | number of CYCLES = |178376|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1700
+ | number of CYCLES = |178377|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1700
+ | number of CYCLES = |178378|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1700
+ | number of CYCLES = |178379|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1700
+ | number of CYCLES = |178380|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1700
+ | number of CYCLES = |178381|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1700
+ | number of CYCLES = |178382|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1700
+ | number of CYCLES = |178383|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1700
+ | number of CYCLES = |178384|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1700
+ | number of CYCLES = |178385|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1700
+ | number of CYCLES = |178386|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1700
+ | number of CYCLES = |178387|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1700
+ | number of CYCLES = |178388|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1700
+ | number of CYCLES = |178389|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1700
+ | number of CYCLES = |178390|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1700
+ | number of CYCLES = |178391|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1700
+ | number of CYCLES = |178392|
+CURRENT OP = 11
+champs 1 prcss 1 executing op 11:
+Octect int value: |84|
+Type is: |1|
+ft_sti
+Argument: |0| is a register
+Argument: |1| is a register
+Argument: |2| is a register
+The register number found and stored is: |6|
+
+stored values:
+ process->arg.v[0] = 6
+The register number found and stored is: |15|
+
+stored values:
+ process->arg.v[1] = 15
+The register number found and stored is: |12|
+
+stored values:
+ process->arg.v[2] = 12
+Argument: |0| is a register
+Argument: |1| is a register
+Argument: |2| is a register
+
+Storing index starting at: |1702|
+value of a = |6| value of b = |15| value of c = |12| value of d = 11
+ARGS_SIZE OF |0| PARAMETER  = SIZE OF |1|ARGS_SIZE OF |1| PARAMETER  = SIZE OF |2|ARGS_SIZE OF |2| PARAMETER  = SIZE OF |3|Index modifed by: |5|
+
+0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f
+0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54
+02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04
+0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b
+54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54
+04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff
+0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b
+54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff
+ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c
+0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff
+ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f
+0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff
+ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06
+0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01
+ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54
+06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f
+01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b
+54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f
+0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c
+0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09
+8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f
+0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c
+09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03
+0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08
+0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54
+03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01
+08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff
+0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b
+54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff
+ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c
+0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff
+ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f
+0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff
+ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06
+0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01
+ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54
+06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f
+01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b
+54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f
+0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c
+0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09
+8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f
+0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c
+09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03
+0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08
+0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54
+03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01
+08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b
+54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54
+01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c
+0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b
+54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f
+0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c
+0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05
+0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e
+0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54
+05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07
+0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b
+54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54
+07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c
+0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b
+54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f
+0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c
+0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02
+index: 1705
+value is 101649419
+ RUN_PROCCESES_index ROOT: 1705
+ | number of CYCLES = |178393|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1705
+ | number of CYCLES = |178394|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1705
+ | number of CYCLES = |178395|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1705
+ | number of CYCLES = |178396|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1705
+ | number of CYCLES = |178397|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1705
+ | number of CYCLES = |178398|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1705
+ | number of CYCLES = |178399|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1705
+ | number of CYCLES = |178400|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1705
+ | number of CYCLES = |178401|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1705
+ | number of CYCLES = |178402|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1705
+ | number of CYCLES = |178403|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1705
+ | number of CYCLES = |178404|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1705
+ | number of CYCLES = |178405|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1705
+ | number of CYCLES = |178406|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1705
+ | number of CYCLES = |178407|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1705
+ | number of CYCLES = |178408|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1705
+ | number of CYCLES = |178409|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1705
+ | number of CYCLES = |178410|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1705
+ | number of CYCLES = |178411|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1705
+ | number of CYCLES = |178412|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1705
+ | number of CYCLES = |178413|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1705
+ | number of CYCLES = |178414|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1705
+ | number of CYCLES = |178415|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1705
+ | number of CYCLES = |178416|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1705
+ | number of CYCLES = |178417|
+CURRENT OP = 11
+champs 1 prcss 1 executing op 11:
+Octect int value: |84|
+Type is: |1|
+ft_sti
+Argument: |0| is a register
+Argument: |1| is a register
+Argument: |2| is a register
+The register number found and stored is: |4|
+
+stored values:
+ process->arg.v[0] = 4
+The register number found and stored is: |15|
+
+stored values:
+ process->arg.v[1] = 15
+The register number found and stored is: |12|
+
+stored values:
+ process->arg.v[2] = 12
+Argument: |0| is a register
+Argument: |1| is a register
+Argument: |2| is a register
+
+Storing index starting at: |1707|
+value of a = |4| value of b = |15| value of c = |12| value of d = 11
+ARGS_SIZE OF |0| PARAMETER  = SIZE OF |1|ARGS_SIZE OF |1| PARAMETER  = SIZE OF |2|ARGS_SIZE OF |2| PARAMETER  = SIZE OF |3|Index modifed by: |5|
+
+0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f
+0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54
+02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04
+0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b
+54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54
+04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff
+0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b
+54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff
+ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c
+0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff
+ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f
+0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff
+ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06
+0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01
+ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54
+06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f
+01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b
+54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f
+0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c
+0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09
+8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f
+0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c
+09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03
+0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08
+0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54
+03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01
+08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff
+0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b
+54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff
+ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c
+0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff
+ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f
+0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff
+ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06
+0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01
+ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54
+06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f
+01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b
+54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f
+0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c
+0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09
+8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f
+0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c
+09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03
+0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08
+0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54
+03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01
+08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b
+54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54
+01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c
+0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b
+54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f
+0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c
+0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05
+0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e
+0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54
+05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07
+0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b
+54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54
+07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c
+0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b
+54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f
+0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c
+0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02
+index: 1710
+value is 68094987
+ RUN_PROCCESES_index ROOT: 1710
+ | number of CYCLES = |178418|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1710
+ | number of CYCLES = |178419|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1710
+ | number of CYCLES = |178420|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1710
+ | number of CYCLES = |178421|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1710
+ | number of CYCLES = |178422|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1710
+ | number of CYCLES = |178423|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1710
+ | number of CYCLES = |178424|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1710
+ | number of CYCLES = |178425|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1710
+ | number of CYCLES = |178426|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1710
+ | number of CYCLES = |178427|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1710
+ | number of CYCLES = |178428|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1710
+ | number of CYCLES = |178429|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1710
+ | number of CYCLES = |178430|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1710
+ | number of CYCLES = |178431|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1710
+ | number of CYCLES = |178432|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1710
+ | number of CYCLES = |178433|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1710
+ | number of CYCLES = |178434|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1710
+ | number of CYCLES = |178435|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1710
+ | number of CYCLES = |178436|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1710
+ | number of CYCLES = |178437|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1710
+ | number of CYCLES = |178438|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1710
+ | number of CYCLES = |178439|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1710
+ | number of CYCLES = |178440|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1710
+ | number of CYCLES = |178441|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1710
+ | number of CYCLES = |178442|
+CURRENT OP = 11
+champs 1 prcss 1 executing op 11:
+Octect int value: |84|
+Type is: |1|
+ft_sti
+Argument: |0| is a register
+Argument: |1| is a register
+Argument: |2| is a register
+The register number found and stored is: |7|
+
+stored values:
+ process->arg.v[0] = 7
+The register number found and stored is: |14|
+
+stored values:
+ process->arg.v[1] = 14
+The register number found and stored is: |12|
+
+stored values:
+ process->arg.v[2] = 12
+Argument: |0| is a register
+Argument: |1| is a register
+Argument: |2| is a register
+
+Storing index starting at: |1715|
+value of a = |11| value of b = |84| value of c = |1| value of d = 8
+ARGS_SIZE OF |0| PARAMETER  = SIZE OF |1|ARGS_SIZE OF |1| PARAMETER  = SIZE OF |2|ARGS_SIZE OF |2| PARAMETER  = SIZE OF |3|Index modifed by: |5|
+
+0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f
+0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54
+02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04
+0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b
+54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54
+04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff
+0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b
+54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff
+ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c
+0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff
+ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f
+0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff
+ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06
+0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01
+ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54
+06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f
+01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b
+54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f
+0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c
+0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09
+8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f
+0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c
+09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03
+0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08
+0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54
+03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01
+08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff
+0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b
+54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff
+ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c
+0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff
+ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f
+0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff
+ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06
+0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01
+ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54
+06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f
+01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b
+54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f
+0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c
+0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09
+8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f
+0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c
+09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03
+0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08
+0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54
+03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01
+08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b
+54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54
+01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c
+0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b
+54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f
+0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c
+0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05
+0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e
+0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54
+05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07
+0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b
+54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54
+07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c
+0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b
+54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f
+0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c
+0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02
+index: 1715
+value is 190054664
+ RUN_PROCCESES_index ROOT: 1715
+ | number of CYCLES = |178443|
+CURRENT OP = 11
+ RUN_PROCCESES_index ROOT: 1715
+ | number of CYCLES = |178444|
+CURRENT OP = 11
+INNER FUNCTION - number of process that are still alive = 0
+INNER FUNCTION - number of process that are still alive = 0
+MOTHERFUCKER WE ARE DECREMENTING CYCLE TO DIE, new value = 136
+IF STATEMENT WE ARE PRINTING, new value = 178580
+Total number of lives before reseting = |0|
+Total number of lives = |0|
+Total number of checks = |1|
+pendejada PROCESSES_ALIVE _ PENDEJADA NBR = |0|
+
+0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f
+0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54
+02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04
+0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b
+54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54
+04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff
+0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b
+54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff
+ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c
+0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff
+ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f
+0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff
+ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06
+0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01
+ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54
+06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f
+01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b
+54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f
+0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c
+0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09
+8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f
+0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c
+09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03
+0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08
+0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54
+03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01
+08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff
+0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b
+54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff
+ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c
+0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff
+ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f
+0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff
+ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06
+0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01
+ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54
+06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f
+01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b
+54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f
+0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c
+0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09
+8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f
+0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c
+09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03
+0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08
+0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54
+03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01
+08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b
+54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54
+01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c
+0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b
+54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f
+0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c
+0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05
+0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e
+0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54
+05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07
+0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b
+54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54
+07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c
+0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b
+54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f
+0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c
+0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02 0f 0c 0b 54 05 0f 0c 0b 54 03 0f 0c 0b 54 06 0f 0c 0b 54 04 0f 0c 0b 54 07 0e 0c 0b 54 01 08 0c 09 8f 0f 01 ff ff ff ff 0b 54 02
