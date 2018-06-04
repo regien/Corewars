@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/29 00:38:09 by eliu              #+#    #+#             */
-/*   Updated: 2018/06/01 21:41:17 by eliu             ###   ########.fr       */
+/*   Updated: 2018/06/03 16:13:10 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,29 @@ char	reg_bounds(int reg)
 	printf("out of register bounds! \n");
 	return (1);
 }
+
+/*
+char	check_register_bounds(t_process *process, char *argv)
+{
+	int	i;
+
+	i = 0;
+	while (argv[i])
+	{
+		if (argv[i] == '0')
+			if (reg_bounds(process->argv[0]))
+				return (1);
+		else if (argv[i] == '1')
+			if (reg_bounds(process->argv[1]))
+				return (1);
+		else if (argv[i] == '2')
+			if (reg_bounds(process->argv[2]))
+				return (1);
+		i++;
+	}
+	return (0);
+}
+*/
 
 void	convert_if_register_number_to_value(t_process *process, int arg)
 {
